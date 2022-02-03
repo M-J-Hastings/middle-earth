@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="3e16-9abf-6238-4ed9" name="Middle-Earth Strategy Battle Game" revision="65" battleScribeVersion="2.02" authorName="Hukoseft" authorContact="hukoseft@gmail.com" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="3e16-9abf-6238-4ed9" name="Middle-Earth Strategy Battle Game" revision="66" battleScribeVersion="2.03" authorName="Hukoseft" authorContact="hukoseft@gmail.com" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <publications>
     <publication id="3e16-9abf-pubN102460" name="Middle-Earth Strategy Battle Game Rules Manual"/>
     <publication id="3e16-9abf-pubN103678" name="Armies of Lord of the Rings"/>
@@ -7,9 +7,9 @@
     <publication id="3e16-9abf-pubN194095" name="Gondor at War"/>
   </publications>
   <costTypes>
-    <costType id="8bde-d63c-7caa-c15d" name=" Points" defaultCostLimit="-1.0"/>
-    <costType id="391e-19ac-b71d-f2e3" name=" Warriors" defaultCostLimit="-1.0"/>
-    <costType id="ab3b-a62b-ef54-533c" name=" Bow" defaultCostLimit="-1.0"/>
+    <costType id="8bde-d63c-7caa-c15d" name=" Points" defaultCostLimit="-1.0" hidden="false"/>
+    <costType id="391e-19ac-b71d-f2e3" name=" Warriors" defaultCostLimit="-1.0" hidden="false"/>
+    <costType id="ab3b-a62b-ef54-533c" name=" Bow" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
   <profileTypes>
     <profileType id="41b1-0f32-a644-93b4" name="Warrior">
@@ -104,7 +104,7 @@
     </forceEntry>
   </forceEntries>
   <selectionEntries>
-    <selectionEntry id="213b-58da-ed05-d8af" name="Wound Chart" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="213b-58da-ed05-d8af" name="Wound Chart" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7911-40b3-11da-4e5a" type="max"/>
       </constraints>
@@ -259,7 +259,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="fafa-0bc3-6016-c70c" name="Influence Points" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="fafa-0bc3-6016-c70c" name="Influence Points" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="85f4-abf6-9d6c-77a2" type="min"/>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bb29-6025-0427-9c71" type="max"/>
@@ -268,7 +268,7 @@
         <categoryLink id="f774-c67d-6735-6122" name="New CategoryLink" hidden="false" targetId="e608-60e7-5ad3-f6a3" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="5d5e-2746-a151-e64e" name="Points" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="5d5e-2746-a151-e64e" name="Points" hidden="false" collective="false" import="true" type="upgrade">
           <costs>
             <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
             <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="0.0"/>
@@ -282,7 +282,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="db3d-5170-cbe9-0897" name="Determine Alliance Level" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="db3d-5170-cbe9-0897" name="Determine Alliance Level" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4949-99bf-09de-95c9" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="92a2-b91a-d629-c940" type="min"/>
@@ -302,7 +302,7 @@
         <categoryLink id="649a-4e0d-cd77-e511" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="83ef-d74c-e15d-044c" name="Cant Mix Good and Evil Armies" hidden="true" collective="false" type="upgrade">
+        <selectionEntry id="83ef-d74c-e15d-044c" name="Cant Mix Good and Evil Armies" hidden="true" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -344,7 +344,7 @@
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ed7a-9919-cb52-884e" name="Impossible Allies" hidden="true" collective="false" type="upgrade">
+        <selectionEntry id="ed7a-9919-cb52-884e" name="Impossible Allies" hidden="true" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="2bfd-adfe-f51d-a1da" value="1">
               <conditions>
@@ -5200,7 +5200,7 @@
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="18bd-5d69-3b58-61ac" name="Historical Allies" hidden="true" collective="false" type="upgrade">
+        <selectionEntry id="18bd-5d69-3b58-61ac" name="Historical Allies" hidden="true" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -7308,7 +7308,7 @@
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="523a-a8e0-abd7-7d99" name="Convenient Allies" hidden="true" collective="false" type="upgrade">
+        <selectionEntry id="523a-a8e0-abd7-7d99" name="Convenient Allies" hidden="true" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="set" field="4a55-e32f-3a51-de73" value="1">
               <conditions>
@@ -11163,7 +11163,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4878-3dab-84cf-7810" name="Determine Breakpoint &amp; 25%" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="4878-3dab-84cf-7810" name="Determine Breakpoint &amp; 25%" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8094-36c9-2f5e-2af5" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f207-f8da-9bca-3f79" type="min"/>
@@ -11236,7 +11236,7 @@
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
-    <selectionEntry id="1fb4-2d83-480d-f94e" name="Horse" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="1fb4-2d83-480d-f94e" name="Horse" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d2d1-5820-55ec-bf20" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c5ba-950f-81a9-855e" type="min"/>
@@ -11250,7 +11250,7 @@
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d3ad-a44c-5e03-265b" name="Heavy Armour" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="d3ad-a44c-5e03-265b" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3683-de95-24b8-92d5" type="max"/>
       </constraints>
@@ -11263,7 +11263,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c9b8-81bd-1cd6-8b3e" name="Shield" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="c9b8-81bd-1cd6-8b3e" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a070-58be-0bde-e6a4" type="max"/>
       </constraints>
@@ -11276,7 +11276,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6af7-15a9-a26b-e9e3" name="Elven Cloak" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="6af7-15a9-a26b-e9e3" name="Elven Cloak" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="ed4e-70be-8a65-d7e0" value="0.0">
           <conditions>
@@ -11301,7 +11301,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1ef8-a0ca-889f-0d8b" name="Elven-made Sword" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="1ef8-a0ca-889f-0d8b" name="Elven-made Sword" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="90b7-0737-a9f8-e46a" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a37-78ae-24ee-89b7" type="min"/>
@@ -11316,7 +11316,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0c3f-f487-8cfa-add8" name="Elf Bow" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="0c3f-f487-8cfa-add8" name="Elf Bow" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4363-7972-e908-9680" type="max"/>
       </constraints>
@@ -11329,7 +11329,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0439-1154-4306-11d8" name="Heavy Armour" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="0439-1154-4306-11d8" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1318-589b-483b-eea1" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="33fc-743b-7356-6f98" type="min"/>
@@ -11343,7 +11343,7 @@
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="18cb-fd03-3380-5f4e" name="Horse" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="18cb-fd03-3380-5f4e" name="Horse" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
           <conditionGroups>
@@ -11410,7 +11410,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6105-888b-3a63-c138" name="Shield" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="6105-888b-3a63-c138" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d99c-b662-678c-c313" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="502e-b8c1-ae12-eded" type="min"/>
@@ -11424,7 +11424,7 @@
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="713d-07e8-7930-c83c" name="Heavy Armour" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="713d-07e8-7930-c83c" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="72d0-fc72-8c87-2832" type="max"/>
       </constraints>
@@ -11437,7 +11437,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e0b4-3068-b6f2-2765" name="Pony" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="e0b4-3068-b6f2-2765" name="Pony" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="4553-a55e-9eac-bbbf" value="0">
           <conditionGroups>
@@ -11503,7 +11503,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="afb0-087f-dce2-2ec8" name="Warg" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="afb0-087f-dce2-2ec8" name="Warg" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="95c4-a601-e3eb-9b2e" type="max"/>
       </constraints>
@@ -11516,7 +11516,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="eb59-3a9f-f03b-22cc" name="Armoured Horse" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="eb59-3a9f-f03b-22cc" name="Armoured Horse" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="5eed-43a1-9ec9-1e80" value="1">
           <conditions>
@@ -11583,7 +11583,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="991c-46d3-d618-c49e" name="Armour" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="991c-46d3-d618-c49e" name="Armour" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3481-83f3-1da4-2d11" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b0e6-c539-3509-18fc" type="max"/>
@@ -11597,7 +11597,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="37fc-f943-01eb-2efd" name="Armour" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="37fc-f943-01eb-2efd" name="Armour" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bea5-792c-256f-c503" type="max"/>
       </constraints>
@@ -11610,7 +11610,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5cb1-7e8b-f6c3-d5cb" name="Unarmed" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="5cb1-7e8b-f6c3-d5cb" name="Unarmed" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0e8a-171d-dcd0-b9a8" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6cc0-72ce-92c4-d669" type="max"/>
@@ -11624,7 +11624,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="badb-13f4-1286-1864" name="Staff" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="badb-13f4-1286-1864" name="Staff" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ba0-16ec-e8ea-46ce" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="97f7-8c47-c74a-95b1" type="max"/>
@@ -11638,7 +11638,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8e38-dc5d-97e6-fb2e" name="Dagger" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="8e38-dc5d-97e6-fb2e" name="Dagger" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c40e-3ed2-6b38-214c" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e349-2240-82af-8098" type="min"/>
@@ -11652,7 +11652,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="64a3-2e98-a578-1a2d" name="Sword" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="64a3-2e98-a578-1a2d" name="Sword" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cccc-d366-b806-d076" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="26be-b7ba-4fb0-04dc" type="min"/>
@@ -11666,7 +11666,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ac2a-ff13-8888-18ca" name="Hand-and-a-Half Sword" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="ac2a-ff13-8888-18ca" name="Hand-and-a-Half Sword" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f17c-b6f5-5976-0b0f" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d00e-d6d0-c54d-8c0b" type="min"/>
@@ -11677,7 +11677,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1c0a-4625-eca9-ec95" name="Staff of Power*" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="1c0a-4625-eca9-ec95" name="Staff of Power*" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e156-50dc-7893-8e10" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe49-07b5-230e-f3d9" type="min"/>
@@ -11691,7 +11691,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9683-2857-3c2a-c889" name="Glamdring" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="9683-2857-3c2a-c889" name="Glamdring" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e2a-9526-80ab-46fe" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d876-1f04-1715-b3ee" type="min"/>
@@ -11713,7 +11713,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="052d-8f1d-225c-afc3" name="Longbow" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="052d-8f1d-225c-afc3" name="Longbow" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b50d-4139-5395-de9f" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="864a-6055-cc29-422d" type="min"/>
@@ -11727,7 +11727,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ed0c-9dde-d02f-ab09" name="Lance" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="ed0c-9dde-d02f-ab09" name="Lance" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="541a-9ea9-e4c2-ec6a" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c0ab-c849-b679-19c6" type="min"/>
@@ -11741,7 +11741,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="aa35-f48c-f09a-8f99" name="Lance" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="aa35-f48c-f09a-8f99" name="Lance" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="0573-0dd1-3778-c68b" value="0.0">
           <conditions>
@@ -11766,7 +11766,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f07a-f21f-5c34-803b" name="Bow" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="f07a-f21f-5c34-803b" name="Bow" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9457-4e68-4e06-397f" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3ec1-b6f5-371b-3f2b" type="min"/>
@@ -11780,7 +11780,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="aee9-0be1-fd8c-7e73" name="Bow" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="aee9-0be1-fd8c-7e73" name="Bow" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e317-50c4-cc64-8ef8" type="max"/>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1cf8-4676-932b-6e37" type="min"/>
@@ -11794,7 +11794,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f782-1cc2-8c07-a218" name="Horn of Gondor" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="f782-1cc2-8c07-a218" name="Horn of Gondor" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0953-1abf-1842-0dba" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e63f-054e-48da-4c67" type="min"/>
@@ -11812,7 +11812,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2ab8-5b3a-f4ce-0225" name="War Spear" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="2ab8-5b3a-f4ce-0225" name="War Spear" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d8e0-57b5-4a3d-d926" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a753-9cd4-ce91-b700" type="min"/>
@@ -11826,7 +11826,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="af39-2af7-6aa3-7226" name="War Horn" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="af39-2af7-6aa3-7226" name="War Horn" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0856-1350-0fd8-7ee6" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8387-e65d-6e29-d94a" type="min"/>
@@ -11840,7 +11840,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6487-f2cf-5eb7-a780" name="Axe" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="6487-f2cf-5eb7-a780" name="Axe" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f4e-e8f3-80fa-09ec" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="10cf-3df6-657b-ff0f" type="min"/>
@@ -11854,7 +11854,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2d5f-8ff0-8762-879e" name="Two-Handed Axe" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="2d5f-8ff0-8762-879e" name="Two-Handed Axe" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="69d5-5441-2fa5-9e17" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b12-dbea-9f38-545e" type="min"/>
@@ -11869,7 +11869,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9cb9-9ebe-8ffa-86f3" name="Spear" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="9cb9-9ebe-8ffa-86f3" name="Spear" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="42a3-97f3-b658-13a4" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a245-16ab-9bec-0960" type="min"/>
@@ -11883,7 +11883,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="af8b-88f1-b5c1-cafd" name="Spear" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="af8b-88f1-b5c1-cafd" name="Spear" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5378-64fb-f278-3627" type="max"/>
       </constraints>
@@ -11896,12 +11896,12 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b2df-6b78-3eef-e449" name="Mithril Coat" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="b2df-6b78-3eef-e449" name="Mithril Coat" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="75ee-8f16-9914-b72e" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="18b1-d4ca-0d4b-1969" name="Mithril Coat" hidden="false" collective="false" targetId="97b9-e206-4382-7257" type="selectionEntry"/>
+        <entryLink id="18b1-d4ca-0d4b-1969" name="Mithril Coat" hidden="false" collective="false" import="true" targetId="97b9-e206-4382-7257" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="15.0"/>
@@ -11909,20 +11909,22 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2428-760d-9db5-14d8" name="Sting" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="2428-760d-9db5-14d8" name="Sting" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a6bb-c436-2635-014f" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f83-a566-d7e7-613b" type="max"/>
       </constraints>
-      <entryLinks>
-        <entryLink id="2cfa-506b-aaf7-b643" name="Sting" hidden="false" collective="false" targetId="b471-7653-0304-33d3" type="selectionEntry"/>
-      </entryLinks>
+      <infoLinks>
+        <infoLink id="0957-f598-750c-f26d" name="Sting (Active)" hidden="false" targetId="bc2b-9885-5cf5-6346" type="profile"/>
+        <infoLink id="48a1-e513-8cf1-1cfa" name="Elven-made" hidden="false" targetId="590e-3a27-7c54-f521" type="rule"/>
+      </infoLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="5.0"/>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f846-4e06-4b6f-5fe1" name="Vilya" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="f846-4e06-4b6f-5fe1" name="Vilya" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d4c6-b858-48a3-289c" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="135c-9418-80c2-7ab3" type="max"/>
@@ -11940,7 +11942,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="cdcd-2bd3-12de-b7e6" name="Nenya" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="cdcd-2bd3-12de-b7e6" name="Nenya" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ead-3532-0ac6-243b" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1789-cab4-dec6-6309" type="max"/>
@@ -11958,7 +11960,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5803-cb66-0eda-5524" name="Narya" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="5803-cb66-0eda-5524" name="Narya" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd05-6257-ab96-c923" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1286-3875-c294-4527" type="min"/>
@@ -11976,7 +11978,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="16d0-4708-68d8-c15f" name="Heavy Dwarf Armour" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="16d0-4708-68d8-c15f" name="Heavy Dwarf Armour" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f998-763f-dd51-5822" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="adb9-0fff-68a2-4799" type="min"/>
@@ -11990,7 +11992,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9ec2-ca86-1098-06db" name="Hammer" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="9ec2-ca86-1098-06db" name="Hammer" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aeb0-2574-07ab-4fd4" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b4d-0706-6917-93f9" type="min"/>
@@ -12004,7 +12006,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a5d0-4c54-689e-06aa" name="Short Bow" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="a5d0-4c54-689e-06aa" name="Short Bow" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c77-7691-14a5-fdf3" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8127-57ae-5e37-5673" type="min"/>
@@ -12018,7 +12020,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d632-0efe-5e4e-415f" name="Warg" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="d632-0efe-5e4e-415f" name="Warg" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f07-3551-b0ec-589c" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8285-383c-72fa-e7d2" type="min"/>
@@ -12032,7 +12034,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c27d-19fd-b766-0cec" name="Pick" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="c27d-19fd-b766-0cec" name="Pick" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e5c7-fe10-37a0-7a05" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3df3-328c-5648-c623" type="min"/>
@@ -12046,7 +12048,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5047-cb17-b681-56ed" name="Two-Handed Sword" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="5047-cb17-b681-56ed" name="Two-Handed Sword" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6225-2237-1f35-cf28" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d87-8cc7-9c5c-efa7" type="min"/>
@@ -12061,7 +12063,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6159-fce2-6d9c-2019" name="Fell Beast" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="6159-fce2-6d9c-2019" name="Fell Beast" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9609-9e9c-16c0-c780" type="max"/>
       </constraints>
@@ -12073,9 +12075,9 @@
         <infoLink id="f10b-18ad-32bc-d535" name="Fell Beast" hidden="false" targetId="b3a3-d079-cc05-8a41" type="profile"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="3f94-2335-f265-a831" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="3f94-2335-f265-a831" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="5550-66d2-e2ea-204b" name="Teeth and Claws" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="5550-66d2-e2ea-204b" name="Teeth and Claws" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2776-5f99-254b-5e4f" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f65-84d3-22c6-6a0b" type="min"/>
@@ -12102,7 +12104,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4e42-ea2b-9566-f9bd" name="Armoured Fell Beast" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="4e42-ea2b-9566-f9bd" name="Armoured Fell Beast" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="74df-258d-aa5f-0bcb" type="max"/>
       </constraints>
@@ -12114,9 +12116,9 @@
         <infoLink id="2671-a447-b96c-6df7" name="Armoured Fell Beast" hidden="false" targetId="e435-e2c3-b3f2-0cc3" type="profile"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="0734-32d9-f187-65a9" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="0734-32d9-f187-65a9" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="b0d4-e2c9-a461-24ae" name="Teeth and Claws" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="b0d4-e2c9-a461-24ae" name="Teeth and Claws" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="657e-0770-a68f-e6e4" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f7a-1bc0-0c45-c8eb" type="min"/>
@@ -12143,7 +12145,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7386-6cd4-6c54-d454" name="Mace" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="7386-6cd4-6c54-d454" name="Mace" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b1e8-924d-5103-2d93" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b674-aaf2-0358-fd44" type="min"/>
@@ -12157,7 +12159,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a875-50e0-8a0e-da87" name="Hand-and-a-Half Hammer" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="a875-50e0-8a0e-da87" name="Hand-and-a-Half Hammer" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4205-78dd-590a-5ec7" type="max"/>
       </constraints>
@@ -12171,7 +12173,7 @@
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4de7-ec7f-29f4-8d49" name="Club" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="4de7-ec7f-29f4-8d49" name="Club" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="43b4-1a79-d288-9501" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e0c6-2b7e-ed3c-062a" type="min"/>
@@ -12185,7 +12187,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a99a-d310-42cf-5dd7" name="Whip" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="a99a-d310-42cf-5dd7" name="Whip" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="28eb-6da2-ba94-8d18" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d431-03ef-c1aa-9685" type="min"/>
@@ -12199,7 +12201,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="bf95-2c78-20dd-7fbc" name="Armoured Horse" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="bf95-2c78-20dd-7fbc" name="Armoured Horse" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f04-e38c-5a61-5596" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3cec-a840-1b8d-8eae" type="min"/>
@@ -12213,7 +12215,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4fbb-79cf-7ab6-b416" name="Throwing Daggers" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="4fbb-79cf-7ab6-b416" name="Throwing Daggers" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4304-6d5f-3c20-d08f" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f274-0ffb-4072-b284" type="min"/>
@@ -12227,7 +12229,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ddc1-67a9-1014-b73c" name="The One Ring" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="ddc1-67a9-1014-b73c" name="The One Ring" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a8c9-d2ea-4df8-362e" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c5a-e8b0-6188-3471" type="max"/>
@@ -12241,7 +12243,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="252d-611b-f9f8-b0b0" name="Pike" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="252d-611b-f9f8-b0b0" name="Pike" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b26c-d443-60bb-1ee6" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b3af-8a4a-4ac8-95e9" type="min"/>
@@ -12255,7 +12257,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="dc4f-fa62-dfaa-c022" name="Poisoned Blowpipe" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="dc4f-fa62-dfaa-c022" name="Poisoned Blowpipe" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="039e-0d86-4e9a-6daa" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b2ab-006a-8ba8-781c" type="min"/>
@@ -12270,7 +12272,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="fddc-2d93-2bbf-54ca" name="Tangado haid, leithio i philinn!" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="fddc-2d93-2bbf-54ca" name="Tangado haid, leithio i philinn!" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2cf7-e483-9042-26a6" type="max"/>
       </constraints>
@@ -12288,7 +12290,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c31c-2585-1e87-b90d" name="They say a great Sorceress lives in these woods..." hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="c31c-2585-1e87-b90d" name="They say a great Sorceress lives in these woods..." hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e4df-7dd6-a9cf-52da" type="max"/>
       </constraints>
@@ -12309,7 +12311,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1772-6b04-d4e4-10ce" name="Protect the King!" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="1772-6b04-d4e4-10ce" name="Protect the King!" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="01a2-a818-9838-6b99" type="max"/>
       </constraints>
@@ -12327,7 +12329,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="853b-bf63-ae34-d549" name="No quarter was asked..." hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="853b-bf63-ae34-d549" name="No quarter was asked..." hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="58a8-e98e-3a05-d9ae" type="max"/>
       </constraints>
@@ -12345,7 +12347,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b063-7073-0255-3d40" name="Don&apos;t be Hasty!" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="b063-7073-0255-3d40" name="Don&apos;t be Hasty!" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="50e3-a2b5-9b22-4504" type="max"/>
       </constraints>
@@ -12363,7 +12365,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9d6e-fe0b-4a90-b6e8" name="The wealth of Moria lay not in Gold or Jewels, but in Mithril" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="9d6e-fe0b-4a90-b6e8" name="The wealth of Moria lay not in Gold or Jewels, but in Mithril." hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c5e-96a8-4717-23d3" type="max"/>
       </constraints>
@@ -12381,7 +12383,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c4b5-1a3d-521e-b003" name="You are Men of Gondor. Whatever comes throught that Gate, you will stand your Ground!" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="c4b5-1a3d-521e-b003" name="You are Men of Gondor. Whatever comes throught that Gate, you will stand your Ground!" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7da8-2574-9f7f-d31b" type="max"/>
       </constraints>
@@ -12399,7 +12401,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e3dc-8af5-af35-3cba" name="One by one the Free Lands of Middle-Earth fell to the Power of the Ring. But there were some who resisted." hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="e3dc-8af5-af35-3cba" name="One by one the Free Lands of Middle-Earth fell to the Power of the Ring; but there were some who resisted." hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c97-ab40-30e4-2c15" type="max"/>
       </constraints>
@@ -12417,7 +12419,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5619-ebd4-d105-6257" name="Ride for Ruin and the World&apos;s Ending!" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="5619-ebd4-d105-6257" name="Ride for Ruin and the World&apos;s Ending!" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9516-a969-b41a-8ce2" type="max"/>
       </constraints>
@@ -12435,7 +12437,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5053-e959-c7a3-c6e5" name="The Dead do not suffer the Living to pass" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="5053-e959-c7a3-c6e5" name="The Dead do not suffer the Living to pass." hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f4d0-be85-9ba2-9bd3" type="max"/>
       </constraints>
@@ -12453,7 +12455,7 @@
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9e12-ce48-2af8-c6b1" name="You have my Sword" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="9e12-ce48-2af8-c6b1" name="You have my Sword." hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e767-a24e-d3eb-c447" type="max"/>
       </constraints>
@@ -12473,7 +12475,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="bc42-7c57-c592-30b3" name="For the White City!" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="bc42-7c57-c592-30b3" name="For the White City!" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e9f-c593-4c4a-faec" type="max"/>
       </constraints>
@@ -12491,7 +12493,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6ece-291f-e876-2ad9" name="The Eagles are coming!" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="6ece-291f-e876-2ad9" name="The Eagles are coming!" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e3b-0153-f5c2-521c" type="max"/>
       </constraints>
@@ -12509,7 +12511,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2e0e-784d-8ce0-ff35" name="They&apos;re dangerous folk, wandering in the wilds." hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="2e0e-784d-8ce0-ff35" name="They&apos;re dangerous folk, wandering in the wilds." hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b843-37a7-8461-8862" type="max"/>
       </constraints>
@@ -12527,7 +12529,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0905-cc21-a8f9-d310" name="Fear! Fire! Foes!" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="0905-cc21-a8f9-d310" name="Fear! Fire! Foes!" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8582-49a8-90eb-0dcf" type="max"/>
       </constraints>
@@ -12548,12 +12550,12 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="acdf-9ccd-b671-6058" name="Wild men have Long Ears and Long Eyes; know all Paths" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="acdf-9ccd-b671-6058" name="Wild men have Long Ears and Long Eyes; know all Paths." hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a49-0ea1-4d0d-1931" type="max"/>
       </constraints>
       <rules>
-        <rule id="9252-136c-e4eb-84bb" name="Wild men have Long Ears and Long Eyes; know all Paths" publicationId="3e16-9abf-pubN103678" page="70" hidden="false">
+        <rule id="9252-136c-e4eb-84bb" name="Wild men have Long Ears and Long Eyes; know all Paths." publicationId="3e16-9abf-pubN103678" page="70" hidden="false">
           <description>Models from this army list gain the Mountain Dweller special rule. Additionally, enemy models do not gain any benefits from the Stalk Unseen special rule, or any such special rules that give similar benefits, against models from this army list. Additionally, warbands from this army list, that contain between 9 and 12 models, do not need a Hero to be the captain of the warband. Instead, one of the Warrior models within the warband takes on the role of the warband&apos;s captain for the purpose of Deployment.</description>
         </rule>
       </rules>
@@ -12566,7 +12568,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="fb6e-41a8-a0e2-71dd" name="The Khandish Hosts" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="fb6e-41a8-a0e2-71dd" name="The Khandish Hosts" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f004-595a-02c7-faca" type="max"/>
       </constraints>
@@ -12584,7 +12586,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c7ac-183e-0764-9e6e" name="The Scorpion&apos;s Sting" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="c7ac-183e-0764-9e6e" name="The Scorpion&apos;s Sting" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1132-cb62-79b5-8c8b" type="max"/>
       </constraints>
@@ -12602,7 +12604,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3a41-6ae1-13c3-89ba" name="Our Enemy is Ready, His full Strength gathered" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="3a41-6ae1-13c3-89ba" name="Our Enemy is Ready, His full Strength gathered." hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c2a-db69-dfa9-dd5c" type="max"/>
       </constraints>
@@ -12620,7 +12622,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a753-0901-9a15-5e94" name="You do not know Pain, you do not know Fear!" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="a753-0901-9a15-5e94" name="You do not know Pain, you do not know Fear!" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c6a-a764-8ee8-eef4" type="max"/>
       </constraints>
@@ -12641,7 +12643,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1d05-9d3c-c8b0-1f84" name="Warrior Pride" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="1d05-9d3c-c8b0-1f84" name="Warrior Pride" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5e73-dfba-1313-de59" type="max"/>
       </constraints>
@@ -12657,7 +12659,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="19ca-8df2-2356-052f" name="The power of the Ring could not be undone." hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="19ca-8df2-2356-052f" name="The power of the Ring could not be undone." hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb1d-3291-280e-f46d" type="max"/>
       </constraints>
@@ -12675,7 +12677,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a6f8-6101-2e27-c710" name="If that fell Kingdom should rise again, Rivendell, Lorien, The Shire, even Gondor itself shall fall." hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="a6f8-6101-2e27-c710" name="If that fell Kingdom should rise again, Rivendell, Lorien, The Shire, even Gondor itself shall fall." hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dff9-c080-a52c-ae88" type="max"/>
       </constraints>
@@ -12693,7 +12695,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="262f-0710-69c9-6ff4" name="The Corsairs are upon us! It is the last Stroke of Doom!" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="262f-0710-69c9-6ff4" name="The Corsairs are upon us! It is the last Stroke of Doom!" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ef61-7617-39c1-5043" type="max"/>
       </constraints>
@@ -12714,7 +12716,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2e9d-d2dd-c4d1-00f5" name="You do what Sharkey says." hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="2e9d-d2dd-c4d1-00f5" name="You do what Sharkey says." hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="99e9-2ee0-412f-f685" type="max"/>
       </constraints>
@@ -12729,7 +12731,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="54a8-3f7e-8ab6-2cdd" name="Orc Bow" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="54a8-3f7e-8ab6-2cdd" name="Orc Bow" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1d25-e594-5f60-8610" type="max"/>
       </constraints>
@@ -12742,7 +12744,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e83e-6f52-a817-2cc2" name="The White Council" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="e83e-6f52-a817-2cc2" name="The White Council" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="4fdb-36bd-db8d-7280" value="0.0"/>
       </modifiers>
@@ -12755,7 +12757,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="91f6-aae7-a700-e106" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="c52a-0bab-b1a1-4ec6" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="c52a-0bab-b1a1-4ec6" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -12763,7 +12765,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="756a-c92a-b077-555d" name="Wildmen of Drúadan" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="756a-c92a-b077-555d" name="Wildmen of Drúadan" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="4ee0-4463-368a-89f6" value="0.0"/>
       </modifiers>
@@ -12776,7 +12778,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="b683-2c65-1840-e8db" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="3fb9-eb90-0f06-ad5f" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="3fb9-eb90-0f06-ad5f" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -12784,7 +12786,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="18d1-6f55-e82a-1ae7" name="Thorin&apos;s Company" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="18d1-6f55-e82a-1ae7" name="Thorin&apos;s Company" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="ea18-36be-ef1a-ef72" value="0.0"/>
       </modifiers>
@@ -12797,7 +12799,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="f959-47d0-a0bd-dbef" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="019d-8d37-7385-6eb3" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="019d-8d37-7385-6eb3" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -12805,7 +12807,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="90fc-7b35-ed85-2ad0" name="Survivors of Lake-town" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="90fc-7b35-ed85-2ad0" name="Survivors of Lake-town" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="ead7-97d7-e113-36a8" value="0.0"/>
       </modifiers>
@@ -12818,7 +12820,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="0e73-a527-f927-fe85" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="a5d5-f12f-27d1-4031" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="a5d5-f12f-27d1-4031" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -12826,7 +12828,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="825f-a053-a115-ce33" name="The Shire" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="825f-a053-a115-ce33" name="The Shire" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="798c-bd61-b586-f6a2" value="0.0"/>
       </modifiers>
@@ -12839,7 +12841,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="648c-e3a8-c74f-b7c9" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="137d-044d-b3b2-00f6" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="137d-044d-b3b2-00f6" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -12847,7 +12849,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7907-55a7-6e0b-9ee6" name="Rohan" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="7907-55a7-6e0b-9ee6" name="Rohan" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="2fde-90a8-3249-5ec2" value="0.0"/>
       </modifiers>
@@ -12860,7 +12862,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="9652-f996-c551-bcac" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="5f8f-179c-f278-4179" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="5f8f-179c-f278-4179" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -12868,7 +12870,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="da09-82f4-d3c2-ed0a" name="Rivendell" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="da09-82f4-d3c2-ed0a" name="Rivendell" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="fd21-64a7-a6f8-a411" value="0.0"/>
       </modifiers>
@@ -12881,7 +12883,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="1879-45a1-b7c2-cabe" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="e462-d87b-8113-481a" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="e462-d87b-8113-481a" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -12889,7 +12891,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c1f7-196f-74fd-b623" name="The Rangers" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="c1f7-196f-74fd-b623" name="The Rangers" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="47d6-4b45-6e2f-c82b" value="0.0"/>
       </modifiers>
@@ -12902,7 +12904,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="c2df-3958-518d-33ed" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="0be8-3963-29fe-c325" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="0be8-3963-29fe-c325" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -12910,7 +12912,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="543e-9750-e44d-71ed" name="Radagast&apos;s Alliance" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="543e-9750-e44d-71ed" name="Radagast&apos;s Alliance" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="939c-4bbe-63a1-ad21" value="0.0"/>
       </modifiers>
@@ -12923,7 +12925,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="e0d4-984a-169c-0e6d" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="cf3c-f792-16e5-4e3f" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="cf3c-f792-16e5-4e3f" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -12931,7 +12933,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6571-6b45-2709-e577" name="Númenor" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="6571-6b45-2709-e577" name="Númenor" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="ba8e-1a6e-759f-79f7" value="0.0"/>
       </modifiers>
@@ -12944,7 +12946,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="3956-7a8d-7312-5543" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="9f93-d8d6-8979-4a52" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="9f93-d8d6-8979-4a52" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -12952,7 +12954,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5da1-c44f-0846-212b" name="The Misty Mountains" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="5da1-c44f-0846-212b" name="The Misty Mountains" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="5d62-e5e8-9b20-fe83" value="0.0"/>
       </modifiers>
@@ -12965,7 +12967,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="1148-1fc9-cb7d-ac31" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="0d50-ce45-bc83-c8bd" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="0d50-ce45-bc83-c8bd" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -12973,7 +12975,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d8fc-a394-3ee8-f3e4" name="Minas Tirith" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="d8fc-a394-3ee8-f3e4" name="Minas Tirith" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="8368-4b08-b763-abb8" value="0.0"/>
       </modifiers>
@@ -12986,7 +12988,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="9886-0190-d5cb-ff25" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="e748-aee5-3cde-cd94" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="e748-aee5-3cde-cd94" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -12994,7 +12996,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d175-1d2d-a438-8b56" name="Lothlórien" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="d175-1d2d-a438-8b56" name="Lothlórien" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="1386-92bc-af70-fcb5" value="0.0"/>
       </modifiers>
@@ -13007,7 +13009,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="cc54-dd55-42ae-789d" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="0c1a-88e3-eee8-0f52" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="0c1a-88e3-eee8-0f52" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13015,7 +13017,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="dd56-02c1-26ac-f1d4" name="The Kingdom of Khazad-dum" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="dd56-02c1-26ac-f1d4" name="The Kingdom of Khazad-dum" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="971f-2146-dfa9-8b9a" value="0.0"/>
       </modifiers>
@@ -13028,7 +13030,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="677d-cf7b-ae2a-9516" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="e5d9-e462-6743-f544" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="e5d9-e462-6743-f544" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13036,7 +13038,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="699f-ab2f-4636-4a5a" name="The Iron Hills" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="699f-ab2f-4636-4a5a" name="The Iron Hills" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="f077-a9f0-fa5e-322d" value="0.0"/>
       </modifiers>
@@ -13049,7 +13051,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="7f8e-4eae-1c22-a2b2" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="2808-520e-012e-2540" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="2808-520e-012e-2540" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13057,7 +13059,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="651a-edf9-1764-6f1d" name="Halls of Thranduil" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="651a-edf9-1764-6f1d" name="Halls of Thranduil" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="2893-c106-c999-d99e" value="0.0"/>
       </modifiers>
@@ -13070,7 +13072,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="7053-686c-759b-2567" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="3b40-bb5c-5b88-82e0" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="3b40-bb5c-5b88-82e0" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13078,7 +13080,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e797-83b5-8060-335e" name="Garrison of Dale" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="e797-83b5-8060-335e" name="Garrison of Dale" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="edfa-8c86-b9cc-139d" value="0.0"/>
       </modifiers>
@@ -13091,7 +13093,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="7075-2280-ac93-2fca" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="fb70-216b-583d-0d84" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="fb70-216b-583d-0d84" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13099,7 +13101,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="50b9-e6be-71b8-7101" name="The Fiefdoms" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="50b9-e6be-71b8-7101" name="The Fiefdoms" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="462d-2a51-0b41-2ee9" value="0.0"/>
       </modifiers>
@@ -13112,7 +13114,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="d4a8-3877-59fc-412f" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="9809-535d-c077-8a3a" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="9809-535d-c077-8a3a" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13120,7 +13122,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b0c8-2d15-b3ab-1bdb" name="The Fellowship" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="b0c8-2d15-b3ab-1bdb" name="The Fellowship" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="730d-ae7f-3483-0b50" value="0.0"/>
       </modifiers>
@@ -13133,7 +13135,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="9807-7cf0-ead5-0953" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="1925-b0c1-3be4-6036" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="1925-b0c1-3be4-6036" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13141,7 +13143,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="14db-95e8-cb5e-599d" name="Fangorn" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="14db-95e8-cb5e-599d" name="Fangorn" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="77f3-3042-24c5-b15e" value="0.0"/>
       </modifiers>
@@ -13154,7 +13156,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="28df-2cc4-39ad-22c7" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="5d36-d383-ac3c-c973" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="5d36-d383-ac3c-c973" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13162,7 +13164,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4c37-270d-e067-8c8b" name="Erebor Reclaimed" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="4c37-270d-e067-8c8b" name="Erebor Reclaimed" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="d232-1603-9230-290e" value="0.0"/>
       </modifiers>
@@ -13175,7 +13177,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="e6bc-41bb-d087-65c4" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="602a-c1d2-84e1-5bbe" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="602a-c1d2-84e1-5bbe" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13183,7 +13185,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="afa9-80da-2e79-faad" name="The Dead of Dunharrow" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="afa9-80da-2e79-faad" name="The Dead of Dunharrow" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="a3ca-6a2e-e3e5-8790" value="0.0"/>
       </modifiers>
@@ -13196,7 +13198,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="da29-dc4a-ef27-8f3e" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="f730-ddaa-89eb-281d" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="f730-ddaa-89eb-281d" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13204,7 +13206,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5a79-55a9-cf37-510d" name="Arnor" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="5a79-55a9-cf37-510d" name="Arnor" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="8869-5a88-a14c-9df3" value="0.0"/>
       </modifiers>
@@ -13217,7 +13219,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="5da5-cbb1-daaa-3273" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="9ec6-f68b-7c38-0e24" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="9ec6-f68b-7c38-0e24" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13225,7 +13227,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="98a6-d611-c152-6d88" name="Army of Thrór" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="98a6-d611-c152-6d88" name="Army of Thrór" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="91bd-da63-84ae-72fd" value="0.0"/>
       </modifiers>
@@ -13238,7 +13240,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="12e0-fa1b-5020-07ac" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="bee7-532c-e293-9140" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="bee7-532c-e293-9140" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13246,7 +13248,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4448-0fe5-5a8a-3f77" name="Variags of Khand" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="4448-0fe5-5a8a-3f77" name="Variags of Khand" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="5fb9-7914-4549-340f" value="0.0"/>
       </modifiers>
@@ -13259,7 +13261,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="34d1-836e-33d7-d832" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="d5d7-9db0-7f9f-4e3c" name="Evil Army" hidden="false" collective="false" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
+        <entryLink id="d5d7-9db0-7f9f-4e3c" name="Evil Army" hidden="false" collective="false" import="true" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13267,7 +13269,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9606-2c4e-7df8-02b6" name="Army of Lake-town" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="9606-2c4e-7df8-02b6" name="Army of Lake-town" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="9f58-124a-1d85-d35e" value="0.0"/>
       </modifiers>
@@ -13280,7 +13282,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="37dd-c141-9db5-5f3f" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="6ef8-1053-087d-bb31" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="6ef8-1053-087d-bb31" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13288,7 +13290,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f748-ad73-4dc0-d72c" name="The Trolls" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="f748-ad73-4dc0-d72c" name="The Trolls" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="0852-2dc4-4a24-084d" value="0.0"/>
       </modifiers>
@@ -13301,7 +13303,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="8a25-e99a-271a-40cf" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="ffaf-16ae-e7ce-892e" name="Evil Army" hidden="false" collective="false" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
+        <entryLink id="ffaf-16ae-e7ce-892e" name="Evil Army" hidden="false" collective="false" import="true" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13309,7 +13311,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="99b2-160d-cab4-ab92" name="Sharkey&apos;s Rogues" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="99b2-160d-cab4-ab92" name="Sharkey&apos;s Rogues" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="4832-98eb-f8dc-c7d8" value="0.0"/>
       </modifiers>
@@ -13322,7 +13324,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="f8ab-9892-3426-a36f" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="12f8-3bc9-d862-0300" name="Evil Army" hidden="false" collective="false" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
+        <entryLink id="12f8-3bc9-d862-0300" name="Evil Army" hidden="false" collective="false" import="true" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13330,7 +13332,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9bc8-a16d-348f-72a2" name="The Serpent Horde" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="9bc8-a16d-348f-72a2" name="The Serpent Horde" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="9144-1a3c-561e-4cf4" value="0.0"/>
       </modifiers>
@@ -13343,7 +13345,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="cf61-e30f-c7a9-67f5" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="8180-3fb7-2c28-eb88" name="Evil Army" hidden="false" collective="false" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
+        <entryLink id="8180-3fb7-2c28-eb88" name="Evil Army" hidden="false" collective="false" import="true" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13351,7 +13353,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f765-0906-a562-a8d1" name="Moria" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="f765-0906-a562-a8d1" name="Moria" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="d34c-0cfa-20dd-271a" value="0.0"/>
       </modifiers>
@@ -13364,7 +13366,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="c3d9-5302-1203-73ca" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="8526-145d-7507-ea8a" name="Evil Army" hidden="false" collective="false" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
+        <entryLink id="8526-145d-7507-ea8a" name="Evil Army" hidden="false" collective="false" import="true" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13372,7 +13374,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3984-79cf-924b-bc01" name="Mordor" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="3984-79cf-924b-bc01" name="Mordor" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="4f84-79b7-bedf-0176" value="0.0"/>
       </modifiers>
@@ -13385,7 +13387,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="60f6-67b1-3ef1-fdf3" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="c27d-56cf-e009-bbc8" name="Evil Army" hidden="false" collective="false" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
+        <entryLink id="c27d-56cf-e009-bbc8" name="Evil Army" hidden="false" collective="false" import="true" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13393,7 +13395,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6c91-4fdd-ad16-08dc" name="Isengard" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="6c91-4fdd-ad16-08dc" name="Isengard" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="f774-364d-6877-5538" value="0.0"/>
       </modifiers>
@@ -13406,7 +13408,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="3fc8-2f5d-4fee-6f1d" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="d6b4-aed2-34f8-db8c" name="Evil Army" hidden="false" collective="false" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
+        <entryLink id="d6b4-aed2-34f8-db8c" name="Evil Army" hidden="false" collective="false" import="true" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13414,7 +13416,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c4cb-7e10-4e2e-e0b5" name="Goblin-town" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="c4cb-7e10-4e2e-e0b5" name="Goblin-town" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="cb59-aaf0-1924-c4db" value="0.0"/>
       </modifiers>
@@ -13427,7 +13429,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="5ad3-1ee8-efc6-b76d" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="4e12-ca51-1c9a-72da" name="Evil Army" hidden="false" collective="false" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
+        <entryLink id="4e12-ca51-1c9a-72da" name="Evil Army" hidden="false" collective="false" import="true" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13435,7 +13437,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="91fe-8a4c-a6a4-995d" name="Far Harad" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="91fe-8a4c-a6a4-995d" name="Far Harad" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="c6dd-ce6b-7884-eeb1" value="0.0"/>
       </modifiers>
@@ -13448,7 +13450,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="2fa9-1065-db55-3c0e" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="d1fb-d101-f75e-8e65" name="Evil Army" hidden="false" collective="false" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
+        <entryLink id="d1fb-d101-f75e-8e65" name="Evil Army" hidden="false" collective="false" import="true" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13456,7 +13458,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6647-a66d-21f5-5f72" name="Desolator of the North" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="6647-a66d-21f5-5f72" name="Desolator of the North" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="668f-8094-3e38-b42a" value="0.0"/>
       </modifiers>
@@ -13469,7 +13471,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="eb9f-54c4-b7ae-eb5f" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="77e9-e0af-3faa-b369" name="Evil Army" hidden="false" collective="false" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
+        <entryLink id="77e9-e0af-3faa-b369" name="Evil Army" hidden="false" collective="false" import="true" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13477,7 +13479,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="54d3-0df2-03ed-f020" name="Dark Powers of Dol Guldur" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="54d3-0df2-03ed-f020" name="Dark Powers of Dol Guldur" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="b5c4-0315-5ab5-2f3b" value="0.0"/>
       </modifiers>
@@ -13490,7 +13492,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="c0c8-5e37-9c51-129a" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="9afe-eb55-b7e1-db98" name="Evil Army" hidden="false" collective="false" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
+        <entryLink id="9afe-eb55-b7e1-db98" name="Evil Army" hidden="false" collective="false" import="true" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13498,7 +13500,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="afb1-3be7-a737-7253" name="Dark Denizens of Mirkwood" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="afb1-3be7-a737-7253" name="Dark Denizens of Mirkwood" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="e2eb-3c24-81cc-703c" value="0.0"/>
       </modifiers>
@@ -13511,7 +13513,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="4a25-3c52-b32b-0265" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="13ea-45b9-6c8f-3d28" name="Evil Army" hidden="false" collective="false" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
+        <entryLink id="13ea-45b9-6c8f-3d28" name="Evil Army" hidden="false" collective="false" import="true" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13519,7 +13521,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c5b8-3e85-1c95-cdea" name="Corsairs of Umbar" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="c5b8-3e85-1c95-cdea" name="Corsairs of Umbar" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="370d-9ccf-fac4-7ea1" value="0.0"/>
       </modifiers>
@@ -13532,7 +13534,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="1d8a-7965-a536-3928" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="5c54-34e2-2b2e-2f8e" name="Evil Army" hidden="false" collective="false" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
+        <entryLink id="5c54-34e2-2b2e-2f8e" name="Evil Army" hidden="false" collective="false" import="true" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13540,7 +13542,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="fafc-c822-4c4e-3473" name="Barad-dûr" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="fafc-c822-4c4e-3473" name="Barad-dûr" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="4962-2516-b865-03c6" value="0.0"/>
       </modifiers>
@@ -13553,7 +13555,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="8836-e69a-dcf0-6482" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="c283-270d-5858-7a2a" name="Evil Army" hidden="false" collective="false" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
+        <entryLink id="c283-270d-5858-7a2a" name="Evil Army" hidden="false" collective="false" import="true" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13561,7 +13563,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5776-5233-d96a-ef21" name="Azog&apos;s Legion" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="5776-5233-d96a-ef21" name="Azog&apos;s Legion" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="4130-532e-329d-486d" value="0.0"/>
       </modifiers>
@@ -13574,7 +13576,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="f17e-787a-2573-242f" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="5126-70ce-a7cf-fd4a" name="Evil Army" hidden="false" collective="false" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
+        <entryLink id="5126-70ce-a7cf-fd4a" name="Evil Army" hidden="false" collective="false" import="true" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13582,7 +13584,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="fc24-78cf-c429-5f5d" name="Azog&apos;s Hunters" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="fc24-78cf-c429-5f5d" name="Azog&apos;s Hunters" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="5f7f-b642-e4b3-d266" value="0.0"/>
       </modifiers>
@@ -13595,7 +13597,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="64d7-aca0-243c-9291" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="51ee-92ed-c642-ae0b" name="Evil Army" hidden="false" collective="false" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
+        <entryLink id="51ee-92ed-c642-ae0b" name="Evil Army" hidden="false" collective="false" import="true" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13603,7 +13605,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="dac7-2f33-9c87-ddca" name="Angmar" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="dac7-2f33-9c87-ddca" name="Angmar" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="34d0-282a-8e24-dbf4" value="0.0"/>
       </modifiers>
@@ -13617,7 +13619,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="d831-c917-3310-376f" name="Rules" hidden="false" targetId="e608-60e7-5ad3-f6a3" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="0bd4-8914-996b-d7d9" name="Evil Army" hidden="false" collective="false" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
+        <entryLink id="0bd4-8914-996b-d7d9" name="Evil Army" hidden="false" collective="false" import="true" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13625,7 +13627,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0d42-f863-e2d1-26d8" name="The Kingdom of Moria" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="0d42-f863-e2d1-26d8" name="The Kingdom of Moria" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="c0c2-7a2f-4b39-3bfa" value="0.0"/>
       </modifiers>
@@ -13638,7 +13640,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="43fe-e648-590c-4fa8" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="4598-329f-40d9-87c1" name="Good Army" hidden="false" collective="false" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
+        <entryLink id="4598-329f-40d9-87c1" name="Good Army" hidden="false" collective="false" import="true" targetId="5ec8-ad8d-8d3f-368c" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -13646,7 +13648,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="af89-b25c-bd59-88fd" name="Flamming Ammunition" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="af89-b25c-bd59-88fd" name="Flamming Ammunition" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="857e-3b27-cbf6-aca7" type="max"/>
       </constraints>
@@ -13661,7 +13663,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="dc44-fdf1-7ac8-1302" name="Severed Heads" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="dc44-fdf1-7ac8-1302" name="Severed Heads" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="17ca-9a7c-728e-8b60" type="max"/>
       </constraints>
@@ -13676,7 +13678,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="af0d-caf2-dd72-c81d" name="Superior Construction" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="af0d-caf2-dd72-c81d" name="Superior Construction" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8033-1a38-5d18-a710" type="max"/>
       </constraints>
@@ -13691,7 +13693,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="575e-8ca9-7dac-9a71" name="Swift Reload" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="575e-8ca9-7dac-9a71" name="Swift Reload" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a09a-4bde-3061-d27f" type="max"/>
       </constraints>
@@ -13706,7 +13708,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="897d-ab38-a11e-301a" name="Crossbow" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="897d-ab38-a11e-301a" name="Crossbow" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c2c-972b-c74f-822a" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a8eb-1f76-c662-94cc" type="min"/>
@@ -13720,12 +13722,12 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c871-2297-3165-268d" name="We cannot get out, they are coming" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="c871-2297-3165-268d" name="We cannot get out, they are coming." hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b0be-0f4e-013c-7515" type="max"/>
       </constraints>
       <rules>
-        <rule id="90fa-aaa4-c970-cf49" name="We cannot get out, they are coming" publicationId="3e16-9abf-pubN103678" page="150" hidden="false">
+        <rule id="90fa-aaa4-c970-cf49" name="We cannot get out, they are coming." publicationId="3e16-9abf-pubN103678" page="150" hidden="false">
           <description>Friendly Moria Goblin models involved in a Fight where their opponent is Trapped receive a bonus of +1 to their Fight value.</description>
         </rule>
       </rules>
@@ -13738,7 +13740,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a0b9-e8a1-bbce-47b2" name="Leader (Legend)" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="a0b9-e8a1-bbce-47b2" name="Leader (Legend)" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="427b-77c2-22d2-ddd8" value="1">
           <conditions>
@@ -13788,7 +13790,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="852a-dd6e-17c4-1a59" name="Leader (Valour)" hidden="true" collective="false" type="upgrade">
+    <selectionEntry id="852a-dd6e-17c4-1a59" name="Leader (Valour)" hidden="true" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditions>
@@ -13819,7 +13821,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0ca9-a833-8cd4-b806" name="Leader (Fortitude)" hidden="true" collective="false" type="upgrade">
+    <selectionEntry id="0ca9-a833-8cd4-b806" name="Leader (Fortitude)" hidden="true" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="6481-8964-ffdb-e4f2" value="1">
           <conditionGroups>
@@ -13872,7 +13874,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4bbe-b6f8-1426-c662" name="Hero of Legend" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="4bbe-b6f8-1426-c662" name="Hero of Legend" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f2c1-c21f-fc73-5596" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f02-80b3-e95c-446b" type="max"/>
@@ -13883,7 +13885,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9afa-e012-fc54-795e" name="Hero of Valour" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="9afa-e012-fc54-795e" name="Hero of Valour" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3944-1faa-9bef-07a2" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3988-c846-3bd1-4ae7" type="min"/>
@@ -13894,7 +13896,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="36a4-de5b-fd01-3f8e" name="Minor Hero" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="36a4-de5b-fd01-3f8e" name="Minor Hero" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a36-25c8-22c9-7ece" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="388e-d598-956c-df0e" type="max"/>
@@ -13905,7 +13907,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="963b-d9e7-5451-b0f9" name="Hero of Fortitude" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="963b-d9e7-5451-b0f9" name="Hero of Fortitude" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7750-9586-81ad-2846" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="271e-6e60-51df-a77e" type="max"/>
@@ -13916,7 +13918,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7729-939c-9d5c-473e" name="Independent Hero" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="7729-939c-9d5c-473e" name="Independent Hero" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc47-b4b1-9cf3-26df" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ad2-7a24-ba30-6d46" type="max"/>
@@ -13932,7 +13934,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f6e2-af14-8ec9-0996" name="Orc Drummer" hidden="false" collective="false" type="model">
+    <selectionEntry id="f6e2-af14-8ec9-0996" name="Orc Drummer" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9086-0c38-3317-1a42" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f2ed-4599-577b-29c2" type="min"/>
@@ -13957,9 +13959,9 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         </profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="2b63-dfa2-8492-23b8" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="2b63-dfa2-8492-23b8" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="9fd6-fa89-913d-9b7b" name="War Drum (Mordor Orc)" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="9fd6-fa89-913d-9b7b" name="War Drum (Mordor Orc)" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7cb0-0312-1fed-c19b" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a57-e12e-4be4-a62e" type="max"/>
@@ -13979,13 +13981,13 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="ab9e-9844-5868-265f" name="Dagger" hidden="false" collective="false" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
-            <entryLink id="6be1-7bf5-5411-aa87" name="Armour" hidden="false" collective="false" targetId="37fc-f943-01eb-2efd" type="selectionEntry"/>
+            <entryLink id="ab9e-9844-5868-265f" name="Dagger" hidden="false" collective="false" import="true" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
+            <entryLink id="6be1-7bf5-5411-aa87" name="Armour" hidden="false" collective="false" import="true" targetId="37fc-f943-01eb-2efd" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="fb9f-9ba6-ba67-2f58" name="Independent Hero" hidden="false" collective="false" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
+        <entryLink id="fb9f-9ba6-ba67-2f58" name="Independent Hero" hidden="false" collective="false" import="true" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="30.0"/>
@@ -13993,7 +13995,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d520-5c6d-e926-3405" name="Shelob" hidden="false" collective="false" type="model">
+    <selectionEntry id="d520-5c6d-e926-3405" name="Shelob" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c3e6-7c35-c28d-faa8" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="69c5-2a49-e8e7-18b8" type="min"/>
@@ -14034,9 +14036,9 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <infoLink id="e0d3-18b6-0bfd-db12" name="Venom" hidden="false" targetId="7b63-9547-be7a-d31d" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="6c43-4456-a516-60a2" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="6c43-4456-a516-60a2" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="a0f6-b899-9f6a-27ca" name="Large Venomous Fangs" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="a0f6-b899-9f6a-27ca" name="Large Venomous Fangs" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f011-b83d-2018-28c0" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a871-cd84-9d12-1308" type="min"/>
@@ -14058,7 +14060,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="4e4f-c2b7-1c98-6056" name="Independent Hero" hidden="false" collective="false" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
+        <entryLink id="4e4f-c2b7-1c98-6056" name="Independent Hero" hidden="false" collective="false" import="true" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="90.0"/>
@@ -14066,7 +14068,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f9b3-aa87-7005-74a4" name="Elven Cloak" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="f9b3-aa87-7005-74a4" name="Elven Cloak" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6327-6187-1057-1fdb" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0493-03eb-76f9-59df" type="min"/>
@@ -14080,7 +14082,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="490b-d0a2-979b-56dd" name="Black Númenórean Marshal" hidden="false" collective="false" type="model">
+    <selectionEntry id="490b-d0a2-979b-56dd" name="Black Númenórean Marshal" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f1d-c123-b5ed-2c05" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6157-7a0a-64a4-8474" type="max"/>
@@ -14115,15 +14117,15 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <infoLink id="6219-d708-1fa7-c173" name="Terror" hidden="false" targetId="85b0-001b-cf06-77c8" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="9116-8efa-6f22-01f1" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="9116-8efa-6f22-01f1" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntryGroups>
-            <selectionEntryGroup id="0969-5303-2834-cb7f" name=" " hidden="false" collective="false" defaultSelectionEntryId="76ca-76ce-6f0c-e83a">
+            <selectionEntryGroup id="0969-5303-2834-cb7f" name=" " hidden="false" collective="false" import="true" defaultSelectionEntryId="76ca-76ce-6f0c-e83a">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c418-4c6a-5f91-7adf" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1bc1-bc85-b0d7-b957" type="max"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry id="e7b3-b2c9-e651-f324" name="Two-handed Weapon" hidden="false" collective="false" type="upgrade">
+                <selectionEntry id="e7b3-b2c9-e651-f324" name="Two-handed Weapon" hidden="false" collective="false" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e31b-3e38-a853-57f2" type="max"/>
                   </constraints>
@@ -14139,7 +14141,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
                 </selectionEntry>
               </selectionEntries>
               <entryLinks>
-                <entryLink id="76ca-76ce-6f0c-e83a" name="Shield" hidden="false" collective="false" targetId="6105-888b-3a63-c138" type="selectionEntry">
+                <entryLink id="76ca-76ce-6f0c-e83a" name="Shield" hidden="false" collective="false" import="true" targetId="6105-888b-3a63-c138" type="selectionEntry">
                   <modifiers>
                     <modifier type="set" field="502e-b8c1-ae12-eded" value="0.0"/>
                   </modifiers>
@@ -14148,20 +14150,20 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink id="fcb8-0f98-19bc-3e2d" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
-            <entryLink id="adc0-d5e5-7a71-a1f7" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="fcb8-0f98-19bc-3e2d" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="adc0-d5e5-7a71-a1f7" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="e70a-f202-9803-5e2e" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="e70a-f202-9803-5e2e" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="ce39-12c5-aed8-958d" name="Armoured Horse" hidden="false" collective="false" targetId="eb59-3a9f-f03b-22cc" type="selectionEntry"/>
-            <entryLink id="0d07-eb93-9d34-aaf1" name="Lance" hidden="false" collective="false" targetId="aa35-f48c-f09a-8f99" type="selectionEntry"/>
+            <entryLink id="ce39-12c5-aed8-958d" name="Armoured Horse" hidden="false" collective="false" import="true" targetId="eb59-3a9f-f03b-22cc" type="selectionEntry"/>
+            <entryLink id="0d07-eb93-9d34-aaf1" name="Lance" hidden="false" collective="false" import="true" targetId="aa35-f48c-f09a-8f99" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="60ba-b3ca-ef64-bea6" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
-        <entryLink id="1292-493e-3b9b-e730" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="60ba-b3ca-ef64-bea6" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="1292-493e-3b9b-e730" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="65.0"/>
@@ -14169,7 +14171,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0880-212b-aebf-a46f" name="The Easterlings" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="0880-212b-aebf-a46f" name="The Easterlings" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="02fe-2f8c-31d7-fc0a" value="0.0"/>
       </modifiers>
@@ -14182,7 +14184,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <categoryLink id="3dc1-1305-c2b8-de98" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="136c-c038-f1a0-dc0b" name="Evil Army" hidden="false" collective="false" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
+        <entryLink id="136c-c038-f1a0-dc0b" name="Evil Army" hidden="false" collective="false" import="true" targetId="c8de-356b-9843-911d" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -14190,7 +14192,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="db5a-e4d1-3e5a-4fb5" name="Orc Captain" hidden="false" collective="false" type="model">
+    <selectionEntry id="db5a-e4d1-3e5a-4fb5" name="Orc Captain" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a67d-489d-28d8-3942" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="799f-ffea-50b6-10e8" type="max"/>
@@ -14229,22 +14231,22 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         </profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="ea09-2e6a-5d0e-4b92" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="ea09-2e6a-5d0e-4b92" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="7fa8-6b57-4b6f-fccf" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
-            <entryLink id="8fff-3e47-0ac0-38e5" name="Weapon" hidden="false" collective="false" targetId="f6ad-e4da-7fb4-dae1" type="selectionEntryGroup"/>
+            <entryLink id="7fa8-6b57-4b6f-fccf" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="8fff-3e47-0ac0-38e5" name="Weapon" hidden="false" collective="false" import="true" targetId="f6ad-e4da-7fb4-dae1" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="7327-ffb2-0ca9-5363" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="7327-ffb2-0ca9-5363" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="32ca-13f4-ebe9-fe1f" name="Warg" hidden="false" collective="false" targetId="afb0-087f-dce2-2ec8" type="selectionEntry"/>
-            <entryLink id="2d8b-6c3a-e8f3-da21" name="Shield" hidden="false" collective="false" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
-            <entryLink id="28ea-835d-1a36-22d0" name="Orc Bow" hidden="false" collective="false" targetId="54a8-3f7e-8ab6-2cdd" type="selectionEntry"/>
+            <entryLink id="32ca-13f4-ebe9-fe1f" name="Warg" hidden="false" collective="false" import="true" targetId="afb0-087f-dce2-2ec8" type="selectionEntry"/>
+            <entryLink id="2d8b-6c3a-e8f3-da21" name="Shield" hidden="false" collective="false" import="true" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
+            <entryLink id="28ea-835d-1a36-22d0" name="Orc Bow" hidden="false" collective="false" import="true" targetId="54a8-3f7e-8ab6-2cdd" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="6855-91c7-e4f6-0851" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry">
+        <entryLink id="6855-91c7-e4f6-0851" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="6481-8964-ffdb-e4f2" value="1">
               <conditions>
@@ -14279,7 +14281,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="50eb-e6dd-81a8-012b" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="50eb-e6dd-81a8-012b" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -14287,7 +14289,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3519-2ab9-5052-67da" name="Orc Shaman" hidden="false" collective="false" type="model">
+    <selectionEntry id="3519-2ab9-5052-67da" name="Orc Shaman" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="10df-a058-bdc6-7239" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed2b-b3ff-9c2c-0caa" type="max"/>
@@ -14328,21 +14330,21 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="7515-73f9-f7ba-100e" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="7515-73f9-f7ba-100e" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="da7b-cbb6-c434-a3e7" name="Spear" hidden="false" collective="false" targetId="9cb9-9ebe-8ffa-86f3" type="selectionEntry"/>
-            <entryLink id="a3a8-6d19-75b1-983d" name="Dagger" hidden="false" collective="false" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
-            <entryLink id="5d41-93a0-bbca-24e0" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="da7b-cbb6-c434-a3e7" name="Spear" hidden="false" collective="false" import="true" targetId="9cb9-9ebe-8ffa-86f3" type="selectionEntry"/>
+            <entryLink id="a3a8-6d19-75b1-983d" name="Dagger" hidden="false" collective="false" import="true" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
+            <entryLink id="5d41-93a0-bbca-24e0" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="31a9-1d79-580e-8b00" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="31a9-1d79-580e-8b00" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="61f1-bc35-87ee-2340" name="Warg" hidden="false" collective="false" targetId="afb0-087f-dce2-2ec8" type="selectionEntry"/>
+            <entryLink id="61f1-bc35-87ee-2340" name="Warg" hidden="false" collective="false" import="true" targetId="afb0-087f-dce2-2ec8" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="afc3-f18b-fc21-ca97" name="Minor Hero" hidden="false" collective="false" targetId="36a4-de5b-fd01-3f8e" type="selectionEntry"/>
+        <entryLink id="afc3-f18b-fc21-ca97" name="Minor Hero" hidden="false" collective="false" import="true" targetId="36a4-de5b-fd01-3f8e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -14350,7 +14352,7 @@ As long as Frodo is alive and on the table (or escapes the board in Scenarios wh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="94e4-5dca-9fa0-b65c" name="Khamûl The Easterling" hidden="false" collective="false" type="model">
+    <selectionEntry id="94e4-5dca-9fa0-b65c" name="Khamûl The Easterling" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="f24e-9028-6999-eb22" value="0.0">
           <conditions>
@@ -14433,17 +14435,17 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="9e7a-ff04-f9be-649d" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="9e7a-ff04-f9be-649d" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="0cd5-2caa-54f5-54c4" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
-            <entryLink id="c76d-b3fb-1312-7594" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="0cd5-2caa-54f5-54c4" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="c76d-b3fb-1312-7594" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="20f5-562e-48ff-a52f" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
-        <entryLink id="73fd-0416-9dd4-2f9e" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="8cca-3de9-4264-c452" name="Mounts" hidden="false" collective="false" targetId="a8f0-7b08-5acd-ee98" type="selectionEntryGroup"/>
+        <entryLink id="20f5-562e-48ff-a52f" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="73fd-0416-9dd4-2f9e" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="8cca-3de9-4264-c452" name="Mounts" hidden="false" collective="false" import="true" targetId="a8f0-7b08-5acd-ee98" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -14451,7 +14453,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9488-5544-6c7c-bce2" name="Ringwraith" hidden="false" collective="false" type="model">
+    <selectionEntry id="9488-5544-6c7c-bce2" name="Ringwraith" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="decrement" field="0b97-c2fd-45d6-31e4" value="1">
           <conditions>
@@ -14584,15 +14586,15 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="e9cc-7d82-2824-b9b5" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="e9cc-7d82-2824-b9b5" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="3da2-5f0c-8743-02c1" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
-            <entryLink id="a7a2-5d79-34fa-9964" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="3da2-5f0c-8743-02c1" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="a7a2-5d79-34fa-9964" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="ff65-f0ab-b580-8c56" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="ff65-f0ab-b580-8c56" name="Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="2ad9-e548-15bb-7d1c" name="Extra Will" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="2ad9-e548-15bb-7d1c" name="Extra Will" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="7.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b34-beec-4b21-bf04" type="max"/>
               </constraints>
@@ -14602,7 +14604,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="dabe-f09d-8870-4c54" name="Extra Might" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="dabe-f09d-8870-4c54" name="Extra Might" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="13bc-753c-d8ac-a1fc" type="max"/>
               </constraints>
@@ -14612,7 +14614,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="1e05-020b-65c6-e8a3" name="Extra Fate" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="1e05-020b-65c6-e8a3" name="Extra Fate" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="48cc-e862-9438-7fbd" type="max"/>
               </constraints>
@@ -14626,9 +14628,9 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="2e0e-61c0-d881-93bf" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
-        <entryLink id="cc40-76a3-294e-1f4c" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="17c9-578c-9a3a-3a2b" name="Mounts" hidden="false" collective="false" targetId="a8f0-7b08-5acd-ee98" type="selectionEntryGroup"/>
+        <entryLink id="2e0e-61c0-d881-93bf" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="cc40-76a3-294e-1f4c" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="17c9-578c-9a3a-3a2b" name="Mounts" hidden="false" collective="false" import="true" targetId="a8f0-7b08-5acd-ee98" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -14636,7 +14638,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="cc0b-d272-62b1-a292" name="The Betrayer" hidden="false" collective="false" type="model">
+    <selectionEntry id="cc0b-d272-62b1-a292" name="The Betrayer" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d517-13be-4a89-218a" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f411-82ff-d49b-d648" type="min"/>
@@ -14711,17 +14713,17 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="227c-cf7d-1452-c194" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="227c-cf7d-1452-c194" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="e64c-d6a9-b98a-ee65" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
-            <entryLink id="7414-3c95-95f0-189a" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="e64c-d6a9-b98a-ee65" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="7414-3c95-95f0-189a" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="2a8d-96f5-9042-266a" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
-        <entryLink id="27ef-379f-e428-75bc" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="2718-691b-13a4-5fd6" name="Mounts" hidden="false" collective="false" targetId="a8f0-7b08-5acd-ee98" type="selectionEntryGroup"/>
+        <entryLink id="2a8d-96f5-9042-266a" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="27ef-379f-e428-75bc" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="2718-691b-13a4-5fd6" name="Mounts" hidden="false" collective="false" import="true" targetId="a8f0-7b08-5acd-ee98" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -14729,7 +14731,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="120.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c53c-c1e2-fe4c-0da8" name="The Dark Marshal" hidden="false" collective="false" type="model">
+    <selectionEntry id="c53c-c1e2-fe4c-0da8" name="The Dark Marshal" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7318-db39-b633-cc83" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f62-f30d-3e31-8758" type="max"/>
@@ -14803,17 +14805,17 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="0db1-052e-d796-4938" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="0db1-052e-d796-4938" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="53cd-86ed-41d7-1739" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-            <entryLink id="e15c-8609-99a0-7b51" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="53cd-86ed-41d7-1739" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="e15c-8609-99a0-7b51" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="0194-c7e6-da43-c8eb" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
-        <entryLink id="2ee6-43fe-485e-d668" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="a502-d273-a254-67f7" name="Mounts" hidden="false" collective="false" targetId="a8f0-7b08-5acd-ee98" type="selectionEntryGroup"/>
+        <entryLink id="0194-c7e6-da43-c8eb" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="2ee6-43fe-485e-d668" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="a502-d273-a254-67f7" name="Mounts" hidden="false" collective="false" import="true" targetId="a8f0-7b08-5acd-ee98" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="120.0"/>
@@ -14821,7 +14823,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a89c-2934-4ea0-a986" name="The Knight of Umbar" hidden="false" collective="false" type="model">
+    <selectionEntry id="a89c-2934-4ea0-a986" name="The Knight of Umbar" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="918b-971a-f4d9-70b7" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b05b-6087-b72f-3a9f" type="min"/>
@@ -14895,9 +14897,9 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="e2c0-820a-700e-9c53" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="e2c0-820a-700e-9c53" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="5599-3797-3431-f2bf" name="Armour of the Sundered Land" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="5599-3797-3431-f2bf" name="Armour of the Sundered Land" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="52d4-30f2-55a6-a46e" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb21-9c47-ef3d-9760" type="min"/>
@@ -14917,14 +14919,14 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="e127-a8c6-d552-21f8" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="e127-a8c6-d552-21f8" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="0806-cded-3a98-dceb" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
-        <entryLink id="956e-c22d-0418-0d3f" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="a16e-9e64-0cf9-294a" name="Mounts" hidden="false" collective="false" targetId="a8f0-7b08-5acd-ee98" type="selectionEntryGroup"/>
+        <entryLink id="0806-cded-3a98-dceb" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="956e-c22d-0418-0d3f" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="a16e-9e64-0cf9-294a" name="Mounts" hidden="false" collective="false" import="true" targetId="a8f0-7b08-5acd-ee98" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="120.0"/>
@@ -14932,7 +14934,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3d1e-0686-d28a-3957" name="The Shadow Lord" hidden="false" collective="false" type="model">
+    <selectionEntry id="3d1e-0686-d28a-3957" name="The Shadow Lord" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2b9a-d8cf-50d3-9d3f" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="321c-ea4f-19df-95bb" type="max"/>
@@ -15006,17 +15008,17 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="8d57-b18c-98e4-b457" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="8d57-b18c-98e4-b457" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="5839-15c1-ea97-e1b0" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-            <entryLink id="e277-2212-24b3-309c" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="5839-15c1-ea97-e1b0" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="e277-2212-24b3-309c" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="7604-a9a6-faea-dcc7" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
-        <entryLink id="d354-809b-a1e1-31d6" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="2bf8-3565-f149-c47e" name="Mounts" hidden="false" collective="false" targetId="a8f0-7b08-5acd-ee98" type="selectionEntryGroup"/>
+        <entryLink id="7604-a9a6-faea-dcc7" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="d354-809b-a1e1-31d6" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="2bf8-3565-f149-c47e" name="Mounts" hidden="false" collective="false" import="true" targetId="a8f0-7b08-5acd-ee98" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="120.0"/>
@@ -15024,7 +15026,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6c13-c2e0-51fb-1d5c" name="The Tainted" hidden="false" collective="false" type="model">
+    <selectionEntry id="6c13-c2e0-51fb-1d5c" name="The Tainted" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c61c-27a8-8cef-0252" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="636d-2f7e-7444-300f" type="max"/>
@@ -15101,17 +15103,17 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="2d69-1986-5e82-78ae" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="2d69-1986-5e82-78ae" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="c298-3cb8-8e18-c498" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-            <entryLink id="9502-ee36-8c46-331f" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="c298-3cb8-8e18-c498" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="9502-ee36-8c46-331f" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="a1b4-3611-efae-6826" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
-        <entryLink id="f081-6437-15a8-8f2f" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="eddd-c32f-7005-43ad" name="Mounts" hidden="false" collective="false" targetId="a8f0-7b08-5acd-ee98" type="selectionEntryGroup"/>
+        <entryLink id="a1b4-3611-efae-6826" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="f081-6437-15a8-8f2f" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="eddd-c32f-7005-43ad" name="Mounts" hidden="false" collective="false" import="true" targetId="a8f0-7b08-5acd-ee98" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -15119,7 +15121,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b682-72ff-629b-2dfd" name="The Undying" hidden="false" collective="false" type="model">
+    <selectionEntry id="b682-72ff-629b-2dfd" name="The Undying" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="65cb-ce7d-ea57-641c" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b5ef-3b43-d738-5d09" type="min"/>
@@ -15196,17 +15198,17 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="7e12-f816-3e11-1648" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="7e12-f816-3e11-1648" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="a7c5-b1a3-4246-7b4a" name="Staff" hidden="false" collective="false" targetId="badb-13f4-1286-1864" type="selectionEntry"/>
-            <entryLink id="2ce2-d219-80bc-1ba6" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="a7c5-b1a3-4246-7b4a" name="Staff" hidden="false" collective="false" import="true" targetId="badb-13f4-1286-1864" type="selectionEntry"/>
+            <entryLink id="2ce2-d219-80bc-1ba6" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="10ff-c915-e225-6e86" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
-        <entryLink id="b706-23b1-c495-36c1" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="c0dc-ae76-a1cf-0221" name="Mounts" hidden="false" collective="false" targetId="a8f0-7b08-5acd-ee98" type="selectionEntryGroup"/>
+        <entryLink id="10ff-c915-e225-6e86" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="b706-23b1-c495-36c1" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="c0dc-ae76-a1cf-0221" name="Mounts" hidden="false" collective="false" import="true" targetId="a8f0-7b08-5acd-ee98" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="120.0"/>
@@ -15214,7 +15216,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2826-f4d5-a5b2-6e6f" name="The Witch-king of Angmar" hidden="false" collective="false" type="model">
+    <selectionEntry id="2826-f4d5-a5b2-6e6f" name="The Witch-king of Angmar" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="4236-c430-dd06-0598" value="0.0">
           <conditions>
@@ -15335,15 +15337,15 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="258e-c876-07e0-a2b4" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="258e-c876-07e0-a2b4" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="6fd5-d809-3271-90b1" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
-            <entryLink id="a85b-6b37-a24c-7aa4" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="6fd5-d809-3271-90b1" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="a85b-6b37-a24c-7aa4" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="7af2-1895-1650-47da" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="7af2-1895-1650-47da" name="Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="9b4e-23c0-7c61-9bb6" name="Extra Will" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="9b4e-23c0-7c61-9bb6" name="Extra Will" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5723-00a1-afd6-e114" type="max"/>
               </constraints>
@@ -15353,7 +15355,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="9b2c-d9c4-4f05-a3ae" name="Extra Might" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="9b2c-d9c4-4f05-a3ae" name="Extra Might" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f32a-c946-0676-98a5" type="max"/>
               </constraints>
@@ -15363,7 +15365,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="2d68-e9b2-0db4-f1b8" name="Extra Fate" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="2d68-e9b2-0db4-f1b8" name="Extra Fate" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="20ec-8d0d-58c4-bfc4" type="max"/>
               </constraints>
@@ -15373,7 +15375,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="42bf-7f4c-6c8f-8d0b" name="Morgal Blade" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="42bf-7f4c-6c8f-8d0b" name="Morgal Blade" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d1f8-4423-582d-6ee3" type="max"/>
               </constraints>
@@ -15386,7 +15388,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="8435-562c-ab13-87da" name="Two-handed Flail" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="8435-562c-ab13-87da" name="Two-handed Flail" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb3f-9381-dca6-3df0" type="max"/>
               </constraints>
@@ -15400,7 +15402,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="269c-5c1c-af80-c908" name="Crown of Morgul" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="269c-5c1c-af80-c908" name="Crown of Morgul" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0f63-765a-6db5-acf9" type="max"/>
               </constraints>
@@ -15419,12 +15421,12 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="bc4b-3467-6117-7eb1" name="Mounts" hidden="false" collective="false" targetId="a8f0-7b08-5acd-ee98" type="selectionEntryGroup"/>
+            <entryLink id="bc4b-3467-6117-7eb1" name="Mounts" hidden="false" collective="false" import="true" targetId="a8f0-7b08-5acd-ee98" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="f9f9-439d-67d4-118f" name="Leader (Legend)" hidden="false" collective="false" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry">
+        <entryLink id="f9f9-439d-67d4-118f" name="Leader (Legend)" hidden="false" collective="false" import="true" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -15433,7 +15435,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="2b28-c042-fa1a-47e3" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry">
+        <entryLink id="2b28-c042-fa1a-47e3" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -15456,7 +15458,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="61e3-6379-253a-2c6f" name="The Dwimmerlaik" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="61e3-6379-253a-2c6f" name="The Dwimmerlaik" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cd62-be22-b0e8-fb0b" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a1c8-c38c-45ae-aa87" type="min"/>
@@ -15530,17 +15532,17 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="21f7-3ffa-2a2e-3af0" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="21f7-3ffa-2a2e-3af0" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="c3fc-e101-0640-6a8d" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
-            <entryLink id="b499-0d19-0ef3-a1bd" name="Two-Handed Sword" hidden="false" collective="false" targetId="5047-cb17-b681-56ed" type="selectionEntry"/>
+            <entryLink id="c3fc-e101-0640-6a8d" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="b499-0d19-0ef3-a1bd" name="Two-Handed Sword" hidden="false" collective="false" import="true" targetId="5047-cb17-b681-56ed" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="4a3f-b41c-1f2e-4abc" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
-        <entryLink id="f189-db03-4975-907c" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="4a24-9d18-5750-9924" name="Mounts" hidden="false" collective="false" targetId="a8f0-7b08-5acd-ee98" type="selectionEntryGroup"/>
+        <entryLink id="4a3f-b41c-1f2e-4abc" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="f189-db03-4975-907c" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="4a24-9d18-5750-9924" name="Mounts" hidden="false" collective="false" import="true" targetId="a8f0-7b08-5acd-ee98" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -15548,7 +15550,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="120.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="dbff-e862-ed44-bb22" name="Mordor Troll Chieftain" hidden="false" collective="false" type="model">
+    <selectionEntry id="dbff-e862-ed44-bb22" name="Mordor Troll Chieftain" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8834-3362-bc27-a1ad" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bca7-1642-7700-66c2" type="max"/>
@@ -15578,16 +15580,16 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <infoLink id="097c-a67f-0dca-9ebf" name="Throw Stones" hidden="false" targetId="39ee-f288-50d5-973e" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="dea6-c55b-472f-a177" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="dea6-c55b-472f-a177" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="938a-3181-6067-5b61" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-            <entryLink id="733e-c1d2-066a-5bc5" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="938a-3181-6067-5b61" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="733e-c1d2-066a-5bc5" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="5bfd-504e-0724-8d2c" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
-        <entryLink id="9d23-fc89-6294-f998" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="5bfd-504e-0724-8d2c" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="9d23-fc89-6294-f998" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="140.0"/>
@@ -15595,7 +15597,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="65e6-fd2a-a815-7201" name="Orc Taskmaster" hidden="false" collective="false" type="model">
+    <selectionEntry id="65e6-fd2a-a815-7201" name="Orc Taskmaster" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b235-8731-dc8e-aa45" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ec5-4c7d-3495-4b45" type="max"/>
@@ -15623,16 +15625,16 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <infoLink id="e8da-98fa-61e2-6c89" name="Whip of the Masters" hidden="false" targetId="e4f9-3fa2-607e-f5d0" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="bfff-8ebb-b0f1-558b" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="bfff-8ebb-b0f1-558b" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="0b3d-afed-adc3-adcc" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
-            <entryLink id="55b1-0977-0005-3fac" name="Mace" hidden="false" collective="false" targetId="7386-6cd4-6c54-d454" type="selectionEntry"/>
-            <entryLink id="6b18-ddf7-47fb-a515" name="Whip" hidden="false" collective="false" targetId="a99a-d310-42cf-5dd7" type="selectionEntry"/>
+            <entryLink id="0b3d-afed-adc3-adcc" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="55b1-0977-0005-3fac" name="Mace" hidden="false" collective="false" import="true" targetId="7386-6cd4-6c54-d454" type="selectionEntry"/>
+            <entryLink id="6b18-ddf7-47fb-a515" name="Whip" hidden="false" collective="false" import="true" targetId="a99a-d310-42cf-5dd7" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="d443-5a25-8e2a-c3a4" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry">
+        <entryLink id="d443-5a25-8e2a-c3a4" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="6481-8964-ffdb-e4f2" value="1">
               <conditions>
@@ -15667,7 +15669,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="6d8e-de5f-8225-a13c" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="6d8e-de5f-8225-a13c" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="50.0"/>
@@ -15675,7 +15677,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="967e-03b9-aa82-1e1f" name="Mordor Siege Bow" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="967e-03b9-aa82-1e1f" name="Mordor Siege Bow" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="decrement" field="277f-f1cc-52bd-bf86" value="1">
           <repeats>
@@ -15723,7 +15725,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         </infoLink>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="4366-b587-895e-7d0d" name="Orc Crew" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="4366-b587-895e-7d0d" name="Orc Crew" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="472e-dc9a-a39d-4508" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ddd8-0e92-cedc-6299" type="max"/>
@@ -15736,7 +15738,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
             </infoLink>
           </infoLinks>
           <selectionEntries>
-            <selectionEntry id="2100-68c4-66cc-7d14" name="Crew" hidden="false" collective="false" type="model">
+            <selectionEntry id="2100-68c4-66cc-7d14" name="Crew" hidden="false" collective="false" import="true" type="model">
               <constraints>
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d2de-4aab-71b2-c54f" type="max"/>
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0051-b91b-5898-00c5" type="min"/>
@@ -15749,10 +15751,10 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups>
-            <selectionEntryGroup id="e849-6e9a-078d-c30c" name="Wargear" hidden="false" collective="false">
+            <selectionEntryGroup id="e849-6e9a-078d-c30c" name="Wargear" hidden="false" collective="false" import="true">
               <entryLinks>
-                <entryLink id="f664-41e1-91bb-5525" name="Weapon" hidden="false" collective="false" targetId="f6ad-e4da-7fb4-dae1" type="selectionEntryGroup"/>
-                <entryLink id="b690-ba72-643f-df60" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+                <entryLink id="f664-41e1-91bb-5525" name="Weapon" hidden="false" collective="false" import="true" targetId="f6ad-e4da-7fb4-dae1" type="selectionEntryGroup"/>
+                <entryLink id="b690-ba72-643f-df60" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -15764,9 +15766,9 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="4903-5af6-77a9-04bc" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="4903-5af6-77a9-04bc" name="Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="7d36-af1a-439a-47fa" name="Aditional Crew" hidden="false" collective="false" type="model">
+            <selectionEntry id="7d36-af1a-439a-47fa" name="Aditional Crew" hidden="false" collective="false" import="true" type="model">
               <modifiers>
                 <modifier type="set" field="81a9-b139-4d19-c865" value="4">
                   <conditions>
@@ -15785,12 +15787,12 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="57df-b3fb-3fe4-c366" name="Flamming Ammunition" hidden="false" collective="false" targetId="af89-b25c-bd59-88fd" type="selectionEntry"/>
+            <entryLink id="57df-b3fb-3fe4-c366" name="Flamming Ammunition" hidden="false" collective="false" import="true" targetId="af89-b25c-bd59-88fd" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="bb18-ca0e-a32e-b593" name="Hero" hidden="false" collective="false" targetId="2f11-3c62-203c-e4d7" type="selectionEntryGroup"/>
+        <entryLink id="bb18-ca0e-a32e-b593" name="Hero" hidden="false" collective="false" import="true" targetId="2f11-3c62-203c-e4d7" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -15798,7 +15800,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="54e7-20ef-c51d-2b54" name="Mordor War Catapult" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="54e7-20ef-c51d-2b54" name="Mordor War Catapult" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="decrement" field="8aa0-9a18-31bc-c573" value="1">
           <repeats>
@@ -15839,7 +15841,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <infoLink id="ac2d-fe83-b6fe-7831" name="Area Effect" hidden="false" targetId="b7ec-80ee-e92d-f4f9" type="rule"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="9d8a-cb6b-894a-d685" name="Troll" hidden="false" collective="false" type="model">
+        <selectionEntry id="9d8a-cb6b-894a-d685" name="Troll" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7de2-dbda-cc55-4c3c" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b487-297d-8071-0a0c" type="min"/>
@@ -15865,10 +15867,10 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
             <infoLink id="ee19-04c4-1498-1d95" name="Troll" hidden="false" targetId="bc1b-f88b-6022-43f3" type="rule"/>
           </infoLinks>
           <selectionEntryGroups>
-            <selectionEntryGroup id="e7e2-efa5-0985-0adf" name="Wargear" hidden="false" collective="false">
+            <selectionEntryGroup id="e7e2-efa5-0985-0adf" name="Wargear" hidden="false" collective="false" import="true">
               <entryLinks>
-                <entryLink id="722a-da84-23f1-fd4f" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
-                <entryLink id="29b6-9ff8-2228-d1c7" name="Weapon" hidden="false" collective="false" targetId="f6ad-e4da-7fb4-dae1" type="selectionEntryGroup"/>
+                <entryLink id="722a-da84-23f1-fd4f" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+                <entryLink id="29b6-9ff8-2228-d1c7" name="Weapon" hidden="false" collective="false" import="true" targetId="f6ad-e4da-7fb4-dae1" type="selectionEntryGroup"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -15880,9 +15882,9 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="1a49-c648-7dd9-cae7" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="1a49-c648-7dd9-cae7" name="Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="f2e4-85e0-96a6-eaee" name="Aditional Crew" hidden="false" collective="false" type="model">
+            <selectionEntry id="f2e4-85e0-96a6-eaee" name="Aditional Crew" hidden="false" collective="false" import="true" type="model">
               <modifiers>
                 <modifier type="set" field="351f-299f-e399-3174" value="3">
                   <conditions>
@@ -15901,13 +15903,13 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="2e50-208f-3a5a-76b3" name="Flamming Ammunition" hidden="false" collective="false" targetId="af89-b25c-bd59-88fd" type="selectionEntry"/>
-            <entryLink id="e983-12aa-a0ce-d124" name="Severed Heads" hidden="false" collective="false" targetId="dc44-fdf1-7ac8-1302" type="selectionEntry"/>
+            <entryLink id="2e50-208f-3a5a-76b3" name="Flamming Ammunition" hidden="false" collective="false" import="true" targetId="af89-b25c-bd59-88fd" type="selectionEntry"/>
+            <entryLink id="e983-12aa-a0ce-d124" name="Severed Heads" hidden="false" collective="false" import="true" targetId="dc44-fdf1-7ac8-1302" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="b81e-acb7-e164-04e0" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="b81e-acb7-e164-04e0" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="57a8-75f7-03f5-d4a1" name="Orc Crew" hidden="false" collective="false" type="model">
+            <selectionEntry id="57a8-75f7-03f5-d4a1" name="Orc Crew" hidden="false" collective="false" import="true" type="model">
               <constraints>
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b7c7-d8af-f7c8-68aa" type="min"/>
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f1b-f5ac-3fec-0a6e" type="max"/>
@@ -15927,10 +15929,10 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
                 </profile>
               </profiles>
               <selectionEntryGroups>
-                <selectionEntryGroup id="70c9-1af4-8be5-c0a0" name="Wargear" hidden="false" collective="false">
+                <selectionEntryGroup id="70c9-1af4-8be5-c0a0" name="Wargear" hidden="false" collective="false" import="true">
                   <entryLinks>
-                    <entryLink id="3b5c-493f-65ac-6639" name="Weapon" hidden="false" collective="false" targetId="f6ad-e4da-7fb4-dae1" type="selectionEntryGroup"/>
-                    <entryLink id="0459-7da2-baad-10c0" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+                    <entryLink id="3b5c-493f-65ac-6639" name="Weapon" hidden="false" collective="false" import="true" targetId="f6ad-e4da-7fb4-dae1" type="selectionEntryGroup"/>
+                    <entryLink id="0459-7da2-baad-10c0" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
@@ -15944,7 +15946,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="5441-8933-02b2-a846" name="Hero" hidden="false" collective="false" targetId="2f11-3c62-203c-e4d7" type="selectionEntryGroup"/>
+        <entryLink id="5441-8933-02b2-a846" name="Hero" hidden="false" collective="false" import="true" targetId="2f11-3c62-203c-e4d7" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -15952,7 +15954,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f0df-9881-6018-16da" name="Hâsharin" hidden="false" collective="false" type="model">
+    <selectionEntry id="f0df-9881-6018-16da" name="Hâsharin" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f7bb-6904-e2dc-901d" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="55f6-75ab-8441-cdfc" type="min"/>
@@ -15994,9 +15996,9 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <infoLink id="92d6-76d1-3dfb-4cb9" name="Preternatural Agility (Active)" hidden="false" targetId="5cdd-0cca-a269-ef28" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="10f9-32c4-0247-dc4e" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="10f9-32c4-0247-dc4e" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="202d-59cc-2816-4193" name="Blowpipe" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="202d-59cc-2816-4193" name="Blowpipe" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e997-1586-ba97-aa22" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4fda-86d4-89a3-0e02" type="min"/>
@@ -16016,13 +16018,13 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="9d83-f681-b710-9a79" name="Throwing Daggers" hidden="false" collective="false" targetId="4fbb-79cf-7ab6-b416" type="selectionEntry"/>
-            <entryLink id="6e80-694b-9619-a4cb" name="Dagger" hidden="false" collective="false" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
+            <entryLink id="9d83-f681-b710-9a79" name="Throwing Daggers" hidden="false" collective="false" import="true" targetId="4fbb-79cf-7ab6-b416" type="selectionEntry"/>
+            <entryLink id="6e80-694b-9619-a4cb" name="Dagger" hidden="false" collective="false" import="true" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="fd7e-8485-c579-fd15" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry">
+        <entryLink id="fd7e-8485-c579-fd15" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -16031,7 +16033,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="4ac5-af43-a870-e90e" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry">
+        <entryLink id="4ac5-af43-a870-e90e" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -16047,7 +16049,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9699-a212-05bd-6cec" name="Gandalf the White" hidden="false" collective="false" type="model">
+    <selectionEntry id="9699-a212-05bd-6cec" name="Gandalf the White" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="ada3-4fbe-6bec-c02c" value="0.0">
           <conditions>
@@ -16138,14 +16140,14 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="e05b-b052-6bd9-e242" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="e05b-b052-6bd9-e242" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="c5f2-eda6-9800-85bf" name="Staff of Power*" hidden="false" collective="false" targetId="1c0a-4625-eca9-ec95" type="selectionEntry"/>
-            <entryLink id="f2f9-c966-8dd1-de22" name="Glamdring" hidden="false" collective="false" targetId="9683-2857-3c2a-c889" type="selectionEntry"/>
-            <entryLink id="4656-16e1-7d9d-1463" name="Narya" hidden="false" collective="false" targetId="5803-cb66-0eda-5524" type="selectionEntry"/>
+            <entryLink id="c5f2-eda6-9800-85bf" name="Staff of Power*" hidden="false" collective="false" import="true" targetId="1c0a-4625-eca9-ec95" type="selectionEntry"/>
+            <entryLink id="f2f9-c966-8dd1-de22" name="Glamdring" hidden="false" collective="false" import="true" targetId="9683-2857-3c2a-c889" type="selectionEntry"/>
+            <entryLink id="4656-16e1-7d9d-1463" name="Narya" hidden="false" collective="false" import="true" targetId="5803-cb66-0eda-5524" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="e6f4-cb3f-0e71-678e" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="e6f4-cb3f-0e71-678e" name="Options" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -16154,7 +16156,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
             </modifier>
           </modifiers>
           <selectionEntries>
-            <selectionEntry id="78f0-6b36-bbdc-9532" name="Shadowfax" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="78f0-6b36-bbdc-9532" name="Shadowfax" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="322e-d4f1-a237-31ef" value="1">
                   <conditions>
@@ -16194,8 +16196,8 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="f83b-05ff-1227-c21a" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="4ee4-c615-6542-171d" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="f83b-05ff-1227-c21a" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="4ee4-c615-6542-171d" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="220.0"/>
@@ -16203,7 +16205,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="fa8a-ebb1-1ab1-4826" name="Claws and Teeth" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="fa8a-ebb1-1ab1-4826" name="Claws and Teeth" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d594-ede8-1dc9-ed7a" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="db38-70ee-0b15-c268" type="min"/>
@@ -16221,7 +16223,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b038-27a5-8bc5-8bf6" name="Aragorn, King Elessar" hidden="false" collective="false" type="model">
+    <selectionEntry id="b038-27a5-8bc5-8bf6" name="Aragorn, King Elessar" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="ce5c-7be8-8880-ed2d" value="0.0">
           <conditions>
@@ -16263,25 +16265,25 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <infoLink id="8a90-30f9-ad97-50cd" name="Mighty Hero" hidden="false" targetId="f325-d8b5-b48f-8824" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="1b09-a229-a3f0-55e2" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="1b09-a229-a3f0-55e2" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="254a-a130-d913-7841" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
-            <entryLink id="768c-40e1-8376-50e8" name="Andúril, Flame of the West" hidden="false" collective="false" targetId="3d53-04f4-ccd7-3778" type="selectionEntry">
+            <entryLink id="254a-a130-d913-7841" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="768c-40e1-8376-50e8" name="Andúril, Flame of the West" hidden="false" collective="false" import="true" targetId="3d53-04f4-ccd7-3778" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="97a6-b420-51df-27fd" type="min"/>
               </constraints>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="08a9-4fa9-608b-6673" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="08a9-4fa9-608b-6673" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="59a9-34eb-2522-2e1e" name="Armoured Horse" hidden="false" collective="false" targetId="eb59-3a9f-f03b-22cc" type="selectionEntry"/>
+            <entryLink id="59a9-34eb-2522-2e1e" name="Armoured Horse" hidden="false" collective="false" import="true" targetId="eb59-3a9f-f03b-22cc" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="774e-6d59-61ba-2e96" name="Hero of Legend" hidden="false" collective="false" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
-        <entryLink id="315b-419a-3178-d8ab" name="Leader (Legend)" hidden="false" collective="false" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry">
+        <entryLink id="774e-6d59-61ba-2e96" name="Hero of Legend" hidden="false" collective="false" import="true" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
+        <entryLink id="315b-419a-3178-d8ab" name="Leader (Legend)" hidden="false" collective="false" import="true" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="6e68-f783-a1fc-fdf7" value="1">
               <conditions>
@@ -16300,7 +16302,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="aeb2-e26d-bd32-c97a" name="Peregrin Took, Guard of the Citadel" hidden="false" collective="false" type="model">
+    <selectionEntry id="aeb2-e26d-bd32-c97a" name="Peregrin Took, Guard of the Citadel" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="c2a5-55e5-726f-2675" value="0.0">
           <conditions>
@@ -16344,20 +16346,20 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <infoLink id="6edc-b478-2806-a3d4" name="Resistant to Magic" hidden="false" targetId="ff02-18ce-6c60-799b" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="4e0d-5cc5-bff5-e6fa" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="4e0d-5cc5-bff5-e6fa" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="32c1-060b-e753-67aa" name="Dagger" hidden="false" collective="false" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
-            <entryLink id="86c3-fbb2-6577-4627" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="32c1-060b-e753-67aa" name="Dagger" hidden="false" collective="false" import="true" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
+            <entryLink id="86c3-fbb2-6577-4627" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="4d7a-20b6-fe35-c1ad" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="4d7a-20b6-fe35-c1ad" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="1fd6-64ad-f41d-17b1" name="Elven Cloak" hidden="false" collective="false" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
+            <entryLink id="1fd6-64ad-f41d-17b1" name="Elven Cloak" hidden="false" collective="false" import="true" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="f780-6316-cc44-4392" name="Independent Hero" hidden="false" collective="false" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
+        <entryLink id="f780-6316-cc44-4392" name="Independent Hero" hidden="false" collective="false" import="true" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="25.0"/>
@@ -16365,7 +16367,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8d2b-ac73-8ba4-990c" name="Boromir, Captain of the White Tower" hidden="false" collective="false" type="model">
+    <selectionEntry id="8d2b-ac73-8ba4-990c" name="Boromir, Captain of the White Tower" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="b2a2-d7c6-6b6d-a8c8" value="0.0">
           <conditions>
@@ -16405,21 +16407,21 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         </profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="a5b0-8446-d475-0eed" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="a5b0-8446-d475-0eed" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="e229-4e7c-f9ff-189e" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
-            <entryLink id="b947-d09e-a897-3b88" name="Horn of Gondor" hidden="false" collective="false" targetId="f782-1cc2-8c07-a218" type="selectionEntry"/>
-            <entryLink id="2d65-f074-ed60-1fe0" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="e229-4e7c-f9ff-189e" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="b947-d09e-a897-3b88" name="Horn of Gondor" hidden="false" collective="false" import="true" targetId="f782-1cc2-8c07-a218" type="selectionEntry"/>
+            <entryLink id="2d65-f074-ed60-1fe0" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="6d3b-1022-96c0-a2bb" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="6d3b-1022-96c0-a2bb" name="Options" hidden="false" collective="false" import="true">
           <selectionEntryGroups>
-            <selectionEntryGroup id="d133-d53b-7898-5598" name=" " hidden="false" collective="false">
+            <selectionEntryGroup id="d133-d53b-7898-5598" name=" " hidden="false" collective="false" import="true">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e81e-8d63-a65c-d4a2" type="max"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry id="c52f-8b52-a8aa-2cbc" name="The Banner of Minas Tirith" hidden="false" collective="false" type="upgrade">
+                <selectionEntry id="c52f-8b52-a8aa-2cbc" name="The Banner of Minas Tirith" hidden="false" collective="false" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="49e8-b9bb-6cf3-203e" type="max"/>
                   </constraints>
@@ -16438,19 +16440,19 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
                 </selectionEntry>
               </selectionEntries>
               <entryLinks>
-                <entryLink id="9d97-2dbf-25e6-1683" name="Lance" hidden="false" collective="false" targetId="aa35-f48c-f09a-8f99" type="selectionEntry"/>
+                <entryLink id="9d97-2dbf-25e6-1683" name="Lance" hidden="false" collective="false" import="true" targetId="aa35-f48c-f09a-8f99" type="selectionEntry"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink id="adfd-dd86-ecd8-dc51" name="Horse" hidden="false" collective="false" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
-            <entryLink id="e4b5-51b3-206e-2df0" name="Shield" hidden="false" collective="false" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
+            <entryLink id="adfd-dd86-ecd8-dc51" name="Horse" hidden="false" collective="false" import="true" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
+            <entryLink id="e4b5-51b3-206e-2df0" name="Shield" hidden="false" collective="false" import="true" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="6d6f-8565-a4a2-8922" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="7a59-58e7-c295-7c40" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="6d6f-8565-a4a2-8922" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="7a59-58e7-c295-7c40" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -16458,7 +16460,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e3aa-a9fc-071d-ea3b" name="Aragorn - Strider" hidden="false" collective="false" type="model">
+    <selectionEntry id="e3aa-a9fc-071d-ea3b" name="Aragorn - Strider" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="d1a0-65df-fbc2-e79c" value="0.0">
           <conditions>
@@ -16502,14 +16504,14 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <infoLink id="51a2-7ccf-076a-c406" name="Horse Lord (Passive)" hidden="false" targetId="6912-7e5d-01e0-aebe" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="1642-1af7-bc67-a17e" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="1642-1af7-bc67-a17e" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="776b-1dd5-00db-1d8e" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="776b-1dd5-00db-1d8e" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="d973-ff45-a1e3-6bf5" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="d973-ff45-a1e3-6bf5" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="ad59-1c87-332b-398b" name="Horse" hidden="false" collective="false" targetId="18cb-fd03-3380-5f4e" type="selectionEntry">
+            <entryLink id="ad59-1c87-332b-398b" name="Horse" hidden="false" collective="false" import="true" targetId="18cb-fd03-3380-5f4e" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
@@ -16518,7 +16520,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="af37-f785-52ae-2272" name="Armour" hidden="false" collective="false" targetId="37fc-f943-01eb-2efd" type="selectionEntry">
+            <entryLink id="af37-f785-52ae-2272" name="Armour" hidden="false" collective="false" import="true" targetId="37fc-f943-01eb-2efd" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
@@ -16527,7 +16529,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="f0d0-132b-7ca0-1cd6" name="Bow" hidden="false" collective="false" targetId="aee9-0be1-fd8c-7e73" type="selectionEntry">
+            <entryLink id="f0d0-132b-7ca0-1cd6" name="Bow" hidden="false" collective="false" import="true" targetId="aee9-0be1-fd8c-7e73" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
@@ -16536,8 +16538,8 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="1003-4064-b958-d69b" name="Elven Cloak" hidden="false" collective="false" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
-            <entryLink id="9b31-d1df-b61f-1120" name="Andúril, Flame of the West" hidden="false" collective="false" targetId="3d53-04f4-ccd7-3778" type="selectionEntry">
+            <entryLink id="1003-4064-b958-d69b" name="Elven Cloak" hidden="false" collective="false" import="true" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
+            <entryLink id="9b31-d1df-b61f-1120" name="Andúril, Flame of the West" hidden="false" collective="false" import="true" targetId="3d53-04f4-ccd7-3778" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="8bde-d63c-7caa-c15d" value="40">
                   <conditions>
@@ -16558,7 +16560,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="a94e-c58f-f873-e4d8" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry">
+        <entryLink id="a94e-c58f-f873-e4d8" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="94de-9fa6-cfc5-eae7" value="1">
               <conditions>
@@ -16570,7 +16572,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
             <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="94de-9fa6-cfc5-eae7" type="min"/>
           </constraints>
         </entryLink>
-        <entryLink id="fd19-1fdf-c0ab-cdbe" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="fd19-1fdf-c0ab-cdbe" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="160.0"/>
@@ -16578,7 +16580,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="cdef-89a1-518e-296a" name="Bilbo Baggins" hidden="false" collective="false" type="model">
+    <selectionEntry id="cdef-89a1-518e-296a" name="Bilbo Baggins" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="5118-e869-78fc-7dab" value="0.0">
           <conditions>
@@ -16640,9 +16642,9 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <infoLink id="4084-97e6-c4f0-f70e" name="Throw Stones (Active)" hidden="false" targetId="39ee-f288-50d5-973e" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="3b1b-43c8-5afc-9c9e" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="3b1b-43c8-5afc-9c9e" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="435c-6dfa-849d-c208" name="The One Ring" hidden="false" collective="false" targetId="ddc1-67a9-1014-b73c" type="selectionEntry">
+            <entryLink id="435c-6dfa-849d-c208" name="The One Ring" hidden="false" collective="false" import="true" targetId="ddc1-67a9-1014-b73c" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="5c5a-e8b0-6188-3471" value="0.0">
                   <conditions>
@@ -16658,7 +16660,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="e15d-574a-e89d-668a" name="Mithril Coat" hidden="false" collective="false" targetId="b2df-6b78-3eef-e449" type="selectionEntry">
+            <entryLink id="e15d-574a-e89d-668a" name="Mithril Coat" hidden="false" collective="false" import="true" targetId="b2df-6b78-3eef-e449" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="75ee-8f16-9914-b72e" value="0.0">
                   <conditions>
@@ -16667,7 +16669,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="adba-3267-977a-8f4c" name="Sting" hidden="false" collective="false" targetId="2428-760d-9db5-14d8" type="selectionEntry">
+            <entryLink id="adba-3267-977a-8f4c" name="Sting" hidden="false" collective="false" import="true" targetId="2428-760d-9db5-14d8" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="a6bb-c436-2635-014f" value="0.0">
                   <conditions>
@@ -16678,9 +16680,9 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="7ac3-c75d-dd8a-4a86" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="7ac3-c75d-dd8a-4a86" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="62a4-568f-b25d-0658" name="Dagger" hidden="false" collective="false" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
+            <entryLink id="62a4-568f-b25d-0658" name="Dagger" hidden="false" collective="false" import="true" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -16690,7 +16692,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="faef-5e8e-6a72-6908" name="Dúnedain" hidden="false" collective="false" type="model">
+    <selectionEntry id="faef-5e8e-6a72-6908" name="Dúnedain" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="cbe9-a43c-8749-161f" value="-1">
           <conditions>
@@ -16749,15 +16751,15 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         </profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="042b-ee68-8079-c60e" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="042b-ee68-8079-c60e" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="cfa9-6071-6a18-9a67" name="Bow" hidden="false" collective="false" targetId="f07a-f21f-5c34-803b" type="selectionEntry"/>
-            <entryLink id="df1a-8a60-2673-6e58" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="cfa9-6071-6a18-9a67" name="Bow" hidden="false" collective="false" import="true" targetId="f07a-f21f-5c34-803b" type="selectionEntry"/>
+            <entryLink id="df1a-8a60-2673-6e58" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="31b7-4b43-b2bc-e626" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="31b7-4b43-b2bc-e626" name="Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="eccd-905b-3bfa-94ae" name="Spear" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="eccd-905b-3bfa-94ae" name="Spear" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="743e-05fa-c392-fc10" type="max"/>
               </constraints>
@@ -16779,7 +16781,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e2d5-bfec-44d4-1ef3" name="Frodo of the Nine Fingers" hidden="false" collective="false" type="model">
+    <selectionEntry id="e2d5-bfec-44d4-1ef3" name="Frodo of the Nine Fingers" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="1f19-3cae-ffda-941a" value="0.0">
           <conditions>
@@ -16823,22 +16825,22 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <infoLink id="1c43-1b8c-4a7a-9945" name="Resistant to Magic (Passive)" hidden="false" targetId="ff02-18ce-6c60-799b" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="ce4d-cf4b-bdee-89cb" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="ce4d-cf4b-bdee-89cb" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="864f-2160-1a9f-3832" name="Unarmed" hidden="false" collective="false" targetId="5cb1-7e8b-f6c3-d5cb" type="selectionEntry"/>
-            <entryLink id="70f3-ebc1-5973-6b0b" name="Mithril Coat" hidden="false" collective="false" targetId="97b9-e206-4382-7257" type="selectionEntry"/>
+            <entryLink id="864f-2160-1a9f-3832" name="Unarmed" hidden="false" collective="false" import="true" targetId="5cb1-7e8b-f6c3-d5cb" type="selectionEntry"/>
+            <entryLink id="70f3-ebc1-5973-6b0b" name="Mithril Coat" hidden="false" collective="false" import="true" targetId="97b9-e206-4382-7257" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="f165-28a8-386e-9d41" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="f165-28a8-386e-9d41" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="ac2a-b9fa-2e1a-628f" name="Pony" hidden="false" collective="false" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
-            <entryLink id="1b43-65eb-f2f2-fbb7" name="Elven Cloak" hidden="false" collective="false" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
+            <entryLink id="ac2a-b9fa-2e1a-628f" name="Pony" hidden="false" collective="false" import="true" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
+            <entryLink id="1b43-65eb-f2f2-fbb7" name="Elven Cloak" hidden="false" collective="false" import="true" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="ac6d-a8c4-7ee3-e40a" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
-        <entryLink id="f953-5fa7-e5fe-26e4" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="ac6d-a8c4-7ee3-e40a" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="f953-5fa7-e5fe-26e4" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="60.0"/>
@@ -16846,7 +16848,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d961-481f-06ce-4feb" name="Gandalf the Grey" hidden="false" collective="false" type="model">
+    <selectionEntry id="d961-481f-06ce-4feb" name="Gandalf the Grey" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="9a2e-720c-6119-8f14" value="0.0">
           <conditions>
@@ -16964,16 +16966,16 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="2880-f9f4-c679-5b66" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="2880-f9f4-c679-5b66" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="b7e9-2705-e1b6-9d42" name="Narya" hidden="false" collective="false" targetId="5803-cb66-0eda-5524" type="selectionEntry"/>
-            <entryLink id="9e48-feb7-38ba-31de" name="Staff of Power*" hidden="false" collective="false" targetId="1c0a-4625-eca9-ec95" type="selectionEntry"/>
-            <entryLink id="54c9-a32d-1304-e3af" name="Glamdring" hidden="false" collective="false" targetId="9683-2857-3c2a-c889" type="selectionEntry"/>
+            <entryLink id="b7e9-2705-e1b6-9d42" name="Narya" hidden="false" collective="false" import="true" targetId="5803-cb66-0eda-5524" type="selectionEntry"/>
+            <entryLink id="9e48-feb7-38ba-31de" name="Staff of Power*" hidden="false" collective="false" import="true" targetId="1c0a-4625-eca9-ec95" type="selectionEntry"/>
+            <entryLink id="54c9-a32d-1304-e3af" name="Glamdring" hidden="false" collective="false" import="true" targetId="9683-2857-3c2a-c889" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="e38f-8ee7-7182-a827" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="e38f-8ee7-7182-a827" name="Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="766f-bec0-26b0-ec68" name="Cart" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="766f-bec0-26b0-ec68" name="Cart" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
@@ -17031,12 +17033,12 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="aeb8-9cae-e9cd-f1f9" name="Horse" hidden="false" collective="false" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
+            <entryLink id="aeb8-9cae-e9cd-f1f9" name="Horse" hidden="false" collective="false" import="true" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="bd5d-f488-015d-642d" name="Leader (Legend)" hidden="false" collective="false" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry">
+        <entryLink id="bd5d-f488-015d-642d" name="Leader (Legend)" hidden="false" collective="false" import="true" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -17063,7 +17065,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="0c65-9d01-0737-be96" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry">
+        <entryLink id="0c65-9d01-0737-be96" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditionGroups>
@@ -17090,7 +17092,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8558-43c4-3ebd-002d" name="Meriadoc, Captain of the Shire" hidden="false" collective="false" type="model">
+    <selectionEntry id="8558-43c4-3ebd-002d" name="Meriadoc, Captain of the Shire" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="6820-d131-ca07-4307" value="0.0">
           <conditions>
@@ -17148,16 +17150,16 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <infoLink id="4155-4fab-2868-5099" name="Resistant to Magic (Passive)" hidden="false" targetId="ff02-18ce-6c60-799b" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="f871-c141-4748-d750" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="f871-c141-4748-d750" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="0d28-ada5-edd9-cbc3" name="Pony" hidden="false" collective="false" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
-            <entryLink id="5aa6-5b18-e2e1-3aae" name="Elven Cloak" hidden="false" collective="false" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
-            <entryLink id="7643-10a0-4ee1-a0bd" name="Shield" hidden="false" collective="false" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
+            <entryLink id="0d28-ada5-edd9-cbc3" name="Pony" hidden="false" collective="false" import="true" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
+            <entryLink id="5aa6-5b18-e2e1-3aae" name="Elven Cloak" hidden="false" collective="false" import="true" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
+            <entryLink id="7643-10a0-4ee1-a0bd" name="Shield" hidden="false" collective="false" import="true" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="3e11-8f51-48f3-69b6" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="3e11-8f51-48f3-69b6" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="1fab-186f-f1b2-5e9a" name="Horn of the Riddermark" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="1fab-186f-f1b2-5e9a" name="Horn of the Riddermark" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c62-b484-e677-8103" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c343-d407-f5ed-c5a8" type="min"/>
@@ -17177,14 +17179,14 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="9675-5e3e-35e6-8a14" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
-            <entryLink id="56a3-5f44-2b98-31d7" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="9675-5e3e-35e6-8a14" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="56a3-5f44-2b98-31d7" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="a074-ef91-ff98-3a95" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="ed69-b29b-6f40-5923" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="a074-ef91-ff98-3a95" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="ed69-b29b-6f40-5923" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="45.0"/>
@@ -17192,7 +17194,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6516-3d89-86a9-dd28" name="Peregrin, Captain of the Shire" hidden="false" collective="false" type="model">
+    <selectionEntry id="6516-3d89-86a9-dd28" name="Peregrin, Captain of the Shire" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="68d4-6c40-d810-e1a6" value="0.0">
           <conditions>
@@ -17248,23 +17250,23 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <infoLink id="6d22-02d1-9320-f0c0" name="Resistant to Magic (Passive)" hidden="false" targetId="ff02-18ce-6c60-799b" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="b2a0-5441-1ffe-ac9d" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="b2a0-5441-1ffe-ac9d" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="09e0-d688-1746-6dd6" name="Pony" hidden="false" collective="false" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
-            <entryLink id="86ee-3563-c9ea-55d9" name="Elven Cloak" hidden="false" collective="false" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
-            <entryLink id="52b3-75ec-7e01-4630" name="Shield" hidden="false" collective="false" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
+            <entryLink id="09e0-d688-1746-6dd6" name="Pony" hidden="false" collective="false" import="true" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
+            <entryLink id="86ee-3563-c9ea-55d9" name="Elven Cloak" hidden="false" collective="false" import="true" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
+            <entryLink id="52b3-75ec-7e01-4630" name="Shield" hidden="false" collective="false" import="true" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="4d44-d7fb-62e7-ec00" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="4d44-d7fb-62e7-ec00" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="3787-e562-9762-4656" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
-            <entryLink id="75c0-9ffa-6e06-9e67" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="3787-e562-9762-4656" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="75c0-9ffa-6e06-9e67" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="301b-98b0-18fa-1635" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
-        <entryLink id="56d0-5907-2d49-d9ef" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="301b-98b0-18fa-1635" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="56d0-5907-2d49-d9ef" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="45.0"/>
@@ -17272,7 +17274,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="46c3-7695-49ab-62dc" name="Samwise the Brave" hidden="false" collective="false" type="model">
+    <selectionEntry id="46c3-7695-49ab-62dc" name="Samwise the Brave" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="f7ff-3983-5d48-eac5" value="0.0">
           <conditions>
@@ -17309,21 +17311,21 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <infoLink id="f81d-dd09-9ddc-0bfc" name="Resistant to Magic (Passive)" hidden="false" targetId="ff02-18ce-6c60-799b" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="a39e-2924-c526-c8de" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="a39e-2924-c526-c8de" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="0b7b-8a1c-1182-f35d" name="Pony" hidden="false" collective="false" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
-            <entryLink id="b146-7b07-acf4-ddab" name="Elven Cloak" hidden="false" collective="false" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
+            <entryLink id="0b7b-8a1c-1182-f35d" name="Pony" hidden="false" collective="false" import="true" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
+            <entryLink id="b146-7b07-acf4-ddab" name="Elven Cloak" hidden="false" collective="false" import="true" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="bc16-d176-c335-bde7" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="bc16-d176-c335-bde7" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="da4c-7cae-7581-1363" name="Sting" hidden="false" collective="false" targetId="b471-7653-0304-33d3" type="selectionEntry"/>
+            <entryLink id="da4c-7cae-7581-1363" name="Sting" hidden="false" collective="false" import="true" targetId="b471-7653-0304-33d3" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="ff82-667c-187e-9144" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
-        <entryLink id="3117-a676-5227-3b4f" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="ff82-667c-187e-9144" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="3117-a676-5227-3b4f" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="45.0"/>
@@ -17331,7 +17333,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="30c3-3b22-c499-db52" name="Boromir of Gondor" hidden="false" collective="false" type="model">
+    <selectionEntry id="30c3-3b22-c499-db52" name="Boromir of Gondor" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="c161-e92d-c194-eaa2" value="0.0">
           <conditions>
@@ -17371,24 +17373,24 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         </profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="38bd-22df-4fde-7815" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="38bd-22df-4fde-7815" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="f2a3-4541-977f-fa25" name="Elven Cloak" hidden="false" collective="false" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
-            <entryLink id="1cee-e24e-5f36-9d48" name="Horse" hidden="false" collective="false" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
-            <entryLink id="70e2-53d0-4a1e-1f07" name="Shield" hidden="false" collective="false" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
+            <entryLink id="f2a3-4541-977f-fa25" name="Elven Cloak" hidden="false" collective="false" import="true" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
+            <entryLink id="1cee-e24e-5f36-9d48" name="Horse" hidden="false" collective="false" import="true" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
+            <entryLink id="70e2-53d0-4a1e-1f07" name="Shield" hidden="false" collective="false" import="true" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="10b6-ad8e-2b72-276c" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="10b6-ad8e-2b72-276c" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="55e4-1a23-f130-ddff" name="Horn of Gondor" hidden="false" collective="false" targetId="f782-1cc2-8c07-a218" type="selectionEntry"/>
-            <entryLink id="0de4-b7a0-0bd0-ffed" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-            <entryLink id="3fc1-2b3c-a039-3302" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="55e4-1a23-f130-ddff" name="Horn of Gondor" hidden="false" collective="false" import="true" targetId="f782-1cc2-8c07-a218" type="selectionEntry"/>
+            <entryLink id="0de4-b7a0-0bd0-ffed" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="3fc1-2b3c-a039-3302" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="8e1a-af2d-a589-1f4c" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="3a0e-e6e2-d2f0-304a" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="8e1a-af2d-a589-1f4c" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="3a0e-e6e2-d2f0-304a" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="95.0"/>
@@ -17396,7 +17398,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="dd6c-5c6d-5d90-e8cc" name="Frodo Baggins" hidden="false" collective="false" type="model">
+    <selectionEntry id="dd6c-5c6d-5d90-e8cc" name="Frodo Baggins" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="e85d-82d9-53ee-2227" value="0.0">
           <conditions>
@@ -17440,9 +17442,9 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <infoLink id="0221-5455-3a1c-5d48" name="Resistant to Magic" hidden="false" targetId="ff02-18ce-6c60-799b" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="fe02-5671-4489-145b" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="fe02-5671-4489-145b" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="75cb-4d12-14b9-b8d1" name="Elven Cloak" hidden="false" collective="false" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry">
+            <entryLink id="75cb-4d12-14b9-b8d1" name="Elven Cloak" hidden="false" collective="false" import="true" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="e5ad-748e-ac6b-5a78" value="1">
                   <conditions>
@@ -17454,7 +17456,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e5ad-748e-ac6b-5a78" type="min"/>
               </constraints>
             </entryLink>
-            <entryLink id="bbd5-06fd-f5a6-3824" name="Sting" hidden="false" collective="false" targetId="2428-760d-9db5-14d8" type="selectionEntry">
+            <entryLink id="bbd5-06fd-f5a6-3824" name="Sting" hidden="false" collective="false" import="true" targetId="2428-760d-9db5-14d8" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="b920-e527-3473-e977" value="1">
                   <conditions>
@@ -17466,7 +17468,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b920-e527-3473-e977" type="min"/>
               </constraints>
             </entryLink>
-            <entryLink id="0741-be09-4795-0f45" name="Mithril Coat" hidden="false" collective="false" targetId="b2df-6b78-3eef-e449" type="selectionEntry">
+            <entryLink id="0741-be09-4795-0f45" name="Mithril Coat" hidden="false" collective="false" import="true" targetId="b2df-6b78-3eef-e449" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="feb2-7aa5-9924-a986" value="1">
                   <conditions>
@@ -17480,20 +17482,20 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="70ca-1ad7-12b3-7663" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="70ca-1ad7-12b3-7663" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="4342-51bd-2f97-4369" name="The One Ring" hidden="false" collective="false" targetId="ddc1-67a9-1014-b73c" type="selectionEntry">
+            <entryLink id="4342-51bd-2f97-4369" name="The One Ring" hidden="false" collective="false" import="true" targetId="ddc1-67a9-1014-b73c" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c524-8cbc-a42a-c111" type="min"/>
               </constraints>
             </entryLink>
-            <entryLink id="be3d-4b24-a19e-a036" name="Dagger" hidden="false" collective="false" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
+            <entryLink id="be3d-4b24-a19e-a036" name="Dagger" hidden="false" collective="false" import="true" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="8898-1da5-49ff-136f" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="f435-c4db-1f9a-1c70" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="8898-1da5-49ff-136f" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="f435-c4db-1f9a-1c70" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="60.0"/>
@@ -17501,7 +17503,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="120a-8965-6980-8112" name="Gimli Son of Glóin" hidden="false" collective="false" type="model">
+    <selectionEntry id="120a-8965-6980-8112" name="Gimli Son of Glóin" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="de4a-3216-c59e-0a2b" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b1a3-ad83-8e5e-398a" type="min"/>
@@ -17557,14 +17559,14 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         </rule>
       </rules>
       <selectionEntryGroups>
-        <selectionEntryGroup id="4405-dd1c-931d-77f5" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="4405-dd1c-931d-77f5" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="fbee-fd98-f94a-0311" name="Elven Cloak" hidden="false" collective="false" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
+            <entryLink id="fbee-fd98-f94a-0311" name="Elven Cloak" hidden="false" collective="false" import="true" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="eb90-07e0-c035-b9ae" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="eb90-07e0-c035-b9ae" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="dc00-62c5-3d81-f330" name="Master Forged Two-Handed Axe" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="dc00-62c5-3d81-f330" name="Master Forged Two-Handed Axe" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2651-6d9b-2df5-c11e" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4968-6bdd-d0a5-d46e" type="max"/>
@@ -17582,18 +17584,18 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="4b53-b11a-d50f-1783" name="Axe" hidden="false" collective="false" targetId="6487-f2cf-5eb7-a780" type="selectionEntry">
+            <entryLink id="4b53-b11a-d50f-1783" name="Axe" hidden="false" collective="false" import="true" targetId="6487-f2cf-5eb7-a780" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="name" value="Two Axes"/>
               </modifiers>
             </entryLink>
-            <entryLink id="2e20-1a70-8df3-2300" name="Heavy Dwarf Armour" hidden="false" collective="false" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
-            <entryLink id="0857-5d73-3b05-4155" name="Throwing Axes" hidden="false" collective="false" targetId="912f-e21a-272a-a9e3" type="selectionEntry"/>
+            <entryLink id="2e20-1a70-8df3-2300" name="Heavy Dwarf Armour" hidden="false" collective="false" import="true" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
+            <entryLink id="0857-5d73-3b05-4155" name="Throwing Axes" hidden="false" collective="false" import="true" targetId="912f-e21a-272a-a9e3" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="ad0e-edd7-46d6-525f" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry">
+        <entryLink id="ad0e-edd7-46d6-525f" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -17602,7 +17604,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="ea03-5f85-3587-6451" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry">
+        <entryLink id="ea03-5f85-3587-6451" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -17618,7 +17620,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ac32-30b4-0114-f0ab" name="Legolas Greenleaf" hidden="false" collective="false" type="model">
+    <selectionEntry id="ac32-30b4-0114-f0ab" name="Legolas Greenleaf" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="b18b-6fa5-bb30-0490" value="0.0">
           <conditions>
@@ -17666,10 +17668,10 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <infoLink id="26c1-ba1e-e3d9-0486" name="Deadly Shot (Active)" hidden="false" targetId="7265-036b-65ff-76c1" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="ac30-ed99-f63f-6736" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="ac30-ed99-f63f-6736" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="6b93-8029-cda7-02a8" name="Elven Cloak" hidden="false" collective="false" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
-            <entryLink id="2645-6975-3a56-0c64" name="Horse" hidden="false" collective="false" targetId="18cb-fd03-3380-5f4e" type="selectionEntry">
+            <entryLink id="6b93-8029-cda7-02a8" name="Elven Cloak" hidden="false" collective="false" import="true" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
+            <entryLink id="2645-6975-3a56-0c64" name="Horse" hidden="false" collective="false" import="true" targetId="18cb-fd03-3380-5f4e" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
@@ -17678,19 +17680,19 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="fa80-217e-6127-57c1" name="Armour" hidden="false" collective="false" targetId="37fc-f943-01eb-2efd" type="selectionEntry"/>
+            <entryLink id="fa80-217e-6127-57c1" name="Armour" hidden="false" collective="false" import="true" targetId="37fc-f943-01eb-2efd" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="650a-2bb3-eb35-f4ef" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="650a-2bb3-eb35-f4ef" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="ffb8-08b8-ca9b-6012" name="Elf Bow" hidden="false" collective="false" targetId="afb9-abc4-cba5-86df" type="selectionEntry"/>
-            <entryLink id="5955-6219-29a2-ed14" name="Elven-made Daggers" hidden="false" collective="false" targetId="1a56-de30-3469-9394" type="selectionEntry"/>
+            <entryLink id="ffb8-08b8-ca9b-6012" name="Elf Bow" hidden="false" collective="false" import="true" targetId="afb9-abc4-cba5-86df" type="selectionEntry"/>
+            <entryLink id="5955-6219-29a2-ed14" name="Elven-made Daggers" hidden="false" collective="false" import="true" targetId="1a56-de30-3469-9394" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="6c9a-e7e5-aa71-56fd" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="fc9f-925b-b08b-da0e" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="6c9a-e7e5-aa71-56fd" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="fc9f-925b-b08b-da0e" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="100.0"/>
@@ -17698,7 +17700,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5615-7273-05fa-7ae4" name="Merry" hidden="false" collective="false" type="model">
+    <selectionEntry id="5615-7273-05fa-7ae4" name="Merry" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="7ce3-a2dd-d6c2-4816" value="0.0">
           <conditions>
@@ -17750,12 +17752,12 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <infoLink id="ddc4-a202-2e1f-5934" name="Throw Stones" hidden="false" targetId="4d93-48da-b5ad-de24" type="profile"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="0c27-e3d6-0d00-464a" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="0c27-e3d6-0d00-464a" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="28ee-d7cb-cbe8-4ef4" name="Dagger" hidden="false" collective="false" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
+            <entryLink id="28ee-d7cb-cbe8-4ef4" name="Dagger" hidden="false" collective="false" import="true" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="5432-5165-7ae3-155e" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="5432-5165-7ae3-155e" name="Options" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -17764,12 +17766,12 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
             </modifier>
           </modifiers>
           <entryLinks>
-            <entryLink id="2295-9e15-272d-2fff" name="Elven Cloak" hidden="false" collective="false" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
+            <entryLink id="2295-9e15-272d-2fff" name="Elven Cloak" hidden="false" collective="false" import="true" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="73eb-eb8c-5d89-7829" name="Minor Hero" hidden="false" collective="false" targetId="36a4-de5b-fd01-3f8e" type="selectionEntry"/>
+        <entryLink id="73eb-eb8c-5d89-7829" name="Minor Hero" hidden="false" collective="false" import="true" targetId="36a4-de5b-fd01-3f8e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -17777,7 +17779,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f0a3-ac69-6beb-550a" name="Pippin" hidden="false" collective="false" type="model">
+    <selectionEntry id="f0a3-ac69-6beb-550a" name="Pippin" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="4d81-5bd3-1cf5-5c7f" value="0.0">
           <conditions>
@@ -17822,12 +17824,12 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <infoLink id="dc60-d9c8-97dc-d06d" name="Resistant to Magic" hidden="false" targetId="ff02-18ce-6c60-799b" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="996e-de81-2c33-1737" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="996e-de81-2c33-1737" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="56a8-7e5c-2091-4f8f" name="Dagger" hidden="false" collective="false" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
+            <entryLink id="56a8-7e5c-2091-4f8f" name="Dagger" hidden="false" collective="false" import="true" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="ae06-9f7f-46f6-3631" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="ae06-9f7f-46f6-3631" name="Options" hidden="false" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -17836,12 +17838,12 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
             </modifier>
           </modifiers>
           <entryLinks>
-            <entryLink id="7538-3c66-6f73-bbca" name="Elven Cloak" hidden="false" collective="false" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
+            <entryLink id="7538-3c66-6f73-bbca" name="Elven Cloak" hidden="false" collective="false" import="true" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="8ec1-01d8-8f55-a403" name="Minor Hero" hidden="false" collective="false" targetId="36a4-de5b-fd01-3f8e" type="selectionEntry"/>
+        <entryLink id="8ec1-01d8-8f55-a403" name="Minor Hero" hidden="false" collective="false" import="true" targetId="36a4-de5b-fd01-3f8e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -17849,7 +17851,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0038-dd5d-3ac6-b66f" name="Samwise Gamgee" hidden="false" collective="false" type="model">
+    <selectionEntry id="0038-dd5d-3ac6-b66f" name="Samwise Gamgee" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="6445-c6a7-02f4-dfc4" value="0.0">
           <conditions>
@@ -17891,9 +17893,9 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <infoLink id="8ec8-e50a-8387-ca44" name="Resistant to Magic" hidden="false" targetId="ff02-18ce-6c60-799b" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="1855-7351-3905-5056" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="1855-7351-3905-5056" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="2464-03e4-4154-4ddb" name="Elven Cloak" hidden="false" collective="false" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry">
+            <entryLink id="2464-03e4-4154-4ddb" name="Elven Cloak" hidden="false" collective="false" import="true" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="ae0c-3eb6-ae13-c96e" value="1">
                   <conditions>
@@ -17907,15 +17909,15 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="8f76-a073-dc58-0920" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="8f76-a073-dc58-0920" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="3893-6519-c902-3c38" name="Dagger" hidden="false" collective="false" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
+            <entryLink id="3893-6519-c902-3c38" name="Dagger" hidden="false" collective="false" import="true" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="6b0d-5c83-5854-688f" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="6c56-15fe-76ff-1f8b" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="6b0d-5c83-5854-688f" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="6c56-15fe-76ff-1f8b" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="40.0"/>
@@ -17923,7 +17925,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="823b-f0e5-7a81-30e7" name="Saruman" hidden="false" collective="false" type="model">
+    <selectionEntry id="823b-f0e5-7a81-30e7" name="Saruman" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="51ab-0cf5-dfc9-5434" value="0.0">
           <conditions>
@@ -18078,20 +18080,20 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="683f-df3b-350c-1e45" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="683f-df3b-350c-1e45" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="0f10-9d01-b272-19f2" name="Staff of Power*" hidden="false" collective="false" targetId="1c0a-4625-eca9-ec95" type="selectionEntry"/>
+            <entryLink id="0f10-9d01-b272-19f2" name="Staff of Power*" hidden="false" collective="false" import="true" targetId="1c0a-4625-eca9-ec95" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="887b-9caa-07c3-b4ac" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="887b-9caa-07c3-b4ac" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="406a-53ac-d0f6-640f" name="Horse" hidden="false" collective="false" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
+            <entryLink id="406a-53ac-d0f6-640f" name="Horse" hidden="false" collective="false" import="true" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="dddf-8160-674d-43ac" name="Leader (Legend)" hidden="false" collective="false" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
-        <entryLink id="83ba-ab02-93b5-a338" name="Hero of Legend" hidden="false" collective="false" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
+        <entryLink id="dddf-8160-674d-43ac" name="Leader (Legend)" hidden="false" collective="false" import="true" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
+        <entryLink id="83ba-ab02-93b5-a338" name="Hero of Legend" hidden="false" collective="false" import="true" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -18099,7 +18101,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="afb9-abc4-cba5-86df" name="Elf Bow" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="afb9-abc4-cba5-86df" name="Elf Bow" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7732-4f5c-277e-5348" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="15ed-b15c-3ef4-33fc" type="max"/>
@@ -18113,7 +18115,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="48d8-3ba9-01d5-3003" name="Gwahir" hidden="false" collective="false" type="model">
+    <selectionEntry id="48d8-3ba9-01d5-3003" name="Gwahir" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a555-f2fd-7952-ac5a" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d69-4b80-dddc-4a74" type="min"/>
@@ -18149,8 +18151,8 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <infoLink id="66c9-bfe9-8059-66ee" name="Terror" hidden="false" targetId="85b0-001b-cf06-77c8" type="rule"/>
       </infoLinks>
       <entryLinks>
-        <entryLink id="7042-9cde-c416-621b" name="Leader (Legend)" hidden="false" collective="false" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
-        <entryLink id="36b6-6a42-db07-9e3e" name="Hero of Legend" hidden="false" collective="false" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
+        <entryLink id="7042-9cde-c416-621b" name="Leader (Legend)" hidden="false" collective="false" import="true" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
+        <entryLink id="36b6-6a42-db07-9e3e" name="Hero of Legend" hidden="false" collective="false" import="true" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -18158,7 +18160,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="bbd5-0d34-4d10-d10c" name="Radagast the Brown" hidden="false" collective="false" type="model">
+    <selectionEntry id="bbd5-0d34-4d10-d10c" name="Radagast the Brown" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c87a-8e21-7425-db45" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="141e-8bea-64ac-677a" type="max"/>
@@ -18243,15 +18245,15 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="d796-2f28-84c0-55ea" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="d796-2f28-84c0-55ea" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntryGroups>
-            <selectionEntryGroup id="0120-f4db-25fe-2251" name=" " hidden="false" collective="false" defaultSelectionEntryId="7b13-4335-8c11-2722">
+            <selectionEntryGroup id="0120-f4db-25fe-2251" name=" " hidden="false" collective="false" import="true" defaultSelectionEntryId="7b13-4335-8c11-2722">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c6f-6497-bfbe-8d83" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0739-ceed-1f69-9d1a" type="max"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry id="ab4e-07ef-e71e-3452" name="Great Eagle" hidden="false" collective="false" type="upgrade">
+                <selectionEntry id="ab4e-07ef-e71e-3452" name="Great Eagle" hidden="false" collective="false" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d360-3fb0-6a3a-5379" type="max"/>
                   </constraints>
@@ -18271,7 +18273,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
                 </selectionEntry>
               </selectionEntries>
               <entryLinks>
-                <entryLink id="7b13-4335-8c11-2722" name="Staff of Power*" hidden="false" collective="false" targetId="1c0a-4625-eca9-ec95" type="selectionEntry">
+                <entryLink id="7b13-4335-8c11-2722" name="Staff of Power*" hidden="false" collective="false" import="true" targetId="1c0a-4625-eca9-ec95" type="selectionEntry">
                   <modifiers>
                     <modifier type="set" field="fe49-07b5-230e-f3d9" value="0.0"/>
                   </modifiers>
@@ -18280,12 +18282,12 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink id="17e8-4c2f-17a3-196a" name="Dagger" hidden="false" collective="false" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
+            <entryLink id="17e8-4c2f-17a3-196a" name="Dagger" hidden="false" collective="false" import="true" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="dc00-2c2b-a77f-bbae" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="dc00-2c2b-a77f-bbae" name="Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="c65d-fabb-6186-7c23" name="Sebastian" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="c65d-fabb-6186-7c23" name="Sebastian" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c0f5-4b30-9dc9-65f6" type="max"/>
               </constraints>
@@ -18302,7 +18304,7 @@ Additionally, Khamûl may expend a single point of Will at the start of the Figh
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="f6ed-2da4-d446-3c20" name="Sleigh" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="f6ed-2da4-d446-3c20" name="Sleigh" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc72-7418-6efc-c047" type="max"/>
               </constraints>
@@ -18338,12 +18340,12 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="aafe-8b55-088b-523a" name="Horse" hidden="false" collective="false" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
+            <entryLink id="aafe-8b55-088b-523a" name="Horse" hidden="false" collective="false" import="true" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="a42d-bdaa-6d1c-2efd" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry">
+        <entryLink id="a42d-bdaa-6d1c-2efd" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -18352,7 +18354,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="f256-b219-29ba-b6ef" name="Leader (Legend)" hidden="false" collective="false" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry">
+        <entryLink id="f256-b219-29ba-b6ef" name="Leader (Legend)" hidden="false" collective="false" import="true" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -18368,7 +18370,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c14c-6bbc-ff77-8ddd" name="The Dark Lord Sauron" hidden="false" collective="false" type="model">
+    <selectionEntry id="c14c-6bbc-ff77-8ddd" name="The Dark Lord Sauron" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="aae7-85d1-34b3-5f68" value="0.0">
           <conditions>
@@ -18461,11 +18463,11 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="fea1-e2d1-fb4c-cc8d" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="fea1-e2d1-fb4c-cc8d" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="704a-7ada-e0c0-57ba" name="Mace" hidden="false" collective="false" targetId="7386-6cd4-6c54-d454" type="selectionEntry"/>
-            <entryLink id="2412-7f56-693f-3fc0" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
-            <entryLink id="4878-9292-e664-a183" name="The One Ring" hidden="false" collective="false" targetId="ddc1-67a9-1014-b73c" type="selectionEntry">
+            <entryLink id="704a-7ada-e0c0-57ba" name="Mace" hidden="false" collective="false" import="true" targetId="7386-6cd4-6c54-d454" type="selectionEntry"/>
+            <entryLink id="2412-7f56-693f-3fc0" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="4878-9292-e664-a183" name="The One Ring" hidden="false" collective="false" import="true" targetId="ddc1-67a9-1014-b73c" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="57a9-e064-7898-906c" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c52-81f6-99ee-4ed5" type="min"/>
@@ -18475,12 +18477,12 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="50f9-c91a-a1d8-5b81" name="Leader (Legend)" hidden="false" collective="false" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry">
+        <entryLink id="50f9-c91a-a1d8-5b81" name="Leader (Legend)" hidden="false" collective="false" import="true" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f22a-6627-227a-0e0b" type="min"/>
           </constraints>
         </entryLink>
-        <entryLink id="a273-b2f2-e2f4-414c" name="Hero of Legend" hidden="false" collective="false" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
+        <entryLink id="a273-b2f2-e2f4-414c" name="Hero of Legend" hidden="false" collective="false" import="true" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="400.0"/>
@@ -18488,7 +18490,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="662f-e9ed-0e9f-bec1" name="The Necromancer of Dol Guldur" hidden="false" collective="false" type="model">
+    <selectionEntry id="662f-e9ed-0e9f-bec1" name="The Necromancer of Dol Guldur" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="5c6b-d786-c0c1-f1f9" value="0.0">
           <conditions>
@@ -18593,8 +18595,8 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         </infoLink>
       </infoLinks>
       <entryLinks>
-        <entryLink id="1b2e-6ede-f513-dc26" name="Leader (Legend)" hidden="false" collective="false" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
-        <entryLink id="1be8-da27-e877-6107" name="Hero of Legend" hidden="false" collective="false" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
+        <entryLink id="1b2e-6ede-f513-dc26" name="Leader (Legend)" hidden="false" collective="false" import="true" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
+        <entryLink id="1be8-da27-e877-6107" name="Hero of Legend" hidden="false" collective="false" import="true" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="250.0"/>
@@ -18602,7 +18604,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c6e1-9cdf-7ee7-6a20" name="Celeborn" hidden="false" collective="false" type="model">
+    <selectionEntry id="c6e1-9cdf-7ee7-6a20" name="Celeborn" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7401-8be6-29a5-d1ea" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="83d0-4d8f-ed4f-3bea" type="min"/>
@@ -18669,14 +18671,14 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="817b-f7e2-b0fa-be11" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="817b-f7e2-b0fa-be11" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="f47e-d237-5520-8e13" name="Unarmed" hidden="false" collective="false" targetId="5cb1-7e8b-f6c3-d5cb" type="selectionEntry"/>
+            <entryLink id="f47e-d237-5520-8e13" name="Unarmed" hidden="false" collective="false" import="true" targetId="5cb1-7e8b-f6c3-d5cb" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="939c-2e99-ee97-66fd" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="939c-2e99-ee97-66fd" name="Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="7e27-872c-0313-adac" name="Elven-made Hand-and-a-Half Sword" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="7e27-872c-0313-adac" name="Elven-made Hand-and-a-Half Sword" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f55-68bd-f6bf-0881" type="max"/>
               </constraints>
@@ -18693,14 +18695,14 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="7ef5-f04f-2804-b6b4" name="Heavy Armour" hidden="false" collective="false" targetId="d3ad-a44c-5e03-265b" type="selectionEntry"/>
-            <entryLink id="bdfe-31f3-2b67-054b" name="Shield" hidden="false" collective="false" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
+            <entryLink id="7ef5-f04f-2804-b6b4" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="d3ad-a44c-5e03-265b" type="selectionEntry"/>
+            <entryLink id="bdfe-31f3-2b67-054b" name="Shield" hidden="false" collective="false" import="true" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="ff28-47da-0090-ffba" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="9789-7261-4942-c0c5" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="ff28-47da-0090-ffba" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="9789-7261-4942-c0c5" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="130.0"/>
@@ -18708,7 +18710,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f781-8e9d-930b-ff0c" name="Galadriel" hidden="false" collective="false" type="model">
+    <selectionEntry id="f781-8e9d-930b-ff0c" name="Galadriel" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="4e61-5a1a-95d7-308c" value="0.0">
           <conditions>
@@ -18772,15 +18774,15 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <infoLink id="bd34-a6c1-f230-a4bc" name="*The Lady of Lothlórien (Passive)" hidden="false" targetId="f2a8-2c2e-98ca-fdef" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="9518-c1ee-8301-7bb3" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="9518-c1ee-8301-7bb3" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="234c-8883-4de9-648d" name="Unarmed" hidden="false" collective="false" targetId="5cb1-7e8b-f6c3-d5cb" type="selectionEntry"/>
-            <entryLink id="d112-aa0b-df5d-df46" name="Nenya" hidden="false" collective="false" targetId="cdcd-2bd3-12de-b7e6" type="selectionEntry"/>
+            <entryLink id="234c-8883-4de9-648d" name="Unarmed" hidden="false" collective="false" import="true" targetId="5cb1-7e8b-f6c3-d5cb" type="selectionEntry"/>
+            <entryLink id="d112-aa0b-df5d-df46" name="Nenya" hidden="false" collective="false" import="true" targetId="cdcd-2bd3-12de-b7e6" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="24b2-36ab-c213-50d4" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="24b2-36ab-c213-50d4" name="Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="4fb6-ca9b-e643-195f" name="Mirror of Galadriel" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="4fb6-ca9b-e643-195f" name="Mirror of Galadriel" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f185-ca0b-ff95-10c2" type="max"/>
               </constraints>
@@ -18799,8 +18801,8 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="3fdf-800d-2f21-015c" name="Hero of Legend" hidden="false" collective="false" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
-        <entryLink id="177d-4466-ac43-7fec" name="Leader (Legend)" hidden="false" collective="false" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
+        <entryLink id="3fdf-800d-2f21-015c" name="Hero of Legend" hidden="false" collective="false" import="true" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
+        <entryLink id="177d-4466-ac43-7fec" name="Leader (Legend)" hidden="false" collective="false" import="true" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="130.0"/>
@@ -18808,7 +18810,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4ec9-22f5-f306-a103" name="Elrond, Master of Rivendell" hidden="false" collective="false" type="model">
+    <selectionEntry id="4ec9-22f5-f306-a103" name="Elrond, Master of Rivendell" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1a98-6dc1-1a29-4d00" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ea9-a965-5841-af0e" type="min"/>
@@ -18863,15 +18865,15 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="84dc-6063-2d38-2f88" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="84dc-6063-2d38-2f88" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="0682-e166-acb1-30c0" name="Horse" hidden="false" collective="false" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
-            <entryLink id="b393-007d-730c-5ad1" name="Heavy Armour" hidden="false" collective="false" targetId="d3ad-a44c-5e03-265b" type="selectionEntry"/>
+            <entryLink id="0682-e166-acb1-30c0" name="Horse" hidden="false" collective="false" import="true" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
+            <entryLink id="b393-007d-730c-5ad1" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="d3ad-a44c-5e03-265b" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="2331-9a32-123c-c2b9" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="2331-9a32-123c-c2b9" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="3f41-23fb-b4aa-1d59" name="Hadhafang" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="3f41-23fb-b4aa-1d59" name="Hadhafang" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1d6f-12f0-5d0f-b72d" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3eb6-e370-32db-f8cf" type="max"/>
@@ -18896,13 +18898,13 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="5da3-8526-efe1-0a1b" name="Vilya" hidden="false" collective="false" targetId="f846-4e06-4b6f-5fe1" type="selectionEntry"/>
+            <entryLink id="5da3-8526-efe1-0a1b" name="Vilya" hidden="false" collective="false" import="true" targetId="f846-4e06-4b6f-5fe1" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="a22d-5e15-3fa1-86fd" name="Hero of Legend" hidden="false" collective="false" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
-        <entryLink id="ade5-c853-4005-a9a6" name="Leader (Legend)" hidden="false" collective="false" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
+        <entryLink id="a22d-5e15-3fa1-86fd" name="Hero of Legend" hidden="false" collective="false" import="true" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
+        <entryLink id="ade5-c853-4005-a9a6" name="Leader (Legend)" hidden="false" collective="false" import="true" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="170.0"/>
@@ -18910,7 +18912,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3f64-9a40-4f37-955f" name="Gil-Galad, High King of the Elves" publicationId="3e16-9abf-pubN103678" page="73" hidden="false" collective="false" type="model">
+    <selectionEntry id="3f64-9a40-4f37-955f" name="Gil-Galad, High King of the Elves" publicationId="3e16-9abf-pubN103678" page="73" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="26b5-75f2-d29e-81ca" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ac2-322d-1225-e22b" type="max"/>
@@ -18954,15 +18956,15 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <infoLink id="1c38-0cfe-ca71-35e3" name="Woodland Creature" hidden="false" targetId="423b-b343-5f3d-f2d9" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="a189-d6f3-77e1-fbb5" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="a189-d6f3-77e1-fbb5" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="140a-4534-801b-cb74" name="Horse" hidden="false" collective="false" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
-            <entryLink id="02b8-779c-a4ec-a249" name="Shield" hidden="false" collective="false" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
+            <entryLink id="140a-4534-801b-cb74" name="Horse" hidden="false" collective="false" import="true" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
+            <entryLink id="02b8-779c-a4ec-a249" name="Shield" hidden="false" collective="false" import="true" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="3133-8cd5-e1ba-54a1" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="3133-8cd5-e1ba-54a1" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="56ca-d18f-ef8a-a560" name="Aiglos" publicationId="3e16-9abf-pubN103678" page="73" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="56ca-d18f-ef8a-a560" name="Aiglos" publicationId="3e16-9abf-pubN103678" page="73" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce5b-149c-6bd8-688e" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8a47-f19b-0706-9657" type="max"/>
@@ -18986,13 +18988,13 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="155b-ea71-a236-ae25" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="155b-ea71-a236-ae25" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="5a0f-a14a-9174-8f86" name="Leader (Legend)" hidden="false" collective="false" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
-        <entryLink id="81ea-1c52-f0fd-6f70" name="Hero of Legend" hidden="false" collective="false" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
+        <entryLink id="5a0f-a14a-9174-8f86" name="Leader (Legend)" hidden="false" collective="false" import="true" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
+        <entryLink id="81ea-1c52-f0fd-6f70" name="Hero of Legend" hidden="false" collective="false" import="true" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="170.0"/>
@@ -19000,7 +19002,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b890-65d0-511d-dbae" name="Glorfindel, Lord of the West" hidden="false" collective="false" type="model">
+    <selectionEntry id="b890-65d0-511d-dbae" name="Glorfindel, Lord of the West" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0da6-0736-aabc-3639" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f5d9-e137-18b8-0e85" type="max"/>
@@ -19045,9 +19047,9 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <infoLink id="ff6c-c15a-fa14-d3d9" name="Horse Lord" hidden="false" targetId="6912-7e5d-01e0-aebe" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="d1ad-cf94-f3a0-589e" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="d1ad-cf94-f3a0-589e" name="Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="0748-b1a3-1f8f-eb16" name="Armour of Gondolin" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="0748-b1a3-1f8f-eb16" name="Armour of Gondolin" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="89b9-383a-8f3d-5e32" type="max"/>
               </constraints>
@@ -19066,18 +19068,18 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="2095-17bf-6c28-10c0" name="Asfaloth" hidden="false" collective="false" targetId="0655-18c8-862d-d925" type="selectionEntry"/>
+            <entryLink id="2095-17bf-6c28-10c0" name="Asfaloth" hidden="false" collective="false" import="true" targetId="0655-18c8-862d-d925" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="a5b5-0c9a-f8e9-4b0e" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="a5b5-0c9a-f8e9-4b0e" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="7952-efa9-d0e0-a31c" name="Elven-Made Hand-and-a-Half Sword" hidden="false" collective="false" targetId="8c7b-6f92-cbcd-faf5" type="selectionEntry"/>
+            <entryLink id="7952-efa9-d0e0-a31c" name="Elven-Made Hand-and-a-Half Sword" hidden="false" collective="false" import="true" targetId="8c7b-6f92-cbcd-faf5" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="c4d8-b6c1-cbb5-8c1a" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
-        <entryLink id="74f8-bbfe-5384-5b3f" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="c4d8-b6c1-cbb5-8c1a" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="74f8-bbfe-5384-5b3f" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="145.0"/>
@@ -19085,7 +19087,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0655-18c8-862d-d925" name="Asfaloth" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="0655-18c8-862d-d925" name="Asfaloth" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="10d1-3545-7310-2ec0" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d668-124f-ef53-394c" type="max"/>
@@ -19113,7 +19115,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8c7b-6f92-cbcd-faf5" name="Elven-made Hand-and-a-Half Sword" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="8c7b-6f92-cbcd-faf5" name="Elven-made Hand-and-a-Half Sword" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2784-e9e9-7a58-155c" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d025-b27e-e8d8-e002" type="max"/>
@@ -19129,7 +19131,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="bc03-d682-d04e-9412" name="Treebeard" hidden="false" collective="false" type="model">
+    <selectionEntry id="bc03-d682-d04e-9412" name="Treebeard" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4a34-eb29-67ad-da5f" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4375-66bd-b601-27d2" type="max"/>
@@ -19161,9 +19163,9 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <infoLink id="a0d1-6faf-bce7-acc9" name="Bludgeon (Brutal Power Atack)" hidden="false" targetId="f296-6dd0-15ca-4ed9" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="f9d4-59d3-264e-b650" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="f9d4-59d3-264e-b650" name="Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="5b12-f5aa-3884-25c7" name="Merry &amp; Pippin" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="5b12-f5aa-3884-25c7" name="Merry &amp; Pippin" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="efdd-e0a0-ccc9-f1d6" type="max"/>
               </constraints>
@@ -19173,12 +19175,12 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
                 </rule>
               </rules>
               <entryLinks>
-                <entryLink id="f6f7-2fd2-378e-e219" name="Merry" hidden="false" collective="false" targetId="5615-7273-05fa-7ae4" type="selectionEntry">
+                <entryLink id="f6f7-2fd2-378e-e219" name="Merry" hidden="false" collective="false" import="true" targetId="5615-7273-05fa-7ae4" type="selectionEntry">
                   <modifiers>
                     <modifier type="set" field="8bde-d63c-7caa-c15d" value="0.0"/>
                   </modifiers>
                 </entryLink>
-                <entryLink id="75b0-e889-733e-37ef" name="Pippin" hidden="false" collective="false" targetId="f0a3-ac69-6beb-550a" type="selectionEntry">
+                <entryLink id="75b0-e889-733e-37ef" name="Pippin" hidden="false" collective="false" import="true" targetId="f0a3-ac69-6beb-550a" type="selectionEntry">
                   <modifiers>
                     <modifier type="set" field="8bde-d63c-7caa-c15d" value="0.0"/>
                   </modifiers>
@@ -19192,15 +19194,15 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="1e03-fa2a-8caa-68d5" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="1e03-fa2a-8caa-68d5" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="0e93-d162-5ef1-4b96" name="Roots and Branches" hidden="false" collective="false" targetId="e8cb-6351-8108-70c3" type="selectionEntry"/>
+            <entryLink id="0e93-d162-5ef1-4b96" name="Roots and Branches" hidden="false" collective="false" import="true" targetId="e8cb-6351-8108-70c3" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="c42e-a35c-65b3-a918" name="Leader (Legend)" hidden="false" collective="false" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
-        <entryLink id="27d2-4f7a-2652-4aa5" name="Hero of Legend" hidden="false" collective="false" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
+        <entryLink id="c42e-a35c-65b3-a918" name="Leader (Legend)" hidden="false" collective="false" import="true" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
+        <entryLink id="27d2-4f7a-2652-4aa5" name="Hero of Legend" hidden="false" collective="false" import="true" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="190.0"/>
@@ -19208,7 +19210,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e8cb-6351-8108-70c3" name="Roots and Branches" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="e8cb-6351-8108-70c3" name="Roots and Branches" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="046b-2330-ec4c-9a08" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="32ec-6c70-035f-c10a" type="min"/>
@@ -19226,7 +19228,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5196-7023-6fc6-c0ee" name="Thráin" hidden="false" collective="false" type="model">
+    <selectionEntry id="5196-7023-6fc6-c0ee" name="Thráin" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="ffe3-8a90-bae6-b20b" value="0.0">
           <conditions>
@@ -19267,9 +19269,9 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         </rule>
       </rules>
       <selectionEntryGroups>
-        <selectionEntryGroup id="b338-8487-a046-253f" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="b338-8487-a046-253f" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="99f0-993f-ec4f-4ff0" name="Master Forged two-handed hammer" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="99f0-993f-ec4f-4ff0" name="Master Forged two-handed hammer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="59a7-dc7d-4bbb-5620" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e775-9e3b-9b90-5748" type="min"/>
@@ -19287,8 +19289,8 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="1f8b-c08a-8cf0-666a" name="Heavy Dwarf Armour" hidden="false" collective="false" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
-            <entryLink id="d3b9-cf52-9e40-8df3" name="The Ring of Durin" hidden="false" collective="false" targetId="2865-8c86-2a53-3ec1" type="selectionEntry">
+            <entryLink id="1f8b-c08a-8cf0-666a" name="Heavy Dwarf Armour" hidden="false" collective="false" import="true" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
+            <entryLink id="d3b9-cf52-9e40-8df3" name="The Ring of Durin" hidden="false" collective="false" import="true" targetId="2865-8c86-2a53-3ec1" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="7cff-e77c-f495-9c56" value="1">
                   <conditions>
@@ -19308,8 +19310,8 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="c1cd-a504-ccee-03de" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="2d40-aa67-21ed-2c10" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="c1cd-a504-ccee-03de" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="2d40-aa67-21ed-2c10" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="120.0"/>
@@ -19317,7 +19319,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8ebc-8574-4d6c-92a0" name="Thrór ruled with utter surety, never doubting his house would endure" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="8ebc-8574-4d6c-92a0" name="Thrór ruled with utter surety, never doubting his house would endure." hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7e2b-0752-fd0b-9ab8" type="max"/>
       </constraints>
@@ -19335,7 +19337,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="57ec-e3d0-5d92-8912" name="Durin&apos;s Axe" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="57ec-e3d0-5d92-8912" name="Durin&apos;s Axe" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f71-b335-ba2e-c706" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="671c-c844-d935-5d4d" type="min"/>
@@ -19354,7 +19356,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8f16-c3be-5242-fc5c" name="Durin, King of Khazard-Dûm" hidden="false" collective="false" type="model">
+    <selectionEntry id="8f16-c3be-5242-fc5c" name="Durin, King of Khazard-Dûm" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7a75-9f5a-eae4-d813" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9e42-42a4-5c00-c25e" type="max"/>
@@ -19383,9 +19385,9 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <infoLink id="f194-f3ec-36fa-dba4" name="Fearless" hidden="false" targetId="7ad1-afe5-c22b-4558" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="75b7-161e-7293-c1d2" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="75b7-161e-7293-c1d2" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="ef0e-2bc3-76b2-00ce" name="Heavy Mithril Armour" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="ef0e-2bc3-76b2-00ce" name="Heavy Mithril Armour" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e280-59d3-47b8-3ad0" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9bfc-12e6-0962-a897" type="max"/>
@@ -19403,7 +19405,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="0932-1569-69c4-3ef7" name="The Crown of Kings" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="0932-1569-69c4-3ef7" name="The Crown of Kings" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9743-3e21-f279-d855" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1a47-c338-645e-3aed" type="max"/>
@@ -19421,7 +19423,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="8be2-49f4-a9fb-eedb" name="The Horn of Zirakzigil" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="8be2-49f4-a9fb-eedb" name="The Horn of Zirakzigil" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a591-d419-b255-c816" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7450-ffb0-37f1-cf7e" type="max"/>
@@ -19444,12 +19446,12 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="52cf-2f9c-e34c-2fbc" name="Durin&apos;s Axe" hidden="false" collective="false" targetId="57ec-e3d0-5d92-8912" type="selectionEntry">
+            <entryLink id="52cf-2f9c-e34c-2fbc" name="Durin&apos;s Axe" hidden="false" collective="false" import="true" targetId="57ec-e3d0-5d92-8912" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="671c-c844-d935-5d4d" value="1"/>
               </modifiers>
             </entryLink>
-            <entryLink id="43a8-b4ed-70fd-8dcd" name="The Ring of Durin" hidden="false" collective="false" targetId="2865-8c86-2a53-3ec1" type="selectionEntry">
+            <entryLink id="43a8-b4ed-70fd-8dcd" name="The Ring of Durin" hidden="false" collective="false" import="true" targetId="2865-8c86-2a53-3ec1" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="453c-f6db-7147-2ab8" type="min"/>
               </constraints>
@@ -19458,8 +19460,8 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="6d5a-23b5-a296-066b" name="Leader (Legend)" hidden="false" collective="false" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
-        <entryLink id="435b-618e-edce-0db5" name="Hero of Legend" hidden="false" collective="false" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
+        <entryLink id="6d5a-23b5-a296-066b" name="Leader (Legend)" hidden="false" collective="false" import="true" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
+        <entryLink id="435b-618e-edce-0db5" name="Hero of Legend" hidden="false" collective="false" import="true" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="160.0"/>
@@ -19467,7 +19469,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2865-8c86-2a53-3ec1" name="The Ring of Durin" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="2865-8c86-2a53-3ec1" name="The Ring of Durin" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7cff-e77c-f495-9c56" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a17-4064-4d64-ffdf" type="max"/>
@@ -19486,7 +19488,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8cf6-136e-1b2f-4040" name="Thrór" hidden="false" collective="false" type="model">
+    <selectionEntry id="8cf6-136e-1b2f-4040" name="Thrór" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4641-dd52-c932-aab1" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="131d-7396-7e95-ba83" type="min"/>
@@ -19512,9 +19514,9 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         </profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="b73c-b320-4550-f8fc" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="b73c-b320-4550-f8fc" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="e8fa-3f3a-d41b-0dcc" name="Arkenstone" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="e8fa-3f3a-d41b-0dcc" name="Arkenstone" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5938-570d-0356-d3b9" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f6e4-6a56-e79e-a581" type="max"/>
@@ -19534,7 +19536,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="e74f-5168-02fc-cea3" name="The Ring of Durin" hidden="false" collective="false" targetId="2865-8c86-2a53-3ec1" type="selectionEntry">
+            <entryLink id="e74f-5168-02fc-cea3" name="The Ring of Durin" hidden="false" collective="false" import="true" targetId="2865-8c86-2a53-3ec1" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="7cff-e77c-f495-9c56" value="1">
                   <conditions>
@@ -19543,15 +19545,15 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="b3f1-6bcd-7cf6-5cbf" name="Heavy Dwarf Armour" hidden="false" collective="false" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
-            <entryLink id="4f19-e33c-df72-ad3f" name="Shield" hidden="false" collective="false" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
-            <entryLink id="fef0-4b68-1d9c-1f1a" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="b3f1-6bcd-7cf6-5cbf" name="Heavy Dwarf Armour" hidden="false" collective="false" import="true" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
+            <entryLink id="4f19-e33c-df72-ad3f" name="Shield" hidden="false" collective="false" import="true" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
+            <entryLink id="fef0-4b68-1d9c-1f1a" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="19e3-6850-7122-c4fa" name="Leader (Legend)" hidden="false" collective="false" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
-        <entryLink id="55fb-9676-b059-0e14" name="Hero of Legend" hidden="false" collective="false" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
+        <entryLink id="19e3-6850-7122-c4fa" name="Leader (Legend)" hidden="false" collective="false" import="true" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
+        <entryLink id="55fb-9676-b059-0e14" name="Hero of Legend" hidden="false" collective="false" import="true" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -19559,7 +19561,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2f79-4eb6-f8a7-7db4" name="Young Thorin Oakenshield" hidden="false" collective="false" type="model">
+    <selectionEntry id="2f79-4eb6-f8a7-7db4" name="Young Thorin Oakenshield" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="5a9a-79ca-014e-8108" value="0.0">
           <conditions>
@@ -19611,21 +19613,21 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         </rule>
       </rules>
       <selectionEntryGroups>
-        <selectionEntryGroup id="ca7b-a9bb-a2d3-aab6" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="ca7b-a9bb-a2d3-aab6" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="9f49-769f-8b1d-0853" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-            <entryLink id="60b3-77aa-68a7-22f4" name="Dwarf Armour" hidden="false" collective="false" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
+            <entryLink id="9f49-769f-8b1d-0853" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="60b3-77aa-68a7-22f4" name="Dwarf Armour" hidden="false" collective="false" import="true" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="5e1d-855e-544d-29fc" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="5e1d-855e-544d-29fc" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="9424-08c3-0d2a-2de6" name="The Oakenshield" hidden="false" collective="false" targetId="e5f5-4af4-4680-a765" type="selectionEntry"/>
+            <entryLink id="9424-08c3-0d2a-2de6" name="The Oakenshield" hidden="false" collective="false" import="true" targetId="e5f5-4af4-4680-a765" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="0ebc-f137-4ee5-a240" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
-        <entryLink id="969e-d9bf-5645-07ae" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="0ebc-f137-4ee5-a240" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="969e-d9bf-5645-07ae" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="100.0"/>
@@ -19633,7 +19635,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e5f5-4af4-4680-a765" name="The Oakenshield" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="e5f5-4af4-4680-a765" name="The Oakenshield" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8644-af47-688b-5160" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bfbc-42ae-fb9d-db80" type="max"/>
@@ -19651,7 +19653,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="09d9-bc39-bde1-3310" name="Orcrist" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="09d9-bc39-bde1-3310" name="Orcrist" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="372f-0384-9ec0-0732" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9151-8c60-6012-5e73" type="max"/>
@@ -19675,7 +19677,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="49a3-9c05-5e01-f6cb" name="Thorin Oakenshield" hidden="false" collective="false" type="model">
+    <selectionEntry id="49a3-9c05-5e01-f6cb" name="Thorin Oakenshield" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="8a3d-faba-2e59-ed1b" value="0.0">
           <conditions>
@@ -19722,23 +19724,23 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         </profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="0917-3200-4bc2-e7bd" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="0917-3200-4bc2-e7bd" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="3690-2762-2ba3-72bf" name="Dwarf Armour" hidden="false" collective="false" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
-            <entryLink id="467b-298d-8321-ca41" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="3690-2762-2ba3-72bf" name="Dwarf Armour" hidden="false" collective="false" import="true" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
+            <entryLink id="467b-298d-8321-ca41" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="8aa1-5dcb-7a8d-89c9" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="8aa1-5dcb-7a8d-89c9" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="69d9-be97-7411-16ca" name="Pony" hidden="false" collective="false" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
-            <entryLink id="aea2-c06c-afa9-0bbb" name="The Oakenshield" hidden="false" collective="false" targetId="e5f5-4af4-4680-a765" type="selectionEntry"/>
-            <entryLink id="cfa2-e706-ee06-de24" name="Orcrist" hidden="false" collective="false" targetId="09d9-bc39-bde1-3310" type="selectionEntry"/>
+            <entryLink id="69d9-be97-7411-16ca" name="Pony" hidden="false" collective="false" import="true" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
+            <entryLink id="aea2-c06c-afa9-0bbb" name="The Oakenshield" hidden="false" collective="false" import="true" targetId="e5f5-4af4-4680-a765" type="selectionEntry"/>
+            <entryLink id="cfa2-e706-ee06-de24" name="Orcrist" hidden="false" collective="false" import="true" targetId="09d9-bc39-bde1-3310" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="7265-9c66-bf1d-38aa" name="Leader (Legend)" hidden="false" collective="false" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
-        <entryLink id="4d97-ff0a-7db2-801f" name="Hero of Legend" hidden="false" collective="false" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
+        <entryLink id="7265-9c66-bf1d-38aa" name="Leader (Legend)" hidden="false" collective="false" import="true" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
+        <entryLink id="4d97-ff0a-7db2-801f" name="Hero of Legend" hidden="false" collective="false" import="true" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="100.0"/>
@@ -19746,7 +19748,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b522-688a-e684-86ef" name="Dwarf Armour" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="b522-688a-e684-86ef" name="Dwarf Armour" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="753d-63bb-d7f9-7392" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="11d6-b989-c9da-1721" type="min"/>
@@ -19760,7 +19762,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8bc1-4db7-ef30-e0db" name="Thorin Oakenshield, King Under the Mountain" hidden="false" collective="false" type="model">
+    <selectionEntry id="8bc1-4db7-ef30-e0db" name="Thorin Oakenshield, King Under the Mountain" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="467e-73a5-0f82-4593" value="0.0">
           <conditions>
@@ -19808,22 +19810,22 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         </rule>
       </rules>
       <selectionEntryGroups>
-        <selectionEntryGroup id="67a5-dce7-398f-0d79" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="67a5-dce7-398f-0d79" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="8132-dafe-92ff-bd6e" name="Heavy Dwarf Armour" hidden="false" collective="false" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
-            <entryLink id="f438-2d7c-3986-a6f9" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="8132-dafe-92ff-bd6e" name="Heavy Dwarf Armour" hidden="false" collective="false" import="true" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
+            <entryLink id="f438-2d7c-3986-a6f9" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="9996-dfc7-264f-ee1e" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="9996-dfc7-264f-ee1e" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="8014-d967-77ac-ddbd" name="Orcrist" hidden="false" collective="false" targetId="09d9-bc39-bde1-3310" type="selectionEntry"/>
-            <entryLink id="601e-b84b-873c-1906" name="War Goat" hidden="false" collective="false" targetId="717c-a11c-4c84-db3d" type="selectionEntry"/>
+            <entryLink id="8014-d967-77ac-ddbd" name="Orcrist" hidden="false" collective="false" import="true" targetId="09d9-bc39-bde1-3310" type="selectionEntry"/>
+            <entryLink id="601e-b84b-873c-1906" name="War Goat" hidden="false" collective="false" import="true" targetId="717c-a11c-4c84-db3d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="98fc-d14d-6368-a11a" name="Hero of Legend" hidden="false" collective="false" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
-        <entryLink id="4901-a3ef-c217-9227" name="Leader (Legend)" hidden="false" collective="false" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
+        <entryLink id="98fc-d14d-6368-a11a" name="Hero of Legend" hidden="false" collective="false" import="true" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
+        <entryLink id="4901-a3ef-c217-9227" name="Leader (Legend)" hidden="false" collective="false" import="true" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="115.0"/>
@@ -19831,7 +19833,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="717c-a11c-4c84-db3d" name="War Goat" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="717c-a11c-4c84-db3d" name="War Goat" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba7c-f216-02bf-3f92" type="max"/>
       </constraints>
@@ -19846,7 +19848,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="da6e-2db8-bd05-a771" name="Young Balin the Dwarf" hidden="false" collective="false" type="model">
+    <selectionEntry id="da6e-2db8-bd05-a771" name="Young Balin the Dwarf" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="30f3-dfc8-d8ef-bc36" value="0.0">
           <conditions>
@@ -19891,16 +19893,16 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         </rule>
       </rules>
       <selectionEntryGroups>
-        <selectionEntryGroup id="1dab-d907-3098-c6be" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="1dab-d907-3098-c6be" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="ce4b-5307-8370-6070" name="Dwarf Armour" hidden="false" collective="false" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
-            <entryLink id="7784-ca95-5521-9397" name="Sword-Mace" hidden="false" collective="false" targetId="d26e-96ea-c830-6ada" type="selectionEntry"/>
+            <entryLink id="ce4b-5307-8370-6070" name="Dwarf Armour" hidden="false" collective="false" import="true" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
+            <entryLink id="7784-ca95-5521-9397" name="Sword-Mace" hidden="false" collective="false" import="true" targetId="d26e-96ea-c830-6ada" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="0701-f98e-c3be-c9b5" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="252d-e24b-199f-1853" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="0701-f98e-c3be-c9b5" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="252d-e24b-199f-1853" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -19908,7 +19910,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5742-130a-873b-a0fc" name="Young Dwalin the Dwarf" hidden="false" collective="false" type="model">
+    <selectionEntry id="5742-130a-873b-a0fc" name="Young Dwalin the Dwarf" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="7295-ab2f-c97c-4975" value="0.0">
           <conditions>
@@ -19964,10 +19966,10 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <infoLink id="0920-1dca-0555-e893" name="Fearless (Passive)" hidden="false" targetId="7ad1-afe5-c22b-4558" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="3253-5198-608b-3bd7" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="3253-5198-608b-3bd7" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="2f28-270c-8dea-8549" name="Dwarf Armour" hidden="false" collective="false" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
-            <entryLink id="85c1-7a4a-c4c7-a230" name="Axe" hidden="false" collective="false" targetId="6487-f2cf-5eb7-a780" type="selectionEntry">
+            <entryLink id="2f28-270c-8dea-8549" name="Dwarf Armour" hidden="false" collective="false" import="true" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
+            <entryLink id="85c1-7a4a-c4c7-a230" name="Axe" hidden="false" collective="false" import="true" targetId="6487-f2cf-5eb7-a780" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="name" value="Two Axes"/>
               </modifiers>
@@ -19976,8 +19978,8 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="4478-9b91-d5c9-6e89" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="2d23-47ce-96d6-3bde" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="4478-9b91-d5c9-6e89" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="2d23-47ce-96d6-3bde" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="85.0"/>
@@ -19985,7 +19987,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d718-8f10-c8e4-48a7" name="Kíli the Dwarf" hidden="false" collective="false" type="model">
+    <selectionEntry id="d718-8f10-c8e4-48a7" name="Kíli the Dwarf" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="ef3a-e148-8972-1c12" value="0.0">
           <conditions>
@@ -20021,22 +20023,22 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <infoLink id="f35b-513f-f59d-3cb9" name="Combat Synergy (Active)" hidden="false" targetId="375a-bd0c-41f7-a75b" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="0f55-0036-fe37-eb7b" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="0f55-0036-fe37-eb7b" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="bf0d-36ba-9394-d62b" name="Dwarf Bow" hidden="false" collective="false" targetId="f572-47ba-00f8-2bf4" type="selectionEntry"/>
-            <entryLink id="88a4-a8c0-0f40-8cc9" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
-            <entryLink id="bbe8-52b7-a811-1d55" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="bf0d-36ba-9394-d62b" name="Dwarf Bow" hidden="false" collective="false" import="true" targetId="f572-47ba-00f8-2bf4" type="selectionEntry"/>
+            <entryLink id="88a4-a8c0-0f40-8cc9" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="bbe8-52b7-a811-1d55" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="7f99-db84-39f4-e86d" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="7f99-db84-39f4-e86d" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="5c17-43e5-c1dc-7743" name="Pony" hidden="false" collective="false" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
+            <entryLink id="5c17-43e5-c1dc-7743" name="Pony" hidden="false" collective="false" import="true" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="a409-467b-9e21-31cc" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="59e7-c16b-719a-b6e6" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="a409-467b-9e21-31cc" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="59e7-c16b-719a-b6e6" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -20044,7 +20046,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="03ee-b6be-132f-0caf" name="Fíli the Dwarf" hidden="false" collective="false" type="model">
+    <selectionEntry id="03ee-b6be-132f-0caf" name="Fíli the Dwarf" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="f6f0-6da7-7d2b-aa79" value="0.0">
           <conditions>
@@ -20080,22 +20082,22 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <infoLink id="20e1-589c-33a9-c745" name="Combat Synergy (Active)" hidden="false" targetId="375a-bd0c-41f7-a75b" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="493a-4b41-13f3-3e64" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="493a-4b41-13f3-3e64" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="a1b7-c103-5004-b8b3" name="Pony" hidden="false" collective="false" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
+            <entryLink id="a1b7-c103-5004-b8b3" name="Pony" hidden="false" collective="false" import="true" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="b66a-8240-a913-c7e2" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="b66a-8240-a913-c7e2" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="b210-210a-a16c-c96f" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-            <entryLink id="0eda-d4be-cd1d-6f5d" name="Throwing Axes" hidden="false" collective="false" targetId="912f-e21a-272a-a9e3" type="selectionEntry"/>
-            <entryLink id="663d-ad5b-85b0-11c3" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="b210-210a-a16c-c96f" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="0eda-d4be-cd1d-6f5d" name="Throwing Axes" hidden="false" collective="false" import="true" targetId="912f-e21a-272a-a9e3" type="selectionEntry"/>
+            <entryLink id="663d-ad5b-85b0-11c3" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="9702-6b88-9596-841e" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="463d-b0f2-2d83-7fd5" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="9702-6b88-9596-841e" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="463d-b0f2-2d83-7fd5" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -20103,7 +20105,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f2e9-213d-1e87-91dd" name="Balin the Dwarf" hidden="false" collective="false" type="model">
+    <selectionEntry id="f2e9-213d-1e87-91dd" name="Balin the Dwarf" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="a7f1-b2d2-a0f1-1790" value="0.0">
           <conditions>
@@ -20153,21 +20155,21 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <infoLink id="8fd2-7f77-a53d-a0e9" name="Longbeard (Active)" hidden="false" targetId="26d2-4ad0-8b10-dbc9" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="eaf0-3212-3a01-9de1" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="eaf0-3212-3a01-9de1" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="200d-5d7b-3dea-8603" name="Pony" hidden="false" collective="false" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
+            <entryLink id="200d-5d7b-3dea-8603" name="Pony" hidden="false" collective="false" import="true" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="785d-b9e7-738d-ee2c" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="785d-b9e7-738d-ee2c" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="5914-0d81-d1bf-6821" name="Sword-Mace" hidden="false" collective="false" targetId="d26e-96ea-c830-6ada" type="selectionEntry"/>
-            <entryLink id="bd7f-e13a-4a1e-13ff" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="5914-0d81-d1bf-6821" name="Sword-Mace" hidden="false" collective="false" import="true" targetId="d26e-96ea-c830-6ada" type="selectionEntry"/>
+            <entryLink id="bd7f-e13a-4a1e-13ff" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="30f0-2163-810d-a077" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="543a-847f-ad24-835e" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="30f0-2163-810d-a077" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="543a-847f-ad24-835e" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -20175,7 +20177,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="fe96-bc83-a884-5324" name="Dwalin the Dwarf" hidden="false" collective="false" type="model">
+    <selectionEntry id="fe96-bc83-a884-5324" name="Dwalin the Dwarf" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="0bf5-3d30-b949-705b" value="0.0">
           <conditions>
@@ -20220,27 +20222,27 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <infoLink id="4663-2bde-7e2c-05d3" name="Burly (Passive)" hidden="false" targetId="390c-dc0c-72ba-8d47" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="21e3-9783-6a9a-a606" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="21e3-9783-6a9a-a606" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="a92e-7a9f-a047-93dc" name="Pony" hidden="false" collective="false" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
+            <entryLink id="a92e-7a9f-a047-93dc" name="Pony" hidden="false" collective="false" import="true" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="d227-ff2e-6de1-49d1" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="d227-ff2e-6de1-49d1" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="4ef8-5795-7ec3-5a43" name="Dagger" hidden="false" collective="false" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
-            <entryLink id="3fd7-a407-ec79-4f3a" name="Dwarf Armour" hidden="false" collective="false" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
-            <entryLink id="a130-fe76-d54d-1bd8" name="Axe" hidden="false" collective="false" targetId="6487-f2cf-5eb7-a780" type="selectionEntry">
+            <entryLink id="4ef8-5795-7ec3-5a43" name="Dagger" hidden="false" collective="false" import="true" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
+            <entryLink id="3fd7-a407-ec79-4f3a" name="Dwarf Armour" hidden="false" collective="false" import="true" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
+            <entryLink id="a130-fe76-d54d-1bd8" name="Axe" hidden="false" collective="false" import="true" targetId="6487-f2cf-5eb7-a780" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="name" value="Two Axes"/>
               </modifiers>
             </entryLink>
-            <entryLink id="30db-d7d3-7579-2236" name="Two-handed Hammer" hidden="false" collective="false" targetId="074f-603b-7258-9f6a" type="selectionEntry"/>
+            <entryLink id="30db-d7d3-7579-2236" name="Two-handed Hammer" hidden="false" collective="false" import="true" targetId="074f-603b-7258-9f6a" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="4419-4e59-d5d9-1eda" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="0489-845c-eeff-bd0f" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="4419-4e59-d5d9-1eda" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="0489-845c-eeff-bd0f" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -20248,7 +20250,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="28ca-f85b-17b2-a3bf" name="Bifur the Dwarf" hidden="false" collective="false" type="model">
+    <selectionEntry id="28ca-f85b-17b2-a3bf" name="Bifur the Dwarf" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="37bb-302c-3dbe-a52f" value="0.0">
           <conditions>
@@ -20286,14 +20288,14 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <infoLink id="ed94-62d5-19b5-1550" name="Embedded Axe-blade (Active)" hidden="false" targetId="41fe-0509-62da-e214" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="555e-4a98-599f-1440" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="555e-4a98-599f-1440" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="ceb2-415f-4e6b-e60b" name="Pony" hidden="false" collective="false" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
+            <entryLink id="ceb2-415f-4e6b-e60b" name="Pony" hidden="false" collective="false" import="true" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="fcdb-8f01-4750-707e" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="fcdb-8f01-4750-707e" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="339a-722f-7532-7447" name="Boar Spear" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="339a-722f-7532-7447" name="Boar Spear" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca9c-b903-5e26-da68" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8937-b117-181b-00bb" type="min"/>
@@ -20318,14 +20320,14 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="4978-0a09-9702-dfc6" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
-            <entryLink id="7d7a-4c53-9ccb-635f" name="Dagger" hidden="false" collective="false" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
+            <entryLink id="4978-0a09-9702-dfc6" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="7d7a-4c53-9ccb-635f" name="Dagger" hidden="false" collective="false" import="true" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="027f-104c-b180-ac04" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="0b06-7cec-2365-d8e5" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="027f-104c-b180-ac04" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="0b06-7cec-2365-d8e5" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -20333,7 +20335,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="39d8-6239-e45e-4a1c" name="Bofur the Dwarf" hidden="false" collective="false" type="model">
+    <selectionEntry id="39d8-6239-e45e-4a1c" name="Bofur the Dwarf" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="6d84-8f66-dff9-901e" value="0.0">
           <conditions>
@@ -20369,21 +20371,21 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <infoLink id="8999-a20d-d072-1929" name="Steadfast (Active)" hidden="false" targetId="f00f-db9b-c7fd-de65" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="1ad2-8aa9-181b-c199" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="1ad2-8aa9-181b-c199" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="edc0-a762-eb07-73d9" name="Pony" hidden="false" collective="false" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
+            <entryLink id="edc0-a762-eb07-73d9" name="Pony" hidden="false" collective="false" import="true" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="6f36-279f-a8ab-92b8" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="6f36-279f-a8ab-92b8" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="7f9a-03cd-81e5-183c" name="Mattock" hidden="false" collective="false" targetId="d2db-d592-d450-774a" type="selectionEntry"/>
-            <entryLink id="89f6-1024-98d3-85b6" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="7f9a-03cd-81e5-183c" name="Mattock" hidden="false" collective="false" import="true" targetId="d2db-d592-d450-774a" type="selectionEntry"/>
+            <entryLink id="89f6-1024-98d3-85b6" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="a7b1-2d93-ee50-49f7" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="daf2-7bcb-cf84-6e8a" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="a7b1-2d93-ee50-49f7" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="daf2-7bcb-cf84-6e8a" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -20391,7 +20393,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ca5c-b585-34f2-b5d9" name="Bombur the Dwarf" hidden="false" collective="false" type="model">
+    <selectionEntry id="ca5c-b585-34f2-b5d9" name="Bombur the Dwarf" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="54d7-d6f8-ed17-c701" value="0.0">
           <conditions>
@@ -20429,24 +20431,24 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <infoLink id="2106-d0f2-cc1d-1dd5" name="Raising Spirits (Active)" hidden="false" targetId="b53b-64cd-d4ba-95d5" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="71fc-cddb-6638-0600" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="71fc-cddb-6638-0600" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="de76-dafa-16c7-6ac8" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry">
+            <entryLink id="de76-dafa-16c7-6ac8" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="name" value="Cleaver"/>
               </modifiers>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="12a7-74d7-6338-aae8" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="12a7-74d7-6338-aae8" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="2dea-9c6b-0e73-8d74" name="Pony" hidden="false" collective="false" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
+            <entryLink id="2dea-9c6b-0e73-8d74" name="Pony" hidden="false" collective="false" import="true" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="66ef-c0c8-3c1a-3f02" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="8866-5e37-c81a-78d6" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="66ef-c0c8-3c1a-3f02" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="8866-5e37-c81a-78d6" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="45.0"/>
@@ -20454,7 +20456,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e066-18b9-98be-8d32" name="Ori the Dwarf" hidden="false" collective="false" type="model">
+    <selectionEntry id="e066-18b9-98be-8d32" name="Ori the Dwarf" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="94c4-b426-380b-ae15" value="0.0">
           <conditions>
@@ -20495,14 +20497,14 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <infoLink id="2578-2ff0-97ee-e9b4" name="Chronicler (Active)" hidden="false" targetId="d799-9157-5720-807e" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="6648-877a-266e-2c08" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="6648-877a-266e-2c08" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="f438-e2c0-0a38-3b5e" name="Pony" hidden="false" collective="false" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
+            <entryLink id="f438-e2c0-0a38-3b5e" name="Pony" hidden="false" collective="false" import="true" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="f90a-4724-0f12-b7ad" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="f90a-4724-0f12-b7ad" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="a84e-01d1-0f4e-f897" name="Slingshot" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="a84e-01d1-0f4e-f897" name="Slingshot" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c5b4-20c8-3e7b-5655" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b7c8-2315-6a5d-dabd" type="max"/>
@@ -20518,13 +20520,13 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="2a64-4e13-bf08-8f94" name="Dagger" hidden="false" collective="false" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
+            <entryLink id="2a64-4e13-bf08-8f94" name="Dagger" hidden="false" collective="false" import="true" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="492d-5b3d-7157-a72f" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="4dbc-dd9a-0582-1ed2" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="492d-5b3d-7157-a72f" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="4dbc-dd9a-0582-1ed2" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -20532,7 +20534,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="cf08-564c-ce2e-16f8" name="Nori the Dwarf" hidden="false" collective="false" type="model">
+    <selectionEntry id="cf08-564c-ce2e-16f8" name="Nori the Dwarf" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="01bd-c1ae-232e-cf70" value="0.0">
           <conditions>
@@ -20568,22 +20570,22 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <infoLink id="573a-93d9-2bfb-fbb7" name="Weapon Master (Active)" hidden="false" targetId="4bb4-a011-0585-ed8b" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="3b69-7b8b-1e08-2797" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="3b69-7b8b-1e08-2797" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="1639-daea-41a7-655e" name="Pony" hidden="false" collective="false" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
+            <entryLink id="1639-daea-41a7-655e" name="Pony" hidden="false" collective="false" import="true" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="3533-e4c5-845e-f722" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="3533-e4c5-845e-f722" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="f9d8-2b15-ca39-c737" name="Dagger" hidden="false" collective="false" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
-            <entryLink id="b72a-37e8-b79e-7c19" name="Two-handed Mace" hidden="false" collective="false" targetId="a300-1832-bfa2-3f24" type="selectionEntry"/>
-            <entryLink id="55a6-b20a-5f6a-4c59" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="f9d8-2b15-ca39-c737" name="Dagger" hidden="false" collective="false" import="true" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
+            <entryLink id="b72a-37e8-b79e-7c19" name="Two-handed Mace" hidden="false" collective="false" import="true" targetId="a300-1832-bfa2-3f24" type="selectionEntry"/>
+            <entryLink id="55a6-b20a-5f6a-4c59" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="6167-7b60-2342-853c" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="c6eb-97cf-b7ff-1a14" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="6167-7b60-2342-853c" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="c6eb-97cf-b7ff-1a14" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -20591,7 +20593,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d3ee-1342-d729-c1a3" name="Dori the Dwarf" hidden="false" collective="false" type="model">
+    <selectionEntry id="d3ee-1342-d729-c1a3" name="Dori the Dwarf" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="41d0-21d5-eabd-f067" value="0.0">
           <conditions>
@@ -20629,22 +20631,22 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         </rule>
       </rules>
       <selectionEntryGroups>
-        <selectionEntryGroup id="0487-9e3e-39ea-f65c" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="0487-9e3e-39ea-f65c" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="5170-f385-9cc8-34ae" name="Pony" hidden="false" collective="false" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
+            <entryLink id="5170-f385-9cc8-34ae" name="Pony" hidden="false" collective="false" import="true" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="cd11-97a5-133d-11e8" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="cd11-97a5-133d-11e8" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="16b4-1df3-dd33-ecb6" name="Flail" hidden="false" collective="false" targetId="1b2d-88a9-0816-7c65" type="selectionEntry"/>
-            <entryLink id="2b3a-e0c2-2002-450e" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-            <entryLink id="e689-7e91-84ab-22a5" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="16b4-1df3-dd33-ecb6" name="Flail" hidden="false" collective="false" import="true" targetId="1b2d-88a9-0816-7c65" type="selectionEntry"/>
+            <entryLink id="2b3a-e0c2-2002-450e" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="e689-7e91-84ab-22a5" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="3130-01c9-06a9-16b9" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="0800-9feb-f77f-bd54" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="3130-01c9-06a9-16b9" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="0800-9feb-f77f-bd54" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -20652,7 +20654,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="308c-7251-a877-9e80" name="Óin the Dwarf" hidden="false" collective="false" type="model">
+    <selectionEntry id="308c-7251-a877-9e80" name="Óin the Dwarf" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="d2f3-4192-1441-e861" value="0.0">
           <conditions>
@@ -20689,14 +20691,14 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <infoLink id="d2a0-7a6a-1e19-1134" name="Prognostication (Active)" hidden="false" targetId="c360-c8fa-19d3-fc18" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="ad86-8f69-3d8d-8edd" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="ad86-8f69-3d8d-8edd" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="0db7-8095-8661-f910" name="Pony" hidden="false" collective="false" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
+            <entryLink id="0db7-8095-8661-f910" name="Pony" hidden="false" collective="false" import="true" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="13a0-73ef-2398-9909" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="13a0-73ef-2398-9909" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="631e-7a62-2a10-3dbd" name="Hand-and-a-half Staff" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="631e-7a62-2a10-3dbd" name="Hand-and-a-half Staff" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a5be-56f0-0ba8-f840" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f612-e004-77bc-97f5" type="max"/>
@@ -20715,8 +20717,8 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="614b-1f8c-a9ed-830c" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="d07b-9533-0071-01f6" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="614b-1f8c-a9ed-830c" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="d07b-9533-0071-01f6" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -20724,7 +20726,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9743-fc7b-b512-45b1" name="Glóin the Dwarf" hidden="false" collective="false" type="model">
+    <selectionEntry id="9743-fc7b-b512-45b1" name="Glóin the Dwarf" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="2a28-8d67-8e31-2ae0" value="0.0">
           <conditions>
@@ -20760,26 +20762,26 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <infoLink id="0df8-6a25-3df3-7989" name="A Warrior Born (Active)" hidden="false" targetId="a5b1-c31a-dcb8-6270" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="2a2a-69d3-6c0b-253c" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="2a2a-69d3-6c0b-253c" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="a597-6b11-8f6d-6e66" name="Pony" hidden="false" collective="false" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
+            <entryLink id="a597-6b11-8f6d-6e66" name="Pony" hidden="false" collective="false" import="true" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="69f3-0584-8e2c-fdf8" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="69f3-0584-8e2c-fdf8" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="3993-7f4c-28fe-9323" name="Throwing Axes" hidden="false" collective="false" targetId="912f-e21a-272a-a9e3" type="selectionEntry"/>
-            <entryLink id="4216-d79e-231e-9e0f" name="Axe" hidden="false" collective="false" targetId="6487-f2cf-5eb7-a780" type="selectionEntry">
+            <entryLink id="3993-7f4c-28fe-9323" name="Throwing Axes" hidden="false" collective="false" import="true" targetId="912f-e21a-272a-a9e3" type="selectionEntry"/>
+            <entryLink id="4216-d79e-231e-9e0f" name="Axe" hidden="false" collective="false" import="true" targetId="6487-f2cf-5eb7-a780" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="name" value="Two Axes"/>
               </modifiers>
             </entryLink>
-            <entryLink id="6b07-4167-bbdd-6110" name="Dwarf Armour" hidden="false" collective="false" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
+            <entryLink id="6b07-4167-bbdd-6110" name="Dwarf Armour" hidden="false" collective="false" import="true" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="ed23-5e34-1d13-8e1b" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="ece4-4ceb-90fe-2c37" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="ed23-5e34-1d13-8e1b" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="ece4-4ceb-90fe-2c37" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -20787,7 +20789,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a0e7-5e9a-14c0-60bd" name="Bilbo Baggins" hidden="false" collective="false" type="model">
+    <selectionEntry id="a0e7-5e9a-14c0-60bd" name="Bilbo Baggins" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="b27b-2300-d0bd-bc4b" value="0.0">
           <conditions>
@@ -20833,16 +20835,16 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <infoLink id="4e3f-67c3-a676-68c0" name="It has not yet Awoken (Passive)" hidden="false" targetId="0dc4-cece-d27c-6bba" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="0927-c642-99cc-af31" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="0927-c642-99cc-af31" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="0ffc-a39c-d04e-a79c" name="The One Ring" hidden="false" collective="false" targetId="ddc1-67a9-1014-b73c" type="selectionEntry"/>
-            <entryLink id="b190-9da2-66ae-255f" name="Sting" hidden="false" collective="false" targetId="2428-760d-9db5-14d8" type="selectionEntry"/>
-            <entryLink id="a575-70a4-d69a-56c6" name="Pony" hidden="false" collective="false" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
+            <entryLink id="0ffc-a39c-d04e-a79c" name="The One Ring" hidden="false" collective="false" import="true" targetId="ddc1-67a9-1014-b73c" type="selectionEntry"/>
+            <entryLink id="b190-9da2-66ae-255f" name="Sting" hidden="false" collective="false" import="true" targetId="2428-760d-9db5-14d8" type="selectionEntry"/>
+            <entryLink id="a575-70a4-d69a-56c6" name="Pony" hidden="false" collective="false" import="true" targetId="e0b4-3068-b6f2-2765" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="2836-309d-1a04-bf3e" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="2836-309d-1a04-bf3e" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="2921-25c2-385e-4286" name="Dagger" hidden="false" collective="false" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
+            <entryLink id="2921-25c2-385e-4286" name="Dagger" hidden="false" collective="false" import="true" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -20852,7 +20854,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="680c-c74d-401c-e2a5" name="Dáin Ironfoot, Lord of the Iron Hills" hidden="false" collective="false" type="model">
+    <selectionEntry id="680c-c74d-401c-e2a5" name="Dáin Ironfoot, Lord of the Iron Hills" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ad75-081b-29b6-330a" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b29-3452-1835-238e" type="max"/>
@@ -20918,15 +20920,15 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="f0a9-9834-bacf-09fc" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="f0a9-9834-bacf-09fc" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="a91f-2c67-c41d-fb06" name="Two-handed Hammer" hidden="false" collective="false" targetId="074f-603b-7258-9f6a" type="selectionEntry"/>
-            <entryLink id="bd87-0645-5426-18db" name="Heavy Dwarf Armour" hidden="false" collective="false" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
+            <entryLink id="a91f-2c67-c41d-fb06" name="Two-handed Hammer" hidden="false" collective="false" import="true" targetId="074f-603b-7258-9f6a" type="selectionEntry"/>
+            <entryLink id="bd87-0645-5426-18db" name="Heavy Dwarf Armour" hidden="false" collective="false" import="true" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="3b53-16bb-7844-3f5d" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="3b53-16bb-7844-3f5d" name="Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="1fb0-5bea-7caa-947f" name="War Boar" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="1fb0-5bea-7caa-947f" name="War Boar" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="27dd-c805-adef-e17c" type="max"/>
               </constraints>
@@ -20954,7 +20956,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="9be6-9343-cc16-e76f" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry">
+        <entryLink id="9be6-9343-cc16-e76f" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -20963,7 +20965,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="e095-134b-701c-c818" name="Leader (Legend)" hidden="false" collective="false" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry">
+        <entryLink id="e095-134b-701c-c818" name="Leader (Legend)" hidden="false" collective="false" import="true" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -20979,7 +20981,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0625-88b8-f1b9-1a37" name="Iron Hills Captain" hidden="false" collective="false" type="model">
+    <selectionEntry id="0625-88b8-f1b9-1a37" name="Iron Hills Captain" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="966c-f081-6012-a60b" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c9b-f31b-19a2-0f80" type="max"/>
@@ -21009,38 +21011,38 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="7836-9a3e-079c-e8a1" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="7836-9a3e-079c-e8a1" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntryGroups>
-            <selectionEntryGroup id="c828-d256-0f5f-ac45" name=" " hidden="false" collective="false" defaultSelectionEntryId="08b9-a891-90c3-2079">
+            <selectionEntryGroup id="c828-d256-0f5f-ac45" name=" " hidden="false" collective="false" import="true" defaultSelectionEntryId="08b9-a891-90c3-2079">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="22c3-4373-0dc8-ffc7" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1021-4323-ba9e-7da5" type="max"/>
               </constraints>
               <entryLinks>
-                <entryLink id="08b9-a891-90c3-2079" name="War Spear" hidden="false" collective="false" targetId="2ab8-5b3a-f4ce-0225" type="selectionEntry">
+                <entryLink id="08b9-a891-90c3-2079" name="War Spear" hidden="false" collective="false" import="true" targetId="2ab8-5b3a-f4ce-0225" type="selectionEntry">
                   <modifiers>
                     <modifier type="set" field="a753-9cd4-ce91-b700" value="0.0"/>
                   </modifiers>
                 </entryLink>
-                <entryLink id="85ae-f16c-916d-1338" name="Mattock" hidden="false" collective="false" targetId="2a89-29f9-1d8e-732f" type="selectionEntry"/>
+                <entryLink id="85ae-f16c-916d-1338" name="Mattock" hidden="false" collective="false" import="true" targetId="2a89-29f9-1d8e-732f" type="selectionEntry"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink id="d153-f623-f79d-14f2" name="Shield" hidden="false" collective="false" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
-            <entryLink id="a6e5-c014-f1d4-7a99" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-            <entryLink id="dd75-0b9f-eb53-52c2" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="d153-f623-f79d-14f2" name="Shield" hidden="false" collective="false" import="true" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
+            <entryLink id="a6e5-c014-f1d4-7a99" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="dd75-0b9f-eb53-52c2" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="ba9c-2fee-b0fd-c69a" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="ba9c-2fee-b0fd-c69a" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="829a-d965-81f5-2f8f" name="War Goat" hidden="false" collective="false" targetId="717c-a11c-4c84-db3d" type="selectionEntry"/>
+            <entryLink id="829a-d965-81f5-2f8f" name="War Goat" hidden="false" collective="false" import="true" targetId="717c-a11c-4c84-db3d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="566d-9734-2036-412e" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
-        <entryLink id="d59a-7767-f96a-a1b7" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="566d-9734-2036-412e" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="d59a-7767-f96a-a1b7" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="80.0"/>
@@ -21048,7 +21050,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="bf61-f3f8-0627-63ff" name="Iron Hills Ballista" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="bf61-f3f8-0627-63ff" name="Iron Hills Ballista" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="increment" field="3a5d-8c56-b437-3a9c" value="1">
           <repeats>
@@ -21092,7 +21094,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         </rule>
       </rules>
       <selectionEntries>
-        <selectionEntry id="a6eb-0c6b-8785-86ea" name="Iron Hills Dwarf Crew" hidden="false" collective="false" type="model">
+        <selectionEntry id="a6eb-0c6b-8785-86ea" name="Iron Hills Dwarf Crew" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0c88-a11a-b9fb-876e" type="min"/>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="611c-df7a-8e90-7501" type="max"/>
@@ -21106,10 +21108,10 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
             <infoLink id="25bc-aa60-f124-bcb4" name="Shieldwall (Active)" hidden="false" targetId="3d14-de88-8fb5-7cad" type="rule"/>
           </infoLinks>
           <selectionEntryGroups>
-            <selectionEntryGroup id="b6a3-8fdb-57c0-04d0" name="Wargear" hidden="false" collective="false">
+            <selectionEntryGroup id="b6a3-8fdb-57c0-04d0" name="Wargear" hidden="false" collective="false" import="true">
               <entryLinks>
-                <entryLink id="781c-4c7d-23d8-efaf" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
-                <entryLink id="89de-995c-8d61-1fbf" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+                <entryLink id="781c-4c7d-23d8-efaf" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+                <entryLink id="89de-995c-8d61-1fbf" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -21121,9 +21123,9 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="a89e-5a6e-a8bb-396e" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="a89e-5a6e-a8bb-396e" name="Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="81b7-d51a-14c8-2f4a" name="Additional Crew" hidden="false" collective="false" type="model">
+            <selectionEntry id="81b7-d51a-14c8-2f4a" name="Additional Crew" hidden="false" collective="false" import="true" type="model">
               <modifiers>
                 <modifier type="set" field="4036-17b0-cb1f-148d" value="2">
                   <conditions>
@@ -21142,16 +21144,16 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="1ee5-aa82-80f8-6588" name="Superior Construction" hidden="false" collective="false" targetId="af0d-caf2-dd72-c81d" type="selectionEntry"/>
+            <entryLink id="1ee5-aa82-80f8-6588" name="Superior Construction" hidden="false" collective="false" import="true" targetId="af0d-caf2-dd72-c81d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="7e81-2f7c-2a4c-1e07" name="Hero" hidden="false" collective="false" defaultSelectionEntryId="ae0e-0d84-b4fc-75a0">
+        <selectionEntryGroup id="7e81-2f7c-2a4c-1e07" name="Hero" hidden="false" collective="false" import="true" defaultSelectionEntryId="ae0e-0d84-b4fc-75a0">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc2b-5c54-f224-b994" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c68b-2cca-d7bb-25c7" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="96ca-b9a0-eb3c-c971" name="Iron Hills Engineer Captain" hidden="false" collective="false" type="model">
+            <selectionEntry id="96ca-b9a0-eb3c-c971" name="Iron Hills Engineer Captain" hidden="false" collective="false" import="true" type="model">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2fb4-8454-d682-2ed8" type="max"/>
               </constraints>
@@ -21183,33 +21185,33 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
                 <infoLink id="8f6b-cabb-3f05-d98f" name="Shieldwall (Active)" hidden="false" targetId="3d14-de88-8fb5-7cad" type="rule"/>
               </infoLinks>
               <selectionEntryGroups>
-                <selectionEntryGroup id="5b7d-52da-14ff-2ec4" name="Wargear" hidden="false" collective="false">
+                <selectionEntryGroup id="5b7d-52da-14ff-2ec4" name="Wargear" hidden="false" collective="false" import="true">
                   <selectionEntryGroups>
-                    <selectionEntryGroup id="155f-8b73-6d9b-5091" name=" " hidden="false" collective="false" defaultSelectionEntryId="d5a2-2d98-f85e-460d">
+                    <selectionEntryGroup id="155f-8b73-6d9b-5091" name=" " hidden="false" collective="false" import="true" defaultSelectionEntryId="d5a2-2d98-f85e-460d">
                       <constraints>
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="86bc-6684-c2a2-a063" type="min"/>
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bbf0-09ab-5c91-fe2f" type="max"/>
                       </constraints>
                       <entryLinks>
-                        <entryLink id="832c-75f9-82e0-f2d8" name="War Spear" hidden="false" collective="false" targetId="2ab8-5b3a-f4ce-0225" type="selectionEntry">
+                        <entryLink id="832c-75f9-82e0-f2d8" name="War Spear" hidden="false" collective="false" import="true" targetId="2ab8-5b3a-f4ce-0225" type="selectionEntry">
                           <modifiers>
                             <modifier type="set" field="a753-9cd4-ce91-b700" value="0.0"/>
                           </modifiers>
                         </entryLink>
-                        <entryLink id="d5a2-2d98-f85e-460d" name="Mattock" hidden="false" collective="false" targetId="2a89-29f9-1d8e-732f" type="selectionEntry"/>
+                        <entryLink id="d5a2-2d98-f85e-460d" name="Mattock" hidden="false" collective="false" import="true" targetId="2a89-29f9-1d8e-732f" type="selectionEntry"/>
                       </entryLinks>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <entryLinks>
-                    <entryLink id="3496-8afd-cd09-375d" name="Shield" hidden="false" collective="false" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
-                    <entryLink id="bdc5-b0aa-75b9-e0a4" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-                    <entryLink id="d13c-61a0-893d-5fbb" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+                    <entryLink id="3496-8afd-cd09-375d" name="Shield" hidden="false" collective="false" import="true" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
+                    <entryLink id="bdc5-b0aa-75b9-e0a4" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+                    <entryLink id="d13c-61a0-893d-5fbb" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <entryLinks>
-                <entryLink id="da30-26da-a59e-0659" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-                <entryLink id="1ece-3a96-7166-dfde" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+                <entryLink id="da30-26da-a59e-0659" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+                <entryLink id="1ece-3a96-7166-dfde" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
               </entryLinks>
               <costs>
                 <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="75.0"/>
@@ -21217,7 +21219,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="ae0e-0d84-b4fc-75a0" name="Iron Hills Siege Veteran" hidden="false" collective="false" type="model">
+            <selectionEntry id="ae0e-0d84-b4fc-75a0" name="Iron Hills Siege Veteran" hidden="false" collective="false" import="true" type="model">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4fd5-def5-ee13-35fe" type="max"/>
               </constraints>
@@ -21244,15 +21246,15 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
                 <infoLink id="26fa-2cf5-2f1d-21be" name="Shieldwall (Active)" hidden="false" targetId="3d14-de88-8fb5-7cad" type="rule"/>
               </infoLinks>
               <selectionEntryGroups>
-                <selectionEntryGroup id="25d4-1cbe-e8b4-b272" name="Wargear" hidden="false" collective="false">
+                <selectionEntryGroup id="25d4-1cbe-e8b4-b272" name="Wargear" hidden="false" collective="false" import="true">
                   <entryLinks>
-                    <entryLink id="cb6d-e469-386b-9a15" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
-                    <entryLink id="9471-f8bc-4938-d6f6" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+                    <entryLink id="cb6d-e469-386b-9a15" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+                    <entryLink id="9471-f8bc-4938-d6f6" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <entryLinks>
-                <entryLink id="7e76-3d1b-0855-256e" name="Minor Hero" hidden="false" collective="false" targetId="36a4-de5b-fd01-3f8e" type="selectionEntry"/>
+                <entryLink id="7e76-3d1b-0855-256e" name="Minor Hero" hidden="false" collective="false" import="true" targetId="36a4-de5b-fd01-3f8e" type="selectionEntry"/>
               </entryLinks>
               <costs>
                 <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -21269,7 +21271,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d2db-d592-d450-774a" name="Mattock" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="d2db-d592-d450-774a" name="Mattock" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="81c0-b629-b1e2-7874" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="af52-b92f-ce9a-df99" type="min"/>
@@ -21286,7 +21288,7 @@ If Radagast is slain or dismounts, remove the sleigh from play.</description>
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="454d-81bd-ce31-02ac" name="Iron Hills Chariot" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="454d-81bd-ce31-02ac" name="Iron Hills Chariot" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a631-eb7f-6f41-ca35" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc87-ec58-c50e-2239" type="max"/>
@@ -21350,10 +21352,10 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="4e64-746e-be3b-e6c3" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="4e64-746e-be3b-e6c3" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="172f-c2bc-4298-4e51" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-            <entryLink id="75b7-217a-94bf-fb20" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="172f-c2bc-4298-4e51" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="75b7-217a-94bf-fb20" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -21363,7 +21365,7 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3db2-cf6a-8479-5dab" name="Kíli the Dwarf, Champion of Erebor" hidden="false" collective="false" type="model">
+    <selectionEntry id="3db2-cf6a-8479-5dab" name="Kíli the Dwarf, Champion of Erebor" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="6ba7-6e27-2b8e-58f5" value="0.0">
           <conditions>
@@ -21405,16 +21407,16 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="703f-dbd9-4530-6f2a" name="Wargear" hidden="false" collective="false"/>
-        <selectionEntryGroup id="583f-11ae-a6e7-428d" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="703f-dbd9-4530-6f2a" name="Wargear" hidden="false" collective="false" import="true"/>
+        <selectionEntryGroup id="583f-11ae-a6e7-428d" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="9bfc-6db4-8ebd-a9b9" name="War Goat" hidden="false" collective="false" targetId="717c-a11c-4c84-db3d" type="selectionEntry"/>
-            <entryLink id="96fd-79ca-2678-e473" name="Dwarf Bow" hidden="false" collective="false" targetId="95ab-8c35-0cf9-0f14" type="selectionEntry"/>
+            <entryLink id="9bfc-6db4-8ebd-a9b9" name="War Goat" hidden="false" collective="false" import="true" targetId="717c-a11c-4c84-db3d" type="selectionEntry"/>
+            <entryLink id="96fd-79ca-2678-e473" name="Dwarf Bow" hidden="false" collective="false" import="true" targetId="95ab-8c35-0cf9-0f14" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="3257-78e1-ce78-35ab" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry">
+        <entryLink id="3257-78e1-ce78-35ab" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -21423,7 +21425,7 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="ebff-5459-4753-61b8" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="ebff-5459-4753-61b8" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -21431,7 +21433,7 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6da8-3da2-b5a2-730e" name="Fíli the Dwarf, Champion of Erebor" hidden="false" collective="false" type="model">
+    <selectionEntry id="6da8-3da2-b5a2-730e" name="Fíli the Dwarf, Champion of Erebor" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="baf1-77d3-569d-0a11" value="0.0">
           <conditions>
@@ -21473,15 +21475,15 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <infoLink id="858f-b9a5-1e99-a2a9" name="Du Bekar! (Passive)" hidden="false" targetId="d4ea-e7e1-3595-95a2" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="6901-8139-3f9f-677f" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="6901-8139-3f9f-677f" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="93bf-0092-5a81-2da4" name="War Goat" hidden="false" collective="false" targetId="717c-a11c-4c84-db3d" type="selectionEntry"/>
-            <entryLink id="786c-3feb-c86d-ba1f" name="Dwarf Bow" hidden="false" collective="false" targetId="95ab-8c35-0cf9-0f14" type="selectionEntry"/>
+            <entryLink id="93bf-0092-5a81-2da4" name="War Goat" hidden="false" collective="false" import="true" targetId="717c-a11c-4c84-db3d" type="selectionEntry"/>
+            <entryLink id="786c-3feb-c86d-ba1f" name="Dwarf Bow" hidden="false" collective="false" import="true" targetId="95ab-8c35-0cf9-0f14" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="10f5-8875-61b4-3eb1" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry">
+        <entryLink id="10f5-8875-61b4-3eb1" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -21490,8 +21492,8 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="d5e1-6fb5-a344-f7df" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="baf4-9952-14b4-109a" name="Wargear" hidden="false" collective="false" targetId="79a5-410c-83fe-05df" type="selectionEntryGroup"/>
+        <entryLink id="d5e1-6fb5-a344-f7df" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="baf4-9952-14b4-109a" name="Wargear" hidden="false" collective="false" import="true" targetId="79a5-410c-83fe-05df" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -21499,7 +21501,7 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b975-9b1d-df5d-c55e" name="Balin the Dwarf, Champion of Erebor" hidden="false" collective="false" type="model">
+    <selectionEntry id="b975-9b1d-df5d-c55e" name="Balin the Dwarf, Champion of Erebor" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="6492-745f-86b1-bab7" value="0.0">
           <conditions>
@@ -21554,16 +21556,16 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="2b8f-5635-cd29-d19c" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="2b8f-5635-cd29-d19c" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="1a47-c1aa-e5ea-d5f1" name="Two-handed Mace" hidden="false" collective="false" targetId="a300-1832-bfa2-3f24" type="selectionEntry"/>
-            <entryLink id="5926-eee4-f5f8-0388" name="Heavy Dwarf Armour" hidden="false" collective="false" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
+            <entryLink id="1a47-c1aa-e5ea-d5f1" name="Two-handed Mace" hidden="false" collective="false" import="true" targetId="a300-1832-bfa2-3f24" type="selectionEntry"/>
+            <entryLink id="5926-eee4-f5f8-0388" name="Heavy Dwarf Armour" hidden="false" collective="false" import="true" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="abf7-37e8-aed2-1967" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
-        <entryLink id="4dd4-cb44-d443-abf2" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="abf7-37e8-aed2-1967" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="4dd4-cb44-d443-abf2" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -21571,7 +21573,7 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b8c1-50ff-227f-fb99" name="Dwalin the Dwarf, Champion of Erebor" hidden="false" collective="false" type="model">
+    <selectionEntry id="b8c1-50ff-227f-fb99" name="Dwalin the Dwarf, Champion of Erebor" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="2618-a86f-60a6-f5fd" value="0.0">
           <conditions>
@@ -21626,25 +21628,25 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <infoLink id="af71-301f-a6c9-0484" name="Weapon Master (Active)" hidden="false" targetId="4bb4-a011-0585-ed8b" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="5b7f-8107-1e9a-e1d6" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="5b7f-8107-1e9a-e1d6" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="36fa-77c6-b4ec-24dd" name="Two-Handed Axe" hidden="false" collective="false" targetId="2d5f-8ff0-8762-879e" type="selectionEntry"/>
-            <entryLink id="32ca-cdcb-2536-d75a" name="Heavy Dwarf Armour" hidden="false" collective="false" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
-            <entryLink id="dbe2-06f0-c93f-6f8c" name="Axe" hidden="false" collective="false" targetId="6487-f2cf-5eb7-a780" type="selectionEntry">
+            <entryLink id="36fa-77c6-b4ec-24dd" name="Two-Handed Axe" hidden="false" collective="false" import="true" targetId="2d5f-8ff0-8762-879e" type="selectionEntry"/>
+            <entryLink id="32ca-cdcb-2536-d75a" name="Heavy Dwarf Armour" hidden="false" collective="false" import="true" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
+            <entryLink id="dbe2-06f0-c93f-6f8c" name="Axe" hidden="false" collective="false" import="true" targetId="6487-f2cf-5eb7-a780" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="name" value="Two Axes"/>
               </modifiers>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="b2c9-92af-2584-d4ec" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="b2c9-92af-2584-d4ec" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="50b9-7a6d-8000-f8aa" name="War Goat" hidden="false" collective="false" targetId="717c-a11c-4c84-db3d" type="selectionEntry"/>
+            <entryLink id="50b9-7a6d-8000-f8aa" name="War Goat" hidden="false" collective="false" import="true" targetId="717c-a11c-4c84-db3d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="b5e5-b47b-4df1-c622" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry">
+        <entryLink id="b5e5-b47b-4df1-c622" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -21653,7 +21655,7 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="5771-52fc-99fa-baee" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="5771-52fc-99fa-baee" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -21661,7 +21663,7 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c4bd-5ac4-26f0-62be" name="Bifur the Dwarf, Champion of Erebor" hidden="false" collective="false" type="model">
+    <selectionEntry id="c4bd-5ac4-26f0-62be" name="Bifur the Dwarf, Champion of Erebor" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="1fae-eafe-449f-bd79" value="0.0">
           <conditions>
@@ -21704,16 +21706,16 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <infoLink id="21d1-2b1a-d0e5-72ac" name="Throw Stones" hidden="false" targetId="4d93-48da-b5ad-de24" type="profile"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="9587-ffad-a8b4-bac2" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="9587-ffad-a8b4-bac2" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="1ec7-6563-5c8b-3a7e" name="Hand-and-a-half Axe" hidden="false" collective="false" targetId="f5c0-592b-0da1-927f" type="selectionEntry"/>
-            <entryLink id="d494-bbc9-d6c1-fa53" name="Heavy Dwarf Armour" hidden="false" collective="false" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
+            <entryLink id="1ec7-6563-5c8b-3a7e" name="Hand-and-a-half Axe" hidden="false" collective="false" import="true" targetId="f5c0-592b-0da1-927f" type="selectionEntry"/>
+            <entryLink id="d494-bbc9-d6c1-fa53" name="Heavy Dwarf Armour" hidden="false" collective="false" import="true" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="e3c5-c7e6-c6af-810c" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="3b6b-b109-0676-08a3" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="e3c5-c7e6-c6af-810c" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="3b6b-b109-0676-08a3" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -21721,7 +21723,7 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3d36-cc97-6660-d6bf" name="Bofur the Dwarf, Champion of Erebor" hidden="false" collective="false" type="model">
+    <selectionEntry id="3d36-cc97-6660-d6bf" name="Bofur the Dwarf, Champion of Erebor" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="2f11-efce-3c53-8a2f" value="0.0">
           <conditions>
@@ -21762,16 +21764,16 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <infoLink id="8e29-00a2-c4d7-2711" name="Steadfast (Passive)" hidden="false" targetId="f00f-db9b-c7fd-de65" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="2d97-d9de-9ee9-fbad" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="2d97-d9de-9ee9-fbad" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="bdd4-c6ef-218d-b4a4" name="Hand-and-a-Half Hammer" hidden="false" collective="false" targetId="a875-50e0-8a0e-da87" type="selectionEntry"/>
-            <entryLink id="300e-f3ae-a43a-51c4" name="Heavy Dwarf Armour" hidden="false" collective="false" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
+            <entryLink id="bdd4-c6ef-218d-b4a4" name="Hand-and-a-Half Hammer" hidden="false" collective="false" import="true" targetId="a875-50e0-8a0e-da87" type="selectionEntry"/>
+            <entryLink id="300e-f3ae-a43a-51c4" name="Heavy Dwarf Armour" hidden="false" collective="false" import="true" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="1414-2be5-d77a-7b70" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="ed2a-7c76-5029-8668" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="1414-2be5-d77a-7b70" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="ed2a-7c76-5029-8668" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -21779,7 +21781,7 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="eb0b-95c9-d91d-d2cd" name="Bombur the Dwarf, Champion of Erebor" hidden="false" collective="false" type="model">
+    <selectionEntry id="eb0b-95c9-d91d-d2cd" name="Bombur the Dwarf, Champion of Erebor" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="6ddc-0067-3de3-3bd2" value="0.0">
           <conditions>
@@ -21822,16 +21824,16 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <infoLink id="06f8-ede5-e854-d25c" name="Raising Spirits (Active)" hidden="false" targetId="b53b-64cd-d4ba-95d5" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="7d44-24c2-76ca-bc74" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="7d44-24c2-76ca-bc74" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="2cd2-6ac2-9a7b-b148" name="Heavy Dwarf Armour" hidden="false" collective="false" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
-            <entryLink id="5d4b-a070-35ed-7935" name="Flail" hidden="false" collective="false" targetId="1b2d-88a9-0816-7c65" type="selectionEntry"/>
+            <entryLink id="2cd2-6ac2-9a7b-b148" name="Heavy Dwarf Armour" hidden="false" collective="false" import="true" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
+            <entryLink id="5d4b-a070-35ed-7935" name="Flail" hidden="false" collective="false" import="true" targetId="1b2d-88a9-0816-7c65" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="08da-5cce-7560-7250" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="312f-e777-8cb5-1382" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="08da-5cce-7560-7250" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="312f-e777-8cb5-1382" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="60.0"/>
@@ -21839,7 +21841,7 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="fcc8-0910-aeeb-4530" name="Ori the Dwarf, Champion of Erebor" hidden="false" collective="false" type="model">
+    <selectionEntry id="fcc8-0910-aeeb-4530" name="Ori the Dwarf, Champion of Erebor" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="358b-8081-57a9-5b07" value="0.0">
           <conditions>
@@ -21892,16 +21894,16 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <infoLink id="5d66-a9cc-eb7b-f767" name="Chronicler (Active)" hidden="false" targetId="d799-9157-5720-807e" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="226a-d4b4-3181-d051" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="226a-d4b4-3181-d051" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="f28a-6125-4d52-6791" name="Hand-and-a-half Axe" hidden="false" collective="false" targetId="f5c0-592b-0da1-927f" type="selectionEntry"/>
-            <entryLink id="3da4-4c7f-bbd9-7426" name="Heavy Dwarf Armour" hidden="false" collective="false" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
+            <entryLink id="f28a-6125-4d52-6791" name="Hand-and-a-half Axe" hidden="false" collective="false" import="true" targetId="f5c0-592b-0da1-927f" type="selectionEntry"/>
+            <entryLink id="3da4-4c7f-bbd9-7426" name="Heavy Dwarf Armour" hidden="false" collective="false" import="true" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="ffe9-dd93-3927-d1a9" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="75ee-d6b6-9d56-9cc6" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="ffe9-dd93-3927-d1a9" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="75ee-d6b6-9d56-9cc6" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -21909,7 +21911,7 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9e46-a235-8060-4ea4" name="Nori the Dwarf, Champion of Erebor" hidden="false" collective="false" type="model">
+    <selectionEntry id="9e46-a235-8060-4ea4" name="Nori the Dwarf, Champion of Erebor" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="e0ed-3f6a-77ee-20c6" value="0.0">
           <conditions>
@@ -21955,17 +21957,17 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <infoLink id="f6a7-5510-20b3-5073" name="Weapon Master (Active)" hidden="false" targetId="4bb4-a011-0585-ed8b" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="4828-7ee3-0d9b-b1c5" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="4828-7ee3-0d9b-b1c5" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="6791-3110-0928-636e" name="Heavy Dwarf Armour" hidden="false" collective="false" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
-            <entryLink id="05f4-fdfa-fee1-e4ea" name="Shield" hidden="false" collective="false" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
-            <entryLink id="9e77-b4c5-40a7-8280" name="Mace" hidden="false" collective="false" targetId="7386-6cd4-6c54-d454" type="selectionEntry"/>
+            <entryLink id="6791-3110-0928-636e" name="Heavy Dwarf Armour" hidden="false" collective="false" import="true" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
+            <entryLink id="05f4-fdfa-fee1-e4ea" name="Shield" hidden="false" collective="false" import="true" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
+            <entryLink id="9e77-b4c5-40a7-8280" name="Mace" hidden="false" collective="false" import="true" targetId="7386-6cd4-6c54-d454" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="c0e4-1294-48d3-a96f" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="805b-2ca0-3c90-a6f4" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="c0e4-1294-48d3-a96f" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="805b-2ca0-3c90-a6f4" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -21973,7 +21975,7 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="99f0-a880-0add-ad39" name="Dori the Dwarf, Champion of Erebor" hidden="false" collective="false" type="model">
+    <selectionEntry id="99f0-a880-0add-ad39" name="Dori the Dwarf, Champion of Erebor" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="b2bd-08a3-d2a5-3377" value="0.0">
           <conditions>
@@ -22014,16 +22016,16 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <infoLink id="48e5-ea90-40e1-21ab" name="Weapon Master (Active)" hidden="false" targetId="4bb4-a011-0585-ed8b" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="54f6-8edd-8b18-3b63" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="54f6-8edd-8b18-3b63" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="73c7-7508-b98f-5643" name="Two-handed Mace" hidden="false" collective="false" targetId="a300-1832-bfa2-3f24" type="selectionEntry"/>
-            <entryLink id="f96b-5a36-dfb1-1450" name="Heavy Dwarf Armour" hidden="false" collective="false" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
+            <entryLink id="73c7-7508-b98f-5643" name="Two-handed Mace" hidden="false" collective="false" import="true" targetId="a300-1832-bfa2-3f24" type="selectionEntry"/>
+            <entryLink id="f96b-5a36-dfb1-1450" name="Heavy Dwarf Armour" hidden="false" collective="false" import="true" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="5b75-cb20-afdf-9e41" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="fed6-66d9-f2d0-03e9" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="5b75-cb20-afdf-9e41" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="fed6-66d9-f2d0-03e9" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -22031,7 +22033,7 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="30ff-24ac-eaf8-375d" name="Óin the Dwarf, Champion of Erebor" hidden="false" collective="false" type="model">
+    <selectionEntry id="30ff-24ac-eaf8-375d" name="Óin the Dwarf, Champion of Erebor" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="311c-78d1-9403-15fb" value="0.0">
           <conditions>
@@ -22073,17 +22075,17 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <infoLink id="69dc-3610-a3bb-f87f" name="Prognostication (Active)" hidden="false" targetId="c360-c8fa-19d3-fc18" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="21d7-4452-7673-a1b0" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="21d7-4452-7673-a1b0" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="d65d-969e-db97-e796" name="Heavy Dwarf Armour" hidden="false" collective="false" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
-            <entryLink id="9b39-dfc8-eb34-a26e" name="Shield" hidden="false" collective="false" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
-            <entryLink id="2cf3-d6ec-a666-9810" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="d65d-969e-db97-e796" name="Heavy Dwarf Armour" hidden="false" collective="false" import="true" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
+            <entryLink id="9b39-dfc8-eb34-a26e" name="Shield" hidden="false" collective="false" import="true" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
+            <entryLink id="2cf3-d6ec-a666-9810" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="54c4-59a8-bad2-333c" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="35b2-a167-2602-e02d" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="54c4-59a8-bad2-333c" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="35b2-a167-2602-e02d" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -22091,7 +22093,7 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="02f1-c2e3-1419-40e8" name="Glóin the Dwarf, Champion of Erebor" hidden="false" collective="false" type="model">
+    <selectionEntry id="02f1-c2e3-1419-40e8" name="Glóin the Dwarf, Champion of Erebor" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="352c-16f0-edd1-f240" value="0.0">
           <conditions>
@@ -22133,16 +22135,16 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <infoLink id="1cd6-cbf5-a2a2-b5c6" name="Weapon Master (Active)" hidden="false" targetId="4bb4-a011-0585-ed8b" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="fcd1-c3db-5e14-5762" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="fcd1-c3db-5e14-5762" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="fc88-6403-d088-e836" name="Two-Handed Axe" hidden="false" collective="false" targetId="2d5f-8ff0-8762-879e" type="selectionEntry"/>
-            <entryLink id="7bca-a5ec-b2b8-ae06" name="Heavy Dwarf Armour" hidden="false" collective="false" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
+            <entryLink id="fc88-6403-d088-e836" name="Two-Handed Axe" hidden="false" collective="false" import="true" targetId="2d5f-8ff0-8762-879e" type="selectionEntry"/>
+            <entryLink id="7bca-a5ec-b2b8-ae06" name="Heavy Dwarf Armour" hidden="false" collective="false" import="true" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="00df-82dd-4f83-46b1" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="6ddf-f6a0-28fc-f7f1" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="00df-82dd-4f83-46b1" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="6ddf-f6a0-28fc-f7f1" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -22150,7 +22152,7 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="82da-a349-b99e-d272" name="Bard the Bowman" hidden="false" collective="false" type="model">
+    <selectionEntry id="82da-a349-b99e-d272" name="Bard the Bowman" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc12-963b-4525-309d" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a152-a93a-6b75-96b9" type="max"/>
@@ -22204,22 +22206,22 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <infoLink id="89a6-5eb1-04cc-5195" name="Rapid Fire (Active)" hidden="false" targetId="1c6b-6633-1c99-37bc" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="aa5d-f266-697a-73d9" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="aa5d-f266-697a-73d9" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="24f0-44f5-b2c7-a65f" name="Great Bow" hidden="false" collective="false" targetId="b45d-aa36-149f-b8c6" type="selectionEntry"/>
-            <entryLink id="fb71-6ce4-f75f-976f" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="24f0-44f5-b2c7-a65f" name="Great Bow" hidden="false" collective="false" import="true" targetId="b45d-aa36-149f-b8c6" type="selectionEntry"/>
+            <entryLink id="fb71-6ce4-f75f-976f" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="33ab-6908-dbf7-bace" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="33ab-6908-dbf7-bace" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="a61b-7194-3448-ad00" name="Armour" hidden="false" collective="false" targetId="37fc-f943-01eb-2efd" type="selectionEntry"/>
-            <entryLink id="28a0-3c38-3457-fe0f" name="Horse" hidden="false" collective="false" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
-            <entryLink id="d058-84a7-ae00-d58c" name="Windlance" hidden="false" collective="false" targetId="d69a-bbc8-abfe-ab7a" type="selectionEntry"/>
+            <entryLink id="a61b-7194-3448-ad00" name="Armour" hidden="false" collective="false" import="true" targetId="37fc-f943-01eb-2efd" type="selectionEntry"/>
+            <entryLink id="28a0-3c38-3457-fe0f" name="Horse" hidden="false" collective="false" import="true" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
+            <entryLink id="d058-84a7-ae00-d58c" name="Windlance" hidden="false" collective="false" import="true" targetId="d69a-bbc8-abfe-ab7a" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="1d52-4d79-6e6b-f24a" name="Leader (Legend)" hidden="false" collective="false" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry">
+        <entryLink id="1d52-4d79-6e6b-f24a" name="Leader (Legend)" hidden="false" collective="false" import="true" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -22228,7 +22230,7 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="5947-cb57-6af5-1905" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry">
+        <entryLink id="5947-cb57-6af5-1905" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -22244,7 +22246,7 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="de44-7054-934b-4ed4" name="Alfrid the Councilor" hidden="false" collective="false" type="model">
+    <selectionEntry id="de44-7054-934b-4ed4" name="Alfrid the Councilor" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ebaa-2965-9882-5642" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2007-1387-9a77-1934" type="max"/>
@@ -22287,14 +22289,14 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         </rule>
       </rules>
       <selectionEntryGroups>
-        <selectionEntryGroup id="858d-563f-1ff6-32ba" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="858d-563f-1ff6-32ba" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="abea-4444-06df-bf38" name="Unarmed" hidden="false" collective="false" targetId="5cb1-7e8b-f6c3-d5cb" type="selectionEntry"/>
+            <entryLink id="abea-4444-06df-bf38" name="Unarmed" hidden="false" collective="false" import="true" targetId="5cb1-7e8b-f6c3-d5cb" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="2540-9eef-809b-7a6b" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry">
+        <entryLink id="2540-9eef-809b-7a6b" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -22310,7 +22312,7 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1457-d7c4-8533-0bd7" name="Bain, Son of Bard" hidden="false" collective="false" type="model">
+    <selectionEntry id="1457-d7c4-8533-0bd7" name="Bain, Son of Bard" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2024-547e-7bd0-1135" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bff1-cca4-b531-e3cc" type="max"/>
@@ -22353,9 +22355,9 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         </rule>
       </rules>
       <selectionEntryGroups>
-        <selectionEntryGroup id="d130-63f5-2e14-db11" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="d130-63f5-2e14-db11" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="85b9-f2f4-f004-fb12" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="85b9-f2f4-f004-fb12" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -22365,7 +22367,7 @@ If the Chariot loses the Fight, it does not Back Away. It also never counts as T
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3847-63c0-b826-d5df" name="Sigrid &amp; Tilda" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="3847-63c0-b826-d5df" name="Sigrid &amp; Tilda" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="a7a6-bb3f-ebe2-404b" value="1">
           <conditions>
@@ -22399,7 +22401,7 @@ It is possible for two models to be the target of Bard’s rage if both Sigrid a
         </rule>
       </rules>
       <selectionEntries>
-        <selectionEntry id="2e5b-1bf8-fa1e-ac5c" name="Sigrid" hidden="false" collective="false" type="model">
+        <selectionEntry id="2e5b-1bf8-fa1e-ac5c" name="Sigrid" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9804-3d0e-6c9c-09e6" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3827-34b5-c294-b513" type="max"/>
@@ -22424,14 +22426,14 @@ It is possible for two models to be the target of Bard’s rage if both Sigrid a
             </profile>
           </profiles>
           <selectionEntryGroups>
-            <selectionEntryGroup id="8824-4739-534f-8f2f" name="Wargear" hidden="false" collective="false">
+            <selectionEntryGroup id="8824-4739-534f-8f2f" name="Wargear" hidden="false" collective="false" import="true">
               <entryLinks>
-                <entryLink id="3c27-9084-4a9a-99a7" name="Unarmed" hidden="false" collective="false" targetId="5cb1-7e8b-f6c3-d5cb" type="selectionEntry"/>
+                <entryLink id="3c27-9084-4a9a-99a7" name="Unarmed" hidden="false" collective="false" import="true" targetId="5cb1-7e8b-f6c3-d5cb" type="selectionEntry"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink id="0058-46f7-2ec5-5ab3" name="Independent Hero" hidden="false" collective="false" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
+            <entryLink id="0058-46f7-2ec5-5ab3" name="Independent Hero" hidden="false" collective="false" import="true" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
           </entryLinks>
           <costs>
             <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -22439,7 +22441,7 @@ It is possible for two models to be the target of Bard’s rage if both Sigrid a
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8ea4-efce-184e-22a9" name="Tilda" hidden="false" collective="false" type="model">
+        <selectionEntry id="8ea4-efce-184e-22a9" name="Tilda" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab0a-f231-4b34-b3df" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5384-f55a-29ff-54e1" type="max"/>
@@ -22464,14 +22466,14 @@ It is possible for two models to be the target of Bard’s rage if both Sigrid a
             </profile>
           </profiles>
           <selectionEntryGroups>
-            <selectionEntryGroup id="5652-1ba3-4833-78d9" name="Wargear" hidden="false" collective="false">
+            <selectionEntryGroup id="5652-1ba3-4833-78d9" name="Wargear" hidden="false" collective="false" import="true">
               <entryLinks>
-                <entryLink id="5df3-f31c-b226-a426" name="Unarmed" hidden="false" collective="false" targetId="5cb1-7e8b-f6c3-d5cb" type="selectionEntry"/>
+                <entryLink id="5df3-f31c-b226-a426" name="Unarmed" hidden="false" collective="false" import="true" targetId="5cb1-7e8b-f6c3-d5cb" type="selectionEntry"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink id="2393-047e-991b-2539" name="Independent Hero" hidden="false" collective="false" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
+            <entryLink id="2393-047e-991b-2539" name="Independent Hero" hidden="false" collective="false" import="true" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
           </entryLinks>
           <costs>
             <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -22486,7 +22488,7 @@ It is possible for two models to be the target of Bard’s rage if both Sigrid a
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d69a-bbc8-abfe-ab7a" name="Windlance" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="d69a-bbc8-abfe-ab7a" name="Windlance" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="456a-3aec-266f-d0b4" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="52ea-2054-903c-cbe0" type="max"/>
@@ -22516,7 +22518,7 @@ Provided that he is in base contact with the Windlance and is not Engaged in com
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="872c-22f7-254a-d1f3" name="Bilbo Baggins, Master Burglar" hidden="false" collective="false" type="model">
+    <selectionEntry id="872c-22f7-254a-d1f3" name="Bilbo Baggins, Master Burglar" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="a577-207e-010d-f4e4" value="0.0">
           <conditions>
@@ -22562,14 +22564,14 @@ Provided that he is in base contact with the Windlance and is not Engaged in com
         <infoLink id="8bed-0737-ff66-4cb3" name="Throw Stones (Active)" hidden="false" targetId="39ee-f288-50d5-973e" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="e212-1034-6b88-2f0b" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="e212-1034-6b88-2f0b" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="21bd-ea26-6060-89fe" name="The One Ring" hidden="false" collective="false" targetId="ddc1-67a9-1014-b73c" type="selectionEntry">
+            <entryLink id="21bd-ea26-6060-89fe" name="The One Ring" hidden="false" collective="false" import="true" targetId="ddc1-67a9-1014-b73c" type="selectionEntry">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b9ca-fac9-c25e-9bf3" type="min"/>
               </constraints>
             </entryLink>
-            <entryLink id="96b9-978c-18c9-8f4c" name="Mithril Coat" hidden="false" collective="false" targetId="b2df-6b78-3eef-e449" type="selectionEntry">
+            <entryLink id="96b9-978c-18c9-8f4c" name="Mithril Coat" hidden="false" collective="false" import="true" targetId="b2df-6b78-3eef-e449" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="8bde-d63c-7caa-c15d" value="0.0"/>
               </modifiers>
@@ -22577,7 +22579,7 @@ Provided that he is in base contact with the Windlance and is not Engaged in com
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7665-8b34-5119-8f95" type="min"/>
               </constraints>
             </entryLink>
-            <entryLink id="3f8f-956d-593f-50be" name="Sting" hidden="false" collective="false" targetId="2428-760d-9db5-14d8" type="selectionEntry">
+            <entryLink id="3f8f-956d-593f-50be" name="Sting" hidden="false" collective="false" import="true" targetId="2428-760d-9db5-14d8" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="8bde-d63c-7caa-c15d" value="0.0"/>
               </modifiers>
@@ -22589,8 +22591,8 @@ Provided that he is in base contact with the Windlance and is not Engaged in com
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="6300-eb85-4ceb-0578" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="8e6c-2edf-0a60-b433" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="6300-eb85-4ceb-0578" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="8e6c-2edf-0a60-b433" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="90.0"/>
@@ -22598,7 +22600,7 @@ Provided that he is in base contact with the Windlance and is not Engaged in com
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b501-ff8f-b343-8801" name="Galadriel, Lady of Light" hidden="false" collective="false" type="model">
+    <selectionEntry id="b501-ff8f-b343-8801" name="Galadriel, Lady of Light" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="1f53-3586-5e72-d1e6" value="0.0">
           <conditions>
@@ -22659,9 +22661,9 @@ Provided that he is in base contact with the Windlance and is not Engaged in com
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="d3a7-a5dd-b033-83fb" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="d3a7-a5dd-b033-83fb" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="c617-84a5-8b9d-2e43" name="The Light of Earendil" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="c617-84a5-8b9d-2e43" name="The Light of Earendil" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc5b-ca0f-011d-bb52" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4883-2f0d-7e71-7e21" type="min"/>
@@ -22681,13 +22683,13 @@ Provided that he is in base contact with the Windlance and is not Engaged in com
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="1293-962c-da45-92aa" name="Nenya" hidden="false" collective="false" targetId="cdcd-2bd3-12de-b7e6" type="selectionEntry"/>
+            <entryLink id="1293-962c-da45-92aa" name="Nenya" hidden="false" collective="false" import="true" targetId="cdcd-2bd3-12de-b7e6" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="7b54-fe76-929b-cbb6" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
-        <entryLink id="6043-6c16-b20d-3893" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="7b54-fe76-929b-cbb6" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="6043-6c16-b20d-3893" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="130.0"/>
@@ -22695,7 +22697,7 @@ Provided that he is in base contact with the Windlance and is not Engaged in com
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="45a4-72ae-b391-f631" name="Thráin the Broken" hidden="false" collective="false" type="model">
+    <selectionEntry id="45a4-72ae-b391-f631" name="Thráin the Broken" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="7684-10fa-e04b-4bfd" value="0.0">
           <conditions>
@@ -22733,14 +22735,14 @@ Provided that he is in base contact with the Windlance and is not Engaged in com
         </rule>
       </rules>
       <selectionEntryGroups>
-        <selectionEntryGroup id="2a8f-f5b6-f75d-eace" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="2a8f-f5b6-f75d-eace" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="09d2-bbbd-9627-da19" name="Dagger" hidden="false" collective="false" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
+            <entryLink id="09d2-bbbd-9627-da19" name="Dagger" hidden="false" collective="false" import="true" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="cb96-9eb4-d957-c751" name="Independent Hero" hidden="false" collective="false" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
+        <entryLink id="cb96-9eb4-d957-c751" name="Independent Hero" hidden="false" collective="false" import="true" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="10.0"/>
@@ -22748,7 +22750,7 @@ Provided that he is in base contact with the Windlance and is not Engaged in com
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="da64-9e72-a166-c6b3" name="Azog" hidden="false" collective="false" type="model">
+    <selectionEntry id="da64-9e72-a166-c6b3" name="Azog" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="153e-a540-22b0-508d" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ce1-2db2-042c-f241" type="max"/>
@@ -22792,15 +22794,15 @@ Provided that he is in base contact with the Windlance and is not Engaged in com
         <infoLink id="f8a6-5037-e5d4-ff5f" name="Burly (Passive)" hidden="false" targetId="390c-dc0c-72ba-8d47" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="be54-228d-3018-2f4b" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="be54-228d-3018-2f4b" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="1365-651b-599a-e1fa" name="Mace" hidden="false" collective="false" targetId="7386-6cd4-6c54-d454" type="selectionEntry"/>
-            <entryLink id="3970-3037-a675-0491" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="1365-651b-599a-e1fa" name="Mace" hidden="false" collective="false" import="true" targetId="7386-6cd4-6c54-d454" type="selectionEntry"/>
+            <entryLink id="3970-3037-a675-0491" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="ff23-a021-7706-7976" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="ff23-a021-7706-7976" name="Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="29ef-7c4c-a639-31e7" name="The White Warg" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="29ef-7c4c-a639-31e7" name="The White Warg" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8756-e39d-58ee-baa6" type="max"/>
               </constraints>
@@ -22839,9 +22841,9 @@ Provided that he is in base contact with the Windlance and is not Engaged in com
                 <infoLink id="0fd0-d74d-e5f9-ea77" name="Terror (Passive)" hidden="false" targetId="85b0-001b-cf06-77c8" type="rule"/>
               </infoLinks>
               <selectionEntryGroups>
-                <selectionEntryGroup id="1dbf-fbe3-403f-7d9d" name="Wargear" hidden="false" collective="false">
+                <selectionEntryGroup id="1dbf-fbe3-403f-7d9d" name="Wargear" hidden="false" collective="false" import="true">
                   <entryLinks>
-                    <entryLink id="37f3-f454-8c5a-4801" name="Claws and Teeth" hidden="false" collective="false" targetId="fa8a-ebb1-1ab1-4826" type="selectionEntry"/>
+                    <entryLink id="37f3-f454-8c5a-4801" name="Claws and Teeth" hidden="false" collective="false" import="true" targetId="fa8a-ebb1-1ab1-4826" type="selectionEntry"/>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
@@ -22851,7 +22853,7 @@ Provided that he is in base contact with the Windlance and is not Engaged in com
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="13e4-14a0-b6e3-5372" name="Stone Flail" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="13e4-14a0-b6e3-5372" name="Stone Flail" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
@@ -22875,7 +22877,7 @@ Provided that he is in base contact with the Windlance and is not Engaged in com
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="6309-b4af-fe5f-5ed0" name="Signal Tower" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="6309-b4af-fe5f-5ed0" name="Signal Tower" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
@@ -22911,7 +22913,7 @@ Before deployment, but after players have decided on their board edges, the cont
                 </rule>
               </rules>
               <selectionEntries>
-                <selectionEntry id="df2c-654f-f95b-82c3" name="Azog&apos;s Lieutenants" hidden="false" collective="false" type="model">
+                <selectionEntry id="df2c-654f-f95b-82c3" name="Azog&apos;s Lieutenants" hidden="false" collective="false" import="true" type="model">
                   <constraints>
                     <constraint field="selections" scope="parent" value="7.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b27b-585c-fa4f-9638" type="min"/>
                     <constraint field="selections" scope="parent" value="7.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5482-fc9c-6de8-e2cc" type="max"/>
@@ -22943,15 +22945,15 @@ Before deployment, but after players have decided on their board edges, the cont
                     </infoLink>
                   </infoLinks>
                   <selectionEntryGroups>
-                    <selectionEntryGroup id="9f0f-ef13-1bc1-a824" name="Wargear" hidden="false" collective="false">
+                    <selectionEntryGroup id="9f0f-ef13-1bc1-a824" name="Wargear" hidden="false" collective="false" import="true">
                       <entryLinks>
-                        <entryLink id="7e1e-3390-6def-30c5" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
-                        <entryLink id="cc9a-40d6-1c67-a8dc" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+                        <entryLink id="7e1e-3390-6def-30c5" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+                        <entryLink id="cc9a-40d6-1c67-a8dc" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
                       </entryLinks>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <entryLinks>
-                    <entryLink id="12bc-2dbc-81f8-bc96" name="Independent Hero" hidden="false" collective="false" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
+                    <entryLink id="12bc-2dbc-81f8-bc96" name="Independent Hero" hidden="false" collective="false" import="true" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
                   </entryLinks>
                   <costs>
                     <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -22959,7 +22961,7 @@ Before deployment, but after players have decided on their board edges, the cont
                     <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="782e-77aa-2ab7-cdc1" name="The Horn of Gorgoroth" hidden="false" collective="false" type="upgrade">
+                <selectionEntry id="782e-77aa-2ab7-cdc1" name="The Horn of Gorgoroth" hidden="false" collective="false" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a70f-2459-c386-66e5" type="max"/>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ab8-0695-895d-289a" type="min"/>
@@ -22989,7 +22991,7 @@ Before deployment, but after players have decided on their board edges, the cont
                     <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="3b60-e8e2-2f45-b9e8" name="The Banner of Angmar" hidden="false" collective="false" type="upgrade">
+                <selectionEntry id="3b60-e8e2-2f45-b9e8" name="The Banner of Angmar" hidden="false" collective="false" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="31e8-fec0-122b-90c6" type="max"/>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a409-707d-22f7-5b1e" type="min"/>
@@ -23019,7 +23021,7 @@ Before deployment, but after players have decided on their board edges, the cont
                     <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="c36c-987f-5b27-8bb9" name="The Banner of Gundabad" hidden="false" collective="false" type="upgrade">
+                <selectionEntry id="c36c-987f-5b27-8bb9" name="The Banner of Gundabad" hidden="false" collective="false" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="92ef-2e90-f743-1df4" type="max"/>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="66e0-7628-26c7-a062" type="min"/>
@@ -23049,7 +23051,7 @@ Before deployment, but after players have decided on their board edges, the cont
                     <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="d16e-9798-7a6c-831b" name="The Banner of Dol Guldur" hidden="false" collective="false" type="upgrade">
+                <selectionEntry id="d16e-9798-7a6c-831b" name="The Banner of Dol Guldur" hidden="false" collective="false" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e1d1-01d6-ecea-7716" type="max"/>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="131f-16f2-f68c-7c9b" type="min"/>
@@ -23088,7 +23090,7 @@ Before deployment, but after players have decided on their board edges, the cont
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="a355-6473-8ca6-28a2" name="Heavy Armour" hidden="false" collective="false" targetId="d3ad-a44c-5e03-265b" type="selectionEntry">
+            <entryLink id="a355-6473-8ca6-28a2" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="d3ad-a44c-5e03-265b" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
@@ -23107,8 +23109,8 @@ Before deployment, but after players have decided on their board edges, the cont
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="cfcf-7f25-7562-6467" name="Leader (Legend)" hidden="false" collective="false" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
-        <entryLink id="1123-b9e0-709f-f5d4" name="Hero of Legend" hidden="false" collective="false" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
+        <entryLink id="cfcf-7f25-7562-6467" name="Leader (Legend)" hidden="false" collective="false" import="true" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
+        <entryLink id="1123-b9e0-709f-f5d4" name="Hero of Legend" hidden="false" collective="false" import="true" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="165.0"/>
@@ -23116,7 +23118,7 @@ Before deployment, but after players have decided on their board edges, the cont
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1a78-e664-2125-e550" name="Bolg" hidden="false" collective="false" type="model">
+    <selectionEntry id="1a78-e664-2125-e550" name="Bolg" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f458-75c5-1497-f9e6" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8fe4-4592-ff52-c826" type="max"/>
@@ -23156,22 +23158,22 @@ Before deployment, but after players have decided on their board edges, the cont
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="1d50-0637-18e5-5a43" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="1d50-0637-18e5-5a43" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="0205-161a-01a5-eb0f" name="Orc Bow" hidden="false" collective="false" targetId="54a8-3f7e-8ab6-2cdd" type="selectionEntry"/>
-            <entryLink id="5dd4-5687-50fa-2478" name="Fell Warg" hidden="false" collective="false" targetId="cbea-de50-df46-8c44" type="selectionEntry"/>
+            <entryLink id="0205-161a-01a5-eb0f" name="Orc Bow" hidden="false" collective="false" import="true" targetId="54a8-3f7e-8ab6-2cdd" type="selectionEntry"/>
+            <entryLink id="5dd4-5687-50fa-2478" name="Fell Warg" hidden="false" collective="false" import="true" targetId="cbea-de50-df46-8c44" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="a208-01fe-4966-a531" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="a208-01fe-4966-a531" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="feba-53e8-ff97-91cf" name="Two-handed Pick" hidden="false" collective="false" targetId="c657-97be-1b93-cdfa" type="selectionEntry"/>
-            <entryLink id="82cb-7b63-ecdb-ff4e" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="feba-53e8-ff97-91cf" name="Two-handed Pick" hidden="false" collective="false" import="true" targetId="c657-97be-1b93-cdfa" type="selectionEntry"/>
+            <entryLink id="82cb-7b63-ecdb-ff4e" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="2f8c-f4fc-e493-9bf2" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="66a2-8810-2b47-f459" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="2f8c-f4fc-e493-9bf2" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="66a2-8810-2b47-f459" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="165.0"/>
@@ -23179,7 +23181,7 @@ Before deployment, but after players have decided on their board edges, the cont
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c865-0218-145d-c232" name="Gundabad Orc Captain" hidden="false" collective="false" type="model">
+    <selectionEntry id="c865-0218-145d-c232" name="Gundabad Orc Captain" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5583-66f0-6a3a-cb0a" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="383b-bb51-677b-d201" type="max"/>
@@ -23219,21 +23221,21 @@ Before deployment, but after players have decided on their board edges, the cont
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="146e-3007-d26c-3239" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="146e-3007-d26c-3239" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="1aa9-9d16-25f4-5b6e" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
-            <entryLink id="b1d0-753f-252d-9552" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="1aa9-9d16-25f4-5b6e" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="b1d0-753f-252d-9552" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="ab8a-f8bc-0258-7883" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="ab8a-f8bc-0258-7883" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="0df6-92c9-026e-b23a" name="Shield" hidden="false" collective="false" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
+            <entryLink id="0df6-92c9-026e-b23a" name="Shield" hidden="false" collective="false" import="true" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="5b34-208e-550c-e556" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="3cfa-a239-7a17-dd2a" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="5b34-208e-550c-e556" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="3cfa-a239-7a17-dd2a" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="50.0"/>
@@ -23241,7 +23243,7 @@ Before deployment, but after players have decided on their board edges, the cont
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3d70-3b21-1274-98cd" name="Goblin Mercenary Captain" hidden="false" collective="false" type="model">
+    <selectionEntry id="3d70-3b21-1274-98cd" name="Goblin Mercenary Captain" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa91-3e23-0c92-5bf1" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="478d-8a8a-3c08-ab11" type="max"/>
@@ -23271,16 +23273,16 @@ Before deployment, but after players have decided on their board edges, the cont
         <infoLink id="eae3-3546-03b0-e49a" name="Cave Dweller (Active)" hidden="false" targetId="5401-5c24-a782-e11f" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="4d7d-9049-60d2-ed32" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="4d7d-9049-60d2-ed32" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="4599-1d6c-1ed5-d53b" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
-            <entryLink id="ae0a-2f34-2dcb-1e20" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="4599-1d6c-1ed5-d53b" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="ae0a-2f34-2dcb-1e20" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="91ce-17a1-455e-3ef3" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="b4c7-eaf7-61cb-120d" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="91ce-17a1-455e-3ef3" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="b4c7-eaf7-61cb-120d" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -23288,7 +23290,7 @@ Before deployment, but after players have decided on their board edges, the cont
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d180-32bc-0aef-6a9a" name="Hunter Orc Captain" hidden="false" collective="false" type="model">
+    <selectionEntry id="d180-32bc-0aef-6a9a" name="Hunter Orc Captain" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d2f4-697d-2ebb-93fe" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3409-a74a-6d0a-18d0" type="max"/>
@@ -23325,9 +23327,9 @@ Before deployment, but after players have decided on their board edges, the cont
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="66b7-f039-63d1-a9ec" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="66b7-f039-63d1-a9ec" name="Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="3db4-553d-1c6d-b161" name="Two-handed Pick" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="3db4-553d-1c6d-b161" name="Two-handed Pick" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4bd6-aab4-2dfc-921f" type="max"/>
               </constraints>
@@ -23343,20 +23345,20 @@ Before deployment, but after players have decided on their board edges, the cont
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="376d-3ad5-f301-b40f" name="Fell Warg" hidden="false" collective="false" targetId="cbea-de50-df46-8c44" type="selectionEntry"/>
-            <entryLink id="2c20-4825-4399-5b7d" name="Orc Bow" hidden="false" collective="false" targetId="54a8-3f7e-8ab6-2cdd" type="selectionEntry"/>
+            <entryLink id="376d-3ad5-f301-b40f" name="Fell Warg" hidden="false" collective="false" import="true" targetId="cbea-de50-df46-8c44" type="selectionEntry"/>
+            <entryLink id="2c20-4825-4399-5b7d" name="Orc Bow" hidden="false" collective="false" import="true" targetId="54a8-3f7e-8ab6-2cdd" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="60ae-bb98-8330-f935" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="60ae-bb98-8330-f935" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="5a52-c1e6-225c-5c30" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
-            <entryLink id="68da-fe3d-99da-c629" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="5a52-c1e6-225c-5c30" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="68da-fe3d-99da-c629" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="001a-cf81-a5b3-dd12" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="fcd4-2407-0f41-89c8" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="001a-cf81-a5b3-dd12" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="fcd4-2407-0f41-89c8" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="45.0"/>
@@ -23364,7 +23366,7 @@ Before deployment, but after players have decided on their board edges, the cont
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5e08-0155-80ae-e106" name="I would take each and everyone of these Dwarves over an army from the Iron Hills, for when I called upon them, they answered" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="5e08-0155-80ae-e106" name="I would take each and everyone of these Dwarves over an army from the Iron Hills, for when I called upon them, they answered." hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a477-2530-4466-a42c" type="max"/>
       </constraints>
@@ -23382,7 +23384,7 @@ Before deployment, but after players have decided on their board edges, the cont
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="81c0-b6d0-05ab-019d" name="Irontfoot has come" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="81c0-b6d0-05ab-019d" name="Irontfoot has come." hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d2e0-1893-797e-5f71" type="max"/>
       </constraints>
@@ -23402,7 +23404,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7007-1077-b6c7-c505" name="Will you follow me, one last time" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="7007-1077-b6c7-c505" name="Will you follow me, one last time?" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="08a1-5992-4316-58a0" type="max"/>
       </constraints>
@@ -23420,7 +23422,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="11e6-b551-86f2-0cb7" name="The Master&apos;s Purse-strings" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="11e6-b551-86f2-0cb7" name="The Master&apos;s Purse-strings" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a3e3-33c5-b850-b4f1" type="max"/>
       </constraints>
@@ -23438,7 +23440,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9b1f-bddf-37ac-fc33" name="Any man who wants to give their last, follow me!" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="9b1f-bddf-37ac-fc33" name="Any man who wants to give their last, follow me!" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="58d8-05bc-6251-6d9c" type="max"/>
       </constraints>
@@ -23456,7 +23458,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a218-2cbb-c72b-f863" name="Girion, lord of the city, rallied his bowmen to fire upon the beast" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="a218-2cbb-c72b-f863" name="Girion, lord of the city, rallied his bowmen to fire upon the beast." hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c278-21d8-d36d-bc9d" type="max"/>
       </constraints>
@@ -23474,7 +23476,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="dc45-4099-3749-5256" name="The Elves of Mirkwood are not like their kin. They are less wise, and more dangerous" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="dc45-4099-3749-5256" name="The Elves of Mirkwood are not like their kin. They are less wise, and more dangerous." hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3c5e-e9ef-cb25-b55f" type="max"/>
       </constraints>
@@ -23492,7 +23494,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="474a-bee6-aee2-3857" name="Are you in need of assistance?" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="474a-bee6-aee2-3857" name="Are you in need of assistance?" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fc57-9b12-360d-e1c3" type="max"/>
       </constraints>
@@ -23510,7 +23512,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1acc-6b0f-f510-5e4d" name="Let the legions come forth!" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="1acc-6b0f-f510-5e4d" name="Let the legions come forth!" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ac70-8182-eccd-4379" type="max"/>
       </constraints>
@@ -23528,7 +23530,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="17fd-1b6b-632a-b65b" name="They strike in the wee small hours when everyone&apos;s asleep" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="17fd-1b6b-632a-b65b" name="They strike in the wee small hours when everyone&apos;s asleep." hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e53a-5aca-7074-aa2a" type="max"/>
       </constraints>
@@ -23546,7 +23548,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0bd6-1cc9-aaab-d2c2" name="His spirit has lost none of its potency" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="0bd6-1cc9-aaab-d2c2" name="His spirit has lost none of its potency." hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fd3e-b705-a11d-1758" type="max"/>
       </constraints>
@@ -23564,7 +23566,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9906-d5a2-0bda-ca0b" name="Beasts of Mirkwood" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="9906-d5a2-0bda-ca0b" name="Beasts of Mirkwood" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e2a8-6a3d-abea-290a" type="max"/>
       </constraints>
@@ -23582,7 +23584,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9e9c-d9f0-da53-b675" name="Down down down in Goblin-town" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="9e9c-d9f0-da53-b675" name="Down, down, down, in Goblin-town." hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f427-5ef6-ad54-c43e" type="max"/>
       </constraints>
@@ -23600,7 +23602,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d058-e0a7-6c62-29a4" name="Hold his toes over the fire, make him squeal" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="d058-e0a7-6c62-29a4" name="Hold his toes over the fire, make him squeal." hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="force" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0dff-5ad6-c4cf-7817" type="max"/>
       </constraints>
@@ -23618,7 +23620,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="822c-ff72-07d6-277b" name="The Nazgûl of Dol Guldur" hidden="false" collective="false" type="model">
+    <selectionEntry id="822c-ff72-07d6-277b" name="The Nazgûl of Dol Guldur" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="404c-867c-96bd-52d7" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="06fb-7e54-1b6e-518d" type="max"/>
@@ -23668,13 +23670,13 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <infoLink id="14ed-e697-8ffa-0a88" name="Harbinger of Evil (Passive)" hidden="false" targetId="3fce-3425-5bca-8374" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="99af-acf3-c494-e062" name="The Servants of Evil" hidden="false" collective="false">
+        <selectionEntryGroup id="99af-acf3-c494-e062" name="The Servants of Evil" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e381-c96c-79bc-2198" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ed3b-2da0-7090-8128" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="2ae9-1b5a-b4f5-5aa5" name="Khamûl the Easterling" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="2ae9-1b5a-b4f5-5aa5" name="Khamûl the Easterling" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="3e5a-aa84-2f95-fb78" value="0.0">
                   <conditions>
@@ -23692,10 +23694,10 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
                 </rule>
               </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup id="cedd-3a26-74cc-b3f9" name="Wargear" hidden="false" collective="false">
+                <selectionEntryGroup id="cedd-3a26-74cc-b3f9" name="Wargear" hidden="false" collective="false" import="true">
                   <entryLinks>
-                    <entryLink id="0434-6cba-0797-ddba" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
-                    <entryLink id="5b82-6747-ea25-ac60" name="Two-handed Mace" hidden="false" collective="false" targetId="a300-1832-bfa2-3f24" type="selectionEntry"/>
+                    <entryLink id="0434-6cba-0797-ddba" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+                    <entryLink id="5b82-6747-ea25-ac60" name="Two-handed Mace" hidden="false" collective="false" import="true" targetId="a300-1832-bfa2-3f24" type="selectionEntry"/>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
@@ -23705,7 +23707,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="d978-3851-de36-f698" name="The Abyssal Knight" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="d978-3851-de36-f698" name="The Abyssal Knight" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="af20-0eb3-d5a0-a8de" type="max"/>
                 <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0c53-ca6d-9039-71cf" type="max"/>
@@ -23716,10 +23718,10 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
                 </rule>
               </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup id="8f4e-cb4b-f50f-2ad0" name="Wargear" hidden="false" collective="false">
+                <selectionEntryGroup id="8f4e-cb4b-f50f-2ad0" name="Wargear" hidden="false" collective="false" import="true">
                   <entryLinks>
-                    <entryLink id="9445-36d3-34a6-d74e" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
-                    <entryLink id="10aa-e83a-81fb-3de9" name="Elven-made Sword" hidden="false" collective="false" targetId="1ef8-a0ca-889f-0d8b" type="selectionEntry"/>
+                    <entryLink id="9445-36d3-34a6-d74e" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+                    <entryLink id="10aa-e83a-81fb-3de9" name="Elven-made Sword" hidden="false" collective="false" import="true" targetId="1ef8-a0ca-889f-0d8b" type="selectionEntry"/>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
@@ -23729,7 +23731,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="d3af-bbd0-a50b-a34b" name="The Lingering Shadow" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="d3af-bbd0-a50b-a34b" name="The Lingering Shadow" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5821-c172-499e-c9f7" type="max"/>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="febb-aa1d-f39d-5719" type="max"/>
@@ -23740,10 +23742,10 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
                 </rule>
               </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup id="484f-47b2-333b-61a3" name="Wargear" hidden="false" collective="false">
+                <selectionEntryGroup id="484f-47b2-333b-61a3" name="Wargear" hidden="false" collective="false" import="true">
                   <entryLinks>
-                    <entryLink id="9e6e-231d-b922-4fde" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-                    <entryLink id="81ee-415f-a102-c38e" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+                    <entryLink id="9e6e-231d-b922-4fde" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+                    <entryLink id="81ee-415f-a102-c38e" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
@@ -23753,7 +23755,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="8152-18f4-bbf9-ed4a" name="The Dark Headsman" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="8152-18f4-bbf9-ed4a" name="The Dark Headsman" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="21ad-df95-caa9-f357" type="max"/>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7779-9d62-586e-9baf" type="max"/>
@@ -23764,10 +23766,10 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
                 </rule>
               </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup id="5f1c-61c3-78ab-544a" name="Wargear" hidden="false" collective="false">
+                <selectionEntryGroup id="5f1c-61c3-78ab-544a" name="Wargear" hidden="false" collective="false" import="true">
                   <entryLinks>
-                    <entryLink id="874e-6e5d-cae8-aa68" name="Axe" hidden="false" collective="false" targetId="6487-f2cf-5eb7-a780" type="selectionEntry"/>
-                    <entryLink id="5351-1891-743e-5046" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+                    <entryLink id="874e-6e5d-cae8-aa68" name="Axe" hidden="false" collective="false" import="true" targetId="6487-f2cf-5eb7-a780" type="selectionEntry"/>
+                    <entryLink id="5351-1891-743e-5046" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
@@ -23777,15 +23779,15 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="5124-ae8f-fd3b-8a61" name="The Forsaken" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="5124-ae8f-fd3b-8a61" name="The Forsaken" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a442-33be-22b1-3cea" type="max"/>
                 <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fcb5-421c-b413-5daa" type="max"/>
               </constraints>
               <selectionEntryGroups>
-                <selectionEntryGroup id="63ad-b606-c5f8-25ae" name="Wargear" hidden="false" collective="false">
+                <selectionEntryGroup id="63ad-b606-c5f8-25ae" name="Wargear" hidden="false" collective="false" import="true">
                   <selectionEntries>
-                    <selectionEntry id="d51f-e129-f071-2eab" name="Trident Spear" hidden="false" collective="false" type="upgrade">
+                    <selectionEntry id="d51f-e129-f071-2eab" name="Trident Spear" hidden="false" collective="false" import="true" type="upgrade">
                       <constraints>
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d5c4-bffb-ee7a-03c2" type="min"/>
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="845d-0b34-c702-8162" type="max"/>
@@ -23805,7 +23807,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
                     </selectionEntry>
                   </selectionEntries>
                   <entryLinks>
-                    <entryLink id="02da-6979-372d-a6f5" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+                    <entryLink id="02da-6979-372d-a6f5" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
@@ -23815,7 +23817,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="a588-4629-0584-1537" name="The Slayer of Men" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="a588-4629-0584-1537" name="The Slayer of Men" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca8b-ded9-7c0e-0e35" type="max"/>
                 <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a1ca-262a-a4e0-58fe" type="max"/>
@@ -23826,10 +23828,10 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
                 </rule>
               </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup id="758e-1e1c-1957-7960" name="Wargear" hidden="false" collective="false">
+                <selectionEntryGroup id="758e-1e1c-1957-7960" name="Wargear" hidden="false" collective="false" import="true">
                   <entryLinks>
-                    <entryLink id="f749-982f-ce87-8509" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
-                    <entryLink id="9ef8-d4ea-38a4-9844" name="Two-handed Mace" hidden="false" collective="false" targetId="a300-1832-bfa2-3f24" type="selectionEntry"/>
+                    <entryLink id="f749-982f-ce87-8509" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+                    <entryLink id="9ef8-d4ea-38a4-9844" name="Two-handed Mace" hidden="false" collective="false" import="true" targetId="a300-1832-bfa2-3f24" type="selectionEntry"/>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
@@ -23839,7 +23841,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="ce9e-9547-1ccb-4b9c" name="The Witch-king of Angmar" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="ce9e-9547-1ccb-4b9c" name="The Witch-king of Angmar" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="4494-00e3-9eb8-43a9" value="0.0">
                   <conditions>
@@ -23857,10 +23859,10 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
                 </rule>
               </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup id="0a9b-157c-f0ca-84e9" name="Wargear" hidden="false" collective="false">
+                <selectionEntryGroup id="0a9b-157c-f0ca-84e9" name="Wargear" hidden="false" collective="false" import="true">
                   <entryLinks>
-                    <entryLink id="24be-71f9-88c0-9419" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-                    <entryLink id="dab5-ea92-8f8f-3eb4" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+                    <entryLink id="24be-71f9-88c0-9419" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+                    <entryLink id="dab5-ea92-8f8f-3eb4" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
@@ -23874,8 +23876,8 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="76b2-2f08-ef26-8604" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
-        <entryLink id="98da-6041-b03f-f2e0" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="76b2-2f08-ef26-8604" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="98da-6041-b03f-f2e0" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="75.0"/>
@@ -23883,7 +23885,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a300-1832-bfa2-3f24" name="Two-handed Mace" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="a300-1832-bfa2-3f24" name="Two-handed Mace" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8e2d-35a4-c9d6-f9b7" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4fe5-fbc0-e679-0252" type="min"/>
@@ -23898,7 +23900,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c657-97be-1b93-cdfa" name="Two-handed Pick" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="c657-97be-1b93-cdfa" name="Two-handed Pick" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6de-3f40-d756-584a" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0b87-d0f6-a82c-6983" type="min"/>
@@ -23913,7 +23915,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4cfa-17f9-9d63-4e9b" name="Morgul Blade" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="4cfa-17f9-9d63-4e9b" name="Morgul Blade" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4850-abf9-64bf-8f74" type="max"/>
       </constraints>
@@ -23926,7 +23928,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8af5-2460-6e2a-95ff" name="Venomous Fangs" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="8af5-2460-6e2a-95ff" name="Venomous Fangs" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1e3a-6c12-465c-b226" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e13d-c1be-661b-5ef1" type="min"/>
@@ -23944,7 +23946,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1a56-de30-3469-9394" name="Elven-made Daggers" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="1a56-de30-3469-9394" name="Elven-made Daggers" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e057-9e93-7eba-82c0" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cbbb-e14a-75ad-d589" type="min"/>
@@ -23959,7 +23961,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="55f9-17fc-cbfd-0c9d" name="Elven-made Glaive" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="55f9-17fc-cbfd-0c9d" name="Elven-made Glaive" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cff5-0643-b486-f246" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="995a-b530-66e0-caf5" type="min"/>
@@ -23974,7 +23976,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5e65-8c10-bcad-e68f" name="Sharkey" hidden="false" collective="false" type="model">
+    <selectionEntry id="5e65-8c10-bcad-e68f" name="Sharkey" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="e43e-0ad1-a0b0-4126" value="0.0">
           <conditions>
@@ -24027,9 +24029,9 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="6503-e56c-faf3-7f2a" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="6503-e56c-faf3-7f2a" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="9a28-48a6-f9dc-f481" name="Two-handed Staff" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="9a28-48a6-f9dc-f481" name="Two-handed Staff" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="383f-a5c4-1c76-4a1a" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="edb6-9834-77f2-eac3" type="min"/>
@@ -24046,13 +24048,13 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="796e-f0aa-96fc-b02e" name="Dagger" hidden="false" collective="false" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
+            <entryLink id="796e-f0aa-96fc-b02e" name="Dagger" hidden="false" collective="false" import="true" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="64b6-6621-beb1-5751" name="Leader (Legend)" hidden="false" collective="false" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
-        <entryLink id="dc0b-ddd3-7492-d8a3" name="Hero of Legend" hidden="false" collective="false" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
+        <entryLink id="64b6-6621-beb1-5751" name="Leader (Legend)" hidden="false" collective="false" import="true" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
+        <entryLink id="dc0b-ddd3-7492-d8a3" name="Hero of Legend" hidden="false" collective="false" import="true" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -24060,7 +24062,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="256d-1a19-a46e-ad73" name="Worm" hidden="false" collective="false" type="model">
+    <selectionEntry id="256d-1a19-a46e-ad73" name="Worm" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="44ec-878f-a772-2823" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f65f-4495-26e4-18f3" type="max"/>
@@ -24094,14 +24096,14 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         </rule>
       </rules>
       <selectionEntryGroups>
-        <selectionEntryGroup id="ead8-1f0d-aa6a-0dd0" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="ead8-1f0d-aa6a-0dd0" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="0bdd-257c-b99d-250a" name="Dagger" hidden="false" collective="false" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
+            <entryLink id="0bdd-257c-b99d-250a" name="Dagger" hidden="false" collective="false" import="true" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="c45a-8fa6-e1cd-2525" name="Independent Hero" hidden="false" collective="false" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
+        <entryLink id="c45a-8fa6-e1cd-2525" name="Independent Hero" hidden="false" collective="false" import="true" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -24109,7 +24111,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="912f-e21a-272a-a9e3" name="Throwing Axes" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="912f-e21a-272a-a9e3" name="Throwing Axes" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a3ee-9a62-40f8-65ae" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6be3-ca67-a103-577f" type="min"/>
@@ -24123,7 +24125,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="cbea-de50-df46-8c44" name="Fell Warg" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="cbea-de50-df46-8c44" name="Fell Warg" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e1a7-ebaa-a345-5713" type="max"/>
       </constraints>
@@ -24132,9 +24134,9 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <infoLink id="70e7-4c4d-dba3-e560" name="Fell Sight (Passive)" hidden="false" targetId="edf7-86c5-28cd-59d1" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="7afb-a5ae-de86-8571" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="7afb-a5ae-de86-8571" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="1c21-a3a2-4aa3-d01e" name="Claws and Teeth" hidden="false" collective="false" targetId="fa8a-ebb1-1ab1-4826" type="selectionEntry"/>
+            <entryLink id="1c21-a3a2-4aa3-d01e" name="Claws and Teeth" hidden="false" collective="false" import="true" targetId="fa8a-ebb1-1ab1-4826" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -24144,7 +24146,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6674-f5bc-ab45-f67c" name="Orc Bow" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="6674-f5bc-ab45-f67c" name="Orc Bow" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0768-45af-aadb-41a2" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0d7f-f38c-7e66-1588" type="min"/>
@@ -24158,7 +24160,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1b2d-88a9-0816-7c65" name="Flail" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="1b2d-88a9-0816-7c65" name="Flail" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd25-eb40-d121-3c15" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d99-94cd-ba47-b3c2" type="min"/>
@@ -24172,7 +24174,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d293-1b29-66f5-2556" name="Pick-Hammer" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="d293-1b29-66f5-2556" name="Pick-Hammer" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a77a-9178-2663-7e41" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="adc4-442a-daee-4997" type="max"/>
@@ -24195,7 +24197,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b45d-aa36-149f-b8c6" name="Great Bow" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="b45d-aa36-149f-b8c6" name="Great Bow" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9916-ef26-fd02-636b" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d27a-c1c8-fafc-7e09" type="max"/>
@@ -24209,7 +24211,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="aef9-b7c6-6074-5bd8" name="Legolas Greenleaf, Prince of Mirkwood" hidden="false" collective="false" type="model">
+    <selectionEntry id="aef9-b7c6-6074-5bd8" name="Legolas Greenleaf, Prince of Mirkwood" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="bd11-ea15-934e-aa3e" value="0.0">
           <conditions>
@@ -24245,24 +24247,24 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <infoLink id="632f-184d-fb27-a8f9" name="Deadly Shot (Active)" hidden="false" targetId="7265-036b-65ff-76c1" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="b8db-f475-e56c-1a52" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="b8db-f475-e56c-1a52" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="6489-c0e9-0a9e-4cec" name="Elven Cloak" hidden="false" collective="false" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
-            <entryLink id="9e63-f711-bb38-44fa" name="Horse" hidden="false" collective="false" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
-            <entryLink id="e4d6-504e-6ba0-3959" name="Orcrist" hidden="false" collective="false" targetId="09d9-bc39-bde1-3310" type="selectionEntry"/>
+            <entryLink id="6489-c0e9-0a9e-4cec" name="Elven Cloak" hidden="false" collective="false" import="true" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
+            <entryLink id="9e63-f711-bb38-44fa" name="Horse" hidden="false" collective="false" import="true" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
+            <entryLink id="e4d6-504e-6ba0-3959" name="Orcrist" hidden="false" collective="false" import="true" targetId="09d9-bc39-bde1-3310" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="be33-438c-fde8-6d48" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="be33-438c-fde8-6d48" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="77e7-70e5-78c5-d064" name="Elf Bow" hidden="false" collective="false" targetId="afb9-abc4-cba5-86df" type="selectionEntry"/>
-            <entryLink id="8fb5-68d7-c300-0fd3" name="Elven-made Daggers" hidden="false" collective="false" targetId="1a56-de30-3469-9394" type="selectionEntry"/>
-            <entryLink id="2664-54a7-d030-b1e3" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="77e7-70e5-78c5-d064" name="Elf Bow" hidden="false" collective="false" import="true" targetId="afb9-abc4-cba5-86df" type="selectionEntry"/>
+            <entryLink id="8fb5-68d7-c300-0fd3" name="Elven-made Daggers" hidden="false" collective="false" import="true" targetId="1a56-de30-3469-9394" type="selectionEntry"/>
+            <entryLink id="2664-54a7-d030-b1e3" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="ad83-3a51-4c18-1d50" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="0798-c7f3-8b79-4692" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="ad83-3a51-4c18-1d50" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="0798-c7f3-8b79-4692" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="95.0"/>
@@ -24270,7 +24272,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="76d7-ecf6-5cfd-897a" name="War Goat" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="76d7-ecf6-5cfd-897a" name="War Goat" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="662d-742a-94aa-5e51" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8340-8b06-3b06-b58c" type="min"/>
@@ -24286,7 +24288,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2a89-29f9-1d8e-732f" name="Mattock" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="2a89-29f9-1d8e-732f" name="Mattock" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6df4-1d44-580e-3d54" type="max"/>
       </constraints>
@@ -24302,7 +24304,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="074f-603b-7258-9f6a" name="Two-handed Hammer" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="074f-603b-7258-9f6a" name="Two-handed Hammer" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f49-4b93-9ebf-7d5b" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2079-3c25-35b4-4f6e" type="min"/>
@@ -24317,7 +24319,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2d70-ffdd-b105-6176" name="Meriadoc Brandybuck, Knight of the Mark" hidden="false" collective="false" type="model">
+    <selectionEntry id="2d70-ffdd-b105-6176" name="Meriadoc Brandybuck, Knight of the Mark" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="d4f2-8262-292f-20a4" value="0.0">
           <conditions>
@@ -24375,9 +24377,9 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <infoLink id="ff7e-beb8-f1f9-bb1f" name="Throw Stones" hidden="false" targetId="4d93-48da-b5ad-de24" type="profile"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="2bd7-5efa-d3d6-3671" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="2bd7-5efa-d3d6-3671" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="95f9-f080-c9a4-34e9" name="Shield" hidden="false" collective="false" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry">
+            <entryLink id="95f9-f080-c9a4-34e9" name="Shield" hidden="false" collective="false" import="true" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="cc92-54de-ce3d-4513" value="1">
                   <conditions>
@@ -24394,7 +24396,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
                 <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cc92-54de-ce3d-4513" type="min"/>
               </constraints>
             </entryLink>
-            <entryLink id="3d66-318e-fc96-308b" name="Elven Cloak" hidden="false" collective="false" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry">
+            <entryLink id="3d66-318e-fc96-308b" name="Elven Cloak" hidden="false" collective="false" import="true" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
@@ -24408,7 +24410,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="3b00-886f-a211-6648" name="Pony" hidden="false" collective="false" targetId="e0b4-3068-b6f2-2765" type="selectionEntry">
+            <entryLink id="3b00-886f-a211-6648" name="Pony" hidden="false" collective="false" import="true" targetId="e0b4-3068-b6f2-2765" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditions>
@@ -24424,15 +24426,15 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="077f-c95f-99ec-3566" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="077f-c95f-99ec-3566" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="1e78-5bc3-72b1-ed91" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
-            <entryLink id="a794-69e3-66c1-b41c" name="Dagger" hidden="false" collective="false" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
+            <entryLink id="1e78-5bc3-72b1-ed91" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="a794-69e3-66c1-b41c" name="Dagger" hidden="false" collective="false" import="true" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="e350-7a4e-7c1d-540c" name="Independent Hero" hidden="false" collective="false" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
+        <entryLink id="e350-7a4e-7c1d-540c" name="Independent Hero" hidden="false" collective="false" import="true" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="25.0"/>
@@ -24440,7 +24442,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="eeb4-c347-7a95-2f8e" name="Iron Shield" hidden="false" collective="false" type="model">
+    <selectionEntry id="eeb4-c347-7a95-2f8e" name="Iron Shield" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="607d-6e9f-04ec-d723" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f0a-a190-5e1a-4a77" type="max"/>
@@ -24477,9 +24479,9 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         </rule>
       </rules>
       <selectionEntryGroups>
-        <selectionEntryGroup id="c3cb-c51e-76cd-0680" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="c3cb-c51e-76cd-0680" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="997d-2e46-b602-70bd" name="Iron Shield" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="997d-2e46-b602-70bd" name="Iron Shield" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="81bf-0179-0492-1537" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0056-3dcf-c3d7-5b7f" type="max"/>
@@ -24499,8 +24501,8 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="a25d-15fa-db5b-85b8" name="Axe" hidden="false" collective="false" targetId="6487-f2cf-5eb7-a780" type="selectionEntry"/>
-            <entryLink id="2741-e512-4e93-6d72" name="Heavy Dwarf Armour" hidden="false" collective="false" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
+            <entryLink id="a25d-15fa-db5b-85b8" name="Axe" hidden="false" collective="false" import="true" targetId="6487-f2cf-5eb7-a780" type="selectionEntry"/>
+            <entryLink id="2741-e512-4e93-6d72" name="Heavy Dwarf Armour" hidden="false" collective="false" import="true" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -24510,7 +24512,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ec6e-c217-a2c7-88b3" name="Foe Spear" hidden="false" collective="false" type="model">
+    <selectionEntry id="ec6e-c217-a2c7-88b3" name="Foe Spear" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c54f-18a0-e650-d308" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c13d-f094-52e4-2fbd" type="max"/>
@@ -24542,9 +24544,9 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         </profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="392b-8b64-bf19-e198" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="392b-8b64-bf19-e198" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="a98f-7c07-b63b-2160" name="Foe Spear" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="a98f-7c07-b63b-2160" name="Foe Spear" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a55-9c7a-e6cc-ed1f" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d6fb-6fde-5771-2905" type="max"/>
@@ -24564,7 +24566,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="138e-2e7d-4a81-8e27" name="Dwarf Armour" hidden="false" collective="false" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
+            <entryLink id="138e-2e7d-4a81-8e27" name="Dwarf Armour" hidden="false" collective="false" import="true" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -24574,7 +24576,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="358e-2782-876a-2328" name="Dwarf Ballista" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="358e-2782-876a-2328" name="Dwarf Ballista" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="increment" field="6d3b-ca04-0b08-4d69" value="1">
           <repeats>
@@ -24611,9 +24613,9 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <infoLink id="1f49-5286-ce03-e547" name="Accurate" hidden="false" targetId="3cb0-101f-89f9-6c6a" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="909f-f53f-912d-724b" name="Crew" hidden="false" collective="false">
+        <selectionEntryGroup id="909f-f53f-912d-724b" name="Crew" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="6711-e338-44f3-0d9a" name="Additional Crew" hidden="false" collective="false" type="model">
+            <selectionEntry id="6711-e338-44f3-0d9a" name="Additional Crew" hidden="false" collective="false" import="true" type="model">
               <modifiers>
                 <modifier type="set" field="4e1c-30a4-8d70-02cb" value="5">
                   <conditions>
@@ -24630,7 +24632,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="2e21-8c1d-bf69-eefe" name="Dwarf Crew" hidden="false" collective="false" type="model">
+            <selectionEntry id="2e21-8c1d-bf69-eefe" name="Dwarf Crew" hidden="false" collective="false" import="true" type="model">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4d69-9c47-4199-4009" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="334c-3f37-3b93-3901" type="min"/>
@@ -24643,10 +24645,10 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
                 </infoLink>
               </infoLinks>
               <selectionEntryGroups>
-                <selectionEntryGroup id="934d-da34-b66e-7009" name="Wargear" hidden="false" collective="false">
+                <selectionEntryGroup id="934d-da34-b66e-7009" name="Wargear" hidden="false" collective="false" import="true">
                   <entryLinks>
-                    <entryLink id="be5b-0112-e39f-9569" name="Dwarf Armour" hidden="false" collective="false" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
-                    <entryLink id="1b91-2d83-22fb-855e" name="Axe" hidden="false" collective="false" targetId="6487-f2cf-5eb7-a780" type="selectionEntry"/>
+                    <entryLink id="be5b-0112-e39f-9569" name="Dwarf Armour" hidden="false" collective="false" import="true" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
+                    <entryLink id="1b91-2d83-22fb-855e" name="Axe" hidden="false" collective="false" import="true" targetId="6487-f2cf-5eb7-a780" type="selectionEntry"/>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
@@ -24658,13 +24660,13 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="53b4-a08a-5b4f-2aa8" name="Hero" hidden="false" collective="false" defaultSelectionEntryId="40b2-1df7-2867-07de">
+        <selectionEntryGroup id="53b4-a08a-5b4f-2aa8" name="Hero" hidden="false" collective="false" import="true" defaultSelectionEntryId="40b2-1df7-2867-07de">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b3b-7e36-bae3-80ba" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2181-8607-24fd-90d1" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="d7cb-59fd-31bc-d444" name="Dwarf Engineer Captain" hidden="false" collective="false" type="model">
+            <selectionEntry id="d7cb-59fd-31bc-d444" name="Dwarf Engineer Captain" hidden="false" collective="false" import="true" type="model">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="864f-eeff-2eb5-3e7c" type="max"/>
               </constraints>
@@ -24705,23 +24707,23 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
                 </profile>
               </profiles>
               <selectionEntryGroups>
-                <selectionEntryGroup id="e2a8-99d5-7acd-a56d" name="Options" hidden="false" collective="false">
+                <selectionEntryGroup id="e2a8-99d5-7acd-a56d" name="Options" hidden="false" collective="false" import="true">
                   <entryLinks>
-                    <entryLink id="1d13-bca1-600d-ac19" name="Throwing Axes" hidden="false" collective="false" targetId="c384-3215-03cb-0b8e" type="selectionEntry"/>
-                    <entryLink id="a134-1923-0786-4026" name="Two-Handed Axe" hidden="false" collective="false" targetId="7f2a-aa52-b09e-4c22" type="selectionEntry"/>
-                    <entryLink id="f8f1-1433-0c41-3f3e" name="Shield" hidden="false" collective="false" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
+                    <entryLink id="1d13-bca1-600d-ac19" name="Throwing Axes" hidden="false" collective="false" import="true" targetId="c384-3215-03cb-0b8e" type="selectionEntry"/>
+                    <entryLink id="a134-1923-0786-4026" name="Two-Handed Axe" hidden="false" collective="false" import="true" targetId="7f2a-aa52-b09e-4c22" type="selectionEntry"/>
+                    <entryLink id="f8f1-1433-0c41-3f3e" name="Shield" hidden="false" collective="false" import="true" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
                   </entryLinks>
                 </selectionEntryGroup>
-                <selectionEntryGroup id="62ea-94f0-c81d-ee8f" name="Wargear" hidden="false" collective="false">
+                <selectionEntryGroup id="62ea-94f0-c81d-ee8f" name="Wargear" hidden="false" collective="false" import="true">
                   <entryLinks>
-                    <entryLink id="957f-24a0-26e3-3db0" name="Dwarf Armour" hidden="false" collective="false" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
-                    <entryLink id="c241-e390-9afe-90d3" name="Axe" hidden="false" collective="false" targetId="6487-f2cf-5eb7-a780" type="selectionEntry"/>
+                    <entryLink id="957f-24a0-26e3-3db0" name="Dwarf Armour" hidden="false" collective="false" import="true" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
+                    <entryLink id="c241-e390-9afe-90d3" name="Axe" hidden="false" collective="false" import="true" targetId="6487-f2cf-5eb7-a780" type="selectionEntry"/>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <entryLinks>
-                <entryLink id="7da1-d56f-df8d-730c" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
-                <entryLink id="5b53-35f2-1f7d-e0b4" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+                <entryLink id="7da1-d56f-df8d-730c" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+                <entryLink id="5b53-35f2-1f7d-e0b4" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
               </entryLinks>
               <costs>
                 <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="60.0"/>
@@ -24729,7 +24731,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="40b2-1df7-2867-07de" name="Siege Veteran" hidden="false" collective="false" type="model">
+            <selectionEntry id="40b2-1df7-2867-07de" name="Siege Veteran" hidden="false" collective="false" import="true" type="model">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b83d-9803-b210-6831" type="max"/>
               </constraints>
@@ -24765,15 +24767,15 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
                 </profile>
               </profiles>
               <selectionEntryGroups>
-                <selectionEntryGroup id="2c4a-c039-07d2-06d9" name="Wargear" hidden="false" collective="false">
+                <selectionEntryGroup id="2c4a-c039-07d2-06d9" name="Wargear" hidden="false" collective="false" import="true">
                   <entryLinks>
-                    <entryLink id="ca58-0f6a-f1fc-7541" name="Dwarf Armour" hidden="false" collective="false" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
-                    <entryLink id="fff0-0205-5b5c-9372" name="Axe" hidden="false" collective="false" targetId="6487-f2cf-5eb7-a780" type="selectionEntry"/>
+                    <entryLink id="ca58-0f6a-f1fc-7541" name="Dwarf Armour" hidden="false" collective="false" import="true" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
+                    <entryLink id="fff0-0205-5b5c-9372" name="Axe" hidden="false" collective="false" import="true" targetId="6487-f2cf-5eb7-a780" type="selectionEntry"/>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <entryLinks>
-                <entryLink id="5822-d2d3-eaa5-5d9d" name="Minor Hero" hidden="false" collective="false" targetId="36a4-de5b-fd01-3f8e" type="selectionEntry"/>
+                <entryLink id="5822-d2d3-eaa5-5d9d" name="Minor Hero" hidden="false" collective="false" import="true" targetId="36a4-de5b-fd01-3f8e" type="selectionEntry"/>
               </entryLinks>
               <costs>
                 <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -24783,9 +24785,9 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="b09a-2908-ca33-ed71" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="b09a-2908-ca33-ed71" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="9f9a-52a9-0a03-c9a4" name="Flamming Ammunition" hidden="false" collective="false" targetId="af89-b25c-bd59-88fd" type="selectionEntry"/>
+            <entryLink id="9f9a-52a9-0a03-c9a4" name="Flamming Ammunition" hidden="false" collective="false" import="true" targetId="af89-b25c-bd59-88fd" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -24795,7 +24797,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c384-3215-03cb-0b8e" name="Throwing Axes" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="c384-3215-03cb-0b8e" name="Throwing Axes" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b29-3142-0cee-ef03" type="max"/>
       </constraints>
@@ -24808,7 +24810,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7f2a-aa52-b09e-4c22" name="Two-Handed Axe" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="7f2a-aa52-b09e-4c22" name="Two-Handed Axe" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fbd4-7e68-c525-8193" type="max"/>
       </constraints>
@@ -24822,7 +24824,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1369-1098-9305-3f9b" name="Dwarf Captain" hidden="false" collective="false" type="model">
+    <selectionEntry id="1369-1098-9305-3f9b" name="Dwarf Captain" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c75-40fc-46ca-373e" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5414-017a-db50-0aee" type="max"/>
@@ -24871,23 +24873,23 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         </profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="0a3e-c08c-e683-a678" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="0a3e-c08c-e683-a678" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="016b-91e1-5a4b-6592" name="Dwarf Armour" hidden="false" collective="false" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
-            <entryLink id="bc12-633f-ab7d-cc7d" name="Axe" hidden="false" collective="false" targetId="6487-f2cf-5eb7-a780" type="selectionEntry"/>
+            <entryLink id="016b-91e1-5a4b-6592" name="Dwarf Armour" hidden="false" collective="false" import="true" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
+            <entryLink id="bc12-633f-ab7d-cc7d" name="Axe" hidden="false" collective="false" import="true" targetId="6487-f2cf-5eb7-a780" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="09e6-d46f-b73b-5e14" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="09e6-d46f-b73b-5e14" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="ca88-3d0f-e7b6-d213" name="Throwing Axes" hidden="false" collective="false" targetId="c384-3215-03cb-0b8e" type="selectionEntry"/>
-            <entryLink id="3b33-d255-6a08-3bd6" name="Two-Handed Axe" hidden="false" collective="false" targetId="7f2a-aa52-b09e-4c22" type="selectionEntry"/>
-            <entryLink id="2937-dac2-a848-ef82" name="Shield" hidden="false" collective="false" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
+            <entryLink id="ca88-3d0f-e7b6-d213" name="Throwing Axes" hidden="false" collective="false" import="true" targetId="c384-3215-03cb-0b8e" type="selectionEntry"/>
+            <entryLink id="3b33-d255-6a08-3bd6" name="Two-Handed Axe" hidden="false" collective="false" import="true" targetId="7f2a-aa52-b09e-4c22" type="selectionEntry"/>
+            <entryLink id="2937-dac2-a848-ef82" name="Shield" hidden="false" collective="false" import="true" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="07dd-c428-2a79-9bde" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
-        <entryLink id="6e3d-f2e7-4ee1-c67d" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="07dd-c428-2a79-9bde" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="6e3d-f2e7-4ee1-c67d" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="60.0"/>
@@ -24895,7 +24897,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7a41-e777-2ebf-85fa" name="Dwarf King" hidden="false" collective="false" type="model">
+    <selectionEntry id="7a41-e777-2ebf-85fa" name="Dwarf King" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b002-335c-b0e0-9e9e" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="16d6-5cea-ce40-069d" type="max"/>
@@ -24932,22 +24934,22 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         </profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="d280-7e47-83f8-4947" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="d280-7e47-83f8-4947" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="a6d9-59a0-972a-26a5" name="Axe" hidden="false" collective="false" targetId="6487-f2cf-5eb7-a780" type="selectionEntry"/>
-            <entryLink id="91ba-1e2e-f340-2e94" name="Heavy Dwarf Armour" hidden="false" collective="false" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
+            <entryLink id="a6d9-59a0-972a-26a5" name="Axe" hidden="false" collective="false" import="true" targetId="6487-f2cf-5eb7-a780" type="selectionEntry"/>
+            <entryLink id="91ba-1e2e-f340-2e94" name="Heavy Dwarf Armour" hidden="false" collective="false" import="true" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="862f-83ce-e9c0-3b89" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="862f-83ce-e9c0-3b89" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="de81-5c84-47f5-b392" name="Throwing Axes" hidden="false" collective="false" targetId="c384-3215-03cb-0b8e" type="selectionEntry"/>
-            <entryLink id="4bea-0a3d-39fc-ebd6" name="Two-Handed Axe" hidden="false" collective="false" targetId="7f2a-aa52-b09e-4c22" type="selectionEntry"/>
+            <entryLink id="de81-5c84-47f5-b392" name="Throwing Axes" hidden="false" collective="false" import="true" targetId="c384-3215-03cb-0b8e" type="selectionEntry"/>
+            <entryLink id="4bea-0a3d-39fc-ebd6" name="Two-Handed Axe" hidden="false" collective="false" import="true" targetId="7f2a-aa52-b09e-4c22" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="7030-c513-dfd8-11f5" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
-        <entryLink id="3c52-a708-f644-54b6" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="7030-c513-dfd8-11f5" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="3c52-a708-f644-54b6" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="75.0"/>
@@ -24955,13 +24957,13 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ffc0-3c90-fe70-cd90" name="King&apos;s Champion" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="ffc0-3c90-fe70-cd90" name="King&apos;s Champion" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="218a-7782-8401-8388" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4e3a-0c09-c99e-34a5" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="f2fb-212f-a55e-8a9a" name="Herald" hidden="false" collective="false" type="model">
+        <selectionEntry id="f2fb-212f-a55e-8a9a" name="Herald" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="91d6-17e3-65b5-9549" type="max"/>
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c5c1-2cb5-6106-b80e" type="min"/>
@@ -25002,9 +25004,9 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
             <infoLink id="04ea-538a-74c9-1a67" name="The Life Guard (Active)" hidden="false" targetId="1185-771a-47a4-8e14" type="rule"/>
           </infoLinks>
           <selectionEntryGroups>
-            <selectionEntryGroup id="c0e3-c8c8-4b01-0767" name="Wargear" hidden="false" collective="false">
+            <selectionEntryGroup id="c0e3-c8c8-4b01-0767" name="Wargear" hidden="false" collective="false" import="true">
               <selectionEntries>
-                <selectionEntry id="548d-b46e-d8a5-9d91" name="Banner" hidden="false" collective="false" type="upgrade">
+                <selectionEntry id="548d-b46e-d8a5-9d91" name="Banner" hidden="false" collective="false" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c01-e31d-9a4f-83e3" type="min"/>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="923a-b92d-7030-ee74" type="max"/>
@@ -25020,14 +25022,14 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
                 </selectionEntry>
               </selectionEntries>
               <entryLinks>
-                <entryLink id="11ae-b53f-10d6-7603" name="Shield" hidden="false" collective="false" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
-                <entryLink id="5f9c-ce69-d12f-1e90" name="Dwarf Armour" hidden="false" collective="false" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
-                <entryLink id="35f2-10a8-713b-418c" name="Axe" hidden="false" collective="false" targetId="6487-f2cf-5eb7-a780" type="selectionEntry"/>
+                <entryLink id="11ae-b53f-10d6-7603" name="Shield" hidden="false" collective="false" import="true" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
+                <entryLink id="5f9c-ce69-d12f-1e90" name="Dwarf Armour" hidden="false" collective="false" import="true" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
+                <entryLink id="35f2-10a8-713b-418c" name="Axe" hidden="false" collective="false" import="true" targetId="6487-f2cf-5eb7-a780" type="selectionEntry"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink id="e5e8-b422-6899-3045" name="Independent Hero" hidden="false" collective="false" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
+            <entryLink id="e5e8-b422-6899-3045" name="Independent Hero" hidden="false" collective="false" import="true" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
           </entryLinks>
           <costs>
             <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -25035,7 +25037,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="926e-c672-15b7-0708" name="King&apos;s Champion" hidden="false" collective="false" type="model">
+        <selectionEntry id="926e-c672-15b7-0708" name="King&apos;s Champion" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="89b0-f379-2f10-62ca" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c9d-a3ab-b3fe-e91b" type="min"/>
@@ -25075,16 +25077,16 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
             <infoLink id="09a9-316e-9cc9-f397" name="The Herald&apos;s Duty (Active)" hidden="false" targetId="f568-15b1-e555-4841" type="rule"/>
           </infoLinks>
           <selectionEntryGroups>
-            <selectionEntryGroup id="3aa0-9011-40e6-7ba7" name="Wargear" hidden="false" collective="false">
+            <selectionEntryGroup id="3aa0-9011-40e6-7ba7" name="Wargear" hidden="false" collective="false" import="true">
               <entryLinks>
-                <entryLink id="2137-ceef-1623-954d" name="Axe" hidden="false" collective="false" targetId="6487-f2cf-5eb7-a780" type="selectionEntry"/>
-                <entryLink id="388e-5bb8-240c-38b3" name="Heavy Dwarf Armour" hidden="false" collective="false" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
+                <entryLink id="2137-ceef-1623-954d" name="Axe" hidden="false" collective="false" import="true" targetId="6487-f2cf-5eb7-a780" type="selectionEntry"/>
+                <entryLink id="388e-5bb8-240c-38b3" name="Heavy Dwarf Armour" hidden="false" collective="false" import="true" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink id="4304-3541-ad08-5b6b" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-            <entryLink id="042d-a248-5ba6-7e6f" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+            <entryLink id="4304-3541-ad08-5b6b" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+            <entryLink id="042d-a248-5ba6-7e6f" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
           </entryLinks>
           <costs>
             <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -25099,7 +25101,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7e17-b2fe-7007-cfa8" name="Shieldbearer" hidden="false" collective="false" type="model">
+    <selectionEntry id="7e17-b2fe-7007-cfa8" name="Shieldbearer" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4f2f-36ad-f506-8839" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="99a3-08a1-459b-e502" type="max"/>
@@ -25144,16 +25146,16 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         </rule>
       </rules>
       <selectionEntryGroups>
-        <selectionEntryGroup id="0e24-7bfc-972f-16b0" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="0e24-7bfc-972f-16b0" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="3823-ffdd-5b8f-b2d2" name="Shield" hidden="false" collective="false" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
-            <entryLink id="a62b-fd58-289d-3643" name="Axe" hidden="false" collective="false" targetId="6487-f2cf-5eb7-a780" type="selectionEntry"/>
-            <entryLink id="5cbc-6ac1-29f7-2387" name="Dwarf Armour" hidden="false" collective="false" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
+            <entryLink id="3823-ffdd-5b8f-b2d2" name="Shield" hidden="false" collective="false" import="true" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
+            <entryLink id="a62b-fd58-289d-3643" name="Axe" hidden="false" collective="false" import="true" targetId="6487-f2cf-5eb7-a780" type="selectionEntry"/>
+            <entryLink id="5cbc-6ac1-29f7-2387" name="Dwarf Armour" hidden="false" collective="false" import="true" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="7301-3739-4ef0-2275" name="Minor Hero" hidden="false" collective="false" targetId="36a4-de5b-fd01-3f8e" type="selectionEntry"/>
+        <entryLink id="7301-3739-4ef0-2275" name="Minor Hero" hidden="false" collective="false" import="true" targetId="36a4-de5b-fd01-3f8e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="60.0"/>
@@ -25161,7 +25163,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2af2-3033-755a-f4aa" name="Tom Bombadil" hidden="false" collective="false" type="model">
+    <selectionEntry id="2af2-3033-755a-f4aa" name="Tom Bombadil" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f2d4-c7f5-509d-6773" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d06f-d66e-75ab-52ae" type="max"/>
@@ -25207,9 +25209,9 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <infoLink id="d00a-501c-0e05-3ffb" name="Hey! Come Merry Dol! (Passive)" hidden="false" targetId="5691-f194-f8fd-74d7" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="90aa-7a3c-dfbb-713b" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="90aa-7a3c-dfbb-713b" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="fa79-296b-5530-471c" name="Tom&apos;s Clothes" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="fa79-296b-5530-471c" name="Tom&apos;s Clothes" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4067-a27f-b136-f7d9" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b2e1-bab2-7b82-de19" type="max"/>
@@ -25234,7 +25236,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="92f7-9414-e74e-7786" name="Independent Hero" hidden="false" collective="false" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
+        <entryLink id="92f7-9414-e74e-7786" name="Independent Hero" hidden="false" collective="false" import="true" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -25242,7 +25244,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="70ff-d806-70ad-4e8a" name="Goldberry" hidden="false" collective="false" type="model">
+    <selectionEntry id="70ff-d806-70ad-4e8a" name="Goldberry" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="57cd-afb1-10a1-2d14" value="1">
           <conditions>
@@ -25292,9 +25294,9 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <infoLink id="ed81-fbb7-e429-4317" name="Hey! Come Merry Dol! (Passive)" hidden="false" targetId="5691-f194-f8fd-74d7" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="59e2-6856-1677-a75f" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="59e2-6856-1677-a75f" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="33d7-7c1a-88d3-f21e" name="Candle" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="33d7-7c1a-88d3-f21e" name="Candle" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e8d-1aa2-82ba-2e03" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="56b7-35e8-6736-6e34" type="max"/>
@@ -25312,7 +25314,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="21ad-a39e-ea18-2174" name="Independent Hero" hidden="false" collective="false" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
+        <entryLink id="21ad-a39e-ea18-2174" name="Independent Hero" hidden="false" collective="false" import="true" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="140.0"/>
@@ -25320,7 +25322,7 @@ Additionally, Dáin Ironfoot, Lord of the Iron Hills receives the Master of Batt
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9726-a2a5-3fc2-5edf" name="Champions of Erebor" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="9726-a2a5-3fc2-5edf" name="Champions of Erebor" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce6f-0ad4-2c28-849e" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="33f1-d525-0440-0e29" type="max"/>
@@ -25340,11 +25342,11 @@ The Chariot is also subject to the following exceptions:
         </rule>
       </rules>
       <entryLinks>
-        <entryLink id="cbde-8d77-0cf2-aa2e" name="Dwalin the Dwarf, Champion of Erebor" hidden="false" collective="false" targetId="b8c1-50ff-227f-fb99" type="selectionEntry"/>
-        <entryLink id="71bc-878b-8c9e-f2c6" name="Fíli the Dwarf, Champion of Erebor" hidden="false" collective="false" targetId="6da8-3da2-b5a2-730e" type="selectionEntry"/>
-        <entryLink id="0df5-3637-be2c-c204" name="Balin the Dwarf, Champion of Erebor" hidden="false" collective="false" targetId="b975-9b1d-df5d-c55e" type="selectionEntry"/>
-        <entryLink id="4f14-16ba-fc4d-f2b8" name="Kíli the Dwarf, Champion of Erebor" hidden="false" collective="false" targetId="3db2-cf6a-8479-5dab" type="selectionEntry"/>
-        <entryLink id="7d24-59b0-6581-fb16" name="Iron Hills Chariot" hidden="false" collective="false" targetId="454d-81bd-ce31-02ac" type="selectionEntry"/>
+        <entryLink id="cbde-8d77-0cf2-aa2e" name="Dwalin the Dwarf, Champion of Erebor" hidden="false" collective="false" import="true" targetId="b8c1-50ff-227f-fb99" type="selectionEntry"/>
+        <entryLink id="71bc-878b-8c9e-f2c6" name="Fíli the Dwarf, Champion of Erebor" hidden="false" collective="false" import="true" targetId="6da8-3da2-b5a2-730e" type="selectionEntry"/>
+        <entryLink id="0df5-3637-be2c-c204" name="Balin the Dwarf, Champion of Erebor" hidden="false" collective="false" import="true" targetId="b975-9b1d-df5d-c55e" type="selectionEntry"/>
+        <entryLink id="4f14-16ba-fc4d-f2b8" name="Kíli the Dwarf, Champion of Erebor" hidden="false" collective="false" import="true" targetId="3db2-cf6a-8479-5dab" type="selectionEntry"/>
+        <entryLink id="7d24-59b0-6581-fb16" name="Iron Hills Chariot" hidden="false" collective="false" import="true" targetId="454d-81bd-ce31-02ac" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="175.0"/>
@@ -25352,7 +25354,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="95ab-8c35-0cf9-0f14" name="Dwarf Bow" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="95ab-8c35-0cf9-0f14" name="Dwarf Bow" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="42b9-aadc-b009-842d" type="max"/>
       </constraints>
@@ -25365,7 +25367,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f5c0-592b-0da1-927f" name="Hand-and-a-half Axe" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="f5c0-592b-0da1-927f" name="Hand-and-a-half Axe" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="79df-bb0b-71fb-9880" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b34e-c8f5-663f-c1dc" type="min"/>
@@ -25380,7 +25382,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5d22-3a94-971f-eef8" name="Balin, King of Moria" hidden="false" collective="false" type="model">
+    <selectionEntry id="5d22-3a94-971f-eef8" name="Balin, King of Moria" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="ca8a-3df8-f23d-33b9" value="0.0">
           <conditions>
@@ -25430,16 +25432,16 @@ The Chariot is also subject to the following exceptions:
         <infoLink id="f2ea-c352-ce5f-23ba" name="Longbeard (Active)" hidden="false" targetId="26d2-4ad0-8b10-dbc9" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="278d-dcbc-3753-78bb" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="278d-dcbc-3753-78bb" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="e840-b2b5-9c9c-51dd" name="Heavy Dwarf Armour" hidden="false" collective="false" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
-            <entryLink id="1460-aa51-5083-90d3" name="Durin&apos;s Axe" hidden="false" collective="false" targetId="57ec-e3d0-5d92-8912" type="selectionEntry"/>
+            <entryLink id="e840-b2b5-9c9c-51dd" name="Heavy Dwarf Armour" hidden="false" collective="false" import="true" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
+            <entryLink id="1460-aa51-5083-90d3" name="Durin&apos;s Axe" hidden="false" collective="false" import="true" targetId="57ec-e3d0-5d92-8912" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="3b0c-d55a-6dd5-6cd1" name="Hero of Legend" hidden="false" collective="false" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
-        <entryLink id="64e8-a2fe-bcdf-b355" name="Leader (Legend)" hidden="false" collective="false" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
+        <entryLink id="3b0c-d55a-6dd5-6cd1" name="Hero of Legend" hidden="false" collective="false" import="true" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
+        <entryLink id="64e8-a2fe-bcdf-b355" name="Leader (Legend)" hidden="false" collective="false" import="true" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -25447,7 +25449,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f572-47ba-00f8-2bf4" name="Dwarf Bow" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="f572-47ba-00f8-2bf4" name="Dwarf Bow" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="543b-d5ea-5594-5ee6" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d583-228e-4fd6-b3ec" type="max"/>
@@ -25461,14 +25463,14 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="654c-120f-e2ba-1f33" name="Múrin &amp; Drár" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="654c-120f-e2ba-1f33" name="Múrin &amp; Drár" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc31-d1f3-30d5-5026" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="be3a-7b7e-8e87-f326" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="68c4-48ac-f612-0bb5" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="8b00-0f8c-987b-7d93" name="Múrin" hidden="false" collective="false" type="model">
+        <selectionEntry id="8b00-0f8c-987b-7d93" name="Múrin" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7db2-1002-779c-4aa1" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b564-27ba-5adb-fd89" type="max"/>
@@ -25494,9 +25496,9 @@ The Chariot is also subject to the following exceptions:
             </profile>
           </profiles>
           <selectionEntryGroups>
-            <selectionEntryGroup id="8199-d44d-9d87-57a8" name="Wargear" hidden="false" collective="false">
+            <selectionEntryGroup id="8199-d44d-9d87-57a8" name="Wargear" hidden="false" collective="false" import="true">
               <selectionEntries>
-                <selectionEntry id="2da3-e57c-31db-d467" name="Kalazâl" hidden="false" collective="false" type="upgrade">
+                <selectionEntry id="2da3-e57c-31db-d467" name="Kalazâl" hidden="false" collective="false" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7fd6-b5cf-f045-edce" type="min"/>
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="17ec-37ea-3183-53d8" type="max"/>
@@ -25516,14 +25518,14 @@ The Chariot is also subject to the following exceptions:
                 </selectionEntry>
               </selectionEntries>
               <entryLinks>
-                <entryLink id="5704-3e0b-8ebc-f4ba" name="Dwarf Armour" hidden="false" collective="false" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
-                <entryLink id="e85f-a256-3278-1cca" name="Shield" hidden="false" collective="false" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
+                <entryLink id="5704-3e0b-8ebc-f4ba" name="Dwarf Armour" hidden="false" collective="false" import="true" targetId="b522-688a-e684-86ef" type="selectionEntry"/>
+                <entryLink id="e85f-a256-3278-1cca" name="Shield" hidden="false" collective="false" import="true" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink id="e5eb-7e9f-0ff9-54b2" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-            <entryLink id="5dbe-3755-4e11-929c" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+            <entryLink id="e5eb-7e9f-0ff9-54b2" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+            <entryLink id="5dbe-3755-4e11-929c" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
           </entryLinks>
           <costs>
             <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -25531,7 +25533,7 @@ The Chariot is also subject to the following exceptions:
             <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8d7b-6387-ea14-401a" name="Drár" hidden="false" collective="false" type="model">
+        <selectionEntry id="8d7b-6387-ea14-401a" name="Drár" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f764-b2b5-5c33-48e6" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0ae7-2235-19f6-1839" type="max"/>
@@ -25560,17 +25562,17 @@ The Chariot is also subject to the following exceptions:
             <infoLink id="9caf-ee0a-ea91-c077" name="Expert Shot (Active)" hidden="false" targetId="72a1-0cb0-79bc-6aa7" type="rule"/>
           </infoLinks>
           <selectionEntryGroups>
-            <selectionEntryGroup id="2dc9-51f0-c2b2-2807" name="Wargear" hidden="false" collective="false">
+            <selectionEntryGroup id="2dc9-51f0-c2b2-2807" name="Wargear" hidden="false" collective="false" import="true">
               <entryLinks>
-                <entryLink id="7a53-a1fd-2839-7aa8" name="Dwarf Bow" hidden="false" collective="false" targetId="f572-47ba-00f8-2bf4" type="selectionEntry"/>
-                <entryLink id="8d99-d716-9f2f-6f9e" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
-                <entryLink id="9050-0929-edf1-15e0" name="Axe" hidden="false" collective="false" targetId="6487-f2cf-5eb7-a780" type="selectionEntry"/>
+                <entryLink id="7a53-a1fd-2839-7aa8" name="Dwarf Bow" hidden="false" collective="false" import="true" targetId="f572-47ba-00f8-2bf4" type="selectionEntry"/>
+                <entryLink id="8d99-d716-9f2f-6f9e" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+                <entryLink id="9050-0929-edf1-15e0" name="Axe" hidden="false" collective="false" import="true" targetId="6487-f2cf-5eb7-a780" type="selectionEntry"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink id="3661-5edc-1de3-0903" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
-            <entryLink id="5ef8-6970-72c7-96db" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+            <entryLink id="3661-5edc-1de3-0903" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+            <entryLink id="5ef8-6970-72c7-96db" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
           </entryLinks>
           <costs>
             <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -25585,7 +25587,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d26e-96ea-c830-6ada" name="Sword-Mace" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="d26e-96ea-c830-6ada" name="Sword-Mace" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f342-9570-494a-e05a" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8f74-9df4-2baf-0c3d" type="max"/>
@@ -25607,7 +25609,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7743-2143-b473-11a6" name="Experience" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="7743-2143-b473-11a6" name="Experience" hidden="false" collective="false" import="true" type="upgrade">
       <rules>
         <rule id="54e9-a73c-402a-82de" name="Warrior Progression Chart" hidden="false">
           <description>[1-3] No Effect - Whilst noteworthy, the Warrior&apos;s efforts have not been enough to earn them a promotion.
@@ -25623,7 +25625,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1354-d0bd-4002-d284" name="Armoured Horse" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="1354-d0bd-4002-d284" name="Armoured Horse" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="2f1c-8184-1fe3-518e" value="0">
           <conditionGroups>
@@ -25684,7 +25686,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c8de-356b-9843-911d" name="Evil Army" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="c8de-356b-9843-911d" name="Evil Army" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6d74-6f64-593b-7108" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="78ae-d97b-059e-a16b" type="max"/>
@@ -25695,7 +25697,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5ec8-ad8d-8d3f-368c" name="Good Army" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="5ec8-ad8d-8d3f-368c" name="Good Army" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b712-7114-6e9c-3844" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7dc4-714f-bb98-66bd" type="max"/>
@@ -25706,13 +25708,13 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="178d-9927-3613-41de" name="Lieutenant" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="178d-9927-3613-41de" name="Lieutenant" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cb11-9108-1655-adbb" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd81-c773-6209-45e6" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="93c5-5356-02bb-74a6" name="Hero" hidden="false" collective="false" targetId="1c32-4567-7482-cb7c" type="selectionEntry">
+        <entryLink id="93c5-5356-02bb-74a6" name="Hero" hidden="false" collective="false" import="true" targetId="1c32-4567-7482-cb7c" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="48a8-7dba-e6d8-3b09" value="1"/>
           </modifiers>
@@ -25724,13 +25726,13 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d377-e9b1-fbca-2709" name="Sergeant" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="d377-e9b1-fbca-2709" name="Sergeant" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ffb-82b4-7b69-4c40" type="max"/>
         <constraint field="selections" scope="roster" value="2.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="996b-d976-dfc0-91f8" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="e21d-45a7-1899-8111" name="Hero" hidden="false" collective="false" targetId="1c32-4567-7482-cb7c" type="selectionEntry">
+        <entryLink id="e21d-45a7-1899-8111" name="Hero" hidden="false" collective="false" import="true" targetId="1c32-4567-7482-cb7c" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="48a8-7dba-e6d8-3b09" value="1"/>
           </modifiers>
@@ -25742,7 +25744,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="1c32-4567-7482-cb7c" name="Hero" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="1c32-4567-7482-cb7c" name="Hero" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e754-d19b-d5e2-57c9" type="max"/>
         <constraint field="selections" scope="roster" value="5.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="967f-27f6-0c0a-f956" type="max"/>
@@ -25754,7 +25756,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e3b4-2195-26ce-f24e" name="Flói Stonehand" hidden="false" collective="false" type="model">
+    <selectionEntry id="e3b4-2195-26ce-f24e" name="Flói Stonehand" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="de30-22cf-627a-bbf8" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d88a-c750-6163-1906" type="min"/>
@@ -25788,16 +25790,16 @@ The Chariot is also subject to the following exceptions:
         </rule>
       </rules>
       <selectionEntryGroups>
-        <selectionEntryGroup id="5dc9-2660-5cd2-f1fc" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="5dc9-2660-5cd2-f1fc" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="6091-1b07-a720-4444" name="Heavy Dwarf Armour" hidden="false" collective="false" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
-            <entryLink id="020e-758c-dfc8-06f1" name="Staff" hidden="false" collective="false" targetId="badb-13f4-1286-1864" type="selectionEntry"/>
+            <entryLink id="6091-1b07-a720-4444" name="Heavy Dwarf Armour" hidden="false" collective="false" import="true" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
+            <entryLink id="020e-758c-dfc8-06f1" name="Staff" hidden="false" collective="false" import="true" targetId="badb-13f4-1286-1864" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="ac41-0e33-338f-21d6" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="1087-9027-8b01-3c92" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="ac41-0e33-338f-21d6" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="1087-9027-8b01-3c92" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="75.0"/>
@@ -25805,7 +25807,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="97b9-e206-4382-7257" name="Mithril Coat" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="97b9-e206-4382-7257" name="Mithril Coat" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9fd8-95c7-f26f-0133" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="63da-7b56-ae82-f04f" type="max"/>
@@ -25820,7 +25822,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b471-7653-0304-33d3" name="Sting" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="b471-7653-0304-33d3" name="Sting" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c3c-3fd9-676e-9c6c" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e7a1-d808-c6fe-0be7" type="max"/>
@@ -25836,7 +25838,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7ce2-b603-e16f-985c" name="Arwen Undómiel" hidden="false" collective="false" type="model">
+    <selectionEntry id="7ce2-b603-e16f-985c" name="Arwen Undómiel" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4375-8ced-f04c-4d3b" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7028-daa4-c534-c594" type="min"/>
@@ -25872,22 +25874,22 @@ The Chariot is also subject to the following exceptions:
         <infoLink id="0046-5f5c-3bca-8d93" name="Expert Rider" hidden="false" targetId="b652-a40f-e5e6-0af6" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="9ed0-19db-8ccb-c297" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="9ed0-19db-8ccb-c297" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="1a49-7692-d36b-305f" name="Asfaloth" hidden="false" collective="false" targetId="0655-18c8-862d-d925" type="selectionEntry"/>
-            <entryLink id="3604-7223-e675-75c8" name="Horse" hidden="false" collective="false" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
-            <entryLink id="557c-bb72-295f-5007" name="Elven Cloak" hidden="false" collective="false" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
+            <entryLink id="1a49-7692-d36b-305f" name="Asfaloth" hidden="false" collective="false" import="true" targetId="0655-18c8-862d-d925" type="selectionEntry"/>
+            <entryLink id="3604-7223-e675-75c8" name="Horse" hidden="false" collective="false" import="true" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
+            <entryLink id="557c-bb72-295f-5007" name="Elven Cloak" hidden="false" collective="false" import="true" targetId="6af7-15a9-a26b-e9e3" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="50aa-b7c3-ef94-870e" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="50aa-b7c3-ef94-870e" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="bbb9-ff9c-51b7-846a" name="Elven-made Sword" hidden="false" collective="false" targetId="1ef8-a0ca-889f-0d8b" type="selectionEntry"/>
+            <entryLink id="bbb9-ff9c-51b7-846a" name="Elven-made Sword" hidden="false" collective="false" import="true" targetId="1ef8-a0ca-889f-0d8b" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="3bf0-513a-468e-1c63" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="2e76-89cd-d42a-b998" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="3bf0-513a-468e-1c63" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="2e76-89cd-d42a-b998" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="60.0"/>
@@ -25895,7 +25897,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="05ab-8ff7-1c64-94d4" name="Elladan &amp; Elrohir" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="05ab-8ff7-1c64-94d4" name="Elladan &amp; Elrohir" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0af2-e39b-4e53-13ca" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6670-66c6-8444-8eaf" type="min"/>
@@ -25910,7 +25912,7 @@ The Chariot is also subject to the following exceptions:
         <infoLink id="3919-6997-1e81-11f6" name="Woodland Creature" hidden="false" targetId="423b-b343-5f3d-f2d9" type="rule"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="74db-5f2f-c0fa-6e8c" name="Elladan" hidden="false" collective="false" type="model">
+        <selectionEntry id="74db-5f2f-c0fa-6e8c" name="Elladan" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="49e5-6418-f849-e516" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e04-5a26-e3b7-264d" type="max"/>
@@ -25942,9 +25944,9 @@ The Chariot is also subject to the following exceptions:
             </profile>
           </profiles>
           <entryLinks>
-            <entryLink id="0461-0d83-583c-50d2" name="Wargear" hidden="false" collective="false" targetId="0141-38d1-bfdd-7628" type="selectionEntryGroup"/>
-            <entryLink id="2832-cc0f-bb7e-6462" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-            <entryLink id="e44a-3809-e970-a9ef" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+            <entryLink id="0461-0d83-583c-50d2" name="Wargear" hidden="false" collective="false" import="true" targetId="0141-38d1-bfdd-7628" type="selectionEntryGroup"/>
+            <entryLink id="2832-cc0f-bb7e-6462" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+            <entryLink id="e44a-3809-e970-a9ef" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
           </entryLinks>
           <costs>
             <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -25952,7 +25954,7 @@ The Chariot is also subject to the following exceptions:
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0581-f714-21c3-e2ab" name="Elrohir" hidden="false" collective="false" type="model">
+        <selectionEntry id="0581-f714-21c3-e2ab" name="Elrohir" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c403-8d50-b2e8-11db" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f49f-cee0-8e04-1c5b" type="min"/>
@@ -25984,9 +25986,9 @@ The Chariot is also subject to the following exceptions:
             </profile>
           </profiles>
           <entryLinks>
-            <entryLink id="8f70-3ebf-64cf-b827" name="Wargear" hidden="false" collective="false" targetId="0141-38d1-bfdd-7628" type="selectionEntryGroup"/>
-            <entryLink id="7b13-58dd-c634-e69c" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-            <entryLink id="ed60-2c74-d672-71be" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+            <entryLink id="8f70-3ebf-64cf-b827" name="Wargear" hidden="false" collective="false" import="true" targetId="0141-38d1-bfdd-7628" type="selectionEntryGroup"/>
+            <entryLink id="7b13-58dd-c634-e69c" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+            <entryLink id="ed60-2c74-d672-71be" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
           </entryLinks>
           <costs>
             <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -25996,9 +25998,9 @@ The Chariot is also subject to the following exceptions:
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="7590-356a-79a4-f57c" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="7590-356a-79a4-f57c" name="Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="a083-0570-da3f-09c0" name="2 Heavy Armour" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="a083-0570-da3f-09c0" name="2 Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd35-8a9b-b78a-7a01" type="max"/>
               </constraints>
@@ -26011,7 +26013,7 @@ The Chariot is also subject to the following exceptions:
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="96d0-8ebc-74d3-bf4d" name="2 Elven Cloaks" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="96d0-8ebc-74d3-bf4d" name="2 Elven Cloaks" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="4f92-c984-be86-ba92" value="0.0">
                   <conditions>
@@ -26036,7 +26038,7 @@ The Chariot is also subject to the following exceptions:
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="253f-349e-b4b5-f71f" name="2 Elf Bows" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="253f-349e-b4b5-f71f" name="2 Elf Bows" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="d6c5-2b3f-e4bc-cb6a" value="0.0">
                   <conditions>
@@ -26061,7 +26063,7 @@ The Chariot is also subject to the following exceptions:
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="f48d-9076-201e-ff35" name="2 Horses" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="f48d-9076-201e-ff35" name="2 Horses" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="bd73-99bc-36e5-37f6" value="0.0">
                   <conditions>
@@ -26095,7 +26097,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9abb-7176-3884-d4a8" name="Lindir of Rivendell" hidden="false" collective="false" type="model">
+    <selectionEntry id="9abb-7176-3884-d4a8" name="Lindir of Rivendell" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2d3a-091d-25f8-851c" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7bff-5a0c-6e95-4e98" type="max"/>
@@ -26140,21 +26142,21 @@ The Chariot is also subject to the following exceptions:
         <infoLink id="c9c8-25e7-e0ff-2e45" name="Resistant to Magic" hidden="false" targetId="ff02-18ce-6c60-799b" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="49ec-5f34-72d8-fce6" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="49ec-5f34-72d8-fce6" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="b003-c514-9316-c122" name="Heavy Armour" hidden="false" collective="false" targetId="d3ad-a44c-5e03-265b" type="selectionEntry"/>
-            <entryLink id="f727-93db-a077-0f54" name="Horse" hidden="false" collective="false" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
+            <entryLink id="b003-c514-9316-c122" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="d3ad-a44c-5e03-265b" type="selectionEntry"/>
+            <entryLink id="f727-93db-a077-0f54" name="Horse" hidden="false" collective="false" import="true" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="17d5-b333-5f7f-2be3" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="17d5-b333-5f7f-2be3" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="74a8-05d1-762d-f834" name="Elven-made Sword" hidden="false" collective="false" targetId="1ef8-a0ca-889f-0d8b" type="selectionEntry"/>
+            <entryLink id="74a8-05d1-762d-f834" name="Elven-made Sword" hidden="false" collective="false" import="true" targetId="1ef8-a0ca-889f-0d8b" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="0ec6-6a32-89e5-d7d5" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="c562-b0bb-d045-e0c0" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="0ec6-6a32-89e5-d7d5" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="c562-b0bb-d045-e0c0" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="65.0"/>
@@ -26162,7 +26164,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0ef2-06c1-8023-4fec" name="Eorl the Young" hidden="false" collective="false" type="model">
+    <selectionEntry id="0ef2-06c1-8023-4fec" name="Eorl the Young" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8a2a-7c67-e308-a83b" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f7d6-7842-5b9d-a8ae" type="min"/>
@@ -26197,9 +26199,9 @@ The Chariot is also subject to the following exceptions:
         <infoLink id="590b-e2bc-3448-34cc" name="Horse Lord" hidden="false" targetId="6912-7e5d-01e0-aebe" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="cf34-deb8-f90c-ec46" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="cf34-deb8-f90c-ec46" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="986d-5949-2561-c41e" name="Throwing Spears" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="986d-5949-2561-c41e" name="Throwing Spears" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cdb7-9891-d0c7-01e8" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="63a8-e10e-ea71-e1d0" type="max"/>
@@ -26213,7 +26215,7 @@ The Chariot is also subject to the following exceptions:
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="ca33-e3a9-5800-1b38" name="Felarof" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="ca33-e3a9-5800-1b38" name="Felarof" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6d1-23ac-9080-e7c7" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="05fe-6f4c-3e56-4e00" type="max"/>
@@ -26234,15 +26236,15 @@ The Chariot is also subject to the following exceptions:
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="af5a-260e-78ae-c8b8" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-            <entryLink id="3794-384e-035b-4fb6" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
-            <entryLink id="0b70-6e84-bfb8-069b" name="Shield" hidden="false" collective="false" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
+            <entryLink id="af5a-260e-78ae-c8b8" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="3794-384e-035b-4fb6" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="0b70-6e84-bfb8-069b" name="Shield" hidden="false" collective="false" import="true" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="3406-3f52-9d36-9533" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="7a63-1a3e-b48c-798c" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="3406-3f52-9d36-9533" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="7a63-1a3e-b48c-798c" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="115.0"/>
@@ -26250,7 +26252,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="21cb-84eb-7517-34b1" name="Erkenbrand, Captain of Rohan" hidden="false" collective="false" type="model">
+    <selectionEntry id="21cb-84eb-7517-34b1" name="Erkenbrand, Captain of Rohan" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8922-aaf4-9935-ffc8" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dff0-86d5-ba37-05c2" type="min"/>
@@ -26280,14 +26282,14 @@ The Chariot is also subject to the following exceptions:
         <infoLink id="423c-e38f-6a66-43c7" name="Horse Lord" hidden="false" targetId="6912-7e5d-01e0-aebe" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="9200-7210-ae20-6b92" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="9200-7210-ae20-6b92" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="7307-3ce1-50c4-4346" name="Horse" hidden="false" collective="false" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
+            <entryLink id="7307-3ce1-50c4-4346" name="Horse" hidden="false" collective="false" import="true" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="9423-c6b2-d2ed-729f" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="9423-c6b2-d2ed-729f" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="3e86-45ef-2714-4cf7" name="Horn of the Hammerhand" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="3e86-45ef-2714-4cf7" name="Horn of the Hammerhand" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="70fc-cb42-8338-fbc9" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4b2c-1578-843d-d2a8" type="max"/>
@@ -26307,15 +26309,15 @@ The Chariot is also subject to the following exceptions:
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="1ced-0b9c-6844-f420" name="Shield" hidden="false" collective="false" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
-            <entryLink id="22e0-97f2-fc2b-6f10" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-            <entryLink id="7a88-8b12-d045-3af5" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="1ced-0b9c-6844-f420" name="Shield" hidden="false" collective="false" import="true" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
+            <entryLink id="22e0-97f2-fc2b-6f10" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="7a88-8b12-d045-3af5" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="48ba-819d-9a90-1e2f" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="b026-95c3-c6f2-1125" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="48ba-819d-9a90-1e2f" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="b026-95c3-c6f2-1125" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -26323,7 +26325,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b444-5c42-a97c-970d" name="Gamling, Captain of Rohan" hidden="false" collective="false" type="model">
+    <selectionEntry id="b444-5c42-a97c-970d" name="Gamling, Captain of Rohan" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4698-0b28-2fd8-aff6" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f505-748c-0a8a-da2c" type="min"/>
@@ -26358,15 +26360,15 @@ The Chariot is also subject to the following exceptions:
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="06c3-7c96-df19-f664" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="06c3-7c96-df19-f664" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="f077-c09e-f485-fbbe" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
-            <entryLink id="e0bc-9210-9bb1-86ce" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="f077-c09e-f485-fbbe" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="e0bc-9210-9bb1-86ce" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="cfaf-5214-f22e-eb27" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="cfaf-5214-f22e-eb27" name="Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="9d09-047f-a812-b446" name="Royal Standard of Rohan" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="9d09-047f-a812-b446" name="Royal Standard of Rohan" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="df1c-f5b2-b1db-b792" type="max"/>
               </constraints>
@@ -26385,13 +26387,13 @@ The Chariot is also subject to the following exceptions:
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="efbf-98d6-3968-9895" name="Horse" hidden="false" collective="false" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
+            <entryLink id="efbf-98d6-3968-9895" name="Horse" hidden="false" collective="false" import="true" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="21bd-2b2a-8f95-2952" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="4aa4-8535-bb41-c065" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="21bd-2b2a-8f95-2952" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="4aa4-8535-bb41-c065" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="55.0"/>
@@ -26399,7 +26401,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="aa07-1ba1-a529-e332" name="Grimbold of Grimslade" hidden="false" collective="false" type="model">
+    <selectionEntry id="aa07-1ba1-a529-e332" name="Grimbold of Grimslade" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="492c-1b38-a4cc-118c" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c0e5-a99e-41ec-1960" type="min"/>
@@ -26428,16 +26430,16 @@ The Chariot is also subject to the following exceptions:
         <infoLink id="3505-2e08-5071-eb9d" name="Mighty Blow" hidden="false" targetId="ee07-a829-e81a-d482" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="45e2-6906-6ac7-98e2" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="45e2-6906-6ac7-98e2" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="4948-2c09-563c-8d85" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
-            <entryLink id="ce51-fc81-56b0-40fc" name="Two-Handed Axe" hidden="false" collective="false" targetId="2d5f-8ff0-8762-879e" type="selectionEntry"/>
+            <entryLink id="4948-2c09-563c-8d85" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="ce51-fc81-56b0-40fc" name="Two-Handed Axe" hidden="false" collective="false" import="true" targetId="2d5f-8ff0-8762-879e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="a542-7cca-482a-26f9" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="207f-899f-5d3d-b18f" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="a542-7cca-482a-26f9" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="207f-899f-5d3d-b18f" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="60.0"/>
@@ -26445,7 +26447,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6a82-c758-be11-af03" name="Háma, Captain of Rohan" hidden="false" collective="false" type="model">
+    <selectionEntry id="6a82-c758-be11-af03" name="Háma, Captain of Rohan" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7f98-99a4-c9b2-1e33" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5f9d-8b23-c815-de68" type="min"/>
@@ -26487,22 +26489,22 @@ The Chariot is also subject to the following exceptions:
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="b61f-2e2e-9f67-59b4" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="b61f-2e2e-9f67-59b4" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="d435-902d-d27c-5376" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
-            <entryLink id="7b0f-ff62-e9d9-5a32" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="d435-902d-d27c-5376" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="7b0f-ff62-e9d9-5a32" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="f890-0104-bccf-9c7d" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="f890-0104-bccf-9c7d" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="c851-3d7c-0226-99a6" name="Horse" hidden="false" collective="false" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
-            <entryLink id="8272-57f3-b479-f2fd" name="Shield" hidden="false" collective="false" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
+            <entryLink id="c851-3d7c-0226-99a6" name="Horse" hidden="false" collective="false" import="true" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
+            <entryLink id="8272-57f3-b479-f2fd" name="Shield" hidden="false" collective="false" import="true" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="0ce2-75a1-6326-21ab" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="d062-5003-26b1-2a73" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="0ce2-75a1-6326-21ab" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="d062-5003-26b1-2a73" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="55.0"/>
@@ -26510,7 +26512,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b8c8-c1c1-b10f-b8b4" name="Théoden, King of Rohan" hidden="false" collective="false" type="model">
+    <selectionEntry id="b8c8-c1c1-b10f-b8b4" name="Théoden, King of Rohan" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2cd8-1945-e988-4f2c" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="828b-343b-92b3-1626" type="min"/>
@@ -26560,9 +26562,9 @@ The Chariot is also subject to the following exceptions:
         <infoLink id="96ba-e8ab-fbe8-59d3" name="Expert Rider" hidden="false" targetId="b652-a40f-e5e6-0af6" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="05ac-4ca0-5bb8-9a39" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="05ac-4ca0-5bb8-9a39" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="ac23-6802-b55b-d987" name="Herugrim" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="ac23-6802-b55b-d987" name="Herugrim" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4554-d97a-001e-a580" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d37-6ec0-aa33-38b5" type="max"/>
@@ -26582,21 +26584,21 @@ The Chariot is also subject to the following exceptions:
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="4553-0695-a309-1cf0" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="4553-0695-a309-1cf0" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="c889-a39a-64c6-9bdb" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="c889-a39a-64c6-9bdb" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="a669-4ebd-acff-38f3" name="Horse" hidden="false" collective="false" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
-            <entryLink id="bb67-7d89-17a1-3c5f" name="Shield" hidden="false" collective="false" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
-            <entryLink id="4a7f-1ca5-2f31-4472" name="Heavy Armour" hidden="false" collective="false" targetId="713d-07e8-7930-c83c" type="selectionEntry"/>
-            <entryLink id="53b2-4335-6e23-8a2d" name="Armoured Horse" hidden="false" collective="false" targetId="eb59-3a9f-f03b-22cc" type="selectionEntry"/>
+            <entryLink id="a669-4ebd-acff-38f3" name="Horse" hidden="false" collective="false" import="true" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
+            <entryLink id="bb67-7d89-17a1-3c5f" name="Shield" hidden="false" collective="false" import="true" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
+            <entryLink id="4a7f-1ca5-2f31-4472" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="713d-07e8-7930-c83c" type="selectionEntry"/>
+            <entryLink id="53b2-4335-6e23-8a2d" name="Armoured Horse" hidden="false" collective="false" import="true" targetId="eb59-3a9f-f03b-22cc" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="c2a8-aa9e-4a99-e7f1" name="Hero of Legend" hidden="false" collective="false" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
-        <entryLink id="1a47-fd41-ca9c-6b5c" name="Leader (Legend)" hidden="false" collective="false" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
+        <entryLink id="c2a8-aa9e-4a99-e7f1" name="Hero of Legend" hidden="false" collective="false" import="true" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
+        <entryLink id="1a47-fd41-ca9c-6b5c" name="Leader (Legend)" hidden="false" collective="false" import="true" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="75.0"/>
@@ -26604,7 +26606,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="457d-441f-ec77-73ec" name="Théodred, Heir of Rohan" hidden="false" collective="false" type="model">
+    <selectionEntry id="457d-441f-ec77-73ec" name="Théodred, Heir of Rohan" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d8f8-8cf4-7af8-ba0d" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3433-7158-9950-058b" type="min"/>
@@ -26646,23 +26648,23 @@ The Chariot is also subject to the following exceptions:
         <infoLink id="b0f5-bd09-0e62-3dda" name="Expert Rider" hidden="false" targetId="b652-a40f-e5e6-0af6" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="5621-79f9-89f6-5c5a" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="5621-79f9-89f6-5c5a" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="6acb-57c9-fc5c-da55" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-            <entryLink id="227f-081d-c7e2-0759" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="6acb-57c9-fc5c-da55" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="227f-081d-c7e2-0759" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="872a-f726-50f2-fa73" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="872a-f726-50f2-fa73" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="e44b-762b-e931-0687" name="Shield" hidden="false" collective="false" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
-            <entryLink id="2cc8-9c3c-82cb-6107" name="Horse" hidden="false" collective="false" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
-            <entryLink id="622a-b5cd-e047-9bf7" name="Throwing Spears" hidden="false" collective="false" targetId="411d-10d1-054e-ad3f" type="selectionEntry"/>
+            <entryLink id="e44b-762b-e931-0687" name="Shield" hidden="false" collective="false" import="true" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
+            <entryLink id="2cc8-9c3c-82cb-6107" name="Horse" hidden="false" collective="false" import="true" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
+            <entryLink id="622a-b5cd-e047-9bf7" name="Throwing Spears" hidden="false" collective="false" import="true" targetId="411d-10d1-054e-ad3f" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="568b-9584-fd63-8b98" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="96f4-0645-2e5a-7b05" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="568b-9584-fd63-8b98" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="96f4-0645-2e5a-7b05" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="80.0"/>
@@ -26670,7 +26672,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="411d-10d1-054e-ad3f" name="Throwing Spears" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="411d-10d1-054e-ad3f" name="Throwing Spears" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c0b1-44ff-c019-a328" type="max"/>
       </constraints>
@@ -26683,7 +26685,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ffb7-14b3-641e-98de" name="Éomer, Marshal of the Riddermark" hidden="false" collective="false" type="model">
+    <selectionEntry id="ffb7-14b3-641e-98de" name="Éomer, Marshal of the Riddermark" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ec36-6bb2-c623-f056" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1fd5-8cd0-731d-4365" type="min"/>
@@ -26725,11 +26727,11 @@ The Chariot is also subject to the following exceptions:
         <infoLink id="48df-7ab3-b785-9f9f" name="Horse Lord" hidden="false" targetId="6912-7e5d-01e0-aebe" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="85aa-e6f9-38c0-6fb4" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="85aa-e6f9-38c0-6fb4" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="1f91-c633-956a-9593" name="Shield" hidden="false" collective="false" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
-            <entryLink id="5b4e-c167-e706-da9b" name="Horse" hidden="false" collective="false" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
-            <entryLink id="7e88-b563-fbd8-cd0d" name="Throwing Spears" hidden="false" collective="false" targetId="411d-10d1-054e-ad3f" type="selectionEntry">
+            <entryLink id="1f91-c633-956a-9593" name="Shield" hidden="false" collective="false" import="true" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
+            <entryLink id="5b4e-c167-e706-da9b" name="Horse" hidden="false" collective="false" import="true" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
+            <entryLink id="7e88-b563-fbd8-cd0d" name="Throwing Spears" hidden="false" collective="false" import="true" targetId="411d-10d1-054e-ad3f" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="c0b1-44ff-c019-a328" value="0">
                   <conditions>
@@ -26743,19 +26745,19 @@ The Chariot is also subject to the following exceptions:
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="e54a-0301-9fbf-e412" name="Armoured Horse" hidden="false" collective="false" targetId="eb59-3a9f-f03b-22cc" type="selectionEntry"/>
+            <entryLink id="e54a-0301-9fbf-e412" name="Armoured Horse" hidden="false" collective="false" import="true" targetId="eb59-3a9f-f03b-22cc" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="8d65-9898-94cb-fe4b" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="8d65-9898-94cb-fe4b" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="3ab8-33d1-3c24-a48a" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-            <entryLink id="da3c-daa3-69e6-a9e4" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="3ab8-33d1-3c24-a48a" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="da3c-daa3-69e6-a9e4" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="dd95-c803-b1a4-1e1c" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="46e6-80a1-2e92-ef64" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="dd95-c803-b1a4-1e1c" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="46e6-80a1-2e92-ef64" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="100.0"/>
@@ -26763,7 +26765,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6b21-eb86-3c2e-0d0e" name="Éowyn, Shield Maiden of Rohan" hidden="false" collective="false" type="model">
+    <selectionEntry id="6b21-eb86-3c2e-0d0e" name="Éowyn, Shield Maiden of Rohan" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="eefa-521b-f7c3-4a6f" value="0.0">
           <conditions>
@@ -26817,22 +26819,22 @@ The Chariot is also subject to the following exceptions:
         <infoLink id="f625-6923-deb5-16c2" name="Horse Lord" hidden="false" targetId="6912-7e5d-01e0-aebe" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="67be-74da-0386-3deb" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="67be-74da-0386-3deb" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="b131-62e0-74dc-d23b" name="Armour" hidden="false" collective="false" targetId="37fc-f943-01eb-2efd" type="selectionEntry"/>
-            <entryLink id="e476-c697-9f8d-5a2e" name="Throwing Spears" hidden="false" collective="false" targetId="411d-10d1-054e-ad3f" type="selectionEntry"/>
-            <entryLink id="80f8-6994-7b7e-5f41" name="Shield" hidden="false" collective="false" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
-            <entryLink id="4d4c-a001-cb62-3d37" name="Horse" hidden="false" collective="false" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
+            <entryLink id="b131-62e0-74dc-d23b" name="Armour" hidden="false" collective="false" import="true" targetId="37fc-f943-01eb-2efd" type="selectionEntry"/>
+            <entryLink id="e476-c697-9f8d-5a2e" name="Throwing Spears" hidden="false" collective="false" import="true" targetId="411d-10d1-054e-ad3f" type="selectionEntry"/>
+            <entryLink id="80f8-6994-7b7e-5f41" name="Shield" hidden="false" collective="false" import="true" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
+            <entryLink id="4d4c-a001-cb62-3d37" name="Horse" hidden="false" collective="false" import="true" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="9c62-5221-582d-92ec" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="9c62-5221-582d-92ec" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="47ee-4301-a936-0d28" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="47ee-4301-a936-0d28" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="c75d-9dbb-a20b-8962" name="Minor Hero" hidden="false" collective="false" targetId="36a4-de5b-fd01-3f8e" type="selectionEntry"/>
+        <entryLink id="c75d-9dbb-a20b-8962" name="Minor Hero" hidden="false" collective="false" import="true" targetId="36a4-de5b-fd01-3f8e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="40.0"/>
@@ -26840,7 +26842,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c2cf-8ac4-cc07-ad30" name="Beregond, Guard of the Citadel" hidden="false" collective="false" type="model">
+    <selectionEntry id="c2cf-8ac4-cc07-ad30" name="Beregond, Guard of the Citadel" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="906f-235d-7186-cfab" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0356-3f02-9c90-b77e" type="min"/>
@@ -26869,16 +26871,16 @@ The Chariot is also subject to the following exceptions:
         <infoLink id="1c18-b43a-9bd5-3aa6" name="Bodyguard" hidden="false" targetId="92c1-aa11-7132-82f2" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="846e-f388-5261-b19d" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="846e-f388-5261-b19d" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="e23b-ed49-6a32-8b1f" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-            <entryLink id="319d-3145-7728-56ec" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
-            <entryLink id="3eae-a250-45d4-c3df" name="Longbow" hidden="false" collective="false" targetId="052d-8f1d-225c-afc3" type="selectionEntry"/>
+            <entryLink id="e23b-ed49-6a32-8b1f" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="319d-3145-7728-56ec" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="3eae-a250-45d4-c3df" name="Longbow" hidden="false" collective="false" import="true" targetId="052d-8f1d-225c-afc3" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="9193-467b-1646-ce38" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="9193-467b-1646-ce38" name="Options" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="3ef4-42d1-ae4f-b1a7" name="Horse" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="3ef4-42d1-ae4f-b1a7" name="Horse" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
                 <modifier type="set" field="hidden" value="true">
                   <conditionGroups>
@@ -26943,7 +26945,7 @@ The Chariot is also subject to the following exceptions:
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="1d9d-14fd-1f7c-dbe9" name="Minor Hero" hidden="false" collective="false" targetId="36a4-de5b-fd01-3f8e" type="selectionEntry"/>
+        <entryLink id="1d9d-14fd-1f7c-dbe9" name="Minor Hero" hidden="false" collective="false" import="true" targetId="36a4-de5b-fd01-3f8e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -26951,7 +26953,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="d3f6-4aee-806b-4612" name="Cirion, Lieutenant of Amon Barad" hidden="false" collective="false" type="model">
+    <selectionEntry id="d3f6-4aee-806b-4612" name="Cirion, Lieutenant of Amon Barad" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9d1c-8806-7a68-4ab2" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b4c5-e644-30c3-0b9a" type="min"/>
@@ -26982,17 +26984,17 @@ The Chariot is also subject to the following exceptions:
         </rule>
       </rules>
       <selectionEntryGroups>
-        <selectionEntryGroup id="f859-cedb-66cc-aaa2" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="f859-cedb-66cc-aaa2" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="79d5-81f8-7096-10b6" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-            <entryLink id="06f5-590f-66b6-65f0" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
-            <entryLink id="04d4-09b2-533e-ffda" name="Shield" hidden="false" collective="false" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
+            <entryLink id="79d5-81f8-7096-10b6" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="06f5-590f-66b6-65f0" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="04d4-09b2-533e-ffda" name="Shield" hidden="false" collective="false" import="true" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="2d97-b299-a1ea-8735" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="cc26-a19e-d146-d10b" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="2d97-b299-a1ea-8735" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="cc26-a19e-d146-d10b" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -27000,7 +27002,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="440f-85f4-f354-8ec7" name="Damrod, Ranger of Ithilien" hidden="false" collective="false" type="model">
+    <selectionEntry id="440f-85f4-f354-8ec7" name="Damrod, Ranger of Ithilien" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="882f-40cc-b6cb-a0d7" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f663-bab0-99f5-89e9" type="max"/>
@@ -27029,16 +27031,16 @@ The Chariot is also subject to the following exceptions:
         <infoLink id="3760-e597-3e65-4109" name="Woodland Creature" hidden="false" targetId="423b-b343-5f3d-f2d9" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="0003-f37f-2d6b-3478" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="0003-f37f-2d6b-3478" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="73a4-9fa6-a5c4-83aa" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-            <entryLink id="95d4-4fb1-7bf3-80c6" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
-            <entryLink id="e06b-7cab-d392-44e5" name="Bow" hidden="false" collective="false" targetId="f07a-f21f-5c34-803b" type="selectionEntry"/>
+            <entryLink id="73a4-9fa6-a5c4-83aa" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="95d4-4fb1-7bf3-80c6" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="e06b-7cab-d392-44e5" name="Bow" hidden="false" collective="false" import="true" targetId="f07a-f21f-5c34-803b" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="80d3-535f-d6bb-f66f" name="Minor Hero" hidden="false" collective="false" targetId="36a4-de5b-fd01-3f8e" type="selectionEntry"/>
+        <entryLink id="80d3-535f-d6bb-f66f" name="Minor Hero" hidden="false" collective="false" import="true" targetId="36a4-de5b-fd01-3f8e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -27046,7 +27048,7 @@ The Chariot is also subject to the following exceptions:
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="7950-ad8b-2321-f820" name="Denethor, Steward of Gondor" hidden="false" collective="false" type="model">
+    <selectionEntry id="7950-ad8b-2321-f820" name="Denethor, Steward of Gondor" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2f5a-20a1-1dff-2dc4" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="93db-fb7c-f10f-45f0" type="max"/>
@@ -27082,16 +27084,16 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         </rule>
       </rules>
       <selectionEntryGroups>
-        <selectionEntryGroup id="444c-965a-57a6-3910" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="444c-965a-57a6-3910" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="a52e-cd09-ca5e-bd37" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
-            <entryLink id="ac7d-f160-9529-f8ef" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="a52e-cd09-ca5e-bd37" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="ac7d-f160-9529-f8ef" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="cffc-2099-8703-8d0a" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="beb9-d4a3-bc97-a334" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry">
+        <entryLink id="cffc-2099-8703-8d0a" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="beb9-d4a3-bc97-a334" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="ce24-6cb3-c9a1-fba3" value="0.0">
               <conditions>
@@ -27111,7 +27113,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b64d-7ea2-972b-6ffb" name="Faramir, Captain of Gondor" hidden="false" collective="false" type="model">
+    <selectionEntry id="b64d-7ea2-972b-6ffb" name="Faramir, Captain of Gondor" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0715-65ea-8d43-860c" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b9db-8fab-2078-cbc7" type="max"/>
@@ -27164,15 +27166,15 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <infoLink id="4506-f5c2-2ca1-a23b" name="Woodland Creature" hidden="false" targetId="423b-b343-5f3d-f2d9" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="2606-d703-7db2-1ab2" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="2606-d703-7db2-1ab2" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="ab26-354b-fa1d-95f1" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-            <entryLink id="cc7f-ab0f-a685-c5c8" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="ab26-354b-fa1d-95f1" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="cc7f-ab0f-a685-c5c8" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="6f56-9456-999b-c762" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="6f56-9456-999b-c762" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="a58b-598a-8e05-c502" name="Heavy Armour" hidden="false" collective="false" targetId="713d-07e8-7930-c83c" type="selectionEntry">
+            <entryLink id="a58b-598a-8e05-c502" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="713d-07e8-7930-c83c" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="72d0-fc72-8c87-2832" value="0">
                   <conditions>
@@ -27186,7 +27188,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="6935-18dc-18d4-2404" name="Lance" hidden="false" collective="false" targetId="aa35-f48c-f09a-8f99" type="selectionEntry">
+            <entryLink id="6935-18dc-18d4-2404" name="Lance" hidden="false" collective="false" import="true" targetId="aa35-f48c-f09a-8f99" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="0573-0dd1-3778-c68b" value="0">
                   <conditions>
@@ -27200,8 +27202,8 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="338a-8504-071e-5ed5" name="Armoured Horse" hidden="false" collective="false" targetId="eb59-3a9f-f03b-22cc" type="selectionEntry"/>
-            <entryLink id="749d-42d8-d2b2-6252" name="Shield" hidden="false" collective="false" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry">
+            <entryLink id="338a-8504-071e-5ed5" name="Armoured Horse" hidden="false" collective="false" import="true" targetId="eb59-3a9f-f03b-22cc" type="selectionEntry"/>
+            <entryLink id="749d-42d8-d2b2-6252" name="Shield" hidden="false" collective="false" import="true" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="a070-58be-0bde-e6a4" value="0">
                   <conditions>
@@ -27215,8 +27217,8 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink id="60b8-416b-0743-38d8" name="Horse" hidden="false" collective="false" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
-            <entryLink id="d18b-bf03-486e-a9c7" name="Bow" hidden="false" collective="false" targetId="aee9-0be1-fd8c-7e73" type="selectionEntry">
+            <entryLink id="60b8-416b-0743-38d8" name="Horse" hidden="false" collective="false" import="true" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
+            <entryLink id="d18b-bf03-486e-a9c7" name="Bow" hidden="false" collective="false" import="true" targetId="aee9-0be1-fd8c-7e73" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="1cf8-4676-932b-6e37" value="1">
                   <conditions>
@@ -27229,8 +27231,8 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="47b9-d34f-a9bb-ce43" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="0c49-ba9f-06a1-0c37" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry">
+        <entryLink id="47b9-d34f-a9bb-ce43" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="0c49-ba9f-06a1-0c37" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="d1e4-f50f-46ab-749b" value="1">
               <conditions>
@@ -27249,7 +27251,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5c39-b0d2-a5d3-4b00" name="Húrin the Tall, Warden of the Keys" hidden="false" collective="false" type="model">
+    <selectionEntry id="5c39-b0d2-a5d3-4b00" name="Húrin the Tall, Warden of the Keys" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9399-fb7d-2e59-c326" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8696-a2c9-25f7-1b79" type="max"/>
@@ -27283,9 +27285,9 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         </rule>
       </rules>
       <selectionEntryGroups>
-        <selectionEntryGroup id="e7de-559c-b351-b4ff" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="e7de-559c-b351-b4ff" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="3f7f-9821-f544-3c14" name="The Warden&apos;s Sword" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="3f7f-9821-f544-3c14" name="The Warden&apos;s Sword" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c8fc-c701-6d78-e780" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c1d2-f81b-a9e0-3b4d" type="min"/>
@@ -27310,18 +27312,18 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="77ee-70b0-a56e-d77b" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="77ee-70b0-a56e-d77b" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="e1bb-6790-b367-4823" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="e1bb-6790-b367-4823" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="5a1a-ef84-8398-c7ca" name="Horse" hidden="false" collective="false" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
+            <entryLink id="5a1a-ef84-8398-c7ca" name="Horse" hidden="false" collective="false" import="true" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="bc81-2dff-4004-fec2" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="1770-1287-32d0-ae38" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="bc81-2dff-4004-fec2" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="1770-1287-32d0-ae38" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="80.0"/>
@@ -27329,7 +27331,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8021-a1f9-d67f-5052" name="Ingold, Warden of the Rammas Echor" hidden="false" collective="false" type="model">
+    <selectionEntry id="8021-a1f9-d67f-5052" name="Ingold, Warden of the Rammas Echor" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e150-86fc-36de-9f91" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dac8-1060-c5a8-4234" type="min"/>
@@ -27363,17 +27365,17 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <infoLink id="0438-7f79-2650-2625" name="Shieldwall (Active)" hidden="false" targetId="3d14-de88-8fb5-7cad" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="4436-a0c5-af9e-966b" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="4436-a0c5-af9e-966b" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="a6b9-45a7-c1dd-739b" name="Shield" hidden="false" collective="false" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
-            <entryLink id="2fa7-7ea9-ce7d-85f6" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
-            <entryLink id="dc91-c514-2f91-5849" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="a6b9-45a7-c1dd-739b" name="Shield" hidden="false" collective="false" import="true" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
+            <entryLink id="2fa7-7ea9-ce7d-85f6" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="dc91-c514-2f91-5849" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="8120-9ceb-2a23-e355" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="a41f-e929-1985-fad2" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="8120-9ceb-2a23-e355" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="a41f-e929-1985-fad2" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="65.0"/>
@@ -27381,7 +27383,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="07e4-00d3-b669-bcd6" name="Irolas, Captain of the Guard" hidden="false" collective="false" type="model">
+    <selectionEntry id="07e4-00d3-b669-bcd6" name="Irolas, Captain of the Guard" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6da6-05be-d96c-b59d" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9fb5-f239-88a9-b6b3" type="max"/>
@@ -27415,10 +27417,10 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <infoLink id="0920-d932-b221-92aa" name="Bodyguard (Active)" hidden="false" targetId="92c1-aa11-7132-82f2" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="2fe7-696c-ba29-a3c9" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="2fe7-696c-ba29-a3c9" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="e10e-b8da-f1e7-1b3c" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
-            <entryLink id="c0b6-5890-d1ee-ab3e" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="e10e-b8da-f1e7-1b3c" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="c0b6-5890-d1ee-ab3e" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -27428,7 +27430,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="e6b7-09fe-7509-04e1" name="Madril, Captain of Ithilien" hidden="false" collective="false" type="model">
+    <selectionEntry id="e6b7-09fe-7509-04e1" name="Madril, Captain of Ithilien" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="32b4-6e0a-ce88-9d1f" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="44ec-e410-94d6-8dbf" type="max"/>
@@ -27462,17 +27464,17 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <infoLink id="30ee-6533-76e1-935d" name="Woodland Creature" hidden="false" targetId="423b-b343-5f3d-f2d9" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="d8ec-7d9c-0469-3e50" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="d8ec-7d9c-0469-3e50" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="c4db-4915-bcc4-76d6" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-            <entryLink id="ed88-053d-22ee-01fd" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
-            <entryLink id="ae7b-9b83-bf61-1f83" name="Bow" hidden="false" collective="false" targetId="f07a-f21f-5c34-803b" type="selectionEntry"/>
+            <entryLink id="c4db-4915-bcc4-76d6" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="ed88-053d-22ee-01fd" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="ae7b-9b83-bf61-1f83" name="Bow" hidden="false" collective="false" import="true" targetId="f07a-f21f-5c34-803b" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="74f6-abab-aec2-5fe7" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="a5b2-dbb0-dbbc-e088" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="74f6-abab-aec2-5fe7" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="a5b2-dbb0-dbbc-e088" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -27480,7 +27482,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="be7e-4d1f-3f6f-3ef7" name="Arathorn" hidden="false" collective="false" type="model">
+    <selectionEntry id="be7e-4d1f-3f6f-3ef7" name="Arathorn" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3707-9fad-c6c1-7800" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0077-a180-6ff6-ff24" type="min"/>
@@ -27506,17 +27508,17 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         </profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup id="30ec-713c-df6e-d7d1" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="30ec-713c-df6e-d7d1" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="2984-7700-40e8-c940" name="Bow" hidden="false" collective="false" targetId="f07a-f21f-5c34-803b" type="selectionEntry"/>
-            <entryLink id="5ac9-e235-d813-e9f7" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
-            <entryLink id="0084-5020-bb4b-eb3c" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="2984-7700-40e8-c940" name="Bow" hidden="false" collective="false" import="true" targetId="f07a-f21f-5c34-803b" type="selectionEntry"/>
+            <entryLink id="5ac9-e235-d813-e9f7" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="0084-5020-bb4b-eb3c" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="d1dd-23ad-e9c6-876a" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="e7a5-b85e-6b4f-b813" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="d1dd-23ad-e9c6-876a" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="e7a5-b85e-6b4f-b813" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -27524,7 +27526,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="13ed-c80f-c091-556f" name="Iron Hills Chariot Captain" hidden="false" collective="false" type="model">
+    <selectionEntry id="13ed-c80f-c091-556f" name="Iron Hills Chariot Captain" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a059-3a25-b3d9-54b5" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9997-e06c-eb3f-523a" type="max"/>
@@ -27544,18 +27546,18 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <infoLink id="5f99-a213-41b2-d427" name="Iron Hills Captain" hidden="false" targetId="ce6b-5e92-88c3-d0f7" type="profile"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="fa7a-8e10-2953-0c17" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="fa7a-8e10-2953-0c17" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="9e3e-e9ab-0ddf-ac57" name="War Goat" hidden="false" collective="false" targetId="76d7-ecf6-5cfd-897a" type="selectionEntry"/>
-            <entryLink id="d16b-ee25-1041-bc66" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-            <entryLink id="e7aa-ca4a-ee0e-ce20" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
-            <entryLink id="e2a3-78d1-b706-3b62" name="Iron Hills Chariot" hidden="false" collective="false" targetId="454d-81bd-ce31-02ac" type="selectionEntry"/>
+            <entryLink id="9e3e-e9ab-0ddf-ac57" name="War Goat" hidden="false" collective="false" import="true" targetId="76d7-ecf6-5cfd-897a" type="selectionEntry"/>
+            <entryLink id="d16b-ee25-1041-bc66" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="e7aa-ca4a-ee0e-ce20" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="e2a3-78d1-b706-3b62" name="Iron Hills Chariot" hidden="false" collective="false" import="true" targetId="454d-81bd-ce31-02ac" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="c558-0e96-87f0-3c2e" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="ebcf-1e45-c33e-93bd" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="c558-0e96-87f0-3c2e" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="ebcf-1e45-c33e-93bd" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="250.0"/>
@@ -27563,7 +27565,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9dfc-6fdb-705f-1563" name="Use Experimental Rules" hidden="true" collective="false" type="upgrade">
+    <selectionEntry id="9dfc-6fdb-705f-1563" name="Use Experimental Rules" hidden="true" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8261-4b08-a6a8-dffa" type="max"/>
       </constraints>
@@ -27576,7 +27578,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0165-2b7b-c083-5e71" name="Axe" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="0165-2b7b-c083-5e71" name="Axe" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9def-27f2-03f1-c910" type="max"/>
       </constraints>
@@ -27589,7 +27591,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2313-837b-4112-f4e4" name="Hammer" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="2313-837b-4112-f4e4" name="Hammer" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9140-8476-d6e5-74da" type="max"/>
       </constraints>
@@ -27602,7 +27604,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6a2a-b92f-dade-b599" name="Dagger" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="6a2a-b92f-dade-b599" name="Dagger" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="701e-bce2-4cdf-b4ea" type="max"/>
       </constraints>
@@ -27615,7 +27617,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3d53-04f4-ccd7-3778" name="Andúril, Flame of the West" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="3d53-04f4-ccd7-3778" name="Andúril, Flame of the West" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="925a-3152-649e-b841" type="max"/>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1643-e3e4-b26c-6d69" type="max"/>
@@ -27631,7 +27633,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="35b7-e5fa-1b09-a31a" name="Bandobras Took" hidden="false" collective="false" type="model">
+    <selectionEntry id="35b7-e5fa-1b09-a31a" name="Bandobras Took" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7d38-40e3-cecf-fade" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9fdb-91d6-ce0c-d3d5" type="min"/>
@@ -27661,16 +27663,16 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <infoLink id="cdcb-0525-6237-acad" name="Resistant to Magic" hidden="false" targetId="ff02-18ce-6c60-799b" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="56ce-24ed-f8f0-0a47" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="56ce-24ed-f8f0-0a47" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="bad9-c7a3-8339-d145" name="Horse" hidden="false" collective="false" targetId="1fb4-2d83-480d-f94e" type="selectionEntry"/>
-            <entryLink id="d2a0-a2f0-8118-ece1" name="Club" hidden="false" collective="false" targetId="4de7-ec7f-29f4-8d49" type="selectionEntry"/>
+            <entryLink id="bad9-c7a3-8339-d145" name="Horse" hidden="false" collective="false" import="true" targetId="1fb4-2d83-480d-f94e" type="selectionEntry"/>
+            <entryLink id="d2a0-a2f0-8118-ece1" name="Club" hidden="false" collective="false" import="true" targetId="4de7-ec7f-29f4-8d49" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="acdd-3252-1431-9ff0" name="Hero of Valour" hidden="false" collective="false" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
-        <entryLink id="6e40-907f-78f9-ba8c" name="Leader (Valour)" hidden="false" collective="false" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
+        <entryLink id="acdd-3252-1431-9ff0" name="Hero of Valour" hidden="false" collective="false" import="true" targetId="9afa-e012-fc54-795e" type="selectionEntry"/>
+        <entryLink id="6e40-907f-78f9-ba8c" name="Leader (Valour)" hidden="false" collective="false" import="true" targetId="852a-dd6e-17c4-1a59" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="40.0"/>
@@ -27678,7 +27680,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9aec-217c-5f99-9b58" name="Farmer Maggot" hidden="false" collective="false" type="model">
+    <selectionEntry id="9aec-217c-5f99-9b58" name="Farmer Maggot" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d912-c9e3-adf5-20f0" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c317-2f58-6cb4-2a49" type="min"/>
@@ -27708,9 +27710,9 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <infoLink id="adab-acf5-807e-e759" name="Resistant to Magic (Passive)" hidden="false" targetId="ff02-18ce-6c60-799b" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="6cd8-d906-7efc-206d" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="6cd8-d906-7efc-206d" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="fddc-95a0-e4ed-6c4a" name="Grip, Fang and Wolf" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="fddc-95a0-e4ed-6c4a" name="Grip, Fang and Wolf" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f22b-5a4c-011d-8bdc" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e883-35c8-1c8f-8fe8" type="max"/>
@@ -27759,9 +27761,9 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
                 </rule>
               </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup id="977e-196d-1509-cf26" name="Wargear" hidden="false" collective="false">
+                <selectionEntryGroup id="977e-196d-1509-cf26" name="Wargear" hidden="false" collective="false" import="true">
                   <selectionEntries>
-                    <selectionEntry id="8208-d129-7328-22bf" name="Claws and Teeth" hidden="false" collective="false" type="upgrade">
+                    <selectionEntry id="8208-d129-7328-22bf" name="Claws and Teeth" hidden="false" collective="false" import="true" type="upgrade">
                       <constraints>
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b3fc-cbc2-d74a-99bb" type="min"/>
                         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5543-71ea-7c37-09ac" type="max"/>
@@ -27788,7 +27790,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="15ba-6e53-8717-7677" name="Two-Handed Scythe (Pick)" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="15ba-6e53-8717-7677" name="Two-Handed Scythe (Pick)" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9904-904d-df8c-a4b8" type="min"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4de1-6551-aa88-0437" type="max"/>
@@ -27807,8 +27809,8 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="beb3-6462-cb49-35ec" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
-        <entryLink id="3392-5a0b-d5e7-9660" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="beb3-6462-cb49-35ec" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="3392-5a0b-d5e7-9660" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="45.0"/>
@@ -27816,7 +27818,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4c2a-e5ff-ab06-06dc" name="Fredegar Bolger" hidden="false" collective="false" type="model">
+    <selectionEntry id="4c2a-e5ff-ab06-06dc" name="Fredegar Bolger" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d61d-6341-57ba-5a63" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6348-7002-b5cb-a400" type="min"/>
@@ -27845,14 +27847,14 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <infoLink id="2dcc-f37f-00c9-b436" name="Throw Stones" hidden="false" targetId="4d93-48da-b5ad-de24" type="profile"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="60bf-79a1-49a8-32b2" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="60bf-79a1-49a8-32b2" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="ae5e-a3a8-036a-2476" name="Unarmed" hidden="false" collective="false" targetId="5cb1-7e8b-f6c3-d5cb" type="selectionEntry"/>
+            <entryLink id="ae5e-a3a8-036a-2476" name="Unarmed" hidden="false" collective="false" import="true" targetId="5cb1-7e8b-f6c3-d5cb" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="7480-52ce-fba7-8daf" name="Minor Hero" hidden="false" collective="false" targetId="36a4-de5b-fd01-3f8e" type="selectionEntry"/>
+        <entryLink id="7480-52ce-fba7-8daf" name="Minor Hero" hidden="false" collective="false" import="true" targetId="36a4-de5b-fd01-3f8e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -27860,7 +27862,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="ffa5-591f-5aee-6a17" name="Lobelia Sackville-Baggins" hidden="false" collective="false" type="model">
+    <selectionEntry id="ffa5-591f-5aee-6a17" name="Lobelia Sackville-Baggins" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3004-317a-edd8-fa90" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c36-dbcf-a225-f1e5" type="min"/>
@@ -27898,9 +27900,9 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <infoLink id="105b-aaca-a662-096e" name="Resistant to Magic" hidden="false" targetId="ff02-18ce-6c60-799b" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="2d37-ef22-d5ac-3564" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="2d37-ef22-d5ac-3564" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="6ff3-4b1b-3090-809c" name="Umbrella" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="6ff3-4b1b-3090-809c" name="Umbrella" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5255-b58f-4918-e071" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2d18-2b72-70ed-dde9" type="min"/>
@@ -27922,7 +27924,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="133a-e1af-86a9-6183" name="Minor Hero" hidden="false" collective="false" targetId="36a4-de5b-fd01-3f8e" type="selectionEntry"/>
+        <entryLink id="133a-e1af-86a9-6183" name="Minor Hero" hidden="false" collective="false" import="true" targetId="36a4-de5b-fd01-3f8e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -27930,7 +27932,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4967-bfa4-0451-ae97" name="Legendary Legion" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="4967-bfa4-0451-ae97" name="Legendary Legion" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bd6c-7843-1182-11c5" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="42f4-3339-2fec-8032" type="max"/>
@@ -27942,7 +27944,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6365-124a-061f-3e74" name="Sméagol" hidden="false" collective="false" type="model">
+    <selectionEntry id="6365-124a-061f-3e74" name="Sméagol" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="6702-9a0e-b8a2-5893" value="1">
           <conditions>
@@ -28046,9 +28048,9 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <infoLink id="4a7c-7609-4e23-cbb9" name="Cave Dweller" hidden="false" targetId="5401-5c24-a782-e11f" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="8f8c-22e7-bb75-f7db" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="8f8c-22e7-bb75-f7db" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="d414-0a02-73c6-33f8" name="Strangling Fingers" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="d414-0a02-73c6-33f8" name="Strangling Fingers" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d681-85fc-3f2f-58be" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f8b6-d0ca-05ea-b4af" type="min"/>
@@ -28070,7 +28072,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="9142-158a-7882-4a4b" name="Independent Hero" hidden="false" collective="false" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
+        <entryLink id="9142-158a-7882-4a4b" name="Independent Hero" hidden="false" collective="false" import="true" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="30.0"/>
@@ -28078,7 +28080,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="cc88-4589-b0e5-fb1e" name="Bill the Pony" hidden="false" collective="false" type="model">
+    <selectionEntry id="cc88-4589-b0e5-fb1e" name="Bill the Pony" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="09b7-0a0b-39c7-2833" value="1">
           <conditions>
@@ -28122,7 +28124,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         </rule>
       </rules>
       <entryLinks>
-        <entryLink id="f720-52fe-a74b-b95b" name="Independent Hero" hidden="false" collective="false" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
+        <entryLink id="f720-52fe-a74b-b95b" name="Independent Hero" hidden="false" collective="false" import="true" targetId="7729-939c-9d5c-473e" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="25.0"/>
@@ -28130,7 +28132,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c033-e9bb-9b82-6107" name="Rangers of Ithilien" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="c033-e9bb-9b82-6107" name="Rangers of Ithilien" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="9a7c-3ad7-117c-3bf9" value="1">
           <conditions>
@@ -28159,7 +28161,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <categoryLink id="82c9-0190-5328-b8e7" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="b83c-32f0-1d9b-4944" name="Legendary Legion" hidden="false" collective="false" targetId="4967-bfa4-0451-ae97" type="selectionEntry"/>
+        <entryLink id="b83c-32f0-1d9b-4944" name="Legendary Legion" hidden="false" collective="false" import="true" targetId="4967-bfa4-0451-ae97" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -28167,7 +28169,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="2341-8c79-03b2-3014" name="The Grey Company" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="2341-8c79-03b2-3014" name="The Grey Company" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="686d-d37d-edbc-1a1e" value="1">
           <conditions>
@@ -28201,7 +28203,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <categoryLink id="3e06-95a2-9446-a148" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="d4e1-490e-5c26-ca84" name="Legendary Legion" hidden="false" collective="false" targetId="4967-bfa4-0451-ae97" type="selectionEntry"/>
+        <entryLink id="d4e1-490e-5c26-ca84" name="Legendary Legion" hidden="false" collective="false" import="true" targetId="4967-bfa4-0451-ae97" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -28209,7 +28211,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="11f1-5b6d-9023-2804" name="Théoden&apos;s Riders" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="11f1-5b6d-9023-2804" name="Théoden&apos;s Riders" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="17bd-c2d3-d15e-4504" value="1">
           <conditions>
@@ -28238,7 +28240,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <categoryLink id="5809-cd3a-7741-ee52" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="0943-5b83-7689-072f" name="Legendary Legion" hidden="false" collective="false" targetId="4967-bfa4-0451-ae97" type="selectionEntry"/>
+        <entryLink id="0943-5b83-7689-072f" name="Legendary Legion" hidden="false" collective="false" import="true" targetId="4967-bfa4-0451-ae97" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -28246,7 +28248,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f84c-7ac5-39e6-42c3" name="The Return of the King" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="f84c-7ac5-39e6-42c3" name="The Return of the King" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="f5e0-272c-2590-c43c" value="1">
           <conditions>
@@ -28280,7 +28282,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <categoryLink id="0556-c86b-4aec-ed82" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="9325-d5b4-dd8c-95cf" name="Legendary Legion" hidden="false" collective="false" targetId="4967-bfa4-0451-ae97" type="selectionEntry"/>
+        <entryLink id="9325-d5b4-dd8c-95cf" name="Legendary Legion" hidden="false" collective="false" import="true" targetId="4967-bfa4-0451-ae97" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -28288,7 +28290,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="52a8-c7bb-103f-418d" name="The Army of Gothmog" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="52a8-c7bb-103f-418d" name="The Army of Gothmog" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="9652-a7b5-2b87-7af0" value="1">
           <conditions>
@@ -28325,7 +28327,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <categoryLink id="8a04-cbb8-7ed9-01e5" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="5718-a8ad-97ff-91b3" name="Legendary Legion" hidden="false" collective="false" targetId="4967-bfa4-0451-ae97" type="selectionEntry"/>
+        <entryLink id="5718-a8ad-97ff-91b3" name="Legendary Legion" hidden="false" collective="false" import="true" targetId="4967-bfa4-0451-ae97" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -28333,7 +28335,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f2a5-a16a-47d8-8603" name="The Black Gate Opens" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="f2a5-a16a-47d8-8603" name="The Black Gate Opens" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="db6c-c6c1-05de-bf63" value="1">
           <conditions>
@@ -28362,7 +28364,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <categoryLink id="f35d-0e8e-5c7f-03dc" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="a396-6d82-13e8-6a32" name="Legendary Legion" hidden="false" collective="false" targetId="4967-bfa4-0451-ae97" type="selectionEntry"/>
+        <entryLink id="a396-6d82-13e8-6a32" name="Legendary Legion" hidden="false" collective="false" import="true" targetId="4967-bfa4-0451-ae97" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -28370,7 +28372,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b6c9-d980-b730-892b" name="Grand Army of the South" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="b6c9-d980-b730-892b" name="Grand Army of the South" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="8fd7-be78-fdb8-7ebc" value="1">
           <conditions>
@@ -28409,14 +28411,14 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <categoryLink id="3f2f-26c4-47b1-f8f8" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="6bdb-f750-d6ac-ca74" name="Haradrim" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="6bdb-f750-d6ac-ca74" name="Haradrim" hidden="false" collective="false" import="true" type="upgrade">
           <costs>
             <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
             <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="0.0"/>
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="70f7-fffa-1297-4bbd" name="Muhad" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="70f7-fffa-1297-4bbd" name="Muhad" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
             <modifier type="increment" field="119d-d51c-bf7e-8cbf" value="1">
               <repeats>
@@ -28435,7 +28437,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="4346-5f69-2dd4-3ae9" name="Legendary Legion" hidden="false" collective="false" targetId="4967-bfa4-0451-ae97" type="selectionEntry"/>
+        <entryLink id="4346-5f69-2dd4-3ae9" name="Legendary Legion" hidden="false" collective="false" import="true" targetId="4967-bfa4-0451-ae97" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -28443,7 +28445,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a5c1-69ba-9957-5564" name="The Men of the West" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="a5c1-69ba-9957-5564" name="The Men of the West" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
         <modifier type="set" field="79d9-1b93-ae7b-1ef8" value="1">
           <conditions>
@@ -28486,7 +28488,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <categoryLink id="373f-7f61-49d8-b94b" name="New CategoryLink" hidden="false" targetId="4a7b-8f86-68be-e1d6" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink id="e19c-425d-eb29-f4b2" name="Legendary Legion" hidden="false" collective="false" targetId="4967-bfa4-0451-ae97" type="selectionEntry"/>
+        <entryLink id="e19c-425d-eb29-f4b2" name="Legendary Legion" hidden="false" collective="false" import="true" targetId="4967-bfa4-0451-ae97" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -28494,7 +28496,7 @@ If Boromir is part of the same army as Denethor, then Denethor will automaticall
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5066-ea60-6c46-8193" name="Dernhelm" hidden="false" collective="false" type="model">
+    <selectionEntry id="5066-ea60-6c46-8193" name="Dernhelm" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="6eaf-c2ca-8dc1-0239" value="0.0">
           <conditions>
@@ -28564,18 +28566,18 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         <infoLink id="ca39-0649-8fa4-3049" name="Horse Lord (Passive)" hidden="false" targetId="6912-7e5d-01e0-aebe" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="399c-1de3-7bbe-b8ba" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="399c-1de3-7bbe-b8ba" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="1eef-903d-926c-8fa9" name="Throwing Spears" hidden="false" collective="false" targetId="411d-10d1-054e-ad3f" type="selectionEntry"/>
+            <entryLink id="1eef-903d-926c-8fa9" name="Throwing Spears" hidden="false" collective="false" import="true" targetId="411d-10d1-054e-ad3f" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="4bf4-ff12-d6fe-48d4" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="4bf4-ff12-d6fe-48d4" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="0ddd-97c3-a024-4c59" name="Horse" hidden="false" collective="false" targetId="1fb4-2d83-480d-f94e" type="selectionEntry"/>
-            <entryLink id="7fe4-54ad-bd68-3c77" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-            <entryLink id="5b48-c753-57e7-7660" name="Shield" hidden="false" collective="false" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
-            <entryLink id="c489-0971-923c-4281" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
-            <entryLink id="9dac-86d3-b710-a0f2" name="Meriadoc Brandybuck, Knight of the Mark" hidden="false" collective="false" targetId="2d70-ffdd-b105-6176" type="selectionEntry">
+            <entryLink id="0ddd-97c3-a024-4c59" name="Horse" hidden="false" collective="false" import="true" targetId="1fb4-2d83-480d-f94e" type="selectionEntry"/>
+            <entryLink id="7fe4-54ad-bd68-3c77" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="5b48-c753-57e7-7660" name="Shield" hidden="false" collective="false" import="true" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
+            <entryLink id="c489-0971-923c-4281" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="9dac-86d3-b710-a0f2" name="Meriadoc Brandybuck, Knight of the Mark" hidden="false" collective="false" import="true" targetId="2d70-ffdd-b105-6176" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="8bde-d63c-7caa-c15d" value="0.0"/>
               </modifiers>
@@ -28589,7 +28591,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="4dc3-3187-bdf3-cc5d" name="Elfhelm, Captain of Rohan" hidden="false" collective="false" type="model">
+    <selectionEntry id="4dc3-3187-bdf3-cc5d" name="Elfhelm, Captain of Rohan" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b56-f4ad-d56f-ed72" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aaca-07a5-2673-4aa0" type="max"/>
@@ -28624,17 +28626,17 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         <infoLink id="9487-110a-955e-abec" name="Expert Rider (Active)" hidden="false" targetId="b652-a40f-e5e6-0af6" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="c42b-b34f-f411-451c" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="c42b-b34f-f411-451c" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="10c3-767d-3b11-a7f1" name="Throwing Spears" hidden="false" collective="false" targetId="63e4-d46a-2f38-bdf5" type="selectionEntry"/>
-            <entryLink id="b553-b707-1b2a-7218" name="Shield" hidden="false" collective="false" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
-            <entryLink id="e5d8-9d44-a001-a708" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-            <entryLink id="f363-d44c-20ef-81b1" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="10c3-767d-3b11-a7f1" name="Throwing Spears" hidden="false" collective="false" import="true" targetId="63e4-d46a-2f38-bdf5" type="selectionEntry"/>
+            <entryLink id="b553-b707-1b2a-7218" name="Shield" hidden="false" collective="false" import="true" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
+            <entryLink id="e5d8-9d44-a001-a708" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="f363-d44c-20ef-81b1" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="9e19-b125-600a-57f0" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="9e19-b125-600a-57f0" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="fa3f-57d7-9e0e-77c7" name="Horse" hidden="false" collective="false" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
+            <entryLink id="fa3f-57d7-9e0e-77c7" name="Horse" hidden="false" collective="false" import="true" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -28644,7 +28646,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="63e4-d46a-2f38-bdf5" name="Throwing Spears" hidden="false" collective="false" type="upgrade">
+    <selectionEntry id="63e4-d46a-2f38-bdf5" name="Throwing Spears" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd72-d461-61a0-292b" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="898d-e980-351d-503f" type="min"/>
@@ -28658,7 +28660,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3fd8-a0da-ae1d-b9c3" name="Déorwine, Chief of the King&apos;s Knights" hidden="false" collective="false" type="model">
+    <selectionEntry id="3fd8-a0da-ae1d-b9c3" name="Déorwine, Chief of the King&apos;s Knights" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ceb1-e522-ff3b-0edb" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="910d-6a94-e89f-bcee" type="max"/>
@@ -28694,16 +28696,16 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         <infoLink id="c2a0-e57a-63f7-c106" name="Bodyguard (Active)" hidden="false" targetId="92c1-aa11-7132-82f2" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="877e-df02-de0b-a259" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="877e-df02-de0b-a259" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="cf20-8bb4-daf6-fac0" name="Shield" hidden="false" collective="false" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
-            <entryLink id="94ab-cc88-d82e-90db" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-            <entryLink id="5bf3-d493-042e-b7d7" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="cf20-8bb4-daf6-fac0" name="Shield" hidden="false" collective="false" import="true" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
+            <entryLink id="94ab-cc88-d82e-90db" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="5bf3-d493-042e-b7d7" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="8751-a72c-21d8-fff3" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="8751-a72c-21d8-fff3" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="06e1-3c01-31fd-05e8" name="Horse" hidden="false" collective="false" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
+            <entryLink id="06e1-3c01-31fd-05e8" name="Horse" hidden="false" collective="false" import="true" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -28713,7 +28715,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="cff5-33f9-de0a-c0d4" name="Prince Imrahil of Dol Amroth" hidden="false" collective="false" type="model">
+    <selectionEntry id="cff5-33f9-de0a-c0d4" name="Prince Imrahil of Dol Amroth" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7a67-2b83-7dd0-568c" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="75d6-62d0-1f4a-b904" type="min"/>
@@ -28747,23 +28749,23 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         </rule>
       </rules>
       <selectionEntryGroups>
-        <selectionEntryGroup id="91f3-e123-d253-fd0e" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="91f3-e123-d253-fd0e" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="b859-c297-392b-8424" name="Armoured Horse" hidden="false" collective="false" targetId="eb59-3a9f-f03b-22cc" type="selectionEntry"/>
-            <entryLink id="074a-3334-4393-90d2" name="Lance" hidden="false" collective="false" targetId="aa35-f48c-f09a-8f99" type="selectionEntry"/>
+            <entryLink id="b859-c297-392b-8424" name="Armoured Horse" hidden="false" collective="false" import="true" targetId="eb59-3a9f-f03b-22cc" type="selectionEntry"/>
+            <entryLink id="074a-3334-4393-90d2" name="Lance" hidden="false" collective="false" import="true" targetId="aa35-f48c-f09a-8f99" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="aa8d-3a5f-9d3c-6058" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="aa8d-3a5f-9d3c-6058" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="dedc-1229-1d5d-521b" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
-            <entryLink id="5674-92f8-89a6-8f96" name="Shield" hidden="false" collective="false" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
-            <entryLink id="aaed-f08d-e1f2-43c0" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="dedc-1229-1d5d-521b" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="5674-92f8-89a6-8f96" name="Shield" hidden="false" collective="false" import="true" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
+            <entryLink id="aaed-f08d-e1f2-43c0" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="19cc-24b9-3acf-474c" name="Hero of Legend" hidden="false" collective="false" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
-        <entryLink id="6aed-6219-0d6a-c420" name="Leader (Legend)" hidden="false" collective="false" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
+        <entryLink id="19cc-24b9-3acf-474c" name="Hero of Legend" hidden="false" collective="false" import="true" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
+        <entryLink id="6aed-6219-0d6a-c420" name="Leader (Legend)" hidden="false" collective="false" import="true" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="140.0"/>
@@ -28771,7 +28773,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f3e4-9abe-1c90-9cf4" name="Captain of Dol Amroth" hidden="false" collective="false" type="model">
+    <selectionEntry id="f3e4-9abe-1c90-9cf4" name="Captain of Dol Amroth" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ab4-b8b6-e869-7ae0" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ba4-1c77-76ac-e4c8" type="max"/>
@@ -28799,23 +28801,23 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         <infoLink id="f0a4-9556-f097-deb4" name="Pride of Dol Amroth (Active)" hidden="false" targetId="00b3-2ac7-4fd3-57cb" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="0be3-d4ee-a2df-10d7" name="Options" hidden="false" collective="false">
+        <selectionEntryGroup id="0be3-d4ee-a2df-10d7" name="Options" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="38c4-489c-92f4-bad7" name="Lance" hidden="false" collective="false" targetId="aa35-f48c-f09a-8f99" type="selectionEntry"/>
-            <entryLink id="1551-2f8c-0fbf-7f34" name="Armoured Horse" hidden="false" collective="false" targetId="eb59-3a9f-f03b-22cc" type="selectionEntry"/>
+            <entryLink id="38c4-489c-92f4-bad7" name="Lance" hidden="false" collective="false" import="true" targetId="aa35-f48c-f09a-8f99" type="selectionEntry"/>
+            <entryLink id="1551-2f8c-0fbf-7f34" name="Armoured Horse" hidden="false" collective="false" import="true" targetId="eb59-3a9f-f03b-22cc" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup id="ff07-ce79-5a63-3c6f" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="ff07-ce79-5a63-3c6f" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="cda5-5da3-fa7a-8638" name="Heavy Armour" hidden="false" collective="false" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
-            <entryLink id="d7eb-f947-892c-5d12" name="Shield" hidden="false" collective="false" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
-            <entryLink id="9f28-78d4-6537-5d30" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+            <entryLink id="cda5-5da3-fa7a-8638" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="0439-1154-4306-11d8" type="selectionEntry"/>
+            <entryLink id="d7eb-f947-892c-5d12" name="Shield" hidden="false" collective="false" import="true" targetId="6105-888b-3a63-c138" type="selectionEntry"/>
+            <entryLink id="9f28-78d4-6537-5d30" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="4579-79b9-bd07-be9d" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="1667-de09-28b2-350b" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="4579-79b9-bd07-be9d" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="1667-de09-28b2-350b" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -28823,7 +28825,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="abfe-d985-4012-1d6f" name="War Mûmak of Far Harad" hidden="false" collective="false" type="model">
+    <selectionEntry id="abfe-d985-4012-1d6f" name="War Mûmak of Far Harad" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="eb24-4f4f-b507-dc9a" value="1">
           <conditions>
@@ -28871,7 +28873,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         <infoLink id="7588-6a00-db6f-a37f" name="Trample" hidden="false" targetId="effd-0f0a-5cb3-34af" type="rule"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry id="e18b-0362-d31a-a614" name="Mahûd Beastmaster Chieftan" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="e18b-0362-d31a-a614" name="Mahûd Beastmaster Chieftan" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="095c-1040-7cec-4bd0" type="max"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="21d1-f79a-c282-2c29" type="min"/>
@@ -28896,10 +28898,10 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             </profile>
           </profiles>
           <selectionEntryGroups>
-            <selectionEntryGroup id="2250-fdb1-304f-ed8d" name="Wargear" hidden="false" collective="false">
+            <selectionEntryGroup id="2250-fdb1-304f-ed8d" name="Wargear" hidden="false" collective="false" import="true">
               <entryLinks>
-                <entryLink id="004d-1e0d-b027-94c9" name="Dagger" hidden="false" collective="false" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
-                <entryLink id="48e9-3444-34a0-e1de" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+                <entryLink id="004d-1e0d-b027-94c9" name="Dagger" hidden="false" collective="false" import="true" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
+                <entryLink id="48e9-3444-34a0-e1de" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -28911,9 +28913,9 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="49f5-3738-d801-95d2" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
-        <entryLink id="bac2-29c6-3974-8a42" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="da07-f588-adf2-2711" name="Options" hidden="false" collective="false" targetId="4084-e020-e056-1fbd" type="selectionEntryGroup"/>
+        <entryLink id="49f5-3738-d801-95d2" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="bac2-29c6-3974-8a42" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="da07-f588-adf2-2711" name="Options" hidden="false" collective="false" import="true" targetId="4084-e020-e056-1fbd" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="300.0"/>
@@ -28921,7 +28923,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="69c6-b2dc-e74b-9e5e" name="The Mûmak War Leader" hidden="false" collective="false" type="model">
+    <selectionEntry id="69c6-b2dc-e74b-9e5e" name="The Mûmak War Leader" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="339e-32a4-329e-7e8f" value="1">
           <conditions>
@@ -28977,9 +28979,9 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         </rule>
       </rules>
       <selectionEntryGroups>
-        <selectionEntryGroup id="4a15-3f0c-207c-a196" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="4a15-3f0c-207c-a196" name="Wargear" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="4aaf-2324-40c8-90aa" name="Long-bladed Spear" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="4aaf-2324-40c8-90aa" name="Long-bladed Spear" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3dc6-0fad-54f9-73ce" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b766-37ba-b96c-ac73" type="min"/>
@@ -28997,7 +28999,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="cf4c-b4aa-28cb-e0ff" name="Royal War Mûmak" hidden="false" collective="false" type="model">
+            <selectionEntry id="cf4c-b4aa-28cb-e0ff" name="Royal War Mûmak" hidden="false" collective="false" import="true" type="model">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e70d-8abd-48fb-c365" type="max"/>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f824-10b1-d817-4848" type="min"/>
@@ -29028,13 +29030,13 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink id="e921-0e10-8c9b-feae" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+            <entryLink id="e921-0e10-8c9b-feae" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="d98f-8d77-aa70-1115" name="Hero of Legend" hidden="false" collective="false" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
-        <entryLink id="7859-504d-a966-1eb5" name="Leader (Legend)" hidden="false" collective="false" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
+        <entryLink id="d98f-8d77-aa70-1115" name="Hero of Legend" hidden="false" collective="false" import="true" targetId="4bbe-b6f8-1426-c662" type="selectionEntry"/>
+        <entryLink id="7859-504d-a966-1eb5" name="Leader (Legend)" hidden="false" collective="false" import="true" targetId="a0b9-e8a1-bbce-47b2" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="400.0"/>
@@ -29042,7 +29044,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="964c-6981-997d-98d7" name="War Mûmak of Harad" hidden="false" collective="false" type="model">
+    <selectionEntry id="964c-6981-997d-98d7" name="War Mûmak of Harad" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="3102-4f44-f3bf-7953" value="1">
           <conditions>
@@ -29090,13 +29092,13 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         </infoLink>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="fcac-479b-01d2-19fb" name="Hero" hidden="false" collective="false">
+        <selectionEntryGroup id="fcac-479b-01d2-19fb" name="Hero" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c616-d335-3e3e-453e" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b3e3-cb57-70cd-5eb5" type="max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="5cc1-596b-6c13-59b3" name="Haradrim Commander" hidden="false" collective="false" type="model">
+            <selectionEntry id="5cc1-596b-6c13-59b3" name="Haradrim Commander" hidden="false" collective="false" import="true" type="model">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="92e6-a95f-b2dd-ddb0" type="max"/>
               </constraints>
@@ -29120,10 +29122,10 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 </profile>
               </profiles>
               <selectionEntryGroups>
-                <selectionEntryGroup id="45fb-f0db-22bf-2922" name="Wargear" hidden="false" collective="false">
+                <selectionEntryGroup id="45fb-f0db-22bf-2922" name="Wargear" hidden="false" collective="false" import="true">
                   <entryLinks>
-                    <entryLink id="0689-dc7e-32a3-fa4b" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
-                    <entryLink id="7c01-ac11-9a13-5e67" name="War Spear" hidden="false" collective="false" targetId="2ab8-5b3a-f4ce-0225" type="selectionEntry"/>
+                    <entryLink id="0689-dc7e-32a3-fa4b" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+                    <entryLink id="7c01-ac11-9a13-5e67" name="War Spear" hidden="false" collective="false" import="true" targetId="2ab8-5b3a-f4ce-0225" type="selectionEntry"/>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
@@ -29133,7 +29135,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="1b23-6c73-d915-d620" name="Mahûd Beastmaster Chieftan" hidden="false" collective="false" type="model">
+            <selectionEntry id="1b23-6c73-d915-d620" name="Mahûd Beastmaster Chieftan" hidden="false" collective="false" import="true" type="model">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f793-4f34-2372-2a18" type="max"/>
               </constraints>
@@ -29157,10 +29159,10 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 </profile>
               </profiles>
               <selectionEntryGroups>
-                <selectionEntryGroup id="8626-a1c9-1d96-2445" name="Wargear" hidden="false" collective="false">
+                <selectionEntryGroup id="8626-a1c9-1d96-2445" name="Wargear" hidden="false" collective="false" import="true">
                   <entryLinks>
-                    <entryLink id="83ff-0771-3541-d4cf" name="Dagger" hidden="false" collective="false" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
-                    <entryLink id="d517-be5a-29cc-3c2f" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+                    <entryLink id="83ff-0771-3541-d4cf" name="Dagger" hidden="false" collective="false" import="true" targetId="8e38-dc5d-97e6-fb2e" type="selectionEntry"/>
+                    <entryLink id="d517-be5a-29cc-3c2f" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
@@ -29174,9 +29176,9 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="0005-9725-9829-31ea" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
-        <entryLink id="8762-a95c-1cce-5a82" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="b3e4-7f2f-8d49-99de" name="Options" hidden="false" collective="false" targetId="4084-e020-e056-1fbd" type="selectionEntryGroup"/>
+        <entryLink id="0005-9725-9829-31ea" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="8762-a95c-1cce-5a82" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="b3e4-7f2f-8d49-99de" name="Options" hidden="false" collective="false" import="true" targetId="4084-e020-e056-1fbd" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="275.0"/>
@@ -29184,7 +29186,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a07d-8d4c-6511-902e" name="Paladin Took" hidden="false" collective="false" type="model">
+    <selectionEntry id="a07d-8d4c-6511-902e" name="Paladin Took" hidden="false" collective="false" import="true" type="model">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e054-8a88-02f7-400b" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4748-5f0e-60a9-c976" type="min"/>
@@ -29219,9 +29221,9 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         <infoLink id="d736-f081-f7d5-6008" name="Resistant to Magic" hidden="false" targetId="ff02-18ce-6c60-799b" type="rule"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="27aa-2fb4-a6c6-de83" name="Wargear" hidden="false" collective="false">
+        <selectionEntryGroup id="27aa-2fb4-a6c6-de83" name="Wargear" hidden="false" collective="false" import="true">
           <entryLinks>
-            <entryLink id="c32b-2bc7-c1d3-5af2" name="Club" hidden="false" collective="false" targetId="4de7-ec7f-29f4-8d49" type="selectionEntry">
+            <entryLink id="c32b-2bc7-c1d3-5af2" name="Club" hidden="false" collective="false" import="true" targetId="4de7-ec7f-29f4-8d49" type="selectionEntry">
               <modifiers>
                 <modifier type="set" field="name" value="Walking Cane (Club)"/>
               </modifiers>
@@ -29230,8 +29232,8 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink id="17f9-3568-dc39-fb73" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
-        <entryLink id="3ff4-eff7-ba6f-8afc" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+        <entryLink id="17f9-3568-dc39-fb73" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+        <entryLink id="3ff4-eff7-ba6f-8afc" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
       </entryLinks>
       <costs>
         <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="25.0"/>
@@ -29241,13 +29243,13 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="f6ad-e4da-7fb4-dae1" name="Weapon" hidden="false" collective="false" defaultSelectionEntryId="756a-14c1-09c9-e711">
+    <selectionEntryGroup id="f6ad-e4da-7fb4-dae1" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="756a-14c1-09c9-e711">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="357a-eaa2-00c7-e021" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d26d-a3af-6977-711d" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="10b8-66bf-20ed-b72f" name="Pick" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="10b8-66bf-20ed-b72f" name="Pick" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="baf9-8eda-1fe3-c6b3" type="max"/>
           </constraints>
@@ -29260,7 +29262,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="756a-14c1-09c9-e711" name="Sword" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="756a-14c1-09c9-e711" name="Sword" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f686-4bf1-cf84-bf44" type="max"/>
           </constraints>
@@ -29275,13 +29277,13 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="0092-8c65-690d-8750" name="Weapon" hidden="false" collective="false" defaultSelectionEntryId="a377-602c-9c62-a7bb">
+    <selectionEntryGroup id="0092-8c65-690d-8750" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="a377-602c-9c62-a7bb">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8781-98a3-3234-fa91" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ffd-a6f8-c645-7e54" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="a377-602c-9c62-a7bb" name="Hand-and-a-Half Hammer" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="a377-602c-9c62-a7bb" name="Hand-and-a-Half Hammer" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8c6d-f96e-6d07-8d44" type="max"/>
           </constraints>
@@ -29295,7 +29297,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="edd3-27ef-040b-1d1e" name="Hand-and-a-Half Club" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="edd3-27ef-040b-1d1e" name="Hand-and-a-Half Club" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="79a5-92f5-a9a4-1bc6" type="max"/>
           </constraints>
@@ -29309,7 +29311,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0a23-46cf-edd9-78f2" name="Hand-and-a-Half Sword" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="0a23-46cf-edd9-78f2" name="Hand-and-a-Half Sword" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4b27-6bb3-ee76-3e1e" type="max"/>
           </constraints>
@@ -29325,13 +29327,13 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="3337-de56-cda2-3a28" name="Change Weapon" hidden="true" collective="false">
+    <selectionEntryGroup id="3337-de56-cda2-3a28" name="Change Weapon" hidden="true" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1666-a1bb-3dab-5397" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bec0-6f4f-d40b-9e89" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="ef27-9ea4-02f3-9887" name="Sword" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="ef27-9ea4-02f3-9887" name="Sword" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d2dd-da34-7144-0992" type="max"/>
           </constraints>
@@ -29344,7 +29346,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b2d1-0cd6-970d-cbf8" name="Staff" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="b2d1-0cd6-970d-cbf8" name="Staff" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f470-7118-2fd4-e938" type="max"/>
           </constraints>
@@ -29357,7 +29359,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="bed7-1401-643d-46f9" name="Pick" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="bed7-1401-643d-46f9" name="Pick" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c12d-225f-33c3-7736" type="max"/>
           </constraints>
@@ -29370,7 +29372,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="680f-4d56-ba5f-3a36" name="Maul" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="680f-4d56-ba5f-3a36" name="Maul" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba36-b6cc-3aee-ed88" type="max"/>
           </constraints>
@@ -29383,7 +29385,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d17c-04dc-d0b7-2576" name="Mace" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="d17c-04dc-d0b7-2576" name="Mace" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ffe2-8ab6-8539-9b35" type="max"/>
           </constraints>
@@ -29396,7 +29398,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0676-1a66-1d0d-afe8" name="Hammer" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="0676-1a66-1d0d-afe8" name="Hammer" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="73ae-08b4-fdee-61e7" type="max"/>
           </constraints>
@@ -29409,7 +29411,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="a0f8-45c0-ca8c-1bfa" name="Flail" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="a0f8-45c0-ca8c-1bfa" name="Flail" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7725-3141-4da0-b673" type="max"/>
           </constraints>
@@ -29422,7 +29424,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="4042-3beb-c65d-25c0" name="Dagger" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="4042-3beb-c65d-25c0" name="Dagger" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3eb3-276a-bbaf-0a29" type="max"/>
           </constraints>
@@ -29435,7 +29437,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="6e05-2f2d-eb58-d698" name="Club" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="6e05-2f2d-eb58-d698" name="Club" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e592-ecce-5cf2-d92e" type="max"/>
           </constraints>
@@ -29448,7 +29450,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8052-eec8-e073-b60d" name="Axe" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="8052-eec8-e073-b60d" name="Axe" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="244a-b67c-7b46-0b93" type="max"/>
           </constraints>
@@ -29463,9 +29465,9 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="4084-e020-e056-1fbd" name="Options" hidden="false" collective="false">
+    <selectionEntryGroup id="4084-e020-e056-1fbd" name="Options" hidden="false" collective="false" import="true">
       <selectionEntries>
-        <selectionEntry id="beda-cb99-a0af-8f85" name="Foul Temperament" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="beda-cb99-a0af-8f85" name="Foul Temperament" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8cad-cad1-fc02-a013" type="max"/>
           </constraints>
@@ -29478,7 +29480,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8019-ecbb-6d75-fdd7" name="Gnarled Hide" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="8019-ecbb-6d75-fdd7" name="Gnarled Hide" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e9f4-5a6f-b9aa-0ff7" type="max"/>
           </constraints>
@@ -29488,7 +29490,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="dc8a-af2a-f30e-9db6" name="Rappelling Lines" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="dc8a-af2a-f30e-9db6" name="Rappelling Lines" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a849-3254-3e1b-eaac" type="max"/>
           </constraints>
@@ -29501,7 +29503,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="86ec-6561-956a-5891" name="Rocks" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="86ec-6561-956a-5891" name="Rocks" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ff6-e1c3-a6b8-838f" type="max"/>
           </constraints>
@@ -29515,7 +29517,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="425d-d2f8-0cf4-4dbd" name="Sigils of Defiance" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="425d-d2f8-0cf4-4dbd" name="Sigils of Defiance" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4b03-5ad5-ce05-4962" type="max"/>
           </constraints>
@@ -29529,7 +29531,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c731-0cec-1ae6-b805" name="Tusk Weapons" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="c731-0cec-1ae6-b805" name="Tusk Weapons" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6eb3-c4db-8b64-f143" type="max"/>
           </constraints>
@@ -29544,14 +29546,14 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="a8f0-7b08-5acd-ee98" name="Mounts" hidden="false" collective="false">
+    <selectionEntryGroup id="a8f0-7b08-5acd-ee98" name="Mounts" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f2e2-2620-8e8c-e096" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="fcd4-7b70-2235-f42d" name="Armoured Fell Beast" hidden="false" collective="false" targetId="4e42-ea2b-9566-f9bd" type="selectionEntry"/>
-        <entryLink id="8daf-6245-ef83-5506" name="Horse" hidden="false" collective="false" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
-        <entryLink id="f6a8-290e-48b4-cf6c" name="Armoured Horse" hidden="false" collective="false" targetId="eb59-3a9f-f03b-22cc" type="selectionEntry">
+        <entryLink id="fcd4-7b70-2235-f42d" name="Armoured Fell Beast" hidden="false" collective="false" import="true" targetId="4e42-ea2b-9566-f9bd" type="selectionEntry"/>
+        <entryLink id="8daf-6245-ef83-5506" name="Horse" hidden="false" collective="false" import="true" targetId="18cb-fd03-3380-5f4e" type="selectionEntry"/>
+        <entryLink id="f6a8-290e-48b4-cf6c" name="Armoured Horse" hidden="false" collective="false" import="true" targetId="eb59-3a9f-f03b-22cc" type="selectionEntry">
           <modifiers>
             <modifier type="set" field="hidden" value="true">
               <conditions>
@@ -29580,16 +29582,16 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink id="33f1-5d19-b843-bb35" name="Fell Beast" hidden="false" collective="false" targetId="6159-fce2-6d9c-2019" type="selectionEntry"/>
+        <entryLink id="33f1-5d19-b843-bb35" name="Fell Beast" hidden="false" collective="false" import="true" targetId="6159-fce2-6d9c-2019" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="2f11-3c62-203c-e4d7" name="Hero" hidden="false" collective="false" defaultSelectionEntryId="c39c-7868-1b48-4ef3">
+    <selectionEntryGroup id="2f11-3c62-203c-e4d7" name="Hero" hidden="false" collective="false" import="true" defaultSelectionEntryId="c39c-7868-1b48-4ef3">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d8b8-4bb9-af95-d7a5" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="85ef-46df-e87f-2920" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="c0cb-e71e-3894-e85e" name="Orc Engineer Captain" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="c0cb-e71e-3894-e85e" name="Orc Engineer Captain" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bde1-df29-b3f2-29ed" type="max"/>
           </constraints>
@@ -29613,22 +29615,22 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             </profile>
           </profiles>
           <selectionEntryGroups>
-            <selectionEntryGroup id="82c0-95e2-8510-fe95" name="Options" hidden="false" collective="false">
+            <selectionEntryGroup id="82c0-95e2-8510-fe95" name="Options" hidden="false" collective="false" import="true">
               <entryLinks>
-                <entryLink id="6ede-17d0-813d-7ae9" name="Shield" hidden="false" collective="false" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
-                <entryLink id="c8c2-0b3d-e799-16bc" name="Orc Bow" hidden="false" collective="false" targetId="54a8-3f7e-8ab6-2cdd" type="selectionEntry"/>
+                <entryLink id="6ede-17d0-813d-7ae9" name="Shield" hidden="false" collective="false" import="true" targetId="c9b8-81bd-1cd6-8b3e" type="selectionEntry"/>
+                <entryLink id="c8c2-0b3d-e799-16bc" name="Orc Bow" hidden="false" collective="false" import="true" targetId="54a8-3f7e-8ab6-2cdd" type="selectionEntry"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup id="9de8-3f53-1ca0-23f2" name="Wargear" hidden="false" collective="false">
+            <selectionEntryGroup id="9de8-3f53-1ca0-23f2" name="Wargear" hidden="false" collective="false" import="true">
               <entryLinks>
-                <entryLink id="57b3-6902-1a78-758e" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
-                <entryLink id="e033-b9a4-39d0-2d02" name="Weapon" hidden="false" collective="false" targetId="f6ad-e4da-7fb4-dae1" type="selectionEntryGroup"/>
+                <entryLink id="57b3-6902-1a78-758e" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+                <entryLink id="e033-b9a4-39d0-2d02" name="Weapon" hidden="false" collective="false" import="true" targetId="f6ad-e4da-7fb4-dae1" type="selectionEntryGroup"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink id="f37f-c47b-703a-9f89" name="Leader (Fortitude)" hidden="false" collective="false" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
-            <entryLink id="50fe-254d-3b22-28ea" name="Hero of Fortitude" hidden="false" collective="false" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
+            <entryLink id="f37f-c47b-703a-9f89" name="Leader (Fortitude)" hidden="false" collective="false" import="true" targetId="0ca9-a833-8cd4-b806" type="selectionEntry"/>
+            <entryLink id="50fe-254d-3b22-28ea" name="Hero of Fortitude" hidden="false" collective="false" import="true" targetId="963b-d9e7-5451-b0f9" type="selectionEntry"/>
           </entryLinks>
           <costs>
             <cost name=" Points" typeId="8bde-d63c-7caa-c15d" value="40.0"/>
@@ -29636,7 +29638,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c39c-7868-1b48-4ef3" name="Orc Siege Veteran" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="c39c-7868-1b48-4ef3" name="Orc Siege Veteran" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3392-c372-c4f8-9380" type="max"/>
           </constraints>
@@ -29660,15 +29662,15 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             </profile>
           </profiles>
           <selectionEntryGroups>
-            <selectionEntryGroup id="fcb2-a6f5-f911-a5a5" name="Wargear" hidden="false" collective="false">
+            <selectionEntryGroup id="fcb2-a6f5-f911-a5a5" name="Wargear" hidden="false" collective="false" import="true">
               <entryLinks>
-                <entryLink id="df40-ba16-4c1e-3d85" name="Weapon" hidden="false" collective="false" targetId="f6ad-e4da-7fb4-dae1" type="selectionEntryGroup"/>
-                <entryLink id="7ed8-add7-bb94-675d" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+                <entryLink id="df40-ba16-4c1e-3d85" name="Weapon" hidden="false" collective="false" import="true" targetId="f6ad-e4da-7fb4-dae1" type="selectionEntryGroup"/>
+                <entryLink id="7ed8-add7-bb94-675d" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <entryLinks>
-            <entryLink id="0b93-a3c0-fb0a-e985" name="Minor Hero" hidden="false" collective="false" targetId="36a4-de5b-fd01-3f8e" type="selectionEntry"/>
+            <entryLink id="0b93-a3c0-fb0a-e985" name="Minor Hero" hidden="false" collective="false" import="true" targetId="36a4-de5b-fd01-3f8e" type="selectionEntry"/>
           </entryLinks>
           <costs>
             <cost name=" Warriors" typeId="391e-19ac-b71d-f2e3" value="0.0"/>
@@ -29678,9 +29680,9 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="eee1-b2b7-455b-78f0" name="Wargear" hidden="false" collective="false">
+    <selectionEntryGroup id="eee1-b2b7-455b-78f0" name="Wargear" hidden="false" collective="false" import="true">
       <selectionEntries>
-        <selectionEntry id="c0f1-dd15-4d75-ec32" name="Claws and Beak" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="c0f1-dd15-4d75-ec32" name="Claws and Beak" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1ab9-b4a2-417a-d46a" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1679-8fbb-61d2-49de" type="max"/>
@@ -29700,13 +29702,13 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="79a5-410c-83fe-05df" name="Wargear" hidden="false" collective="false">
+    <selectionEntryGroup id="79a5-410c-83fe-05df" name="Wargear" hidden="false" collective="false" import="true">
       <entryLinks>
-        <entryLink id="6d00-e8f0-4b0b-a613" name="Sword" hidden="false" collective="false" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
-        <entryLink id="e153-3a74-4e84-f651" name="Heavy Dwarf Armour" hidden="false" collective="false" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
+        <entryLink id="6d00-e8f0-4b0b-a613" name="Sword" hidden="false" collective="false" import="true" targetId="64a3-2e98-a578-1a2d" type="selectionEntry"/>
+        <entryLink id="e153-3a74-4e84-f651" name="Heavy Dwarf Armour" hidden="false" collective="false" import="true" targetId="16d0-4708-68d8-c15f" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="0d58-043c-dd08-db64" name="Heroic Upgrades" hidden="true" collective="false">
+    <selectionEntryGroup id="0d58-043c-dd08-db64" name="Heroic Upgrades" hidden="true" collective="false" import="true">
       <modifiers>
         <modifier type="set" field="hidden" value="false">
           <conditions>
@@ -29715,9 +29717,9 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         </modifier>
       </modifiers>
       <selectionEntryGroups>
-        <selectionEntryGroup id="dd0b-9d35-599d-b5cf" name="Increase stats" hidden="false" collective="false">
+        <selectionEntryGroup id="dd0b-9d35-599d-b5cf" name="Increase stats" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="cc21-f698-4812-44e1" name="Fate" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="cc21-f698-4812-44e1" name="Fate" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="eb0f-a3fe-6130-4753" type="max"/>
               </constraints>
@@ -29727,7 +29729,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="9ed4-ffac-2deb-980c" name="Fight Value" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="9ed4-ffac-2deb-980c" name="Fight Value" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b477-1eea-b526-90d3" type="max"/>
               </constraints>
@@ -29737,7 +29739,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="0417-473c-24c0-734d" name="Strength" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="0417-473c-24c0-734d" name="Strength" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0de1-8e26-5956-be31" type="max"/>
               </constraints>
@@ -29747,7 +29749,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="44a2-b773-5243-5687" name="Will" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="44a2-b773-5243-5687" name="Will" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="009d-8dc7-e02d-9f14" type="max"/>
               </constraints>
@@ -29757,7 +29759,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="0167-8d06-4d5f-3afb" name="Defence" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="0167-8d06-4d5f-3afb" name="Defence" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d180-a02b-cd69-5014" type="max"/>
               </constraints>
@@ -29767,7 +29769,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="9a32-2a3c-2e51-b229" name="Courage" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="9a32-2a3c-2e51-b229" name="Courage" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0477-7732-6644-be10" type="max"/>
               </constraints>
@@ -29777,7 +29779,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="9bf7-cb62-167c-a30f" name="Attack" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="9bf7-cb62-167c-a30f" name="Attack" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f6a5-80f7-3400-fe0f" type="max"/>
               </constraints>
@@ -29787,7 +29789,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="4573-496d-8aa3-9544" name="Wound" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="4573-496d-8aa3-9544" name="Wound" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3c48-aefb-6313-9072" type="max"/>
               </constraints>
@@ -29797,7 +29799,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="b7d1-2dc9-f344-19d4" name="Might" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="b7d1-2dc9-f344-19d4" name="Might" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aacb-a8cb-7670-0a5e" type="max"/>
               </constraints>
@@ -29807,7 +29809,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="986c-f898-7854-49e5" name="Shoot Value" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="986c-f898-7854-49e5" name="Shoot Value" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="daab-dd98-7b97-4c8d" type="max"/>
               </constraints>
@@ -29819,9 +29821,9 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="bff7-a0e6-3691-837b" name="Leadership Progression" hidden="false" collective="false">
+        <selectionEntryGroup id="bff7-a0e6-3691-837b" name="Leadership Progression" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="f81d-3255-097a-6307" name="Inspiring Presence" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="f81d-3255-097a-6307" name="Inspiring Presence" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="128c-048e-7e1f-84e5" type="max"/>
               </constraints>
@@ -29831,7 +29833,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="ec9d-5c49-d96b-655e" name="&apos;Rally to me!&apos;" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="ec9d-5c49-d96b-655e" name="&apos;Rally to me!&apos;" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c374-33d8-6340-c7af" type="max"/>
               </constraints>
@@ -29843,9 +29845,9 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="46d2-5226-b67d-337c" name="Leadership Skills" hidden="false" collective="false">
+        <selectionEntryGroup id="46d2-5226-b67d-337c" name="Leadership Skills" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="16b2-4312-6b3d-842d" name="Master of Battle" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="16b2-4312-6b3d-842d" name="Master of Battle" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2995-929b-88e3-16dd" type="max"/>
               </constraints>
@@ -29858,7 +29860,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="3505-d586-6240-6644" name="Master of Ambush" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="3505-d586-6240-6644" name="Master of Ambush" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ae1-4c36-ed24-994d" type="max"/>
               </constraints>
@@ -29868,7 +29870,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="b3c6-b4e6-3cf9-2012" name="Battle Veteran" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="b3c6-b4e6-3cf9-2012" name="Battle Veteran" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="325a-2a91-69c3-6047" type="max"/>
               </constraints>
@@ -29878,7 +29880,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="49f6-49b5-5e58-1fa6" name="Lead by Example" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="49f6-49b5-5e58-1fa6" name="Lead by Example" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="56b0-7e57-4513-b950" type="max"/>
               </constraints>
@@ -29888,7 +29890,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="d05b-88f7-63e4-af8a" name="Courageous" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="d05b-88f7-63e4-af8a" name="Courageous" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b823-ca38-6737-b1e0" type="max"/>
               </constraints>
@@ -29898,7 +29900,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="49ca-ac8b-1217-7a57" name="Favour of the Court" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="49ca-ac8b-1217-7a57" name="Favour of the Court" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7566-3dc1-ba6f-ead0" type="max"/>
               </constraints>
@@ -29910,9 +29912,9 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="d7f1-0ae7-67a7-d281" name="Shooting Progression" hidden="false" collective="false">
+        <selectionEntryGroup id="d7f1-0ae7-67a7-d281" name="Shooting Progression" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="e784-ccf6-714d-7adf" name="Steady Aim" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="e784-ccf6-714d-7adf" name="Steady Aim" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2eba-c77d-0816-0f32" type="max"/>
               </constraints>
@@ -29922,7 +29924,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="90d4-a0f3-a6fb-ab56" name="Pinpoint Shot" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="90d4-a0f3-a6fb-ab56" name="Pinpoint Shot" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="290c-5a20-594f-286d" type="max"/>
               </constraints>
@@ -29934,9 +29936,9 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="e255-241a-76cd-ea24" name="Shooting Skills" hidden="false" collective="false">
+        <selectionEntryGroup id="e255-241a-76cd-ea24" name="Shooting Skills" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="0cb4-9607-ad4e-10e8" name="Lethal Aim" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="0cb4-9607-ad4e-10e8" name="Lethal Aim" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="19d9-fa8b-39e1-a4fc" type="max"/>
               </constraints>
@@ -29946,7 +29948,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="1eb7-8b5e-35fc-e84a" name="Expert Shot" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="1eb7-8b5e-35fc-e84a" name="Expert Shot" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6472-5877-4ecc-04c5" type="max"/>
               </constraints>
@@ -29959,7 +29961,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="139e-f1d1-4e8e-4d4e" name="Seasoned Archer" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="139e-f1d1-4e8e-4d4e" name="Seasoned Archer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d12d-c20b-dcc4-ff3b" type="max"/>
               </constraints>
@@ -29969,7 +29971,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="b4c5-8c06-72f7-35cc" name="Deadly Accuracy" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="b4c5-8c06-72f7-35cc" name="Deadly Accuracy" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab0b-3420-22f3-6166" type="max"/>
               </constraints>
@@ -29979,7 +29981,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="868b-1aee-f462-4673" name="Keen Eye" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="868b-1aee-f462-4673" name="Keen Eye" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a588-9f84-6e97-51a9" type="max"/>
               </constraints>
@@ -29989,7 +29991,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="16c5-e98e-b951-3837" name="Master Archer" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="16c5-e98e-b951-3837" name="Master Archer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0aeb-81ee-6b52-9c86" type="max"/>
               </constraints>
@@ -30001,7 +30003,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="cfe4-3fbd-8437-9b9f" name="Good Progression" hidden="true" collective="false">
+        <selectionEntryGroup id="cfe4-3fbd-8437-9b9f" name="Good Progression" hidden="true" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -30010,7 +30012,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             </modifier>
           </modifiers>
           <selectionEntries>
-            <selectionEntry id="5152-493e-c54a-c7ea" name="Legendary Hero" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="5152-493e-c54a-c7ea" name="Legendary Hero" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a34b-2c60-fc13-70bd" type="max"/>
               </constraints>
@@ -30025,7 +30027,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="6329-ca48-60b5-31ba" name="Inspirational Fighter" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="6329-ca48-60b5-31ba" name="Inspirational Fighter" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="291c-bf4f-def3-17d0" type="max"/>
               </constraints>
@@ -30040,7 +30042,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="cb15-bde2-b5f6-6451" name="Fearless" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="cb15-bde2-b5f6-6451" name="Fearless" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="40e4-b8f2-d89b-3957" type="max"/>
               </constraints>
@@ -30053,7 +30055,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="4496-eda0-1f59-d6d9" name="Hardy Warrior" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="4496-eda0-1f59-d6d9" name="Hardy Warrior" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="308b-0bfa-1154-0f0b" type="max"/>
               </constraints>
@@ -30068,7 +30070,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="9dbe-aa2f-9b6c-9fd8" name="Chosen of the Valar" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="9dbe-aa2f-9b6c-9fd8" name="Chosen of the Valar" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="28b3-e15f-fa96-e6a0" type="max"/>
               </constraints>
@@ -30094,9 +30096,9 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="070b-7abb-0f15-babb" name="Combat Skills" hidden="false" collective="false">
+        <selectionEntryGroup id="070b-7abb-0f15-babb" name="Combat Skills" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="b195-ccb2-7a05-c53d" name="Deadly Strength" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="b195-ccb2-7a05-c53d" name="Deadly Strength" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5578-a96c-d747-7f24" type="max"/>
               </constraints>
@@ -30109,7 +30111,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="72ef-2802-98a5-ccb4" name="Parry" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="72ef-2802-98a5-ccb4" name="Parry" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4dc4-24ca-3e26-4281" type="max"/>
               </constraints>
@@ -30119,7 +30121,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="c8e5-7617-2183-0c1c" name="Blade Master" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="c8e5-7617-2183-0c1c" name="Blade Master" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b73d-2ba6-4958-93c5" type="max"/>
               </constraints>
@@ -30129,7 +30131,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="589b-7125-5cbb-9219" name="Heroic Presence" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="589b-7125-5cbb-9219" name="Heroic Presence" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fe21-7d18-7e64-0f29" type="max"/>
               </constraints>
@@ -30139,7 +30141,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="0b57-d5c7-7831-10c9" name="Hero Slayer" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="0b57-d5c7-7831-10c9" name="Hero Slayer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5872-4910-5a05-9f21" type="max"/>
               </constraints>
@@ -30149,7 +30151,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="eb98-1961-4414-5a23" name="Furious Charge" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="eb98-1961-4414-5a23" name="Furious Charge" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f93e-0ee6-dded-9091" type="max"/>
               </constraints>
@@ -30161,7 +30163,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup id="3a15-6b53-a5ed-e818" name="Evil Progression" hidden="true" collective="false">
+        <selectionEntryGroup id="3a15-6b53-a5ed-e818" name="Evil Progression" hidden="true" collective="false" import="true">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -30170,7 +30172,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             </modifier>
           </modifiers>
           <selectionEntries>
-            <selectionEntry id="76da-ae21-11f9-75d3" name="Infused with Dark Power" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="76da-ae21-11f9-75d3" name="Infused with Dark Power" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5578-e1fb-5433-19e4" type="max"/>
               </constraints>
@@ -30189,7 +30191,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="3f49-25b3-fe33-9f9a" name="Terror" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="3f49-25b3-fe33-9f9a" name="Terror" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2192-102f-75f7-16a1" type="max"/>
               </constraints>
@@ -30202,7 +30204,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="74a5-9b6a-502a-b66b" name="Bane of Kings" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="74a5-9b6a-502a-b66b" name="Bane of Kings" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a371-7aa0-8935-b7c3" type="max"/>
               </constraints>
@@ -30215,7 +30217,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="140c-45b4-50a3-327f" name="Fell Sight" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="140c-45b4-50a3-327f" name="Fell Sight" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a8f3-d039-5d8c-e360" type="max"/>
               </constraints>
@@ -30228,7 +30230,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
                 <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="4701-22e4-25e3-9ed2" name="Harbinger of Evil" hidden="false" collective="false" type="upgrade">
+            <selectionEntry id="4701-22e4-25e3-9ed2" name="Harbinger of Evil" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3032-1fc6-176d-fa27" type="max"/>
               </constraints>
@@ -30245,9 +30247,9 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
-    <selectionEntryGroup id="fd30-56be-80cd-156b" name="Armoury" hidden="true" collective="false">
+    <selectionEntryGroup id="fd30-56be-80cd-156b" name="Armoury" hidden="true" collective="false" import="true">
       <selectionEntries>
-        <selectionEntry id="2157-53d0-f528-cc95" name="Armoured Horse" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="2157-53d0-f528-cc95" name="Armoured Horse" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b196-91fb-dd1b-0dda" type="max"/>
           </constraints>
@@ -30257,7 +30259,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="40c6-cb96-f20f-c100" name="Bow" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="40c6-cb96-f20f-c100" name="Bow" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c26-7d18-e58d-1268" type="max"/>
           </constraints>
@@ -30267,7 +30269,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="4466-d920-09c4-400b" name="Dwarf Longbow" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="4466-d920-09c4-400b" name="Dwarf Longbow" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc39-1091-daca-b7a1" type="max"/>
           </constraints>
@@ -30277,7 +30279,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2b8e-e4d4-6a12-850e" name="Dwarf Bow" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="2b8e-e4d4-6a12-850e" name="Dwarf Bow" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d3db-1e68-d1f5-b7de" type="max"/>
           </constraints>
@@ -30287,7 +30289,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="782f-2057-6c7e-5294" name="Orc Bow" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="782f-2057-6c7e-5294" name="Orc Bow" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="767d-542b-c512-95e5" type="max"/>
           </constraints>
@@ -30297,7 +30299,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="4b2d-82bc-8be1-33b8" name="Uruk-hai Bow" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="4b2d-82bc-8be1-33b8" name="Uruk-hai Bow" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6adf-3721-ac95-8608" type="max"/>
           </constraints>
@@ -30307,7 +30309,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e8a2-93f0-382f-b16c" name="Elf Bow" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="e8a2-93f0-382f-b16c" name="Elf Bow" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a613-2c17-1b4a-38b7" type="max"/>
           </constraints>
@@ -30317,7 +30319,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="4833-986a-d99c-b0ed" name="Longbow" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="4833-986a-d99c-b0ed" name="Longbow" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ac49-8d4f-6c74-18fe" type="max"/>
           </constraints>
@@ -30327,7 +30329,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7d67-098d-4fb9-997f" name="Crossbow" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="7d67-098d-4fb9-997f" name="Crossbow" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0a26-03d7-168b-c459" type="max"/>
           </constraints>
@@ -30337,7 +30339,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="dc50-7122-198b-9d35" name="Esgaroth Bow" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="dc50-7122-198b-9d35" name="Esgaroth Bow" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7689-0da1-f414-efb8" type="max"/>
           </constraints>
@@ -30347,7 +30349,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3026-766d-46b9-9285" name="Horse" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="3026-766d-46b9-9285" name="Horse" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7211-9628-3b5a-e39f" type="max"/>
           </constraints>
@@ -30357,7 +30359,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b2b0-6bae-6d38-e6ed" name="Warg" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="b2b0-6bae-6d38-e6ed" name="Warg" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e6d0-cb7e-6d24-37b5" type="max"/>
           </constraints>
@@ -30367,7 +30369,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b494-f32d-2231-54f0" name="War Spear" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="b494-f32d-2231-54f0" name="War Spear" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5fe9-e5fe-b998-7c3e" type="max"/>
           </constraints>
@@ -30377,7 +30379,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="6ee7-0438-dcc6-0473" name="Lance" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="6ee7-0438-dcc6-0473" name="Lance" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c81-0ca3-5167-e863" type="max"/>
           </constraints>
@@ -30387,7 +30389,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f8f7-78d6-a539-e388" name="Shield" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="f8f7-78d6-a539-e388" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8861-0d62-38b4-0cf4" type="max"/>
           </constraints>
@@ -30397,7 +30399,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="15f0-2c93-db60-6c8e" name="Spear" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="15f0-2c93-db60-6c8e" name="Spear" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d591-1b02-fc69-4242" type="max"/>
           </constraints>
@@ -30407,7 +30409,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7c56-fba9-23fa-ad32" name="Pike" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="7c56-fba9-23fa-ad32" name="Pike" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c4a1-3ee6-2116-2c9e" type="max"/>
           </constraints>
@@ -30417,7 +30419,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2a91-5742-13bf-1965" name="Throwing Weapons" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="2a91-5742-13bf-1965" name="Throwing Weapons" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ffd6-143e-bd36-4b5b" type="max"/>
           </constraints>
@@ -30427,7 +30429,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="86de-4e24-544d-c66c" name="Two-Handed Weapon" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="86de-4e24-544d-c66c" name="Two-Handed Weapon" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dea2-c172-d57c-1e1d" type="max"/>
           </constraints>
@@ -30437,7 +30439,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="090c-9dda-7578-e139" name="Heavy Armour" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="090c-9dda-7578-e139" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="91fa-2c94-a996-c538" type="max"/>
           </constraints>
@@ -30449,16 +30451,16 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="81f0-a84c-3fb8-b990" name="Change Weapon" hidden="false" collective="false" targetId="41b2-59a5-5a1a-c38a" type="selectionEntryGroup"/>
+        <entryLink id="81f0-a84c-3fb8-b990" name="Change Weapon" hidden="false" collective="false" import="true" targetId="41b2-59a5-5a1a-c38a" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="41b2-59a5-5a1a-c38a" name="Change Weapon" hidden="true" collective="false">
+    <selectionEntryGroup id="41b2-59a5-5a1a-c38a" name="Change Weapon" hidden="true" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ba80-3d29-19ee-0451" type="min"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7fb2-4756-18ba-0ff3" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="d260-8a19-5b74-2935" name="Sword" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="d260-8a19-5b74-2935" name="Sword" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c50c-3ba9-207b-128e" type="max"/>
           </constraints>
@@ -30471,7 +30473,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="cd12-5278-66aa-3d94" name="Staff" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="cd12-5278-66aa-3d94" name="Staff" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7e23-0fed-179a-e329" type="max"/>
           </constraints>
@@ -30484,7 +30486,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="5dbc-9346-af64-6ee6" name="Pick" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="5dbc-9346-af64-6ee6" name="Pick" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2ffb-ffcc-a749-1b3f" type="max"/>
           </constraints>
@@ -30497,7 +30499,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="12b1-543a-585d-a1da" name="Maul" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="12b1-543a-585d-a1da" name="Maul" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="82b8-8754-6381-f5a8" type="max"/>
           </constraints>
@@ -30510,7 +30512,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="711a-e76d-c421-e2b8" name="Mace" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="711a-e76d-c421-e2b8" name="Mace" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e3de-bc0f-2306-cede" type="max"/>
           </constraints>
@@ -30523,7 +30525,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="79a0-9c06-efec-1f5f" name="Hammer" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="79a0-9c06-efec-1f5f" name="Hammer" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b6cf-7f83-3120-12c6" type="max"/>
           </constraints>
@@ -30536,7 +30538,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="bc78-5089-e842-dde9" name="Flail" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="bc78-5089-e842-dde9" name="Flail" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="332c-521b-6b54-29ae" type="max"/>
           </constraints>
@@ -30549,7 +30551,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="78e3-a111-9c1e-622d" name="Dagger" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="78e3-a111-9c1e-622d" name="Dagger" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f1b-7299-e616-0304" type="max"/>
           </constraints>
@@ -30562,7 +30564,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d31d-09c3-60dd-f9fa" name="Club" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="d31d-09c3-60dd-f9fa" name="Club" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="175d-4936-4409-ea0e" type="max"/>
           </constraints>
@@ -30575,7 +30577,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8c07-f0b2-b02d-4cdc" name="Axe" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="8c07-f0b2-b02d-4cdc" name="Axe" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d799-34a7-bd30-3f3a" type="max"/>
           </constraints>
@@ -30590,9 +30592,9 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="35c6-74dd-066f-b328" name="Armoury" hidden="true" collective="false">
+    <selectionEntryGroup id="35c6-74dd-066f-b328" name="Armoury" hidden="true" collective="false" import="true">
       <selectionEntries>
-        <selectionEntry id="1087-97a4-da5a-6d32" name="Armoured Horse" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="1087-97a4-da5a-6d32" name="Armoured Horse" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2507-ed2f-f1be-8e17" type="max"/>
           </constraints>
@@ -30602,7 +30604,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8833-b504-ddfa-d1ce" name="Bow" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="8833-b504-ddfa-d1ce" name="Bow" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e56a-59f0-983c-39c6" type="max"/>
           </constraints>
@@ -30612,7 +30614,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e649-25c5-96f5-ee9e" name="Dwarf Longbow" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="e649-25c5-96f5-ee9e" name="Dwarf Longbow" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e71a-82c8-c268-1688" type="max"/>
           </constraints>
@@ -30622,7 +30624,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="34a6-17d0-f1db-f158" name="Dwarf Bow" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="34a6-17d0-f1db-f158" name="Dwarf Bow" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5a98-b033-42c9-cbc0" type="max"/>
           </constraints>
@@ -30632,7 +30634,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1fb9-c607-2535-087c" name="Orc Bow" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="1fb9-c607-2535-087c" name="Orc Bow" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="188b-fbfe-0f51-02bf" type="max"/>
           </constraints>
@@ -30642,7 +30644,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f640-f0ec-8dff-b702" name="Uruk-hai Bow" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="f640-f0ec-8dff-b702" name="Uruk-hai Bow" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="395c-b195-aadb-60e3" type="max"/>
           </constraints>
@@ -30652,7 +30654,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d909-025e-2aa8-ec1a" name="Elf Bow" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="d909-025e-2aa8-ec1a" name="Elf Bow" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fc5e-a9dd-f332-ae26" type="max"/>
           </constraints>
@@ -30662,7 +30664,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9e27-7380-6576-3c38" name="Longbow" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="9e27-7380-6576-3c38" name="Longbow" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff9d-76c4-cb5b-d76e" type="max"/>
           </constraints>
@@ -30672,7 +30674,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2060-37df-36b9-3ef9" name="Crossbow" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="2060-37df-36b9-3ef9" name="Crossbow" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="12c3-e2ca-a4eb-464e" type="max"/>
           </constraints>
@@ -30682,7 +30684,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="50be-6563-a64a-4395" name="Esgaroth Bow" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="50be-6563-a64a-4395" name="Esgaroth Bow" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="208c-c116-9ebc-da14" type="max"/>
           </constraints>
@@ -30692,7 +30694,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="658e-0ca1-5b1a-43f2" name="Horse" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="658e-0ca1-5b1a-43f2" name="Horse" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c3c9-4af2-ca43-a845" type="max"/>
           </constraints>
@@ -30702,7 +30704,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ef3c-39a0-36e8-3c7f" name="Warg" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="ef3c-39a0-36e8-3c7f" name="Warg" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1de8-4fb4-2c53-8ce7" type="max"/>
           </constraints>
@@ -30712,7 +30714,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="70ca-6122-f360-d57e" name="War Spear" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="70ca-6122-f360-d57e" name="War Spear" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e74-4c73-391c-7d4c" type="max"/>
           </constraints>
@@ -30722,7 +30724,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="56da-12ff-5530-9859" name="Lance" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="56da-12ff-5530-9859" name="Lance" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bc1c-190b-dea4-821f" type="max"/>
           </constraints>
@@ -30732,7 +30734,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="cd88-a631-d0d8-c221" name="Shield" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="cd88-a631-d0d8-c221" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="991b-3851-ac19-37f9" type="max"/>
           </constraints>
@@ -30742,7 +30744,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="028e-b78f-6c48-2268" name="Spear" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="028e-b78f-6c48-2268" name="Spear" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ae24-0181-47a5-b7c9" type="max"/>
           </constraints>
@@ -30752,7 +30754,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d664-c05d-3f8c-5bfd" name="Pike" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="d664-c05d-3f8c-5bfd" name="Pike" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="401e-c930-2fbb-d2b5" type="max"/>
           </constraints>
@@ -30762,7 +30764,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="dc65-be35-361a-4b51" name="Throwing Weapons" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="dc65-be35-361a-4b51" name="Throwing Weapons" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5654-e86e-b7f2-9f5e" type="max"/>
           </constraints>
@@ -30772,7 +30774,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="cf20-e1e4-997f-4c81" name="Two-Handed Weapon" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="cf20-e1e4-997f-4c81" name="Two-Handed Weapon" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ff5-00c8-4cef-70a0" type="max"/>
           </constraints>
@@ -30782,7 +30784,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="4b66-7f42-7d88-9943" name="Heavy Armour" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="4b66-7f42-7d88-9943" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="78ed-2458-4df6-7036" type="max"/>
           </constraints>
@@ -30794,22 +30796,22 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="b9b5-042a-5d19-fd46" name="Change Weapon" hidden="false" collective="false" targetId="3337-de56-cda2-3a28" type="selectionEntryGroup"/>
+        <entryLink id="b9b5-042a-5d19-fd46" name="Change Weapon" hidden="false" collective="false" import="true" targetId="3337-de56-cda2-3a28" type="selectionEntryGroup"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="15e7-701b-883c-8ae8" name="Hero" hidden="false" collective="false">
+    <selectionEntryGroup id="15e7-701b-883c-8ae8" name="Hero" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5c35-b94c-2a4d-d6c9" type="max"/>
       </constraints>
       <entryLinks>
-        <entryLink id="415b-38e1-fd7b-7687" name="Lieutenant" hidden="false" collective="false" targetId="178d-9927-3613-41de" type="selectionEntry"/>
-        <entryLink id="c584-1b2c-e80b-85b4" name="Sergeant" hidden="false" collective="false" targetId="d377-e9b1-fbca-2709" type="selectionEntry"/>
-        <entryLink id="55e9-abb6-734f-df58" name="Hero" hidden="false" collective="false" targetId="1c32-4567-7482-cb7c" type="selectionEntry"/>
+        <entryLink id="415b-38e1-fd7b-7687" name="Lieutenant" hidden="false" collective="false" import="true" targetId="178d-9927-3613-41de" type="selectionEntry"/>
+        <entryLink id="c584-1b2c-e80b-85b4" name="Sergeant" hidden="false" collective="false" import="true" targetId="d377-e9b1-fbca-2709" type="selectionEntry"/>
+        <entryLink id="55e9-abb6-734f-df58" name="Hero" hidden="false" collective="false" import="true" targetId="1c32-4567-7482-cb7c" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="0141-38d1-bfdd-7628" name="Wargear" hidden="false" collective="false">
+    <selectionEntryGroup id="0141-38d1-bfdd-7628" name="Wargear" hidden="false" collective="false" import="true">
       <selectionEntries>
-        <selectionEntry id="09e7-ec43-6991-1c67" name="Two Elven-made Swords" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="09e7-ec43-6991-1c67" name="Two Elven-made Swords" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e079-91a9-0016-25a7" type="min"/>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a6e9-d3c5-ad90-a4e6" type="max"/>
@@ -30829,16 +30831,16 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="42ae-687f-3f92-6070" name="Armour" hidden="false" collective="false" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
+        <entryLink id="42ae-687f-3f92-6070" name="Armour" hidden="false" collective="false" import="true" targetId="991c-46d3-d618-c49e" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="2fb2-bc75-1f44-5626" name="Weapon" hidden="false" collective="false" defaultSelectionEntryId="7a80-99b4-6404-0381">
+    <selectionEntryGroup id="2fb2-bc75-1f44-5626" name="Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="7a80-99b4-6404-0381">
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da42-9e56-79cf-ec2c" type="max"/>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6c2d-ff55-e44f-ed73" type="min"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="c7c0-7f23-8957-2d8c" name="Axe" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="c7c0-7f23-8957-2d8c" name="Axe" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6fd2-cf17-738d-d095" type="max"/>
           </constraints>
@@ -30851,7 +30853,7 @@ Whilst mounted, Dernhelm will follow all of the rules provided on these pages ra
             <cost name=" Bow" typeId="ab3b-a62b-ef54-533c" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7a80-99b4-6404-0381" name="Sword" hidden="false" collective="false" type="upgrade">
+        <selectionEntry id="7a80-99b4-6404-0381" name="Sword" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="13e7-3297-b2b4-af04" type="max"/>
           </constraints>
@@ -31160,7 +31162,7 @@ Select another model in the Fight for the Ent to hit with the bludgeon. Both the
     <rule id="c0ca-87f4-fe1f-a142" name="Spider Webs (Active)" publicationId="3e16-9abf-pubN141412" page="116" hidden="false">
       <description>A Mirkwood Spider can shoot webs at its enemies. They are treated as a throwing weapon with a range of 8&quot;. If a Mirkwood Spider hits its target, do not roll To Wound. Instead, the model suffers the effects of the Paralyse Magical Power. A Hero model hit by a Spider Web can choose to expend a Fate point in the same manner as if it had just suffered a Wound in order to dodge the attack. If successful, the target model is not Paralysed.</description>
     </rule>
-    <rule id="f2a8-2c2e-98ca-fdef" name="*The Lady of Lothlórien (Passive)" publicationId="3e16-9abf-pubN103678" page="83" hidden="false">
+    <rule id="f2a8-2c2e-98ca-fdef" name="* The Lady of Lothlórien (Passive)" publicationId="3e16-9abf-pubN103678" page="83" hidden="false">
       <description>Galadriel may expend a single point of Will each turn without reducing her own store.</description>
     </rule>
     <rule id="cf87-1687-97be-cc20" name="Piercing Strike (Special Strike)" publicationId="3e16-9abf-pubN102460" hidden="false">
